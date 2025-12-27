@@ -17,47 +17,54 @@ export default function AboutPage() {
       {/* HERO */}
       <section className="about-hero">
         <span className="hero-badge">About HumanCare MVT</span>
-        <h2>Your Trusted Partner in Medical Value Travel</h2>
+        <h2>Your Trusted Global Medical Travel Partner</h2>
         <p>
-          Bridging the gap between international patients and India’s finest
-          healthcare facilities
+          Humnacare Medical Value Travel connects international patients with
+          leading hospitals and specialists in India and worldwide. We simplify
+          cross-border healthcare through ethical guidance, transparent pricing,
+          and complete end-to-end support.
+        </p>
+        <p>
+          From medical opinions and treatment coordination to travel assistance
+          and post-care follow-up, we ensure a safe, seamless, and
+          patient-focused healthcare journey.
         </p>
       </section>
 
       {/* STATS */}
-          <section className="stats-section">
-      <div className="stats-container">
-        <div className="stats-card">
-          <div className="stats-icon">
-            <Users />
+      <section className="stats-section">
+        <div className="stats-container">
+          <div className="stats-card">
+            <div className="stats-icon">
+              <Users />
+            </div>
+            <div className="stats-text">
+              <h3>1000+</h3>
+              <p>Happy Patients</p>
+            </div>
           </div>
-          <div className="stats-text">
-            <h3>1000+</h3>
-            <p>Happy Patients</p>
-          </div>
-        </div>
 
-        <div className="stats-card">
-          <div className="stats-icon">
-            <Award />
+          <div className="stats-card">
+            <div className="stats-icon">
+              <Award />
+            </div>
+            <div className="stats-text">
+              <h3>300+</h3>
+              <p>Doctors Network</p>
+            </div>
           </div>
-          <div className="stats-text">
-            <h3>300+</h3>
-            <p>Doctors Network</p>
-          </div>
-        </div>
 
-        <div className="stats-card">
-          <div className="stats-icon">
-            <Globe />
-          </div>
-          <div className="stats-text">
-            <h3>15+</h3>
-            <p>Countries Served</p>
+          <div className="stats-card">
+            <div className="stats-icon">
+              <Globe />
+            </div>
+            <div className="stats-text">
+              <h3>15+</h3>
+              <p>Countries Served</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* WHO WE ARE */}
       <section className="about-who">
@@ -66,22 +73,25 @@ export default function AboutPage() {
           <h2>Compassionate Care, Global Reach</h2>
 
           <p>
-            HumanCare MVT was founded with a simple yet powerful mission: to make
-            world-class healthcare accessible to everyone, regardless of where
-            they live.
+            At Humnacare Medical Value Travel, we believe quality healthcare
+            should be accessible—no matter where you live. We connect patients
+            worldwide with trusted hospitals and experienced specialists, making
+            cross-border medical care simple, safe, and affordable.
           </p>
 
           <p>
-            We understand that seeking treatment abroad can be overwhelming.
-            That’s why our dedicated coordinators guide you through every step
-            — from consultation to complete recovery.
+            Our patient-first approach ensures you receive personalized guidance
+            at every step, from medical consultation and treatment planning to
+            travel support and recovery care. With strong hospital partnerships
+            and a commitment to transparency, we focus on what matters most—your
+            health, comfort, and peace of mind.
           </p>
 
-          <p>
+          {/* <p>
             By partnering with India’s most trusted hospitals and specialists,
             we ensure international patients receive affordable, globally
             accredited medical care.
-          </p>
+          </p> */}
         </div>
 
         <div className="who-image">
@@ -110,50 +120,51 @@ export default function AboutPage() {
       </section>
 
       {/* VALUES */}
-     <section className="values-section">
-      <span className="values-badge">Our Values</span>
+      <section className="values-section">
+        <span className="values-badge">Our Values</span>
 
-      <h2 className="values-title">What Drives Us</h2>
+        <h2 className="values-title">What Drives Us</h2>
 
-      <p className="values-subtitle">
-        The principles that guide every interaction and decision we make
-      </p>
+        <p className="values-subtitle">
+          The values that shape every decision we make and every patient journey
+          we support.
+        </p>
 
-      <div className="values-grid">
-        <div className="value-card">
-          <div className="value-icon">
-            <Heart />
+        <div className="values-grid">
+          <div className="value-card">
+            <div className="value-icon">
+              <Heart />
+            </div>
+            <h3>Patient-First Care</h3>
+            <p>
+              We place patients at the heart of everything we do, prioritizing
+              comfort, safety, and well-being at every stage.
+            </p>
           </div>
-          <h3>Patient-First Approach</h3>
-          <p>
-            Every decision we make is centered around the well-being and comfort
-            of our patients.
-          </p>
-        </div>
 
-        <div className="value-card">
-          <div className="value-icon">
-            <Target />
+          <div className="value-card">
+            <div className="value-icon">
+              <Target />
+            </div>
+            <h3>Commitment to Quality</h3>
+            <p>
+              We collaborate only with accredited hospitals and experienced
+              specialists who meet international healthcare standards.
+            </p>
           </div>
-          <h3>Excellence in Care</h3>
-          <p>
-            We partner only with accredited hospitals that meet international
-            standards of healthcare.
-          </p>
-        </div>
 
-        <div className="value-card">
-          <div className="value-icon">
-            <Globe />
+          <div className="value-card">
+            <div className="value-icon">
+              <Globe />
+            </div>
+            <h3>Global Access to Care</h3>
+            <p>
+              We strive to make high-quality medical treatment accessible to
+              patients across borders, regardless of location.
+            </p>
           </div>
-          <h3>Global Accessibility</h3>
-          <p>
-            Making world-class healthcare accessible to patients from developing
-            nations.
-          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* SUPPORT */}
       <section className="about-support">

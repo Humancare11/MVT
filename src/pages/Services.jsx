@@ -93,8 +93,12 @@ export default function ServicesPage() {
       {/* HERO */}
       <section className="services-hero">
         <span className="hero-badge">Our Services</span>
-        <h1>Comprehensive Medical Travel Support</h1>
-        <p>End-to-end assistance for your entire healthcare journey in India</p>
+        <h1>Complete Medical Travel Support</h1>
+        <p>
+          We provide end-to-end medical travel assistance, including treatment
+          coordination, hospital support, travel planning, and post-care
+          follow-up—making your healthcare journey simple and stress-free.
+        </p>
       </section>
 
       {/* SERVICES GRID */}
@@ -132,18 +136,22 @@ export default function ServicesPage() {
       <section className="process-section">
         <div className="section-header">
           <span className="badge">How It Works</span>
-          <h2>Simple & Transparent Process</h2>
-          <p>We make medical tourism hassle-free with our streamlined approach</p>
+          <h2>A Simple, Stress-Free Medical Journey</h2>
+          <p>
+            Our transparent process ensures smooth coordination from your first
+            inquiry to recovery, so you can focus on your health while we take
+            care of the rest.
+          </p>
         </div>
 
         <div className="process-steps">
           {[
-            "Inquiry",
-            "Consultation",
-            "Planning",
-            "Travel",
-            "Treatment",
-            "Follow-up",
+            "Share Your Medical Details",
+            "Expert Medical Consultation",
+            "Expert Medical Consultation",
+            "Travel & Stay Arrangements",
+            "Treatment & Care",
+            "Treatment & Care",
           ].map((step, index) => (
             <div className="process-item" key={index}>
               <div className="step-circle">{index + 1}</div>
