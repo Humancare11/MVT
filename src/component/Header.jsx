@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import "./Header.css";
-import logo from "../assets/react.svg";
+import logo from "../assets/humancare.webp";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
