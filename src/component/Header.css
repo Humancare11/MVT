@@ -12,12 +12,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* CONTAINER */
-.navbar-container {
-  /* max-width: 1800px;
-  margin: auto;
-  padding: 0 48px; */
-}
+
 
 .navbar-container {
     width: 100%;

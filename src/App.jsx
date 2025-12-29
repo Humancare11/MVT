@@ -17,16 +17,16 @@ import Footer from "./component/Footer";
 function App() {
   return (
     <>
-    <Header />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/treatments" element={<Treatments />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/hospitals" element={<Hospitals />} />
-                <Route path="/process" element={<Process />} />
- <Route path="/doctors" element={<Doctors />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/treatments" element={<Treatments />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/hospitals" element={<Hospitals />} />
+        <Route path="/process" element={<Process />} />
+        <Route path="/doctors" element={<Doctors />} />
       </Routes>
       <Footer />
     </>
