@@ -29,31 +29,36 @@ import "./Home.css";
 import heroImage from "../assets/react.svg";
 import Testimonials from "../component/Testimonials";
 import Contactsection from "../component/Contactsection";
+import Apollo from "../assets/apollo.jpeg";
+import Manipal from "../assets/manipal.jpeg";
+import Fortis from "../assets/fortis.jpeg";
+import Narayana from "../assets/narayana.jpeg";
+
 
 const hospitals = [
   {
-    name: "Medanta – The Medicity",
-    specialty: "Multi-Specialty Hospital",
-    location: "Gurugram, India",
-    image: "https://images.unsplash.com/photo-1576765607924-3f7b8410a787",
-  },
-  {
-    name: "Fortis Escorts Heart Institute",
-    specialty: "Cardiac Care",
-    location: "New Delhi, India",
-    image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3",
-  },
-  {
     name: "Apollo Hospitals",
-    specialty: "Global Healthcare Network",
-    location: "Multiple Locations",
-    image: "https://safartibbi.com/wp-content/uploads/2022/11/apolo-1.jpg",
+    specialty: "Multi-Specialty Hospital",
+    // location: "Gurugram, India",
+    image: Apollo,
+  },
+  {
+    name: "Manipal Hospitals",
+    specialty: "Multi-Specialty Hospital",
+    // location: "New Delhi, India",
+    image: Manipal,
+  },
+  {
+    name: "Fortis Healthcare",
+    specialty: "Multi-Specialty Hospital",
+    // location: "Multiple Locations",
+    image: Fortis,
   },
   {
     name: "Narayana Health",
-    specialty: "Advanced Medical Care",
-    location: "India & Overseas",
-    image: "https://images.unsplash.com/photo-1600959907703-125ba1374a12",
+    specialty: "Multi-Specialty Hospital",
+    // location: "India & Overseas",
+    image: Narayana ,
   },
 ];
 
@@ -222,11 +227,16 @@ export default function HomePage() {
           </p>
 
           <div className="hero-buttons">
-            <Link to="/contact" className="cta-btn red-btn">
+        
+ <a
+              href="tel:+918655835979"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn red-btn"
+            >
               <Phone size={18} />
               Book Free Consultation
-            </Link>
-
+            </a>
             <a
               href="https://wa.me/+918655835979"
               target="_blank"

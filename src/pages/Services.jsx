@@ -104,7 +104,7 @@ export default function ServicesPage() {
       {/* SERVICES GRID */}
       <section className="services-section">
         <div className="section-header">
-          <span className="badge">What We Offer</span>
+          <span className="hero-badge">What We Offer</span>
           <h2>Services Designed for International Patients</h2>
           <p>
             From your first inquiry to complete recovery, we're with you every
@@ -133,7 +133,7 @@ export default function ServicesPage() {
       </section>
 
       {/* PROCESS */}
-      <section className="process-section">
+      {/* <section className="process-section">
         <div className="section-header">
           <span className="badge">How It Works</span>
           <h2>A Simple, Stress-Free Medical Journey</h2>
@@ -166,7 +166,46 @@ export default function ServicesPage() {
             View Detailed Process <ArrowRight />
           </Link>
         </div>
-      </section>
+      </section> */}
+<section className="process-section">
+  <div className="section-header">
+    <span className="hero-badge">How It Works</span>
+    <h2>A Simple, Stress-Free Medical Journey</h2>
+    <p>
+      Our transparent process ensures smooth coordination from your first
+      inquiry to recovery, so you can focus on your health while we take
+      care of the rest.
+    </p>
+  </div>
+
+  <div className="process-steps">
+    {[
+      "Share Your Medical Details",
+      "Expert Medical Consultation",
+      "Treatment Planning",
+      "Travel & Stay Arrangements",
+      "Treatment & Care",
+      "Recovery & Follow-up",
+    ].map((step, index) => (
+      <div className="process-card" key={index}>
+        <div className="step-circle">{index + 1}</div>
+        <span>{step}</span>
+      </div>
+    ))}
+  </div>
+  <div className="process-btn">
+<Link to="/process" className="primary-btn">
+      View Detailed Process <ArrowRight />
+    </Link>
+  </div>
+   
+
+  {/* <div className="process-cta">
+    <Link to="/process" className="primary-btn">
+      View Detailed Process <ArrowRight />
+    </Link>
+  </div> */}
+</section>
 
       {/* CTA */}
       <section className="services-cta">
@@ -176,7 +215,7 @@ export default function ServicesPage() {
           journey
         </p>
 
-        <Link to="/contact" className="outline-btn">
+        <Link to="tel:+918655835979" className="outline-btn">
           <Phone /> Contact Us Today
         </Link>
       </section>

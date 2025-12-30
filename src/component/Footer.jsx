@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink, Link } from "react-router-dom";
+
 import {
   Phone,
   Mail,
@@ -10,6 +12,8 @@ import {
   Linkedin,
 } from "lucide-react";
 import "./Footer.css";
+import logo from "../assets/humancare.webp";
+
 
 export default function Footer({ onNavigate }) {
 
@@ -24,8 +28,9 @@ export default function Footer({ onNavigate }) {
                 <Phone size={20} />
               </div> */}
               <div>
-                <h3>Humancare World Wide</h3>
-                <p>Medical Value Travel</p>
+            <Link to="/" className="logo">
+            <img src={logo} alt="Logo" />
+          </Link>
               </div>
             </div>
 

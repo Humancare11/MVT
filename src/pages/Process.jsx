@@ -71,7 +71,7 @@ export default function PatientProcessPage() {
       {/* PROCESS */}
       <section className="process-section">
         <div className="process-header">
-          <span className="badge">6-Step Process</span>
+          <span className="hero-badge">6-Step Process</span>
           <h2>How It Works</h2>
           <p>From first inquiry to complete recovery</p>
         </div>
@@ -108,7 +108,7 @@ export default function PatientProcessPage() {
       {/* FAQ */}
       <section className="faq-section">
         <div className="process-header">
-          <span className="badge">Common Questions</span>
+          <span className="hero-badge">Common Questions</span>
           <h2>Frequently Asked Questions</h2>
           <p>Quick answers to help you plan better</p>
         </div>
@@ -146,9 +146,7 @@ export default function PatientProcessPage() {
         <p>Take the first step towards world-class healthcare in India</p>
 
         <div className="cta-buttons">
-          <a href="/contact" className="cta-outline">
-            <Phone /> Start Now
-          </a>
+         
 
           <a
             href="https://wa.me/919876543210"
@@ -156,7 +154,7 @@ export default function PatientProcessPage() {
             rel="noreferrer"
             className="cta-whatsapp"
           >
-            <MessageCircle /> Send Reports on WhatsApp
+            <MessageCircle /> Contact Us Today
           </a>
         </div>
       </section>
