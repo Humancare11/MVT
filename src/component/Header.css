@@ -13,17 +13,17 @@
 }
 
 /* CONTAINER */
-/* .navbar-container {
+.navbar-container {
   max-width: 1800px;
   margin: auto;
   padding: 0 48px;
-} */
+}
 
 .navbar-container {
-    width: 100%;
-    max-width: 1800px;
-    margin: 0 auto;
-    padding: 0 48px;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 48px;
 }
 
 /* INNER */
