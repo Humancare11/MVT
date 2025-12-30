@@ -2,69 +2,137 @@ import React from "react";
 import { Award } from "lucide-react";
 import "./Doctors.css";
 import Narendra from "../assets/dr-naresh-trehan.webp";
+import Balkrisnan from "../assets/dr-naresh-trehan.webp";
+import Mohd from "../assets/dr-naresh-trehan.webp";
+import Adwani from "../assets/dr-naresh-trehan.webp";
+import Amit from "../assets/dr-naresh-trehan.webp";
+import Kaushal from "../assets/dr-naresh-trehan.webp";
+import Hamdule from "../assets/dr-naresh-trehan.webp";
+import Sudhansu from "../assets/dr-naresh-trehan.webp";
+import Abhay from "../assets/dr-naresh-trehan.webp";
+import Dinshaw from "../assets/dr-naresh-trehan.webp";
+import Shailesh from "../assets/dr-naresh-trehan.webp";
+import Kamran from "../assets/dr-naresh-trehan.webp";
+import Sanjeev from "../assets/dr-naresh-trehan.webp";
+import Fatuque from "../assets/dr-naresh-trehan.webp";
+import zarir from "../assets/dr-naresh-trehan.webp";
 
 const doctors = [
   {
-    name: "Dr Narendra trehan",
+    name: "Dr. Narendra trehan",
     specialty: "Cardiovascular & Cardiothoracic Surgeon",
     experience: "40+ years",
     image: Narendra,
   },
   {
-    name: "Dr Balkrisnan",
+    name: "Dr. Balkrisnan",
     specialty: "Cardiothoracic / Heart Surgery",
     experience: "40+ years",
-    image: Mohad,
+    image: Balkrisnan,
   },
   {
-    name: "Dr. Ashok Seth",
-    specialty: "Interventional Cardiology",
-    hospital: "Fortis Escorts",
-    experience: "38+ years",
-    image: "https://images.unsplash.com/photo-1606813902779-9c6c3f7a8c3b",
+    name: "Dr. Mohd Rela",
+    specialty:
+      "Liver Transplant Surgeon & HPB (Hepato-Pancreato-Biliary) Surgery",
+    experience: "28+ years",
+    image: Mohd,
   },
   {
-    name: "Dr. Naresh Trehan",
-    specialty: "Cardiovascular Surgery",
-    hospital: "Medanta",
+    name: "Dr. Adwani",
+    specialty: "Oncologist",
     experience: "45+ years",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2",
+    image: Adwani,
   },
   {
-    name: "Dr. Ramakanta Panda",
-    specialty: "Heart Surgery",
-    hospital: "Asian Heart Institute",
-    experience: "30+ years",
-    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
-  },
-  {
-    name: "Dr. P Raghu Ram",
-    specialty: "Breast Surgery",
-    hospital: "Ushalakshmi Centre",
-    experience: "25+ years",
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f",
-  },
-  {
-    name: "Dr. Muffazal Lakdawala",
-    specialty: "Bariatric Surgery",
-    hospital: "Saifee Hospital",
-    experience: "20+ years",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d",
-  },
-  {
-    name: "Dr. Arvinder Singh Soin",
-    specialty: "Liver Transplant",
-    hospital: "Medanta",
+    name: "Dr. Amit Maidev",
+    specialty: "Gastroenterologist",
     experience: "35+ years",
-    image: "https://images.unsplash.com/photo-1618498082410-b4aa22193b38",
+    image: Amit,
+  },
+  {
+    name: "Dr. Kaushal Pandey",
+    specialty: "Cardio-Thoracic & Vascular Surgeon",
+    experience: "35+ years",
+    image: Kaushal,
+  },
+  {
+    name: "Dr. Hamdule",
+    specialty: "Cardio-Thoracic & Vascular Surgeon",
+    experience: "30+ years",
+    image: Hamdule,
+  },
+  {
+    name: "Dr. Sudhansu Bhattacharya",
+    specialty: "Cardio-Thoracic & Vascular Surgeon",
+    experience: "40+ years",
+    image: Sudhansu,
+  },
+  {
+    name: "Dr. Abhay Bhave",
+    specialty: "Haematologist",
+    experience: "30+ years",
+    image: Abhay,
+  },
+  {
+    name: "Dr Dinshaw Pardiwala",
+    specialty: "Sports Medicine Specialist",
+    experience: "25+ years",
+    image: Dinshaw,
+  },
+  {
+    name: "Dr Shailesh Raina",
+    specialty: "Renal (Kidney) Transplant Surgeon",
+    experience: "35+ years",
+    image: Shailesh,
+  },
+  {
+    name: "Dr. Kamran Khan",
+    specialty: "Oncologic Surgeon / Cancer Surgeon",
+    experience: "25+ years",
+    image: Kamran,
+  },
+  {
+    name: "Dr. Sanjeev Amin",
+    specialty: "Rheumatologist",
+    experience: "30+ years",
+    image: Sanjeev,
+  },
+  {
+    name: "Dr. Fatuque Udwadia",
+    specialty: "Critical Care Medicine",
+    experience: "30+ years",
+    image: Fatuque,
+  },
+  {
+    name: "Dr. Zarir Udwadia",
+    specialty: "Chest Physician / Pulmonologist",
+    experience: "30+ years",
+    image: zarir,
+  },
+  {
+    name: "Dr Sanjeev Amin",
+    specialty: "Rheumatologist",
+    experience: "30+ years",
+    image: Sanjeev,
+  },
+  {
+    name: "Dr Sanjeev Amin",
+    specialty: "Rheumatologist",
+    experience: "30+ years",
+    image: Sanjeev,
+  },
+  {
+    name: "Dr Sanjeev Amin",
+    specialty: "Rheumatologist",
+    experience: "30+ years",
+    image: Sanjeev,
   },
 ];
 
 export default function DoctorsPage() {
   return (
     <>
-
-       <section className="doctors-hero">
+      <section className="doctors-hero">
         <span className="hero-badge">Medical Specialties</span>
         <h1>World-Class Treatments at Affordable Prices</h1>
         <p>
@@ -73,7 +141,6 @@ export default function DoctorsPage() {
         </p>
       </section>
       {/* HERO */}
-     
 
       {/* DOCTORS LIST */}
       <section className="doctors-section">
@@ -86,8 +153,6 @@ export default function DoctorsPage() {
 
               <h3>{doc.name}</h3>
               <p className="specialty">{doc.specialty}</p>
-              <p className="hospital">{doc.hospital}</p>
-
               <div className="experience">
                 <Award />
                 {doc.experience}
@@ -97,7 +162,8 @@ export default function DoctorsPage() {
         </div>
 
         <p className="doctors-footer">
-          Our network includes 300+ specialist doctors across various medical fields
+          Our network includes 300+ specialist doctors across various medical
+          fields
         </p>
       </section>
     </>
