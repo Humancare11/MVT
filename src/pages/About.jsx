@@ -17,7 +17,7 @@ export default function AboutPage() {
       {/* HERO */}
       <section className="about-hero">
         <span className="hero-badge">About HumanCare MVT</span>
-        <h2>Your Trusted Global Medical Travel Partner</h2>
+        {/* <h2>Your Trusted Global Medical Travel Partner</h2> */}
         <p>
           Humnacare Medical Value Travel connects international patients with
           leading hospitals and specialists in India and worldwide. We simplify
