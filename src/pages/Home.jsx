@@ -34,6 +34,10 @@ import Manipal from "../assets/manipal.jpeg";
 import Fortis from "../assets/fortis.jpeg";
 import Narayana from "../assets/narayana.jpeg";
 
+import Narendra from "../assets/docters/dr-naresh-trehan.jpeg";
+import Balkrisnan from "../assets/docters/balakrishna.jpeg";
+import Fatuque from "../assets/docters/fatuque-udwadia.jpeg";
+import Nageshwar from "../assets/docters/nageshwar-reddy.jpeg";
 
 const hospitals = [
   {
@@ -58,7 +62,7 @@ const hospitals = [
     name: "Narayana Health",
     specialty: "Multi-Specialty Hospital",
     // location: "India & Overseas",
-    image: Narayana ,
+    image: Narayana,
   },
 ];
 
@@ -107,32 +111,28 @@ const data = [
 
 const doctors = [
   {
-    name: "Dr. Devi Prasad Shetty",
-    specialty: "Cardiac Surgery",
-    hospital: "Narayana Health",
+    name: "Dr. Narendra trehan",
+    specialty: "Cardiovascular & Cardiothoracic Surgeon",
     experience: "40+ years",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d",
+    image: Narendra,
   },
   {
-    name: "Dr. Randeep Guleria",
-    specialty: "Pulmonology",
-    hospital: "AIIMS Delhi",
-    experience: "35+ years",
-    image: "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+    name: "Dr. Balkrisnan",
+    specialty: "Cardiothoracic / Heart Surgery",
+    experience: "40+ years",
+    image: Balkrisnan,
   },
   {
-    name: "Dr. Ashok Seth",
-    specialty: "Interventional Cardiology",
-    hospital: "Fortis Escorts",
-    experience: "38+ years",
-    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5",
+    name: "Dr. Fatuque Udwadia",
+    specialty: "Critical Care Medicine",
+    experience: "70+ years",
+    image: Fatuque,
   },
   {
-    name: "Dr. Naresh Trehan",
-    specialty: "Cardiovascular Surgery",
-    hospital: "Medanta",
-    experience: "45+ years",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2",
+    name: "Dr. D. Nageshwar Reddy",
+    specialty: "Gastroenterology Pioneer",
+    experience: "50+ years",
+    image: Nageshwar,
   },
 ];
 const trustHighlights = [
@@ -227,8 +227,7 @@ export default function HomePage() {
           </p>
 
           <div className="hero-buttons">
-        
- <a
+            <a
               href="tel:+918655835979"
               target="_blank"
               rel="noopener noreferrer"
@@ -419,8 +418,6 @@ export default function HomePage() {
 
               <h3>{doc.name}</h3>
               <p className="doctor-specialty">{doc.specialty}</p>
-              <p className="doctor-hospital">{doc.hospital}</p>
-
               <div className="doctor-exp">
                 <User />
                 <span>{doc.experience}</span>
