@@ -39,6 +39,14 @@ import Shobha from "../assets/docters/shobha-nandavar.jpeg";
 import Kamal from "../assets/docters/kamal-kiran.jpeg";
 import Venkataram from "../assets/docters/venkataram-mysore.jpg";
 import Anil from "../assets/docters/Anil-kumar.jpg";
+// import DeviPrasad from "../assets/docters/dr-naresh-trehan.jpge";
+// import SandeepN from "../assets/docters/dr-naresh-trehan.jpeg";
+// import Gopinath from "../assets/docters/dr-naresh-trehan.jpeg";
+// import Kamini from "../assets/docters/dr-naresh-trehan.jpeg";
+// import Shobha from "../assets/docters/dr-naresh-trehan.jpeg";
+// import Kamal from "../assets/docters/dr-naresh-trehan.jpeg";
+// import Venkataram from "../assets/docters/dr-naresh-trehan.jpeg";
+// import Anil from "../assets/docters/dr-naresh-trehan.jpeg";
 // ------------------------CHENNAI-------------------------------------------------------
 import Thiagarajan from "../assets/docters/thiagarajan-srinivasan.jpeg";
 import Vijayan from "../assets/docters/vijayan.jpeg";
