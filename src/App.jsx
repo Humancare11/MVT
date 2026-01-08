@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Hospitals from "./pages/Hospitals";
 import Doctors from "./pages/Doctors";
 import Process from "./pages/Process";
+import Oman from "./pages/Oman";
 
 import "./App.css";
 import Header from "./component/Header";
@@ -27,6 +28,8 @@ function App() {
         <Route path="/hospitals" element={<Hospitals />} />
         <Route path="/process" element={<Process />} />
         <Route path="/doctors" element={<Doctors />} />
+                <Route path="/oman" element={<Oman />} />
+
       </Routes>
       <Footer />
     </>

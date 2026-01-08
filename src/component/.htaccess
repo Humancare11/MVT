@@ -1,36 +1,12 @@
-# Enable Rewrite Engine
-RewriteEngine On
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
 
-# Force HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  # Allow existing files and folders
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
 
-# Remove index.php from URL
-RewriteCond %{THE_REQUEST} /index\.php [NC]
-RewriteRule ^(.*)index\.php$ /$1 [R=301,L]
-
-# Redirect trailing slash (optional)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ /$1 [R=301,L]
-
-# Custom 404 Page
-ErrorDocument 404 /404.php
-
-# Protect .env file
-<Files .env>
-Order allow,deny
-Deny from all
-</Files>
-
-# Disable directory browsing
-Options -Indexes
-
-# Cache static files
-<IfModule mod_expires.c>
-ExpiresActive On
-ExpiresByType image/jpg "access plus 1 year"
-ExpiresByType image/jpeg "access plus 1 year"
-ExpiresByType image/png "access plus 1 year"
-ExpiresByType image/css "access plus 1 month"
-ExpiresByType application/javascript "access plus 1 month"
+  # Redirect all other requests to index.html
+  RewriteRule ^ index.html [L]
 </IfModule>

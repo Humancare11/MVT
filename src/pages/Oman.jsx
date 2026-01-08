@@ -204,7 +204,7 @@ const testimonials = [
   },
 ];
 
-export default function HomePage() {
+export default function Oman() {
   return (
     <div className="layout">
       {/* HERO SECTION start  */}
