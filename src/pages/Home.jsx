@@ -390,7 +390,6 @@ export default function HomePage() {
       {/* about SECTION end  */}
 
       {/* hospitals section Start */}
-
       <section className="hospitals-section">
         <span className="hospitals-badge">Specialist Hospitals</span>
 
@@ -423,6 +422,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* hospital section end */}
+
       {/* TREATMENTS start */}
       <section className="treatments">
         <div className="treatment-container">
@@ -465,6 +465,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* TREATMENTS end */}
+
       {/* doctors section start*/}
       <section className="doctors-section-home">
         <span className="doctors-badge">Expert Doctors</span>

@@ -1,52 +1,9 @@
-/* .doctors-hero {
-  background: #ffffff;
-  text-align: center;
-  padding: 120px 20px 90px;
-}
-
-.hero-badge {
-  display: inline-block;
-  background: rgba(214, 0, 0, 0.12);
-  color: var(--red);
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 18px;
-}
-
-.doctors-hero h1 {
-  font-size: 46px;
-  color: #0b1b4b;
-  margin-bottom: 14px;
-}
-
-.doctors-hero p {
-  font-size: 18px;
-  color: #4a638a;
-} */
-/* HERO */
-.doctors-hero-section {
-  background: var(--blue);
-  color: #fff;
-  text-align: center;
-  padding: 120px 20px;
-}
-
-.doctors-hero-section h1 {
-  font-size: 46px;
-  max-width: 900px;
-  margin: 0 auto 16px;
-}
-
-.doctors-hero-section p {
-  font-size: 18px;
-  opacity: 0.9;
-}
+/* Doctors page hero styles (detailed block below) */
 
 /* HERO SECTION START */
 .doctors-hero-section {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       to right,
       rgba(10, 23, 84, 1.7) 0%,
       rgba(10, 23, 84, 0.88) 35%,
@@ -299,6 +256,13 @@
   align-items: center;
 }
 
+/* ensure padding is included in width calculations */
+.filter-container,
+.filter-bar {
+  box-sizing: border-box;
+  overflow: visible;
+}
+
 /* FILTER GROUP */
 .filter-group {
   position: relative;
@@ -339,6 +303,8 @@
   outline: none;
   font-family: inherit;
   cursor: pointer;
+  min-width: 0; /* prevent flex items from overflowing their container */
+  width: 100%;
 }
 
 .filter-group input {
@@ -408,7 +374,9 @@
 
 /* ================= CARD HOVER ANIMATION ================= */
 .doctor-card {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .doctor-card:hover {
@@ -436,13 +404,13 @@
 
 /* ================= RESPONSIVE FILTER BAR ================= */
 @media (max-width: 1100px) {
-  .filter-container {
+  .filter-bar .filter-container {
     grid-template-columns: 1fr;
     gap: 16px;
     padding: 30px 25px;
   }
 
-  .filter-actions {
+  .filter-bar .filter-actions {
     grid-column: 1;
   }
 
@@ -458,18 +426,76 @@
     padding: 0 15px;
   }
 
-  .filter-container {
+  .filter-bar .filter-container {
     padding: 25px 20px;
+    margin-top: 4rem;
   }
 
-  .filter-actions {
+  .filter-bar .filter-actions {
     flex-direction: column;
+    gap: 12px;
   }
 
   .filter-bar .search-btn,
   .filter-bar .clear-btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* Extra-small screens: avoid any horizontal overflow and ensure controls fit */
+@media (max-width: 480px) {
+  .filter-bar {
+    margin: -24px auto 28px;
+    padding: 0 12px;
+  }
+
+  .filter-bar .filter-container {
+    padding: 18px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .filter-group {
+    padding: 6px 10px;
+  }
+
+  .filter-group input,
+  .filter-group select {
+    padding: 12px 12px;
+    font-size: 15px;
+  }
+
+  .filter-group select {
+    background-position: right 12px center;
+    padding-right: 40px;
+  }
+
+  .filter-bar .filter-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filter-bar .search-btn,
+  .filter-bar .clear-btn {
+    width: 100%;
+    padding: 12px 14px;
+    box-sizing: border-box;
+  }
+
+  /* ensure icons inside inputs don't push width */
+  .filter-icon {
+    margin-right: 10px;
+  }
+
+  /* keep modal and other elements unaffected */
+  .docker-modal-content {
+    max-width: 92%;
   }
 }
 
@@ -522,7 +548,9 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.18s ease, background 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease;
 }
 
 .docker-modal-close:hover {

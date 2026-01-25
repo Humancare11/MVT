@@ -456,10 +456,73 @@ a {
   font-size: 15px;
   opacity: 0.9;
 }
+/* Responsive tweaks specifically for the About section */
+@media (max-width: 1100px) {
+  .about {
+    padding: 60px 20px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 0 12px;
+  }
+
+  .about-image-new {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+
+  .experience-card-new {
+    position: static;
+    margin-top: -40px;
+    display: inline-block;
+    transform: translateX(0);
+    box-shadow: 0 8px 20px #e6000044;
+    border-radius: 12px;
+  }
+
+  .about-subtext,
+  .about-desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 36px 12px;
+  }
+
+  .about-badge {
+    font-size: 18px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-subtext,
+  .about-desc {
+    font-size: 15px;
+  }
+
+  .about-image-new {
+    border-radius: 12px;
+    max-height: 420px;
+  }
+
+  .about-points {
+    gap: 16px;
+  }
+}
 /* 🏥 ABOUT SECTION — END
 ============================================================ */
 
-/* hospitals section — logo grid layout (matches provided design) */
+/* 🏥 HOSPITALS SECTION — START
+============================================================ */
 .hospitals-section {
   padding: 35px 20px;
   text-align: center;
@@ -551,7 +614,9 @@ a {
   height: auto;
   object-fit: contain;
   filter: grayscale(100%) opacity(0.6);
-  transition: filter 0.25s ease, transform 0.25s ease;
+  transition:
+    filter 0.25s ease,
+    transform 0.25s ease;
 }
 
 .hospital-card:hover .hospital-image img {
@@ -613,7 +678,41 @@ a {
   }
 }
 
-/* hospital section end */
+/* MOBILE: hospitals single-column and spacing for very small screens */
+@media (max-width: 400px) {
+  .hospitals-grid {
+    grid-template-columns: 1fr;
+    gap: 28px; /* space between stacked items */
+    padding: 0 16px;
+    margin: 12px auto 50px;
+    justify-items: center;
+  }
+
+  .hospital-card {
+    justify-self: center;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .hospital-image {
+    width: 70%;
+    height: auto;
+    margin: 0 auto 8px;
+  }
+
+  .hospital-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.6);
+  }
+
+  .hospitals-title {
+    font-size: 22px;
+  }
+}
+/* 🏥 HOSPITALS SECTION — END
+============================================================ */
 
 /* ============================================================
    💉 TREATMENTS SECTION — START
@@ -712,9 +811,19 @@ a {
   margin-top: 12px;
   color: var(--blue);
 }
+
+@media (max-width: 400px) {
+  .treat-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 /* 💉 TREATMENTS SECTION — END
 ============================================================ */
-/* ==================doctors section star====================== */
+
+/* 💉 DOCTORS SECTION — START
+============================================================ */
 .doctors-section-home {
   padding: 35px 20px;
   text-align: center;
@@ -854,23 +963,33 @@ a {
 
 /* RESPONSIVE */
 @media (max-width: 1100px) {
-  .doctors-grid {
+  /* Target doctors section specifically */
+  .doctors-grid-home {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .doctors-grid {
+  .doctors-grid-home {
     grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 16px;
   }
 
   .doctors-title {
     font-size: 32px;
   }
-}
 
-/* ============================================================
-   ⭐ doctors section end
+  .doctor-card {
+    padding: 26px 18px;
+  }
+
+  .doctor-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+/* 💉 DOCTORS SECTION — END
 ============================================================ */
 
 /* ============================================================
@@ -1407,6 +1526,12 @@ a {
   .choose-grid,
   .testimonials-grid,
   .grid-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .treat-grid {
     grid-template-columns: 1fr;
   }
 }

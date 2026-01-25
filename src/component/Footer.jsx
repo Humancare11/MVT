@@ -14,10 +14,7 @@ import {
 import "./Footer.css";
 import logo from "../assets/humancare.webp";
 
-
 export default function Footer({ onNavigate }) {
-
-
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -28,9 +25,9 @@ export default function Footer({ onNavigate }) {
                 <Phone size={20} />
               </div> */}
               <div>
-            <Link to="/" className="logo">
-            <img src={logo} alt="Logo" />
-          </Link>
+                <Link to="/" className="logo">
+                  <img src={logo} alt="Logo" />
+                </Link>
               </div>
             </div>
 
@@ -51,28 +48,87 @@ export default function Footer({ onNavigate }) {
           <div>
             <h4>Quick Links</h4>
             <ul className="quick-links">
-              <li><a className="footer-links" href="/">Home</a></li>
-              <li><a className="footer-links" href="/about">About Us</a></li>
-              <li><a className="footer-links" href="/services">Services</a></li>
-              <li><a className="footer-links" href="/process">Patient Process</a></li>
-              <li><a className="footer-links" href="/partners">Hospitals </a></li>
-              <li><a className="footer-links" href="/partners">Doctors</a></li>
-              <li><a className="footer-links" href="/contact">Contact Us</a></li>
+              <li>
+                <a className="footer-links" href="/">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/about">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/services">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/process">
+                  Patient Process
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/partners">
+                  Hospitals{" "}
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/partners">
+                  Doctors
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/contact">
+                  Contact Us
+                </a>
+              </li>
             </ul>
-
           </div>
 
           <div>
             <h4>Our Treatments</h4>
             <ul className="quick-links">
-              <li><a className="footer-links" href="/treatments">Heart Surgery</a></li>
-              <li><a className="footer-links" href="/treatments">Bone & Joint</a></li>
-              <li><a className="footer-links" href="/treatments">Neurology & Neurosurgery</a></li>
-              <li><a className="footer-links" href="/treatments">Cancer Treatment</a></li>
-              <li><a className="footer-links" href="/treatments">IVF & Fertility</a></li>
-              <li><a className="footer-links" href="/treatments">Dental Care</a></li>
-              <li><a className="footer-links" href="/treatments">Cosmetic Surgery</a></li>
-              <li><a className="footer-links" href="/treatments">Eye Care</a></li>
+              <li>
+                <a className="footer-links" href="/treatments">
+                  Heart Surgery
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/treatments">
+                  Bone & Joint
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/treatments">
+                  Neurology & Neurosurgery
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/treatments">
+                  Cancer Treatment
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/treatments">
+                  IVF & Fertility
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/treatments">
+                  Dental Care
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/treatments">
+                  Cosmetic Surgery
+                </a>
+              </li>
+              <li>
+                <a className="footer-links" href="/treatments">
+                  Eye Care
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -103,15 +159,16 @@ export default function Footer({ onNavigate }) {
                 <div>
                   <strong>Office Address</strong>
                   <p>
-                    544, Dheeraj Haritage, S. V. Road,<br />
-                    Junction, Milan Subway,<br />
-                    Santacruz (West), Mumbai,<br />
+                    544, Dheeraj Haritage, S. V. Road,
+                    <br />
+                    Junction, Milan Subway,
+                    <br />
+                    Santacruz (West), Mumbai,
+                    <br />
                     Maharashtra 400054
                   </p>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>
@@ -119,9 +176,9 @@ export default function Footer({ onNavigate }) {
         <div className="footer-bottom">
           <p>© 2024 HumanCare MVT. All rights reserved.</p>
           <div>
-            <a href="#">Privacy Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
             <span>|</span>
-            <a href="#">Terms of Service</a>
+            <a href="/terms-and-conditions">Terms of Service</a>
             <span>|</span>
             <a href="#">Refund Policy</a>
           </div>

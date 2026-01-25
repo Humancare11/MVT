@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Treatments from "./pages/Treatments";
 import Contact from "./pages/Contact";
 import Hospitals from "./pages/Hospitals";
+import HospitalDetails from "./pages/HospitalDetails";
 import Doctors from "./pages/Doctors";
 import Process from "./pages/Process";
 import Oman from "./pages/Oman";
@@ -15,6 +16,8 @@ import "./App.css";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import ConnectWithUs from "./component/ConnectWithUs";
+import TermsAndConditionsPage from "./pages/terms-and-conditions";
+import PrivacyPolicyPage from "./pages/privacy-policy";
 
 function App() {
   return (
@@ -27,9 +30,15 @@ function App() {
         <Route path="/treatments" element={<Treatments />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/hospitals" element={<Hospitals />} />
+        <Route path="/hospital-details/:id" element={<HospitalDetails />} />
         <Route path="/process" element={<Process />} />
         <Route path="/doctors" element={<Doctors />} />
         <Route path="/oman" element={<Oman />} />
+        <Route
+          path="/terms-and-conditions"
+          element={<TermsAndConditionsPage />}
+        />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       </Routes>
       <Footer />
       <ConnectWithUs />

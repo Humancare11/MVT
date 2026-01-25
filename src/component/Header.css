@@ -5,68 +5,7 @@
   z-index: 9999;
   width: 100%;
 }
-
-/* ===================== TOP BAR ===================== */
-.top-bar {
-  background: #ce1810;
-  color: #fff;
-  font-size: 13px;
-  position: relative;
-}
-
-.top-bar-container {
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 8px 48px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-/* Contact Info */
-.contact-info {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-}
-
-.contact-info-number {
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.contact-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.25s ease;
-  padding: 4px 8px;
-  border-radius: 6px;
-}
-
-.contact-item:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-1px);
-}
-
-/* Social Icons */
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.social-label {
-  font-size: 16px;
-  font-weight: 700;
-  opacity: 0.9;
-  margin-right: 4px;
-  letter-spacing: 0.5px;
-}
-
+/* Social icons and link styles (used in header and mobile blocks) */
 .social-links {
   display: flex;
   gap: 10px;
@@ -83,7 +22,6 @@
   justify-content: center;
   border-radius: 50%;
   background-color: #001f54;
-  /* background: rgba(255, 255, 255, 0.1); */
   transition: all 0.25s ease;
 }
 
@@ -97,27 +35,6 @@
 .social-links a svg {
   width: 20px;
   height: 20px;
-}
-
-/* Responsive Top Bar */
-@media (max-width: 992px) {
-  .top-bar-container {
-    padding: 8px 24px;
-  }
-
-  .social-label {
-    display: none;
-  }
-
-  .contact-info {
-    gap: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .top-bar {
-    display: none;
-  }
 }
 
 .navbar {
@@ -135,12 +52,6 @@
 }
 
 /* CONTAINER */
-.navbar-container {
-  max-width: 1800px;
-  margin: auto;
-  padding: 0 48px;
-}
-
 .navbar-container {
   width: 100%;
   max-width: 1800px;
@@ -224,28 +135,70 @@
   background: none;
   border: none;
   cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition:
+    transform 200ms ease,
+    opacity 200ms ease;
 }
 
 /* MOBILE NAV */
 .nav-mobile {
-  display: none;
+  /* starts hidden via height/opacity for smooth transitions */
+  display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 24px 0;
+  padding: 0 0 12px 0;
   border-top: 1px solid #e5e7eb;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  overflow: hidden;
+  transition:
+    max-height 320ms ease,
+    opacity 280ms ease,
+    transform 320ms ease;
+  position: relative;
 }
 
-.nav-mobile a {
+/* mobile social block hidden by default; only shown for very small screens */
+.nav-mobile .mobile-social-links {
+  display: none;
+}
+
+.nav-mobile.open {
+  max-height: 600px; /* large enough to contain links */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-mobile.closed {
+  pointer-events: none;
+}
+
+.nav-mobile a,
+.nav-mobile .mobile-nav-link {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   color: #1f2937;
   text-decoration: none;
+  padding: 10px 6px;
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.nav-mobile a:hover,
+.nav-mobile .mobile-nav-link:hover {
+  transform: translateX(6px);
 }
 
 .emergency-btn.mobile {
   width: fit-content;
-  margin-top: 10px;
+  margin-top: 6px;
 }
+
+/* (mobile close button removed from markup; no styles needed) */
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
@@ -254,7 +207,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .nav-desktop {
     display: none;
   }
@@ -274,8 +227,73 @@
   .emergency-btn {
     display: none;
   }
-  /* hide inline social icons on small screens to keep header compact */
+
+  /* show social icons beside logo on smaller screens */
+  .navbar .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 12px;
+  }
+
+  /* adjust sizes for compact header */
+  .logo img {
+    height: 44px;
+  }
+
+  .navbar-inner {
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* order: logo, social icons, then menu button */
+  .navbar-inner .logo {
+    order: 0;
+  }
+
+  /* place social icons to the right beside the hamburger */
+  .navbar-inner .social-icons {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .navbar-inner .menu-btn {
+    order: 3;
+    margin-left: 8px;
+  }
+
+  /* slightly smaller circular social buttons */
+  .navbar .social-links a {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* very small screens: hide header social icons, show mobile social block after contact */
+@media (max-width: 500px) {
   .navbar .social-icons {
     display: none;
+  }
+
+  /* mobile social block is inside .nav-mobile */
+  .nav-mobile .mobile-social-links {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+  }
+
+  .nav-mobile .mobile-social-links .social-links {
+    gap: 10px;
+  }
+
+  .nav-mobile .mobile-social-links .social-links a {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #001f54;
+    color: #fff;
   }
 }
