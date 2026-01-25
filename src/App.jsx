@@ -19,6 +19,8 @@ import ConnectWithUs from "./component/ConnectWithUs";
 import TermsAndConditionsPage from "./pages/terms-and-conditions";
 import PrivacyPolicyPage from "./pages/privacy-policy";
 
+import Translate from "./pages/Translate";
+
 function App() {
   return (
     <>
@@ -39,7 +41,9 @@ function App() {
           element={<TermsAndConditionsPage />}
         />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/translate" element={<Translate />} />
       </Routes>
+
       <Footer />
       <ConnectWithUs />
     </>
