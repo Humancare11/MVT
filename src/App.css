@@ -26,3 +26,28 @@ body {
   color: var(--page-text);
   line-height: 1.6;
 }
+
+
+
+/* Remove Google top bar completely */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Remove black overlay box */
+.goog-te-spinner-pos,
+.goog-te-spinner-animation,
+.goog-te-spinner {
+  display: none !important;
+}
+
+/* Remove "Show Original" Dropdown */
+.goog-te-balloon-frame {
+  display: none !important;
+  visibility: hidden !important;
+}

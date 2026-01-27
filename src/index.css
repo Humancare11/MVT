@@ -22,3 +22,19 @@ body {
   background: var(--text-dark);
   line-height: 1.6;
 }
+
+
+
+
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}

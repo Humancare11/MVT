@@ -24,7 +24,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close on Escape and prevent body scroll when menu is open
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") setIsOpen(false);
@@ -40,6 +39,29 @@ const Header = () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
+
+ const handleLangChange = (lang) => {
+  let tries = 0;
+
+  const interval = setInterval(() => {
+    tries++;
+
+    const googleSelect = document.querySelector(".goog-te-combo");
+
+    if (googleSelect) {
+      googleSelect.value = lang;
+
+      googleSelect.dispatchEvent(new Event("change", { bubbles: true }));
+
+      clearInterval(interval);
+    }
+
+    if (tries > 50) clearInterval(interval);
+  }, 150);
+};
+
+
+
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -57,12 +79,13 @@ const Header = () => {
       <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
         <div className="navbar-container">
           <div className="navbar-inner">
-            {/* LOGO */}
+
+            {/* Logo */}
             <Link to="/" className="logo">
               <img src={logo} alt="Logo" />
             </Link>
 
-            {/* DESKTOP NAV */}
+            {/* Desktop Menu */}
             <div className="nav-desktop">
               {navItems.map((item) => (
                 <NavLink
@@ -77,83 +100,43 @@ const Header = () => {
               ))}
             </div>
 
-            {/* EMERGENCY BUTTON */}
-            {/* <a href="tel:+918655835979" className="emergency-btn">
-              <Phone size={16} />
-              Emergency
-            </a> */}
+            {/* Language Dropdown */}
+                    <select
+  onChange={(e) => handleLangChange(e.target.value)}
+  className="lang-select"
+  style={{
+    padding: "6px",
+    marginLeft: "15px",
+    borderRadius: "6px",
+    border: "1px solid #ccc",
+    fontSize: "14px",
+  }}
+>
+  <option value="en">English</option>
+  <option value="ar">Arabic</option>
+  <option value="bn">Bengali</option>
+</select>
 
+            {/* Social Icons */}
             <div className="social-icons">
               <div className="social-links">
-                <a
-                  href="https://www.facebook.com/humancareworldwide/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                >
-                  <Facebook size={15} />
-                </a>
-                <a
-                  href="https://x.com/wwhumancare"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Twitter"
-                >
-                  <Twitter size={15} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin size={15} />
-                </a>
-                <a
-                  href="https://wa.me/+918655835979"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="whatsapp"
-                >
-                  <FaWhatsapp size={15} />
-                </a>
-                <a
-                  href="https://www.instagram.com/humancareworldwideofficial/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={15} />
-                </a>
-                <a
-                  href="https://www.youtube.com/@HumancareWorldWide"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
-                >
-                  <Youtube size={15} />
-                </a>
+                <a href="https://www.facebook.com/humancareworldwide/" target="_blank"><Facebook size={15} /></a>
+                <a href="https://x.com/wwhumancare" target="_blank"><Twitter size={15} /></a>
+                <a href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all" target="_blank"><Linkedin size={15} /></a>
+                <a href="https://wa.me/+918655835979" target="_blank"><FaWhatsapp size={15} /></a>
+                <a href="https://www.instagram.com/humancareworldwideofficial/" target="_blank"><Instagram size={15} /></a>
+                <a href="https://www.youtube.com/@HumancareWorldWide" target="_blank"><Youtube size={15} /></a>
               </div>
             </div>
 
-            {/* MOBILE MENU BUTTON */}
-            <button
-              className="menu-btn"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-expanded={isOpen}
-              aria-controls="mobile-nav"
-              aria-label={isOpen ? "Close menu" : "Open menu"}
-            >
+            {/* Mobile Menu Button */}
+            <button className="menu-btn" onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? <X /> : <Menu />}
             </button>
           </div>
 
-          {/* MOBILE NAV (always rendered for smooth transitions) */}
-          <div
-            id="mobile-nav"
-            className={`nav-mobile ${isOpen ? "open" : "closed"}`}
-            aria-hidden={!isOpen}
-          >
+          {/* Mobile Navigation */}
+          <div id="mobile-nav" className={`nav-mobile ${isOpen ? "open" : "closed"}`}>
             {navItems.map((item) => (
               <NavLink
                 key={item.name}
@@ -165,63 +148,23 @@ const Header = () => {
               </NavLink>
             ))}
 
-            <a href="tel:+918655835979" className="emergency-btn mobile">
-              <Phone size={16} />
-              Emergency Call
-            </a>
-            {/* Mobile social links shown on very small screens (<=500px) */}
-            <div className="mobile-social-links">
-              <div className="social-links">
-                <a
-                  href="https://www.facebook.com/humancareworldwide/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                >
-                  <Facebook size={15} />
-                </a>
-                <a
-                  href="https://x.com/wwhumancare"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Twitter"
-                >
-                  <Twitter size={15} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin size={15} />
-                </a>
-                <a
-                  href="https://wa.me/+918655835979"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="whatsapp"
-                >
-                  <FaWhatsapp size={15} />
-                </a>
-                <a
-                  href="https://www.instagram.com/humancareworldwideofficial/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={15} />
-                </a>
-                <a
-                  href="https://www.youtube.com/@HumancareWorldWide"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
-                >
-                  <Youtube size={15} />
-                </a>
-              </div>
-            </div>
+            {/* Mobile Language Dropdown */}
+           <select
+  onChange={(e) => handleLangChange(e.target.value)}
+  className="lang-select"
+  style={{
+    padding: "6px",
+    marginLeft: "15px",
+    borderRadius: "6px",
+    border: "1px solid #ccc",
+    fontSize: "14px",
+  }}
+>
+  <option value="en">English</option>
+  <option value="ar">Arabic</option>
+  <option value="bn">Bengali</option>
+</select>
+
           </div>
         </div>
       </nav>
