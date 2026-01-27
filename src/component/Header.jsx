@@ -40,28 +40,25 @@ const Header = () => {
     };
   }, [isOpen]);
 
- const handleLangChange = (lang) => {
-  let tries = 0;
+  const handleLangChange = (lang) => {
+    let tries = 0;
 
-  const interval = setInterval(() => {
-    tries++;
+    const interval = setInterval(() => {
+      tries++;
 
-    const googleSelect = document.querySelector(".goog-te-combo");
+      const googleSelect = document.querySelector(".goog-te-combo");
 
-    if (googleSelect) {
-      googleSelect.value = lang;
+      if (googleSelect) {
+        googleSelect.value = lang;
 
-      googleSelect.dispatchEvent(new Event("change", { bubbles: true }));
+        googleSelect.dispatchEvent(new Event("change", { bubbles: true }));
 
-      clearInterval(interval);
-    }
+        clearInterval(interval);
+      }
 
-    if (tries > 50) clearInterval(interval);
-  }, 150);
-};
-
-
-
+      if (tries > 50) clearInterval(interval);
+    }, 150);
+  };
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -79,7 +76,6 @@ const Header = () => {
       <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
         <div className="navbar-container">
           <div className="navbar-inner">
-
             {/* Logo */}
             <Link to="/" className="logo">
               <img src={logo} alt="Logo" />
@@ -100,35 +96,117 @@ const Header = () => {
               ))}
             </div>
 
-            {/* Language Dropdown */}
-                    <select
-  onChange={(e) => handleLangChange(e.target.value)}
-  className="lang-select"
-  style={{
-    padding: "6px",
-    marginLeft: "15px",
-    borderRadius: "6px",
-    border: "1px solid #ccc",
-    fontSize: "14px",
-  }}
->
-  <option value="en">English</option>
-  <option value="ar">Arabic</option>
-  <option value="bn">Bengali</option>
-</select>
+            {/* placeholder for language select (moved to right controls) */}
 
             {/* Social Icons */}
-            <div className="social-icons">
+            {/* <div className="social-icons">
               <div className="social-links">
-                <a href="https://www.facebook.com/humancareworldwide/" target="_blank"><Facebook size={15} /></a>
-                <a href="https://x.com/wwhumancare" target="_blank"><Twitter size={15} /></a>
-                <a href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all" target="_blank"><Linkedin size={15} /></a>
-                <a href="https://wa.me/+918655835979" target="_blank"><FaWhatsapp size={15} /></a>
-                <a href="https://www.instagram.com/humancareworldwideofficial/" target="_blank"><Instagram size={15} /></a>
-                <a href="https://www.youtube.com/@HumancareWorldWide" target="_blank"><Youtube size={15} /></a>
+                <a
+                  href="https://www.facebook.com/humancareworldwide/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Facebook size={15} />
+                </a>
+                <a
+                  href="https://x.com/wwhumancare"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Twitter size={15} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin size={15} />
+                </a>
+                <a
+                  href="https://wa.me/+918655835979"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp size={15} />
+                </a>
+                <a
+                  href="https://www.instagram.com/humancareworldwideofficial/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram size={15} />
+                </a>
+                <a
+                  href="https://www.youtube.com/@HumancareWorldWide"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Youtube size={15} />
+                </a>
               </div>
-            </div>
+            </div> */}
 
+            {/* Right controls: social icons + language select */}
+            <div className="header-controls">
+              <div className="social-icons small">
+                <div className="social-links">
+                  <a
+                    href="https://www.facebook.com/humancareworldwide/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Facebook size={15} />
+                  </a>
+                  <a
+                    href="https://x.com/wwhumancare"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Twitter size={15} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin size={15} />
+                  </a>
+                  <a
+                    href="https://wa.me/+918655835979"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaWhatsapp size={15} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/humancareworldwideofficial/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Instagram size={15} />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@HumancareWorldWide"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Youtube size={15} />
+                  </a>
+                </div>
+              </div>
+              <select
+                onChange={(e) => handleLangChange(e.target.value)}
+                className="lang-select"
+              >
+                <option value="">Select Language</option>
+                <option value="en">English</option>
+                <option value="mr">Marathi</option>
+                <option value="hi">Hindi</option>
+                <option value="ur">Urdu</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+              </select>
+            </div>
             {/* Mobile Menu Button */}
             <button className="menu-btn" onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? <X /> : <Menu />}
@@ -136,7 +214,10 @@ const Header = () => {
           </div>
 
           {/* Mobile Navigation */}
-          <div id="mobile-nav" className={`nav-mobile ${isOpen ? "open" : "closed"}`}>
+          <div
+            id="mobile-nav"
+            className={`nav-mobile ${isOpen ? "open" : "closed"}`}
+          >
             {navItems.map((item) => (
               <NavLink
                 key={item.name}
@@ -149,22 +230,18 @@ const Header = () => {
             ))}
 
             {/* Mobile Language Dropdown */}
-           <select
-  onChange={(e) => handleLangChange(e.target.value)}
-  className="lang-select"
-  style={{
-    padding: "6px",
-    marginLeft: "15px",
-    borderRadius: "6px",
-    border: "1px solid #ccc",
-    fontSize: "14px",
-  }}
->
-  <option value="en">English</option>
-  <option value="ar">Arabic</option>
-  <option value="bn">Bengali</option>
-</select>
-
+            <select
+              onChange={(e) => handleLangChange(e.target.value)}
+              className="lang-select mobile"
+            >
+              <option value="">Select Language</option>
+              <option value="en">English</option>
+              <option value="mr">Marathi</option>
+              <option value="hi">Hindi</option>
+              <option value="ur">Urdu</option>
+              <option value="fr">French</option>
+              <option value="es">Spanish</option>
+            </select>
           </div>
         </div>
       </nav>

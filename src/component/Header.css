@@ -76,6 +76,28 @@
   height: 52px;
 }
 
+/* header controls: social icons + language select aligned to the right */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.lang-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #111827;
+  font-size: 14px;
+}
+
+.lang-select.mobile {
+  width: 100%;
+  margin-left: 0;
+  margin-top: 6px;
+}
+
 /* DESKTOP NAV (CENTERED PROPERLY) */
 .nav-desktop {
   flex: 1 1 auto;

@@ -22,26 +22,21 @@ import PrivacyPolicyPage from "./pages/privacy-policy";
 
 import Translate from "./pages/Translate";
 function App() {
-
   // REMOVE GOOGLE TOP BAR ALWAYS
-useEffect(() => {
-  const removeGoogleBar = () => {
-    const iframe = document.querySelector("iframe.goog-te-banner-frame");
-    if (iframe) iframe.remove();
+  useEffect(() => {
+    const removeGoogleBar = () => {
+      const iframe = document.querySelector("iframe.goog-te-banner-frame");
+      if (iframe) iframe.remove();
 
-    // Google top spacing fix
-    const bodyStyle = document.querySelector("body").style;
-    if (bodyStyle.top) bodyStyle.top = "0px";
-  };
+      // Google top spacing fix
+      const bodyStyle = document.querySelector("body").style;
+      if (bodyStyle.top) bodyStyle.top = "0px";
+    };
 
-  // Run repeatedly because Google re-injects iframe
-  const interval = setInterval(removeGoogleBar, 300);
-  return () => clearInterval(interval);
-}, []);
-
-
-
-
+    // Run repeatedly because Google re-injects iframe
+    const interval = setInterval(removeGoogleBar, 300);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -60,7 +55,10 @@ useEffect(() => {
         <Route path="/process" element={<Process />} />
         <Route path="/doctors" element={<Doctors />} />
         <Route path="/oman" element={<Oman />} />
-        <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
+        <Route
+          path="/terms-and-conditions"
+          element={<TermsAndConditionsPage />}
+        />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/translate" element={<Translate />} />
       </Routes>

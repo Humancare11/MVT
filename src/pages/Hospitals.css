@@ -194,6 +194,17 @@
   box-shadow: 0 6px 18px rgba(10, 25, 60, 0.06);
 }
 
+/* Prevent image overflow and make responsive */
+.hc-left,
+.hc-thumb {
+  max-width: 100%;
+}
+
+/* Ensure container hides any overflow from images */
+.hc-left {
+  overflow: hidden;
+}
+
 /* middle content */
 .hc-middle {
   display: flex;
@@ -316,6 +327,10 @@
   .hc-card {
     grid-template-columns: 120px 1fr;
   }
+  .hc-thumb {
+    width: 120px;
+    height: 100px;
+  }
   .hc-right {
     align-items: flex-start;
   }
@@ -328,9 +343,20 @@
   .hc-left {
     order: 0;
   }
+  .hc-thumb {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
   .hc-right {
     order: 2;
     align-items: flex-start;
+  }
+
+  /* Remove large minimum heights on very small screens to avoid overflow */
+  .hc-card {
+    min-height: auto;
+    padding: 12px;
   }
 }
 
@@ -360,6 +386,14 @@
   .hc-specialty-chip {
     font-size: 12px;
     padding: 6px 8px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .main-hospitals-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 22px;
   }
 }
 
