@@ -202,7 +202,7 @@ export default function PatientProcessPage() {
 
         <div className="cta-buttons">
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/919833166697"
             target="_blank"
             rel="noreferrer"
             className="cta-whatsapp"

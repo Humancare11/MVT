@@ -69,12 +69,12 @@ export default function Footer({ onNavigate }) {
                 </a>
               </li>
               <li>
-                <a className="footer-links" href="/partners">
+                <a className="footer-links" href="/hospitals">
                   Hospitals{" "}
                 </a>
               </li>
               <li>
-                <a className="footer-links" href="/partners">
+                <a className="footer-links" href="/doctors">
                   Doctors
                 </a>
               </li>
@@ -140,7 +140,7 @@ export default function Footer({ onNavigate }) {
                 <Phone size={18} />
                 <div>
                   <strong>24/7 Emergency</strong>
-                  <a href="tel:+91 86558 35979">+91 987 654 3210</a>
+                  <a href="tel:+919833166697">+91 98331 66697</a>
                 </div>
               </div>
 

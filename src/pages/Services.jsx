@@ -216,7 +216,7 @@ export default function ServicesPage() {
           journey
         </p>
 
-        <Link to="tel:+918655835979" className="outline-btn">
+        <Link to="tel:+919833166697" className="outline-btn">
           <Phone /> Contact Us Today
         </Link>
       </section>

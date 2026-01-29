@@ -67,27 +67,27 @@ export default function ContactSection() {
 
           <a
             className="contact-card emergency"
-            href="tel:+918655835979"
-            aria-label="Call Emergency +91 86558 35979"
+            href="tel:+919833166697"
+            aria-label="Call Emergency +919833166697"
           >
             <Phone className="contact-icon red" />
             <div>
               <h4>Emergency 24/7</h4>
-              <p>+91 86558 35979</p>
+              <p>+91 98331 66697</p>
             </div>
           </a>
 
           <a
             className="contact-card whatsapp"
-            href="https://wa.me/918655835979"
+            href="https://wa.me/919833166697"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Chat on WhatsApp +91 86558 35979"
+            aria-label="Chat on WhatsApp +91 98331 66697"
           >
             <WhatsAppIcon className="contact-icon green" />
             <div>
               <h4>Whatsapp Us</h4>
-              <p>+91 86558 35979</p>
+              <p>+91 98331 66697</p>
             </div>
           </a>
 
