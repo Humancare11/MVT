@@ -610,7 +610,7 @@ export default function HospitalsPage() {
                     <h2 className="hc-title">{h.name}</h2>
                     <div className="hc-address">{h.address}</div>
 
-                    <p className="hc-desc">{h.desc.slice(0, 100)}...</p>
+                    <p className="hc-desc">{h.desc.slice(0, 60)}...</p>
                   </div>
 
                   <div className="hc-info-row">
