@@ -172,7 +172,7 @@ const Header = () => {
                     <Linkedin size={15} />
                   </a>
                   <a
-                    href="https://wa.me/+918655835979"
+                    href="https://wa.me/919833166697"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

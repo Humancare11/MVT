@@ -287,7 +287,7 @@ export default function AboutPage() {
           Let our expert team guide you to the best medical treatment in India
         </p>
 
-        <a href="tel:+918655835979" className="cta-button">
+        <a href="tel:+919833166697" className="cta-button">
           <Phone />
           Contact Us Today
         </a>
