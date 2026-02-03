@@ -11,6 +11,7 @@ import {
   Phone,
 } from "lucide-react";
 import "./Services.css";
+import { Helmet } from "react-helmet";
 
 const services = [
   {
@@ -90,6 +91,27 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      <Helmet>
+        <title>
+          Medical Tourism Services | Complete Healthcare Travel Support -
+          HumanCare
+        </title>
+
+        <meta
+          name="description"
+          content="Explore HumanCare Medical Tourism services including medical consultation, hospital & doctor selection, visa assistance, travel booking, and post-treatment follow-up."
+        />
+
+        <meta
+          name="keywords"
+          content="medical tourism services, healthcare travel support, medical consultation india, hospital selection service, visa assistance medical travel"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/services"
+        />
+      </Helmet>
       {/* HERO */}
       <section className="services-hero">
         <div>

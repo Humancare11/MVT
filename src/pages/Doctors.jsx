@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Award, Search, MapPin, Briefcase, X } from "lucide-react";
 import "./Doctors.css";
+import { Helmet } from "react-helmet";
 // -----------------Mumbai--------------------------------------------------------------
 import Narendra from "../assets/docters/dr-naresh-trehan.jpeg";
 import Balkrisnan from "../assets/docters/balakrishna.jpeg";
@@ -472,6 +473,27 @@ export default function DoctorsPage() {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Best Doctors in India | Experienced Medical Specialists - HumanCare
+        </title>
+
+        <meta
+          name="description"
+          content="Explore experienced and internationally trained doctors across multiple specialties in India. HumanCare Medical Tourism connects patients with trusted medical specialists."
+        />
+
+        <meta
+          name="keywords"
+          content="best doctors in india, medical specialists india, experienced surgeons india, find doctors india, humancare doctors"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/doctors"
+        />
+      </Helmet>
+
       <section className="doctors-hero-section">
         <div>
           <span className="hero-badge-doctors">Medical Specialties</span>

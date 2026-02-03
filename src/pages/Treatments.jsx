@@ -13,6 +13,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import "./Treatments.css";
+import { Helmet } from "react-helmet";
 
 const treatments = [
   {
@@ -117,6 +118,27 @@ const treatments = [
 export default function TreatmentsPage() {
   return (
     <>
+      <Helmet>
+        <title>
+          Medical Treatments in India | Affordable Procedures - HumanCare
+        </title>
+
+        <meta
+          name="description"
+          content="Explore a wide range of medical treatments in India including cardiology, oncology, orthopedics, neurology and more. Affordable care at top hospitals with HumanCare."
+        />
+
+        <meta
+          name="keywords"
+          content="medical treatments india, affordable procedures india, surgery in india, healthcare services india, humancare treatments"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/treatments"
+        />
+      </Helmet>
+
       {/* HERO */}
       <section className="treatments-hero">
         <div>

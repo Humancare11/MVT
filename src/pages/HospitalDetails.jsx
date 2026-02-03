@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { fetchHospitals } from "./Hospitals";
 import "./HospitalDetails.css";
 import { FaWhatsapp } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 export default function HospitalDetails() {
   const { id } = useParams();
@@ -33,6 +34,25 @@ export default function HospitalDetails() {
 
   return (
     <>
+      <Helmet>
+        <title>Best Hospitals in India | HumanCare Medical Tourism</title>
+
+        <meta
+          name="description"
+          content="Discover top accredited hospitals in India with expert doctors and world-class healthcare services. HumanCare Medical Tourism ensures safe and affordable medical travel support."
+        />
+
+        <meta
+          name="keywords"
+          content="best hospitals in India, medical tourism India, top hospitals, accredited hospitals, human care hospitals"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/hospitals"
+        />
+      </Helmet>
+
       <section className="hospitals-hero-section">
         <div>
           <span className="hero-badge-hospitals">Medical Specialties</span>

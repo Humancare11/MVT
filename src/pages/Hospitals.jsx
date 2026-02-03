@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import "./Hospitals.css";
+import { Helmet } from "react-helmet";
 
 import Apollo from "../assets/hospitals-photos/apollo.jpeg";
 import Manipal from "../assets/hospitals-photos/manipal.jpeg";
@@ -564,6 +565,27 @@ export default function HospitalsPage() {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Best Hospitals in India | Top Accredited Hospitals - HumanCare
+        </title>
+
+        <meta
+          name="description"
+          content="Discover top JCI & NABH accredited hospitals in India offering world-class medical care. HumanCare Medical Tourism partners with leading hospitals across specialties."
+        />
+
+        <meta
+          name="keywords"
+          content="best hospitals in india, top hospitals india, accredited hospitals india, multispecialty hospitals india, humancare hospitals"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/hospitals"
+        />
+      </Helmet>
+
       {/* HERO */}
       <section className="hospitals-hero-section">
         <div>

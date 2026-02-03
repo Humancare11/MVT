@@ -1,9 +1,29 @@
 import React from "react";
 import "./privacy-policy.css";
+import { Helmet } from "react-helmet";
 
 export default function PrivacyPolicyPage() {
   return (
     <>
+      <Helmet>
+        <title>Privacy Policy | HumanCare Medical Tourism</title>
+
+        <meta
+          name="description"
+          content="Read the Privacy Policy of HumanCare Medical Tourism. Learn how we collect, use, and protect your personal information when making payments or using our services."
+        />
+
+        <meta
+          name="keywords"
+          content="privacy policy, human care medical tourism, payment security, data protection, personal information, cookies policy"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/privacy-policy"
+        />
+      </Helmet>
+
       {/* HERO */}
       <section className="privacy-policy-hero">
         <div>

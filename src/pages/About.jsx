@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import aboutImg from "../assets/about.jpg";
 import "./About.css";
+import { Helmet } from "react-helmet";
 
 import { useEffect, useState } from "react";
 import about1 from "../assets/about-1.jpeg";
@@ -40,6 +41,28 @@ export default function AboutPage() {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>
+          About HumanCare Medical Tourism | Trusted Medical Travel Company in
+          India
+        </title>
+
+        <meta
+          name="description"
+          content="HumanCare Medical Tourism is a trusted medical travel company with 21+ years of experience helping international patients access affordable treatment at top hospitals in India."
+        />
+
+        <meta
+          name="keywords"
+          content="about humancare medical tourism, medical tourism company india, healthcare travel experts, international patient services"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/about"
+        />
+      </Helmet>
+
       <section
         className="about-hero-section"
         style={{

@@ -5,12 +5,11 @@ import {
   X,
   Phone,
   Facebook,
-  Twitter,
   Linkedin,
   Instagram,
   Youtube,
 } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
 import "./Header.css";
 import logo from "../assets/humancare.webp";
 
@@ -113,7 +112,7 @@ const Header = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Twitter size={15} />
+                  <FaXTwitter size={15} />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"
@@ -162,8 +161,9 @@ const Header = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Twitter size={15} />
+                    <FaXTwitter size={15} />
                   </a>
+
                   <a
                     href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"
                     target="_blank"
@@ -254,7 +254,7 @@ const Header = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Twitter size={15} />
+                  <FaXTwitter size={15} />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"

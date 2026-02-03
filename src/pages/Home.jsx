@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import {
   HeartPulse,
   Plane,
@@ -272,304 +273,401 @@ const testimonials = [
 
 export default function HomePage() {
   return (
-    <div className="layout">
-      {/* HERO SECTION start  */}
-      <section className="hero">
-        <div className="hero-left">
-          <span className="hero-badge-red">
-            Trusted Medical Value Travel Partner
-          </span>
+    <>
+      <Helmet>
+        {/* 🔹 Primary SEO */}
+        <title>
+          HumanCare Medical Tourism | Affordable Healthcare & Top Hospitals in
+          India
+        </title>
 
-          <h1 className="hero-title-new">
-            Across Borders,{" "}
-            <span className="hero-highlight-red">Made Affordable</span>
-          </h1>
+        <meta
+          name="description"
+          content="HumanCare Medical Tourism connects international patients with top JCI & NABH accredited hospitals and expert doctors in India. Get affordable treatment with complete travel, visa, and patient support."
+        />
 
-          <p className="hero-desc-new">
-            Access top accredited hospitals in India and worldwide with expert
-            medical coordination. Save up to 70–80% on treatment in India, or
-            choose your preferred country for specialized care, managed
-            seamlessly by our team.
-          </p>
+        <meta
+          name="keywords"
+          content="medical tourism in India, affordable medical treatment India, best hospitals India, international patient care, medical travel support"
+        />
 
-          <div className="hero-buttons">
-            <a
-              href="tel:+919833166697"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn red-btn"
-            >
-              <Phone size={18} />
-              Book Free Consultation
-            </a>
-            <a
-              href="https://wa.me/+919833166697"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn green-btn"
-            >
-              <MessageCircle size={18} />
-              WhatsApp Chat
-            </a>
+        <link rel="canonical" href="https://humancaremedicaltourism.com/" />
+
+        {/* 🔹 Open Graph (Social Media Previews) */}
+        <meta
+          property="og:title"
+          content="HumanCare Medical Tourism – Top Healthcare in India"
+        />
+        <meta
+          property="og:description"
+          content="Find world-class medical treatment in India with top hospitals and personalized patient support. Save on major treatments while receiving the best care."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://humancaremedicaltourism.com/"
+        />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        {/* 🔹 Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="HumanCare Medical Tourism – India"
+        />
+        <meta
+          name="twitter:description"
+          content="Access top Indian hospitals, expert doctors, and affordable procedures with HumanCare Medical Tourism."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        {/* 🔹 FAQ Schema (Structured Data) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is HumanCare Medical Tourism?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "HumanCare Medical Tourism is a full-service medical travel company that helps international patients access world-class treatment in India, including hospital coordination, travel support, and post-treatment care.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Which hospitals do you work with?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We partner with JCI & NABH accredited hospitals in India that offer high quality and safe healthcare across specialties.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How can I start my medical journey?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "You can contact us via phone or WhatsApp for a free consultation and personalized treatment plan tailored to your medical needs.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you assist with travel and visa arrangements?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we provide complete support for medical visas, flights, accommodation, and on-ground logistics for international patients.",
+                },
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
+
+      <div className="layout">
+        {/* HERO SECTION start  */}
+        <section className="hero">
+          <div className="hero-left">
+            <span className="hero-badge-red">
+              Trusted Medical Value Travel Partner
+            </span>
+
+            <h1 className="hero-title-new">
+              Across Borders,{" "}
+              <span className="hero-highlight-red">Made Affordable</span>
+            </h1>
+
+            <p className="hero-desc-new">
+              Access top accredited hospitals in India and worldwide with expert
+              medical coordination. Save up to 70–80% on treatment in India, or
+              choose your preferred country for specialized care, managed
+              seamlessly by our team.
+            </p>
+
+            <div className="hero-buttons">
+              <a
+                href="tel:+919833166697"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-btn red-btn"
+              >
+                <Phone size={18} />
+                Book Free Consultation
+              </a>
+              <a
+                href="https://wa.me/+919833166697"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-btn green-btn"
+              >
+                <MessageCircle size={18} />
+                WhatsApp Chat
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div className="hero-right">
-          {trustHighlights.map((item, i) => (
-            <div className="trust-card-new" key={i}>
-              <item.icon className="trust-icon-new" />
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+          <div className="hero-right">
+            {trustHighlights.map((item, i) => (
+              <div className="trust-card-new" key={i}>
+                <item.icon className="trust-icon-new" />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        {/* HERO SECTION end  */}
+
+        {/* ABOUT  start*/}
+        <section className="about">
+          <div className="about-grid">
+            {/* LEFT */}
+            <div>
+              <span className="about-badge">About Us</span>
+
+              <h2 className="about-title">
+                Your Trusted Partner for Global Healthcare
+              </h2>
+
+              <p className="about-subtext">
+                Humanacare Medical Value Travel is a leading medical tourism and
+                patient transfer company with 21+ years of experience in
+                connecting international patients to world-class healthcare in
+                India and across the globe.
+              </p>
+
+              <p className="about-desc">
+                We simplify cross-border healthcare by managing every step of
+                the journey — from medical opinions and hospital coordination to
+                travel, stay, and post-treatment follow-up. Our long-standing
+                expertise, ethical practices, and strong hospital network ensure
+                patients receive the right treatment, at the right place, at the
+                right cost.
+              </p>
+
+              <div className="about-points">
+                {[
+                  "Personalized Medical Coordination",
+                  "Expert Guidance from Industry Professionals",
+                  "24/7 Patient Support & Assistance",
+                ].map((p) => (
+                  <div className="point-new" key={p}>
+                    <CheckCircle2 size={18} className="point-icon-new" />
+                    {p}
+                  </div>
+                ))}
+              </div>
+
+              <Link to="/about" className="about-btn">
+                Read More About Us <ArrowRight size={18} />
+              </Link>
+            </div>
+
+            {/* RIGHT */}
+            <div className="about-image-box-new">
+              <img
+                src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=1200"
+                className="about-image-new"
+              />
+
+              <div className="experience-card-new">
+                <h3>21+</h3>
+                <p>Years Experience</p>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-      {/* HERO SECTION end  */}
+          </div>
+        </section>
+        {/* about SECTION end  */}
 
-      {/* ABOUT  start*/}
-      <section className="about">
-        <div className="about-grid">
-          {/* LEFT */}
-          <div>
-            <span className="about-badge">About Us</span>
+        {/* hospitals section Start */}
+        <section className="hospitals-section">
+          <span className="hospitals-badge">Specialist Hospitals</span>
 
-            <h2 className="about-title">
-              Your Trusted Partner for Global Healthcare
-            </h2>
+          <h2 className="hospitals-title">Trusted Partner Hospitals</h2>
 
-            <p className="about-subtext">
-              Humanacare Medical Value Travel is a leading medical tourism and
-              patient transfer company with 21+ years of experience in
-              connecting international patients to world-class healthcare in
-              India and across the globe.
+          <p className="hospitals-subtitle">
+            We partner with India’s leading accredited hospitals, offering
+            advanced technology, expert doctors, and safe, world-class care for
+            international patients.
+          </p>
+
+          <div className="hospitals-grid">
+            {hospitals.map((hospital, index) => (
+              <div className="hospital-card" key={index}>
+                <div className="hospital-image">
+                  <img src={hospital.image} alt={hospital.name} />
+                </div>
+
+                <h3>{hospital.name}</h3>
+                <p className="hospital-specialty">{hospital.specialty}</p>
+                <p className="hospital-location">{hospital.location}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="hospitals-cta">
+            <a href="/hospitals" className="explore-btn">
+              Explore More Hospitals
+            </a>
+          </div>
+        </section>
+        {/* hospital section end */}
+
+        {/* TREATMENTS start */}
+        <section className="treatments">
+          <div className="treatment-container">
+            <span className="treat-badge">Our Specialties</span>
+
+            <h2 className="treat-title">Popular Medical Treatments</h2>
+
+            <p className="treat-subtext">
+              Access advanced medical treatments from globally trained
+              specialists at internationally accredited hospitals—delivered with
+              quality, safety, and affordability.
             </p>
 
-            <p className="about-desc">
-              We simplify cross-border healthcare by managing every step of the
-              journey — from medical opinions and hospital coordination to
-              travel, stay, and post-treatment follow-up. Our long-standing
-              expertise, ethical practices, and strong hospital network ensure
-              patients receive the right treatment, at the right place, at the
-              right cost.
-            </p>
-
-            <div className="about-points">
+            <div className="treat-grid">
               {[
-                "Personalized Medical Coordination",
-                "Expert Guidance from Industry Professionals",
-                "24/7 Patient Support & Assistance",
-              ].map((p) => (
-                <div className="point-new" key={p}>
-                  <CheckCircle2 size={18} className="point-icon-new" />
-                  {p}
+                { icon: HeartPulse, name: "Cardiology" },
+                { icon: Brain, name: "Neurology" },
+                { icon: ShieldPlus, name: "Oncology" },
+                { icon: Eye, name: "Ophthalmology" },
+                { icon: Stethoscope, name: "Internal Medicine" },
+                { icon: Utensils, name: "Gastroenterology" },
+                { icon: Sparkles, name: "Dermatology" },
+                { icon: Droplets, name: "Hematology" },
+                { icon: Baby, name: "Gynecology" },
+                { icon: Users, name: "Pediatrics" },
+                { icon: Bone, name: "Orthopedics" },
+                { icon: Smile, name: "Dentists" },
+                { icon: Wind, name: "Pulmonology" },
+                { icon: Activity, name: "Nephrology" },
+                { icon: FlaskConical, name: "Urology" },
+              ].map((item, i) => (
+                <div className="treat-card" key={i}>
+                  <div className="treat-icon-wrap">
+                    <item.icon className="treat-icon" size={32} />
+                  </div>
+                  <h3 className="treat-name">{item.name}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* TREATMENTS end */}
+
+        {/* doctors section start*/}
+        <section className="doctors-section-home">
+          <span className="doctors-badge">Expert Doctors</span>
+
+          <h2 className="doctors-title">Our Medical Specialists</h2>
+
+          <p className="doctors-subtitle">
+            Our network includes experienced, internationally trained doctors
+            from top accredited hospitals. Each specialist is selected for
+            clinical expertise, proven outcomes, and commitment to safe,
+            high-quality care for international patients.
+          </p>
+
+          <div className="doctors-grid-home">
+            {doctors.map((doc, index) => (
+              <div className="doctor-card" key={index}>
+                <div className="doctor-image">
+                  <img src={doc.image} alt={doc.name} />
+                </div>
+
+                <h3>{doc.name}</h3>
+                <p className="doctor-specialty">{doc.specialty}</p>
+                <div className="doctor-exp">
+                  <User />
+                  <span>{doc.experience}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="hospitals-cta-home">
+            <p className="doctors-footer-home">
+              Our network includes 300+ specialist doctors across various
+              medical fields
+            </p>
+            <a href="/doctors" className="explore-btn">
+              Explore More Doctors
+            </a>
+          </div>
+        </section>
+        {/* doctors section end*/}
+
+        {/* WHY CHOOSE US start*/}
+        <section className="why-choose">
+          <div className="choose-container">
+            <span className="choose-badge">Why Choose Us</span>
+
+            <h2 className="choose-title">Your Health, Our Priority</h2>
+
+            <p className="choose-subtext">
+              With 21+ years of experience in medical tourism, we deliver
+              trusted healthcare solutions with complete transparency,
+              personalized care, and end-to-end support—so you can focus on
+              healing while we manage the rest.
+            </p>
+
+            <div className="choose-grid">
+              {[
+                "Accredited Partner Hospitals",
+                "Dedicated Patient Coordinator",
+                "Transparent & Ethical Pricing",
+                "No Hidden Costs",
+                "End-to-End Medical Support",
+                "Multi-Language Assistance",
+              ].map((item, index) => (
+                <div className="choose-card" key={index}>
+                  <CheckCircle className="choose-icon" size={22} />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>
 
-            <Link to="/about" className="about-btn">
-              Read More About Us <ArrowRight size={18} />
-            </Link>
-          </div>
-
-          {/* RIGHT */}
-          <div className="about-image-box-new">
-            <img
-              src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=1200"
-              className="about-image-new"
-            />
-
-            <div className="experience-card-new">
-              <h3>21+</h3>
-              <p>Years Experience</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* about SECTION end  */}
-
-      {/* hospitals section Start */}
-      <section className="hospitals-section">
-        <span className="hospitals-badge">Specialist Hospitals</span>
-
-        <h2 className="hospitals-title">Trusted Partner Hospitals</h2>
-
-        <p className="hospitals-subtitle">
-          We partner with India’s leading accredited hospitals, offering
-          advanced technology, expert doctors, and safe, world-class care for
-          international patients.
-        </p>
-
-        <div className="hospitals-grid">
-          {hospitals.map((hospital, index) => (
-            <div className="hospital-card" key={index}>
-              <div className="hospital-image">
-                <img src={hospital.image} alt={hospital.name} />
-              </div>
-
-              <h3>{hospital.name}</h3>
-              <p className="hospital-specialty">{hospital.specialty}</p>
-              <p className="hospital-location">{hospital.location}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="hospitals-cta">
-          <a href="/hospitals" className="explore-btn">
-            Explore More Hospitals
-          </a>
-        </div>
-      </section>
-      {/* hospital section end */}
-
-      {/* TREATMENTS start */}
-      <section className="treatments">
-        <div className="treatment-container">
-          <span className="treat-badge">Our Specialties</span>
-
-          <h2 className="treat-title">Popular Medical Treatments</h2>
-
-          <p className="treat-subtext">
-            Access advanced medical treatments from globally trained specialists
-            at internationally accredited hospitals—delivered with quality,
-            safety, and affordability.
-          </p>
-
-          <div className="treat-grid">
-            {[
-              { icon: HeartPulse, name: "Cardiology" },
-              { icon: Brain, name: "Neurology" },
-              { icon: ShieldPlus, name: "Oncology" },
-              { icon: Eye, name: "Ophthalmology" },
-              { icon: Stethoscope, name: "Internal Medicine" },
-              { icon: Utensils, name: "Gastroenterology" },
-              { icon: Sparkles, name: "Dermatology" },
-              { icon: Droplets, name: "Hematology" },
-              { icon: Baby, name: "Gynecology" },
-              { icon: Users, name: "Pediatrics" },
-              { icon: Bone, name: "Orthopedics" },
-              { icon: Smile, name: "Dentists" },
-              { icon: Wind, name: "Pulmonology" },
-              { icon: Activity, name: "Nephrology" },
-              { icon: FlaskConical, name: "Urology" },
-            ].map((item, i) => (
-              <div className="treat-card" key={i}>
-                <div className="treat-icon-wrap">
-                  <item.icon className="treat-icon" size={32} />
-                </div>
-                <h3 className="treat-name">{item.name}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* TREATMENTS end */}
-
-      {/* doctors section start*/}
-      <section className="doctors-section-home">
-        <span className="doctors-badge">Expert Doctors</span>
-
-        <h2 className="doctors-title">Our Medical Specialists</h2>
-
-        <p className="doctors-subtitle">
-          Our network includes experienced, internationally trained doctors from
-          top accredited hospitals. Each specialist is selected for clinical
-          expertise, proven outcomes, and commitment to safe, high-quality care
-          for international patients.
-        </p>
-
-        <div className="doctors-grid-home">
-          {doctors.map((doc, index) => (
-            <div className="doctor-card" key={index}>
-              <div className="doctor-image">
-                <img src={doc.image} alt={doc.name} />
-              </div>
-
-              <h3>{doc.name}</h3>
-              <p className="doctor-specialty">{doc.specialty}</p>
-              <div className="doctor-exp">
-                <User />
-                <span>{doc.experience}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="hospitals-cta-home">
-          <p className="doctors-footer-home">
-            Our network includes 300+ specialist doctors across various medical
-            fields
-          </p>
-          <a href="/doctors" className="explore-btn">
-            Explore More Doctors
-          </a>
-        </div>
-      </section>
-      {/* doctors section end*/}
-
-      {/* WHY CHOOSE US start*/}
-      <section className="why-choose">
-        <div className="choose-container">
-          <span className="choose-badge">Why Choose Us</span>
-
-          <h2 className="choose-title">Your Health, Our Priority</h2>
-
-          <p className="choose-subtext">
-            With 21+ years of experience in medical tourism, we deliver trusted
-            healthcare solutions with complete transparency, personalized care,
-            and end-to-end support—so you can focus on healing while we manage
-            the rest.
-          </p>
-
-          <div className="choose-grid">
-            {[
-              "Accredited Partner Hospitals",
-              "Dedicated Patient Coordinator",
-              "Transparent & Ethical Pricing",
-              "No Hidden Costs",
-              "End-to-End Medical Support",
-              "Multi-Language Assistance",
-            ].map((item, index) => (
-              <div className="choose-card" key={index}>
-                <CheckCircle className="choose-icon" size={22} />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* <button className="choose-btn">
+            {/* <button className="choose-btn">
       Learn More →
     </button> */}
-        </div>
-      </section>
-      {/* WHY CHOOSE US end*/}
+          </div>
+        </section>
+        {/* WHY CHOOSE US end*/}
 
-      {/* Advantages start*/}
+        {/* Advantages start*/}
 
-      <section className="advantages-section">
-        <p className="tag">Our Advantages</p>
-        <h2 className="title">What Makes Us Different</h2>
-        <p className="subtitle">
-          We deliver ethical, patient-first healthcare support that goes beyond
-          treatment—ensuring confidence, comfort, and complete transparency at
-          every step.
-        </p>
+        <section className="advantages-section">
+          <p className="tag">Our Advantages</p>
+          <h2 className="title">What Makes Us Different</h2>
+          <p className="subtitle">
+            We deliver ethical, patient-first healthcare support that goes
+            beyond treatment—ensuring confidence, comfort, and complete
+            transparency at every step.
+          </p>
 
-        <div className="grid-box">
-          {data.map((item, index) => (
-            <div className="card" key={index}>
-              <div className="icon-box">{item.icon}</div>
-              <h3 className="card-title">{item.title}</h3>
-              <p className="card-desc">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-      {/* Advantages end*/}
+          <div className="grid-box">
+            {data.map((item, index) => (
+              <div className="card" key={index}>
+                <div className="icon-box">{item.icon}</div>
+                <h3 className="card-title">{item.title}</h3>
+                <p className="card-desc">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+        {/* Advantages end*/}
 
-      {/* how its work start*/}
+        {/* how its work start*/}
 
-      {/* <section className="cta-wrapper">
+        {/* <section className="cta-wrapper">
         <div className="cta-box">
           <div className="cta-text">
             <h2>How It Works</h2>
@@ -584,33 +682,33 @@ export default function HomePage() {
           </Link>
         </div>
       </section> */}
-      {/* how its work end */}
+        {/* how its work end */}
 
-      <section className="study-hero">
-        <div className="overlay"></div>
+        <section className="study-hero">
+          <div className="overlay"></div>
 
-        <div className="hero-content">
-          <h1>How It Works</h1>
-          <p>
-            Understand our step-by-step process from consultation to complete
-            recovery. Quick, simple and fully transparent.
-          </p>
+          <div className="hero-content">
+            <h1>How It Works</h1>
+            <p>
+              Understand our step-by-step process from consultation to complete
+              recovery. Quick, simple and fully transparent.
+            </p>
 
-          <div className="hero-buttons-home">
-            <Link to="/process" className="btn secondary">
-              Know More <ArrowRight size={18} />
-            </Link>
+            <div className="hero-buttons-home">
+              <Link to="/process" className="btn secondary">
+                Know More <ArrowRight size={18} />
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* <Testimonials /> */}
+        {/* <Testimonials /> */}
 
-      {/* CTA start*/}
+        {/* CTA start*/}
 
-      {/* cta end */}
+        {/* cta end */}
 
-      {/* <section className="blue-cta-section">
+        {/* <section className="blue-cta-section">
         <h2 className="blue-cta-title">
           Ready to Start Your Healthcare Journey?
         </h2>
@@ -625,7 +723,8 @@ export default function HomePage() {
           </a>
         </div>
       </section> */}
-      <Contactsection />
-    </div>
+        <Contactsection />
+      </div>
+    </>
   );
 }

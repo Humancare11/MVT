@@ -1,9 +1,29 @@
 import React from "react";
 import "./terms-and-conditions.css";
+import { Helmet } from "react-helmet";
 
 export default function TermsAndConditionsPage() {
   return (
     <>
+      <Helmet>
+        <title>Terms and Conditions | HumanCare Medical Tourism</title>
+
+        <meta
+          name="description"
+          content="Read the Terms and Conditions for using HumanCare Medical Tourism website. Understand our payment, refund, user responsibilities, and service policies."
+        />
+
+        <meta
+          name="keywords"
+          content="terms and conditions, human care medical tourism terms, payment policy, refund policy, user responsibilities, healthcare services india"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/terms-and-conditions"
+        />
+      </Helmet>
+
       {/* HERO */}
       <section className="terms-and-conditions-hero">
         <div>

@@ -10,7 +10,6 @@ import Hospitals from "./pages/Hospitals";
 import HospitalDetails from "./pages/HospitalDetails";
 import Doctors from "./pages/Doctors";
 import Process from "./pages/Process";
-import Oman from "./pages/Oman";
 
 import "./App.css";
 import Header from "./component/Header";
@@ -54,7 +53,6 @@ function App() {
         <Route path="/hospital-details/:id" element={<HospitalDetails />} />
         <Route path="/process" element={<Process />} />
         <Route path="/doctors" element={<Doctors />} />
-        <Route path="/oman" element={<Oman />} />
         <Route
           path="/terms-and-conditions"
           element={<TermsAndConditionsPage />}

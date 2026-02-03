@@ -11,6 +11,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import "./Process.css";
+import { Helmet } from "react-helmet";
 
 const steps = [
   {
@@ -135,6 +136,28 @@ function FAQAccordion() {
 export default function PatientProcessPage() {
   return (
     <>
+      <Helmet>
+        <title>
+          Patient Journey & Treatment Process | Medical Tourism in India -
+          HumanCare
+        </title>
+
+        <meta
+          name="description"
+          content="Learn about HumanCare Medical Tourism 6-step patient journey including medical reports review, doctor consultation, cost estimation, visa support, treatment in India, and post-treatment follow-up."
+        />
+
+        <meta
+          name="keywords"
+          content="patient journey medical tourism, treatment process india, medical travel steps, healthcare process india, human care process"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/process"
+        />
+      </Helmet>
+
       {/* HERO */}
       <section className="process-hero-section">
         <div>
