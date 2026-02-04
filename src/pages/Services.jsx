@@ -91,6 +91,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      {/* HELMET SECTION START */}
       <Helmet>
         <title>
           Medical Tourism Services | Complete Healthcare Travel Support -
@@ -112,7 +113,9 @@ export default function ServicesPage() {
           href="https://humancaremedicaltourism.com/services"
         />
       </Helmet>
-      {/* HERO */}
+      {/* HELMET SECTION END */}
+
+      {/* HERO SECTION START */}
       <section className="services-hero">
         <div>
           <span className="services-hero-badge">Our Services</span>
@@ -124,8 +127,9 @@ export default function ServicesPage() {
           </p>
         </div>
       </section>
+      {/* HERO SECTION END */}
 
-      {/* SERVICES GRID */}
+      {/* SERVICES SECTION START */}
       <section className="services-section">
         <div className="section-header-service">
           <span className="hero-badge-service">What We Offer</span>
@@ -155,42 +159,9 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+      {/* SERVICES SECTION END */}
 
-      {/* PROCESS */}
-      {/* <section className="process-section">
-        <div className="section-header">
-          <span className="badge">How It Works</span>
-          <h2>A Simple, Stress-Free Medical Journey</h2>
-          <p>
-            Our transparent process ensures smooth coordination from your first
-            inquiry to recovery, so you can focus on your health while we take
-            care of the rest.
-          </p>
-        </div>
-
-        <div className="process-steps">
-          {[
-            "Share Your Medical Details",
-            "Expert Medical Consultation",
-            "Expert Medical Consultation",
-            "Travel & Stay Arrangements",
-            "Treatment & Care",
-            "Treatment & Care",
-          ].map((step, index) => (
-            <div className="process-item" key={index}>
-              <div className="step-circle">{index + 1}</div>
-              <span>{step}</span>
-              {index < 5 && <ArrowRight />}
-            </div>
-          ))}
-        </div>
-
-        <div className="process-cta">
-          <Link to="/process" className="primary-btn">
-            View Detailed Process <ArrowRight />
-          </Link>
-        </div>
-      </section> */}
+      {/* PROCESS SECTION START */}
       <section className="process-section-services">
         <div className="section-header-services">
           <span className="hero-badge-services">How It Works</span>
@@ -222,15 +193,10 @@ export default function ServicesPage() {
             View Detailed Process <ArrowRight />
           </Link>
         </div>
-
-        {/* <div className="process-cta">
-    <Link to="/process" className="primary-btn">
-      View Detailed Process <ArrowRight />
-    </Link>
-  </div> */}
       </section>
+      {/* PROCESS SECTION END */}
 
-      {/* CTA */}
+      {/* CTA SECTION START */}
       <section className="services-cta">
         <h2>Need Personalized Assistance?</h2>
         <p>
@@ -242,6 +208,7 @@ export default function ServicesPage() {
           <Phone /> Contact Us Today
         </Link>
       </section>
+      {/* CTA SECTION END */}
     </>
   );
 }

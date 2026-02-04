@@ -473,6 +473,7 @@ export default function DoctorsPage() {
 
   return (
     <>
+      {/* HELMET SECTION START */}
       <Helmet>
         <title>
           Best Doctors in India | Experienced Medical Specialists - HumanCare
@@ -493,7 +494,9 @@ export default function DoctorsPage() {
           href="https://humancaremedicaltourism.com/doctors"
         />
       </Helmet>
+      {/* HELMET SECTION END */}
 
+      {/* HERO SECTION START */}
       <section className="doctors-hero-section">
         <div>
           <span className="hero-badge-doctors">Medical Specialties</span>
@@ -504,8 +507,9 @@ export default function DoctorsPage() {
           </p>
         </div>
       </section>
-      {/* HERO */}
+      {/* HERO SECTION END */}
 
+      {/* FILTER BAR SECTION START */}
       <div className="filter-bar">
         <div className="filter-container">
           <div className="filter-group">
@@ -557,8 +561,9 @@ export default function DoctorsPage() {
           </div>
         </div>
       </div>
+      {/* FILTER BAR SECTION END */}
 
-      {/* DOCTORS LIST */}
+      {/* DOCTORS LIST SECTION START */}
       <section className="doctors-section">
         <div className="doctors-grid">
           {filteredDoctors.length > 0 ? (
@@ -596,7 +601,9 @@ export default function DoctorsPage() {
           </p>
         )}
       </section>
+      {/* DOCTORS LIST SECTION END */}
 
+      {/* DOCTOR DETAILS MODAL SECTION START */}
       {selectedDoctor && (
         <div
           className="docker-modal-overlay"
@@ -631,6 +638,7 @@ export default function DoctorsPage() {
           </div>
         </div>
       )}
+      {/* DOCTOR DETAILS MODAL SECTION END */}
     </>
   );
 }

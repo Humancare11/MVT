@@ -56,6 +56,7 @@ import Narendra from "../assets/docters/dr-naresh-trehan.webp";
 import Balkrisnan from "../assets/docters/balakrishna.webp";
 import Fatuque from "../assets/docters/fatuque-udwadia.webp";
 import Nageshwar from "../assets/docters/nageshwar-reddy.webp";
+import aboutImage from "../assets/home-image-1.webp";
 
 const hospitals = [
   {
@@ -474,7 +475,7 @@ export default function HomePage() {
             {/* RIGHT */}
             <div className="about-image-box-new">
               <img
-                src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=1200"
+                src={aboutImage}
                 className="about-image-new"
               />
 
@@ -643,7 +644,6 @@ export default function HomePage() {
         {/* WHY CHOOSE US end*/}
 
         {/* Advantages start*/}
-
         <section className="advantages-section">
           <p className="tag">Our Advantages</p>
           <h2 className="title">What Makes Us Different</h2>
@@ -665,25 +665,7 @@ export default function HomePage() {
         </section>
         {/* Advantages end*/}
 
-        {/* how its work start*/}
-
-        {/* <section className="cta-wrapper">
-        <div className="cta-box">
-          <div className="cta-text">
-            <h2>How It Works</h2>
-            <p>
-              Understand our step-by-step process from consultation to complete
-              recovery. Quick, simple and fully transparent.
-            </p>
-          </div>
-
-          <Link to="/process" className="cta-btn">
-            Know More →
-          </Link>
-        </div>
-      </section> */}
-        {/* how its work end */}
-
+        {/* HOW IT WORKS section start */}
         <section className="study-hero">
           <div className="overlay"></div>
 
@@ -701,28 +683,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        {/* HOW IT WORKS section end */}
 
-        {/* <Testimonials /> */}
-
-        {/* CTA start*/}
-
-        {/* cta end */}
-
-        {/* <section className="blue-cta-section">
-        <h2 className="blue-cta-title">
-          Ready to Start Your Healthcare Journey?
-        </h2>
-        <p className="blue-cta-subtitle">
-          Get a free consultation and personalized treatment plan from top
-          Indian hospitals
-        </p>
-
-        <div className="blue-cta-buttons">
-          <a href="tel:+918655835979" className="blue-btn-outline">
-            <Phone size={18} /> Call Now
-          </a>
-        </div>
-      </section> */}
         <Contactsection />
       </div>
     </>

@@ -17,15 +17,15 @@ import {
   HeartPulse,
   Headset,
 } from "lucide-react";
-import aboutImg from "../assets/about.jpg";
+import aboutImg from "../assets/about/about.webp";
 import "./About.css";
 import { Helmet } from "react-helmet";
 
 import { useEffect, useState } from "react";
-import about1 from "../assets/about-1.jpeg";
-import about2 from "../assets/about-2.jpeg";
-import about3 from "../assets/about-3.jpeg";
-import about4 from "../assets/about-4.jpeg";
+import about1 from "../assets/about/about-1.webp";
+import about2 from "../assets/about/about-2.webp";
+import about3 from "../assets/about/about-3.webp";
+import about4 from "../assets/about/about-4.webp";
 
 const images = [about1, about2, about3, about4];
 
@@ -41,6 +41,7 @@ export default function AboutPage() {
   }, []);
   return (
     <>
+      {/* HELMET START */}
       <Helmet>
         <title>
           About HumanCare Medical Tourism | Trusted Medical Travel Company in
@@ -62,7 +63,9 @@ export default function AboutPage() {
           href="https://humancaremedicaltourism.com/about"
         />
       </Helmet>
+      {/* HELMET END */}
 
+      {/* HERO SECTION START */}
       <section
         className="about-hero-section"
         style={{
@@ -92,27 +95,9 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
+      {/* HERO SECTION END */}
 
-      {/* HERO */}
-      {/* <section className="about-hero-section">
-        <div>
-          <span className="about-hero-badge">About HumanCare MVT</span>
-          <h2>Your Trusted Global Medical Travel Partner</h2>
-          <p>
-            Humancare Medical Value Travel connects international patients with
-            leading hospitals and specialists in India and worldwide. We
-            simplify cross-border healthcare through ethical guidance,
-            transparent pricing, and complete end-to-end support.
-          </p>
-          <p>
-            From medical opinions and treatment coordination to travel
-            assistance and post-care follow-up, we ensure a safe, seamless, and
-            patient-focused healthcare journey.
-          </p>
-        </div>
-      </section> */}
-
-      {/* STATS */}
+      {/* STATS SECTION START */}
       <section className="stats-section">
         <div className="stats-container">
           <div className="stats-card">
@@ -146,8 +131,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      {/* STATS SECTION END */}
 
-      {/* WHO WE ARE */}
+      {/* WHO WE ARE SECTION START */}
       <section className="about-who">
         <div className="who-content">
           <span className="section-badge">Who We Are</span>
@@ -180,8 +166,9 @@ export default function AboutPage() {
           {/* add image */}
         </div>
       </section>
+      {/* WHO WE ARE SECTION END */}
 
-      {/* MISSION & VISION */}
+      {/* MISSION & VISION SECTION START */}
       <section className="about-mission">
         <div className="mission-box blue">
           <h3>Our Mission</h3>
@@ -200,8 +187,9 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
+      {/* MISSION & VISION SECTION END */}
 
-      {/* VALUES */}
+      {/* VALUES SECTION START */}
       <section className="values-section">
         <span className="values-badge">Our Values</span>
 
@@ -247,8 +235,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      {/* VALUES SECTION END */}
 
-      {/* SUPPORT */}
+      {/* SUPPORT SECTION START */}
       <section className="about-support">
         <span className="section-badge dark">Our Commitment</span>
         <h2>How We Support You</h2>
@@ -302,8 +291,9 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
+      {/* SUPPORT SECTION END */}
 
-      {/* CTA */}
+      {/* CTA SECTION START */}
       <section className="about-cta">
         <h2>Ready to Begin Your Healthcare Journey?</h2>
         <p>
@@ -315,6 +305,7 @@ export default function AboutPage() {
           Contact Us Today
         </a>
       </section>
+      {/* CTA SECTION END */}
     </>
   );
 }

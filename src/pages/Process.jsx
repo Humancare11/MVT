@@ -136,6 +136,7 @@ function FAQAccordion() {
 export default function PatientProcessPage() {
   return (
     <>
+      {/* HELMET SECTION START */}
       <Helmet>
         <title>
           Patient Journey & Treatment Process | Medical Tourism in India -
@@ -157,8 +158,9 @@ export default function PatientProcessPage() {
           href="https://humancaremedicaltourism.com/process"
         />
       </Helmet>
+      {/* HELMET SECTION END */}
 
-      {/* HERO */}
+      {/* HERO SECTION START */}
       <section className="process-hero-section">
         <div>
           <span className="hero-badge-section">Patient Journey</span>
@@ -169,8 +171,9 @@ export default function PatientProcessPage() {
           </p>
         </div>
       </section>
+      {/* HERO SECTION END */}
 
-      {/* PROCESS */}
+      {/* PROCESS SECTION START */}
       <section className="process-section">
         <div className="process-header">
           <span className="process-hero-badge">6-Step Process</span>
@@ -206,8 +209,9 @@ export default function PatientProcessPage() {
           ))}
         </div>
       </section>
+      {/* PROCESS SECTION END */}
 
-      {/* FAQ */}
+      {/* FAQ SECTION START */}
       <section className="faq-section">
         <div className="process-header">
           <span className="faq-hero-badge">Common Questions</span>
@@ -217,8 +221,9 @@ export default function PatientProcessPage() {
 
         <FAQAccordion />
       </section>
+      {/* FAQ SECTION END */}
 
-      {/* CTA */}
+      {/* CTA SECTION START */}
       <section className="process-cta">
         <h2>Ready to Start Your Journey?</h2>
         <p>Take the first step towards world-class healthcare in India</p>
@@ -234,6 +239,7 @@ export default function PatientProcessPage() {
           </a>
         </div>
       </section>
+      {/* CTA SECTION END */}
     </>
   );
 }

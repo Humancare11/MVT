@@ -118,6 +118,7 @@ const treatments = [
 export default function TreatmentsPage() {
   return (
     <>
+      {/* HELMET SECTION START */}
       <Helmet>
         <title>
           Medical Treatments in India | Affordable Procedures - HumanCare
@@ -138,8 +139,9 @@ export default function TreatmentsPage() {
           href="https://humancaremedicaltourism.com/treatments"
         />
       </Helmet>
+      {/* HELMET SECTION END */}
 
-      {/* HERO */}
+      {/* HERO SECTION START */}
       <section className="treatments-hero">
         <div>
           <span className="hero-badge-treatment">Medical Specialties</span>
@@ -150,24 +152,9 @@ export default function TreatmentsPage() {
           </p>
         </div>
       </section>
+      {/* HERO SECTION END */}
 
-      {/* COST COMPARISON */}
-      {/* <section className="cost-banner">
-        <span className="cost-title">Compare & Save:</span>
-        <div className="cost-box">
-          <div>
-            <small>Heart Bypass in USA</small>
-            <strong>$150,000</strong>
-          </div>
-          <span className="arrow">→</span>
-          <div>
-            <small>Heart Bypass in India</small>
-            <strong>$5,000</strong>
-          </div>
-        </div>
-      </section> */}
-
-      {/* TREATMENTS */}
+      {/* TREATMENTS SECTION START */}
       <section className="treatments-section">
         <div className="section-header-treatments">
           <span className="hero-badge-treatments">Our Specialties</span>
@@ -203,8 +190,9 @@ export default function TreatmentsPage() {
           ))}
         </div>
       </section>
+      {/* TREATMENTS SECTION END */}
 
-      {/* WHY INDIA */}
+      {/* WHY INDIA SECTION START */}
       <section className="why-india">
         <div className="section-header-why light">
           {/* <span className="badge white">Why India</span> */}
@@ -229,8 +217,9 @@ export default function TreatmentsPage() {
           ))}
         </div>
       </section>
+      {/* WHY INDIA SECTION END */}
 
-      {/* CTA */}
+      {/* CTA SECTION START */}
       <section className="about-cta">
         <h2>Ready to Begin Your Healthcare Journey?</h2>
         <p>
@@ -242,6 +231,7 @@ export default function TreatmentsPage() {
           Contact Us Today
         </a>
       </section>
+      {/* CTA SECTION END */}
     </>
   );
 }

@@ -565,6 +565,7 @@ export default function HospitalsPage() {
 
   return (
     <>
+      {/* HELMET SECTION START */}
       <Helmet>
         <title>
           Best Hospitals in India | Top Accredited Hospitals - HumanCare
@@ -585,8 +586,9 @@ export default function HospitalsPage() {
           href="https://humancaremedicaltourism.com/hospitals"
         />
       </Helmet>
+      {/* HELMET SECTION END */}
 
-      {/* HERO */}
+      {/* HERO SECTION START */}
       <section className="hospitals-hero-section">
         <div>
           <span className="hero-badge-hospitals">Medical Specialties</span>
@@ -597,7 +599,9 @@ export default function HospitalsPage() {
           </p>
         </div>
       </section>
+      {/* HERO SECTION END */}
 
+      {/* LOCATION TABS START */}
       <div className="location-tabs">
         <div className="tabs-inner">
           {displayTabs.map((tab) => (
@@ -612,8 +616,10 @@ export default function HospitalsPage() {
           ))}
         </div>
       </div>
+      {/* LOCATION TABS END */}
 
-      <section>
+      {/* HOSPITALS LIST START */}
+      <section className="hospitals-list-section">
         <div className="main-hospitals-card">
           {filteredHospitals.map((h, idx) => (
             <Link
@@ -680,6 +686,7 @@ export default function HospitalsPage() {
           ))}
         </div>
       </section>
+      {/* HOSPITALS LIST END */}
     </>
   );
 }

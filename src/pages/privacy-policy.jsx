@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 export default function PrivacyPolicyPage() {
   return (
     <>
+      {/* HELMET SECTION START */}
       <Helmet>
         <title>Privacy Policy | HumanCare Medical Tourism</title>
 
@@ -23,8 +24,9 @@ export default function PrivacyPolicyPage() {
           href="https://humancaremedicaltourism.com/privacy-policy"
         />
       </Helmet>
+      {/* HELMET SECTION END */}
 
-      {/* HERO */}
+      {/* HERO SECTION START */}
       <section className="privacy-policy-hero">
         <div>
           <span className="privacy-policy-hero-badge">Privacy Policy</span>
@@ -36,7 +38,9 @@ export default function PrivacyPolicyPage() {
           </p>
         </div>
       </section>
+      {/* HERO SECTION END */}
 
+      {/* PRIVACY POLICY SECTION START */}
       <main className="privacy-wrap">
         <div className="privacy-content">
           <div className="privacy-header">
@@ -133,6 +137,7 @@ export default function PrivacyPolicyPage() {
           </p>
         </div>
       </main>
+      {/* PRIVACY POLICY SECTION END */}
     </>
   );
 }

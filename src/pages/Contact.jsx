@@ -5,6 +5,7 @@ import Contactsection from "../component/Contactsection";
 function Contact() {
   return (
     <>
+      {/* HELMET SECTION START */}
       <Helmet>
         <title>
           Contact HumanCare Medical Tourism | Free Medical Consultation
@@ -25,6 +26,9 @@ function Contact() {
           href="https://humancaremedicaltourism.com/contact"
         />
       </Helmet>
+      {/* HELMET SECTION END */}
+
+      {/* HERO SECTION START */}
       <section className="contact-hero-section">
         <div>
           <span className="hero-badge-section">Our Services</span>
@@ -34,6 +38,8 @@ function Contact() {
           </p>
         </div>
       </section>
+      {/* HERO Section END */}
+
       <Contactsection />
     </>
   );

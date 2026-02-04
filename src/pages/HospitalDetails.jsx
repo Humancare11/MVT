@@ -34,6 +34,7 @@ export default function HospitalDetails() {
 
   return (
     <>
+      {/* HELMET SECTION START */}
       <Helmet>
         <title>Best Hospitals in India | HumanCare Medical Tourism</title>
 
@@ -52,7 +53,9 @@ export default function HospitalDetails() {
           href="https://humancaremedicaltourism.com/hospitals"
         />
       </Helmet>
+      {/* HELMET SECTION END */}
 
+      {/* HERO SECTION START */}
       <section className="hospitals-hero-section">
         <div>
           <span className="hero-badge-hospitals">Medical Specialties</span>
@@ -60,7 +63,9 @@ export default function HospitalDetails() {
           <p>{hospital.desc.slice(0, 200)}</p>
         </div>
       </section>
+      {/* HERO SECTION END */}
 
+      {/* HOSPITAL DETAILS SECTION START */}
       <div className="hospital-details-page pro-layout">
         <div
           className="hospital-details-banner pro-banner"
@@ -118,6 +123,7 @@ export default function HospitalDetails() {
           </div>
         </div>
       </div>
+      {/* HOSPITAL DETAILS SECTION END */}
     </>
   );
 }

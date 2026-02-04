@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 export default function TermsAndConditionsPage() {
   return (
     <>
+      {/* HELMET SECTION START */}
       <Helmet>
         <title>Terms and Conditions | HumanCare Medical Tourism</title>
 
@@ -23,8 +24,9 @@ export default function TermsAndConditionsPage() {
           href="https://humancaremedicaltourism.com/terms-and-conditions"
         />
       </Helmet>
+      {/* HELMET SECTION END */}
 
-      {/* HERO */}
+      {/* HERO SECTION START */}
       <section className="terms-and-conditions-hero">
         <div>
           <span className="terms-and-conditions-hero-badge">
@@ -38,7 +40,9 @@ export default function TermsAndConditionsPage() {
           </p>
         </div>
       </section>
+      {/* HERO SECTION END */}
 
+      {/* TERMS AND CONDITIONS SECTION START */}
       <main className="terms-page-wrap">
         <div className="terms-card">
           <div className="terms-header">
@@ -109,6 +113,7 @@ export default function TermsAndConditionsPage() {
           </div>
         </div>
       </main>
+      {/* TERMS AND CONDITIONS SECTION END */}
     </>
   );
 }
