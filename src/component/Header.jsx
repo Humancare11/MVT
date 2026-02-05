@@ -77,7 +77,13 @@ const Header = () => {
           <div className="navbar-inner">
             {/* Logo */}
             <Link to="/" className="logo">
-              <img src={logo} alt="Logo" loading="lazy"/>
+              <img
+                src={logo}
+                alt="Logo"
+                loading="lazy"
+                width="180"
+                height="48"
+              />
             </Link>
 
             {/* Desktop Menu */}
