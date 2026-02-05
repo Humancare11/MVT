@@ -479,6 +479,9 @@ export default function HomePage() {
                 className="about-image-new"
                 loading="lazy"
                 alt="About HumanCare Medical Tourism"
+                width="800"
+                height="533"
+                style={{ aspectRatio: "3/2" }}
               />
 
               <div className="experience-card-new">

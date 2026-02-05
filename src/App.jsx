@@ -1,4 +1,4 @@
-import React, { useEffect, lazy, Suspense } from "react";
+import React, { useEffect, lazy, Suspense, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 // Keep critical components loaded
@@ -7,7 +7,7 @@ import Header from "./component/Header";
 import Footer from "./component/Footer";
 import ConnectWithUs from "./component/ConnectWithUsWhatsapp";
 import ConnectWithUsCall from "./component/ConnectWithUsCall";
-import Translate from "./pages/Translate";
+const Translate = lazy(() => import("./pages/Translate"));
 
 // Lazy load all pages
 const Home = lazy(() => import("./pages/Home"));
@@ -32,23 +32,44 @@ const PageLoader = () => (
 function App() {
   // REMOVE GOOGLE TOP BAR ALWAYS
   useEffect(() => {
+    // Remove Google Translate banner once when it appears using a MutationObserver.
     const removeGoogleBar = () => {
       const iframe = document.querySelector("iframe.goog-te-banner-frame");
       if (iframe) iframe.remove();
 
-      // Google top spacing fix
-      const bodyStyle = document.querySelector("body").style;
-      if (bodyStyle.top) bodyStyle.top = "0px";
+      const body = document.querySelector("body");
+      if (body && body.style.top) body.style.top = "0px";
     };
 
-    // Run repeatedly because Google re-injects iframe
-    const interval = setInterval(removeGoogleBar, 300);
-    return () => clearInterval(interval);
+    const observer = new MutationObserver(() => {
+      removeGoogleBar();
+      // If removed, disconnect observer to avoid repeated work
+      const iframeStill = document.querySelector("iframe.goog-te-banner-frame");
+      if (!iframeStill) observer.disconnect();
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // One-time run in case the iframe is already present
+    removeGoogleBar();
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Defer mounting Translate until after initial load to avoid early iframe injection
+  const [showTranslate, setShowTranslate] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setShowTranslate(true), 2500);
+    return () => clearTimeout(t);
   }, []);
 
   return (
     <>
-      <Translate />
+      {showTranslate && (
+        <Suspense fallback={null}>
+          <Translate />
+        </Suspense>
+      )}
 
       <Header />
 

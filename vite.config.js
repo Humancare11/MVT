@@ -1,18 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    // Bundle visualizer: generates stats.html in dist for analysis
+    visualizer({ filename: 'dist/bundle-stats.html', open: false }),
+  ],
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-ui': ['lucide-react', 'framer-motion', 'swiper'],
-          'vendor-utils': ['axios', 'react-helmet-async', 'i18next'],
-        },
-      },
-    },
+    // Use default chunking to remain compatible with the configured bundler
+    // Custom manualChunks removed because `rolldown-vite` expects a function.
     chunkSizeWarningLimit: 1000,
   },
   optimizeDeps: {
