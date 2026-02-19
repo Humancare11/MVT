@@ -220,11 +220,12 @@
   border-radius: 2px;
 }
 
-.about-who h2 {
+.about-who h1 {
   font-size: 44px;
   margin: 18px 0;
   color: var(--blue);
-  font-weight: 600 !important;
+  /* font-weight: 600 !important; */
+  font-weight: 700;
 }
 
 .about-who p {

@@ -138,19 +138,16 @@ export default function PatientProcessPage() {
     <>
       {/* HELMET SECTION START */}
       <Helmet>
-        <title>
-          Patient Journey & Treatment Process | Medical Tourism in India -
-          HumanCare
-        </title>
+        <title>Medical Tourism Process | Treatment Process India</title>
 
         <meta
           name="description"
-          content="Learn about HumanCare Medical Tourism 6-step patient journey including medical reports review, doctor consultation, cost estimation, visa support, treatment in India, and post-treatment follow-up."
+          content="Learn our simple step-by-step medical treatment process, from consultation to recovery, with Humancare World Wide."
         />
 
         <meta
           name="keywords"
-          content="patient journey medical tourism, treatment process india, medical travel steps, healthcare process india, human care process"
+          content="medical tourism treatment process, treatment process india"
         />
 
         <link
@@ -164,7 +161,7 @@ export default function PatientProcessPage() {
       <section className="process-hero-section">
         <div>
           <span className="hero-badge-section">Patient Journey</span>
-          <h1>Your Path to Better Health</h1>
+          <h1>Our Medical Tourism & Treatment Process</h1>
           <p>
             A simple, transparent process designed to make your medical journey
             stress-free

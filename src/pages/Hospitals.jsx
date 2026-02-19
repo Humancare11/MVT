@@ -567,13 +567,11 @@ export default function HospitalsPage() {
     <>
       {/* HELMET SECTION START */}
       <Helmet>
-        <title>
-          Best Hospitals in India | Top Accredited Hospitals - HumanCare
-        </title>
+        <title>Best Hospitals in India | Trusted Medical Centers</title>
 
         <meta
           name="description"
-          content="Discover top JCI & NABH accredited hospitals in India offering world-class medical care. HumanCare Medical Tourism partners with leading hospitals across specialties."
+          content="Explore top hospitals in India including Apollo Hospital New Delhi and other leading healthcare centers for advanced and affordable treatment."
         />
 
         <meta
@@ -592,7 +590,7 @@ export default function HospitalsPage() {
       <section className="hospitals-hero-section">
         <div>
           <span className="hero-badge-hospitals">Medical Specialties</span>
-          <h1>World-Class Treatments at Affordable Prices</h1>
+          <h1>Top Hospitals & Medical Centers</h1>
           <p>
             Access India's finest specialists and cutting-edge medical
             technology at a fraction of Western costs.

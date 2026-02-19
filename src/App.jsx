@@ -23,6 +23,7 @@ const TermsAndConditionsPage = lazy(
   () => import("./pages/terms-and-conditions"),
 );
 const PrivacyPolicyPage = lazy(() => import("./pages/privacy-policy"));
+const MedicalTourismIndia = lazy(() => import("./pages/medical-tourism-india"));
 
 // Loading component
 const PageLoader = () => (
@@ -90,6 +91,7 @@ function App() {
           />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/translate" element={<Translate />} />
+          <Route path="/treatment-in-india" element={<MedicalTourismIndia />} />
         </Routes>
       </Suspense>
 

@@ -278,18 +278,17 @@ export default function HomePage() {
       <Helmet>
         {/* 🔹 Primary SEO */}
         <title>
-          HumanCare Medical Tourism | Affordable Healthcare & Top Hospitals in
-          India
+          Medical Tourism & Healthcare in India | Affordable Treatment in India
         </title>
 
         <meta
           name="description"
-          content="HumanCare Medical Tourism connects international patients with top JCI & NABH accredited hospitals and expert doctors in India. Get affordable treatment with complete travel, visa, and patient support."
+          content="Humancare World Wide offers Medical Tourism and healthcare services in India, connecting patients with world-class hospitals, doctors and expert care for affordable treatment."
         />
 
         <meta
           name="keywords"
-          content="medical tourism in India, affordable medical treatment India, best hospitals India, international patient care, medical travel support"
+          content="medical tourism in India, treatment in india, affordable medical treatment India, best hospitals India, international patient care, medical travel support"
         />
 
         <link rel="canonical" href="https://humancaremedicaltourism.com/" />
@@ -297,11 +296,11 @@ export default function HomePage() {
         {/* 🔹 Open Graph (Social Media Previews) */}
         <meta
           property="og:title"
-          content="HumanCare Medical Tourism – Top Healthcare in India"
+          content="Medical Tourism & Healthcare in India | Affordable Treatment in India"
         />
         <meta
           property="og:description"
-          content="Find world-class medical treatment in India with top hospitals and personalized patient support. Save on major treatments while receiving the best care."
+          content="Humancare World Wide offers Medical Tourism and healthcare services in India, connecting patients with world-class hospitals, doctors and expert care for affordable treatment."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -317,11 +316,11 @@ export default function HomePage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="HumanCare Medical Tourism – India"
+          content="Medical Tourism & Healthcare in India | Affordable Treatment in India"
         />
         <meta
           name="twitter:description"
-          content="Access top Indian hospitals, expert doctors, and affordable procedures with HumanCare Medical Tourism."
+          content="Humancare World Wide offers Medical Tourism and healthcare services in India, connecting patients with world-class hospitals, doctors and expert care for affordable treatment."
         />
         <meta
           name="twitter:image"

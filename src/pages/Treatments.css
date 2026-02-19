@@ -106,7 +106,7 @@
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.treatments-hero h2 {
+.treatments-hero h1 {
   font-size: 52px;
   font-weight: 700;
   max-width: 700px;
@@ -155,28 +155,7 @@
 }
 /* HERO SECTION END */
 
-/* COST */
-.cost-banner {
-  background: var(--red);
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.cost-box {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 10px;
-}
-
-.cost-box strong {
-  font-size: 20px;
-}
-
-.arrow {
-  font-size: 24px;
-}
+/* (Cost banner removed - not used in Treatments page) */
 
 /* TREATMENTS */
 .treatments-section {
@@ -336,27 +315,7 @@
   top: 6px;
 }
 
-.card-bottom {
-  background: #f2f6fb;
-  border-top: 1px solid #e6ecf5;
-  padding: 16px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-bottom strong {
-  color: var(--red);
-  font-size: 20px;
-}
-
-.saving {
-  background: rgba(214, 0, 0, 0.1);
-  color: var(--red);
-  padding: 4px 12px;
-  font-size: 12px;
-  border-radius: 20px;
-}
+/* Card footer removed - not used in current markup */
 
 /* WHY INDIA - PARALLAX */
 .why-india {
@@ -423,64 +382,7 @@
   margin: 0;
 }
 
-/* CTA */
-.cta-strip {
-  background: var(--red);
-  padding: 90px 20px;
-  text-align: center;
-}
-
-.cta-content h2 {
-  font-size: 38px;
-  color: #fff;
-  margin-bottom: 12px;
-}
-
-.cta-content p {
-  color: #fff;
-  opacity: 0.9;
-  font-size: 16px;
-  margin-bottom: 40px;
-}
-
-.cta-actions {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-/* LEFT BUTTON */
-.cta-call {
-  border: 2px solid #ffffff80;
-  color: #fff;
-  padding: 16px 36px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* GREEN WHATSAPP BAR */
-.cta-whatsapp {
-  background: #22c55e;
-  color: #fff;
-  padding: 18px 60px;
-  border-radius: 10px;
-  font-weight: 700;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 420px;
-  justify-content: center;
-}
-
-.cta-whatsapp .icon {
-  font-size: 20px;
-}
+/* Unused CTA styles removed to keep file focused */
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
@@ -512,3 +414,29 @@
     font-size: 32px;
   }
 }
+
+/* CTA */
+.treatments-cta {
+  background: #d60000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  /* margin: 35px; */
+  max-width: 1400px;
+  margin: 3rem auto;
+}
+
+.treatments-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #d60000;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 22px;
+}
+
+/* Removed responsive rules for unrelated sections */

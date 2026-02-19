@@ -475,18 +475,16 @@ export default function DoctorsPage() {
     <>
       {/* HELMET SECTION START */}
       <Helmet>
-        <title>
-          Best Doctors in India | Experienced Medical Specialists - HumanCare
-        </title>
+        <title>Indian Doctors | Top Medical Specialists in India</title>
 
         <meta
           name="description"
-          content="Explore experienced and internationally trained doctors across multiple specialties in India. HumanCare Medical Tourism connects patients with trusted medical specialists."
+          content="indian doctors, heart doctor near me, neurosurgeon near me, good neurologist near me, pediatric dentist near me, eye specialist"
         />
 
         <meta
           name="keywords"
-          content="best doctors in india, medical specialists india, experienced surgeons india, find doctors india, humancare doctors"
+          content="indian doctors, heart doctor near me, medical specialists india, experienced surgeons india, find doctors india"
         />
 
         <link
@@ -500,7 +498,7 @@ export default function DoctorsPage() {
       <section className="doctors-hero-section">
         <div>
           <span className="hero-badge-doctors">Medical Specialties</span>
-          <h1>World-Class Treatments at Affordable Prices</h1>
+          <h1>Find the Best Indian Doctors & Specialists</h1>
           <p>
             Access India's finest specialists and cutting-edge medical
             technology at a fraction of Western costs
