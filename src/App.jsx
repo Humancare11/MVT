@@ -89,7 +89,7 @@ function App() {
           />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/translate" element={<Translate />} />
-          <Route path="/treatment-in-india" element={<MedicalTourismIndia />} />
+          <Route path="/medical-treatment-in-india" element={<MedicalTourismIndia />} />
         </Routes>
       </Suspense>
       <Footer />

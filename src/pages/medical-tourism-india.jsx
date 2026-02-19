@@ -1,6 +1,5 @@
 import React from "react";
 import "./medical-tourism-india.css";
-import aboutImg from "../assets/about/about.webp";
 import AboutImage from "../assets/about/medical-tourism-about-image.webp";
 import WhyChoose from "../assets/about/why-choose-image.webp";
 import apolloLogo from "../assets/hospitals/apollo.webp";
@@ -31,10 +30,35 @@ import {
 } from "react-icons/fa";
 import { BiRupee } from "react-icons/bi";
 import { AiOutlineClockCircle } from "react-icons/ai";
+import { Helmet } from "react-helmet";
 
 function MedicalTourismIndia() {
   return (
     <>
+      {/* MEDICAL TOURISM HELMET SECTION START */}
+      <Helmet>
+        <title>
+          Medical Treatment in India | Best Hospital in India | Top Hospitals in
+          India
+        </title>
+
+        <meta
+          name="description"
+          content="Planning treatment in India? We guide you to the best hospital in India and trusted hospitals in India, ensuring quality care, clear communication, and full support from consultation to recovery."
+        />
+
+        <meta
+          name="keywords"
+          content="treatment in india, best hospital in india, hospitals in india, medical tourism india, affordable treatment india, top hospitals in india"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/medical-treatment-in-india"
+        />
+      </Helmet>
+      {/* MEDICAL TOURISM HELMET SECTION END */}
+
       {/* MEDICAL TOURISM HERO SECTION START */}
       <section className="medical-tourism-hero">
         <div className="medical-tourism-hero-content">
@@ -109,110 +133,110 @@ function MedicalTourismIndia() {
       {/* MEDICAL TOURISM ABOUT-US SECTION END */}
 
       {/* SERVICES CARDS SECTION START */}
-        <section className="services-section">
-          <div className="services-container">
-            <div className="services-intro">
-              <h2>Our Medical Tourism Services</h2>
+      <section className="services-section">
+        <div className="services-container">
+          <div className="services-intro">
+            <h2>Our Medical Tourism Services</h2>
+            <p>
+              We offer comprehensive, end-to-end assistance for international
+              patients traveling for treatment in India. From the initial
+              medical consultation and selecting the right hospital to arranging
+              travel, accommodation, and post-treatment follow-up, our team
+              manages every detail to ensure a seamless and stress-free
+              experience. By partnering with some of the best hospitals in
+              India, we connect you with experienced specialists, clear
+              treatment plans, and cost-effective healthcare options. Our
+              mission is to make your medical journey to India smooth, secure,
+              and fully supported at every stage.
+            </p>
+          </div>
+          <div className="services-grid">
+            <div className="service-card">
+              <div className="service-icon">
+                <FaStethoscope size={30} />
+              </div>
+              <h3>Medical Consultation</h3>
               <p>
-                We offer comprehensive, end-to-end assistance for international
-                patients traveling for treatment in India. From the initial
-                medical consultation and selecting the right hospital to arranging
-                travel, accommodation, and post-treatment follow-up, our team
-                manages every detail to ensure a seamless and stress-free
-                experience. By partnering with some of the best hospitals in
-                India, we connect you with experienced specialists, clear
-                treatment plans, and cost-effective healthcare options. Our
-                mission is to make your medical journey to India smooth, secure,
-                and fully supported at every stage.
+                Receive expert opinions and a detailed treatment plan and cost
+                estimate within 24–48 hours by sharing your medical reports.
               </p>
+              <a href="/services" className="service-cta">
+                Learn More
+              </a>
             </div>
-            <div className="services-grid">
-              <div className="service-card">
-                <div className="service-icon">
-                  <FaStethoscope size={30} />
-                </div>
-                <h3>Medical Consultation</h3>
-                <p>
-                  Receive expert opinions and a detailed treatment plan and cost
-                  estimate within 24–48 hours by sharing your medical reports.
-                </p>
-                <a href="/services" className="service-cta">
-                  Learn More
-                </a>
-              </div>
 
-              <div className="service-card">
-                <div className="service-icon">
-                  <FaHospital size={30} />
-                </div>
-                <h3>Doctor & Hospital Selection</h3>
-                <p>
-                  We help you choose accredited hospitals and specialists based on
-                  condition, budget and location preference.
-                </p>
-                <a href="/services" className="service-cta">
-                  Learn More
-                </a>
+            <div className="service-card">
+              <div className="service-icon">
+                <FaHospital size={30} />
               </div>
+              <h3>Doctor & Hospital Selection</h3>
+              <p>
+                We help you choose accredited hospitals and specialists based on
+                condition, budget and location preference.
+              </p>
+              <a href="/services" className="service-cta">
+                Learn More
+              </a>
+            </div>
 
-              <div className="service-card">
-                <div className="service-icon">
-                  <FaPassport size={30} />
-                </div>
-                <h3>Medical Visa Assistance</h3>
-                <p>
-                  Assistance with visa documentation, hospital invitation letters
-                  and embassy coordination for a smooth travel experience.
-                </p>
-                <a href="/services" className="service-cta">
-                  Learn More
-                </a>
+            <div className="service-card">
+              <div className="service-icon">
+                <FaPassport size={30} />
               </div>
+              <h3>Medical Visa Assistance</h3>
+              <p>
+                Assistance with visa documentation, hospital invitation letters
+                and embassy coordination for a smooth travel experience.
+              </p>
+              <a href="/services" className="service-cta">
+                Learn More
+              </a>
+            </div>
 
-              <div className="service-card">
-                <div className="service-icon">
-                  <FaPlane size={30} />
-                </div>
-                <h3>Travel & Accommodation Support</h3>
-                <p>
-                  Flight booking and comfortable hotels near the hospital for a
-                  convenient, stress-free stay.
-                </p>
-                <a href="/services" className="service-cta">
-                  Learn More
-                </a>
+            <div className="service-card">
+              <div className="service-icon">
+                <FaPlane size={30} />
               </div>
+              <h3>Travel & Accommodation Support</h3>
+              <p>
+                Flight booking and comfortable hotels near the hospital for a
+                convenient, stress-free stay.
+              </p>
+              <a href="/services" className="service-cta">
+                Learn More
+              </a>
+            </div>
 
-              <div className="service-card">
-                <div className="service-icon">
-                  <FaCarAlt size={30} />
-                </div>
-                <h3>Airport Pickup & Local Coordination</h3>
-                <p>
-                  24/7 airport pickup, transfers, language assistance and local
-                  support throughout your stay in India.
-                </p>
-                <a href="/services" className="service-cta">
-                  Learn More
-                </a>
+            <div className="service-card">
+              <div className="service-icon">
+                <FaCarAlt size={30} />
               </div>
+              <h3>Airport Pickup & Local Coordination</h3>
+              <p>
+                24/7 airport pickup, transfers, language assistance and local
+                support throughout your stay in India.
+              </p>
+              <a href="/services" className="service-cta">
+                Learn More
+              </a>
+            </div>
 
-              <div className="service-card">
-                <div className="service-icon">
-                  <FaHeart size={30} />
-                </div>
-                <h3>Post-Treatment Follow-Up</h3>
-                <p>
-                  Ongoing recovery guidance and follow-up consultations after you
-                  return home to ensure a smooth recovery.
-                </p>
-                <a href="/services" className="service-cta">
-                  Learn More
-                </a>
+            <div className="service-card">
+              <div className="service-icon">
+                <FaHeart size={30} />
               </div>
+              <h3>Post-Treatment Follow-Up</h3>
+              <p>
+                Ongoing recovery guidance and follow-up consultations after you
+                return home to ensure a smooth recovery.
+              </p>
+              <a href="/services" className="service-cta">
+                Learn More
+              </a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
       {/* SERVICES CARDS SECTION END */}
 
       {/* WHY CHOOSE INDIA SECTION START */}
