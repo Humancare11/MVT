@@ -606,6 +606,103 @@ const DentalImplantIndia = () => {
 
   return (
     <>
+      <Helmet>
+        {/* Primary SEO */}
+        <title>
+          Dental Implants in India | Affordable Dental Treatment for
+          International Patients
+        </title>
+
+        <meta
+          name="description"
+          content="Get affordable dental implants in India with advanced technology, experienced dentists, and modern clinics. Trusted dental treatment in India for patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan."
+        />
+
+        <meta
+          name="keywords"
+          content="
+              dental in india
+              dental implants india
+              dental implant cost in india
+              dental implant cost in mumbai
+              dental implant cost bangalore
+              price of dental implants in india
+              dental loupes india
+              partha dental vijayawada
+              dental treatment price list in india
+              dental crown cost in india
+              dental cap cost in india
+              dental cap price in india
+              best dentist in india
+              dental crown price in india
+              dentist in ahmedabad
+              best dentist in coimbatore
+              dentist bareilly
+              top 10 dentist in coimbatore
+              teeth cap price in india
+              tooth cap price in delhi
+              implant cost in india
+              implant cost in mumbai
+            "
+        />
+
+        {/* Canonical URL */}
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/dental-implants-india"
+        />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Facebook */}
+        <meta
+          property="og:title"
+          content="Dental Implants in India | Affordable Dental Treatment"
+        />
+
+        <meta
+          property="og:description"
+          content="Affordable dental implants in India with experienced dentists, advanced clinics, and personalized care for international patients."
+        />
+
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/src/departments/dept-images/dental-implants-india.webp"
+        />
+
+        <meta
+          property="og:url"
+          content="https://humancaremedicaltourism.com/dental-implants-india"
+        />
+
+        <meta property="og:type" content="website" />
+
+        {/* Twitter SEO */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Dental Implants in India | Affordable Dental Treatment"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Get affordable dental treatment in India with modern clinics and experienced implant specialists."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/src/departments/dept-images/dental-implants-india.webp"
+        />
+
+        {/* Geo SEO */}
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content="India" />
+
+        {/* Language */}
+        <meta httpEquiv="content-language" content="en" />
+      </Helmet>
       <section className="dental-hero-section">
         {/* Background Image */}
         <img
