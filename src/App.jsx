@@ -25,6 +25,18 @@ const TermsAndConditionsPage = lazy(
 const PrivacyPolicyPage = lazy(() => import("./pages/privacy-policy"));
 const MedicalTourismIndia = lazy(() => import("./pages/medical-tourism-india"));
 
+const CardiacLandingIndia = lazy(() => import("./pages/CardiacLandingIndia"));
+
+const DentalImplantIndia = lazy(() => import("./pages/DentalImplantIndia"));
+
+const OrthopedicTreatmentIndia = lazy(
+  () => import("./pages/orthopedicTreatmentIndia"),
+);
+
+const EyeSurgeryIndia = lazy(() => import("./pages/EyeSurgeryIndia"));
+
+const CancerLandingIndia = lazy(() => import("./pages/CancerLandingIndia"));
+
 // Loading component
 const PageLoader = () => (
   <div style={{ padding: "50px", textAlign: "center" }}>Loading...</div>
@@ -89,7 +101,27 @@ function App() {
           />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/translate" element={<Translate />} />
-          <Route path="/medical-treatment-in-india" element={<MedicalTourismIndia />} />
+          <Route
+            path="/medical-treatment-in-india"
+            element={<MedicalTourismIndia />}
+          />
+          <Route
+            path="/cardiac-treatment-india"
+            element={<CardiacLandingIndia />}
+          />
+          <Route
+            path="/dental-implants-india"
+            element={<DentalImplantIndia />}
+          />
+          <Route
+            path="/orthopedic-treatment-india"
+            element={<OrthopedicTreatmentIndia />}
+          />
+          <Route path="/eye-surgery-in-india" element={<EyeSurgeryIndia />} />
+          <Route
+            path="/cancer-treatment-in-india"
+            element={<CancerLandingIndia />}
+          />
         </Routes>
       </Suspense>
       <Footer />

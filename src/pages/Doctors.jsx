@@ -17,7 +17,7 @@ import Dinshaw from "../assets/docters/dinshaw-pardiwala.webp";
 import Shailesh from "../assets/docters/shailesh_raina.webp";
 import Kamran from "../assets/docters/kamran-khan.webp";
 import Sanjeev from "../assets/docters/sanjiv-amin.webp";
-import Fatuque from "../assets/docters/fatuque-udwadia.webp";
+import Farokh from "../assets/docters/farokh-udwadia.webp";
 import zarir from "../assets/docters/zarir-udwadia.webp";
 // -----------------DELHI--------------------------------------------------------------
 import Rakesh from "../assets/docters/rakesh-gupta.webp";
@@ -110,7 +110,7 @@ const doctors = [
       "Senior surgeon in CVTS with extensive experience in heart and vascular surgery (including bypass surgery, valve replacements, congenital heart disease surgery).",
   },
   {
-    name: "Dr. Hamdule",
+    name: "Dr. Zainulabedin Hamdulay",
     specialty: "Cardio-Thoracic & Vascular Surgeon",
     experience: "30+ years",
     city: "Mumbai",
@@ -171,12 +171,12 @@ const doctors = [
       "Specialist in rheumatic and autoimmune diseases (e.g., rheumatoid arthritis, lupus, spondyloarthritis); offers long-term management of chronic inflammatory disorders.",
   },
   {
-    name: "Dr. Fatuque Udwadia",
+    name: "Dr. Farokh Udwadia",
     specialty: "Critical Care Medicine",
     experience: "70+ years",
     city: "Mumbai",
     department: "Critical Care Medicine",
-    image: Fatuque,
+    image: Farokh,
     description:
       "Senior critical care specialist with extensive experience in managing ICU-level emergencies, sepsis, multi-organ failure, ventilation support, and complex acute care cases.",
   },
@@ -509,7 +509,7 @@ export default function DoctorsPage() {
       </section>
       {/* HERO SECTION END */}
 
-       <Breadcrumb currentPage="Doctors" />
+      <Breadcrumb currentPage="Doctors" />
 
       {/* FILTER BAR SECTION START */}
       <div className="filter-bar">
