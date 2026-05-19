@@ -21,13 +21,13 @@ const HospitalDetails = lazy(() => import("./pages/HospitalDetails"));
 const Doctors = lazy(() => import("./pages/Doctors"));
 const Process = lazy(() => import("./pages/Process"));
 
-const DentalImplantIndia = lazy(() =>
-  import("./pages/DentalImplantIndia")
-);
+// const DentalImplantIndia = lazy(() =>
+//   import("./pages/DentalImplantIndia")
+// );
 
-const CardiacLandingIndia = lazy(() =>
-  import("./pages/CardiacLandingIndia")
-);
+// const CardiacLandingIndia = lazy(() =>
+//   import("./pages/CardiacLandingIndia")
+// );
 
 const TermsAndConditionsPage = lazy(() =>
   import("./pages/terms-and-conditions")
@@ -46,6 +46,18 @@ const MedicalTourismIndia = lazy(() =>
 // const OrthopedicTreatmentIndia = lazy(() =>
 //   import("./pages/OrthopedicTreatmentIndia")
 // );
+
+// const CardiacLandingIndia = lazy(() => import("./pages/CardiacLandingIndia"));
+
+const DentalImplantIndia = lazy(() => import("./pages/DentalImplantIndia"));
+
+const OrthopedicTreatmentIndia = lazy(
+  () => import("./pages/orthopedicTreatmentIndia"),
+);
+
+// const EyeSurgeryIndia = lazy(() => import("./pages/EyeSurgeryIndia"));
+
+const CancerLandingIndia = lazy(() => import("./pages/CancerLandingIndia"));
 
 // Loading component
 const PageLoader = () => (
@@ -146,7 +158,6 @@ function App() {
             path="/medical-treatment-in-india"
             element={<MedicalTourismIndia />}
           />
-
           <Route
             path="/cardiac-treatment-india"
             element={<CardiacLandingIndia />}

@@ -54,9 +54,26 @@ import Narayana from "../assets/hospitals/narayana.webp";
 
 import Narendra from "../assets/docters/dr-naresh-trehan.webp";
 import Balkrisnan from "../assets/docters/balakrishna.webp";
+import Farokh from "../assets/docters/farokh-udwadia.webp";
 import Fatuque from "../assets/docters/farokh-udwadia.webp";
 import Nageshwar from "../assets/docters/nageshwar-reddy.webp";
 import aboutImage from "../assets/home-image-1.webp";
+
+import cardiologyImg from "../departments/dept-images/cardiology-treatment.webp";
+import neurologyImg from "../departments/dept-images/neurology-treatment.webp";
+import oncologyImg from "../departments/dept-images/oncology-treatment.webp";
+import ophthalmologyImg from "../departments/dept-images/ophthalmology-treatment.webp";
+import internalMedicineImg from "../departments/dept-images/internal-medicine-treatment.webp";
+import gastroenterologyImg from "../departments/dept-images/gastroenterology-treatment.webp";
+import dermatologyImg from "../departments/dept-images/dermatology-treatment.webp";
+import hematologyImg from "../departments/dept-images/hematology-treatment.webp";
+import gynecologyImg from "../departments/dept-images/gynecology-treatment.webp";
+import pediatricsImg from "../departments/dept-images/pediatrics-treatment.webp";
+import orthopedicsImg from "../departments/dept-images/orthopedics-treatment.webp";
+import dentistsImg from "../departments/dept-images/dentists-treatment.webp";
+import pulmonologyImg from "../departments/dept-images/pulmonology-treatment.webp";
+import nephrologyImg from "../departments/dept-images/nephrology-treatment.webp";
+import urologyImg from "../departments/dept-images/urology-treatment.webp";
 
 const hospitals = [
   {
@@ -190,10 +207,10 @@ const doctors = [
     image: Balkrisnan,
   },
   {
-    name: "Dr. Fatuque Udwadia",
+    name: "Dr. Farokh Udwadia",
     specialty: "Critical Care Medicine",
     experience: "70+ years",
-    image: Fatuque,
+    image: Farokh,
   },
   {
     name: "Dr. D. Nageshwar Reddy",
@@ -273,6 +290,7 @@ const testimonials = [
 ];
 
 import Breadcrumb from "../component/Breadcrumb";
+import { image } from "framer-motion/client";
 
 export default function HomePage() {
   return (
@@ -538,7 +556,7 @@ export default function HomePage() {
         {/* hospital section end */}
 
         {/* TREATMENTS start */}
-        <section className="treatments">
+        {/* <section className="treatments">
           <div className="treatment-container">
             <span className="treat-badge">Our Specialties</span>
 
@@ -573,6 +591,109 @@ export default function HomePage() {
                     <item.icon className="treat-icon" size={32} />
                   </div>
                   <h3 className="treat-name">{item.name}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section> */}
+
+        <section className="treatments">
+          <div className="treatment-container">
+            <span className="treat-badge">Our Specialties</span>
+
+            <h2 className="treat-title">Popular Medical Treatments</h2>
+
+            <p className="treat-subtext">
+              Access advanced medical treatments from globally trained
+              specialists at internationally accredited hospitals—delivered with
+              quality, safety, and affordability.
+            </p>
+
+            <div className="treat-grid">
+              {[
+                {
+                  name: "Cardiology",
+                  desc: "Advanced heart care including diagnostics, prevention, and treatment for cardiovascular diseases.",
+                  image: cardiologyImg,
+                },
+                {
+                  name: "Neurology",
+                  desc: "Expert care for brain and nervous system disorders with accurate diagnosis and modern treatments.",
+                  image: neurologyImg,
+                },
+                {
+                  name: "Oncology",
+                  desc: "Comprehensive cancer care with personalized treatment plans and advanced therapies.",
+                  image: oncologyImg,
+                },
+                {
+                  name: "Ophthalmology",
+                  desc: "Complete eye care services including vision correction, diagnostics, and surgical treatments.",
+                  image: ophthalmologyImg,
+                },
+                {
+                  name: "Internal Medicine",
+                  desc: "Holistic adult healthcare focusing on prevention, diagnosis, and management of complex diseases.",
+                  image: internalMedicineImg,
+                },
+                {
+                  name: "Gastroenterology",
+                  desc: "Specialized care for digestive system disorders with advanced diagnostic and treatment solutions.",
+                  image: gastroenterologyImg,
+                },
+                {
+                  name: "Dermatology",
+                  desc: "Expert skin, hair, and nail treatments using modern dermatological procedures and care.",
+                  image: dermatologyImg,
+                },
+                {
+                  name: "Hematology",
+                  desc: "Diagnosis and treatment of blood disorders with advanced laboratory and clinical expertise.",
+                  image: hematologyImg,
+                },
+                {
+                  name: "Gynecology",
+                  desc: "Comprehensive women’s health services including reproductive care and hormonal treatments.",
+                  image: gynecologyImg,
+                },
+                {
+                  name: "Pediatrics",
+                  desc: "Dedicated healthcare for infants, children, and adolescents ensuring healthy growth and development.",
+                  image: pediatricsImg,
+                },
+                {
+                  name: "Orthopedics",
+                  desc: "Advanced treatment for bone, joint, and musculoskeletal conditions with surgical and non-surgical care.",
+                  image: orthopedicsImg,
+                },
+                {
+                  name: "Dentists",
+                  desc: "Complete oral healthcare including preventive, cosmetic, and restorative dental treatments.",
+                  image: dentistsImg,
+                },
+                {
+                  name: "Pulmonology",
+                  desc: "Expert care for lung and respiratory conditions with advanced diagnostic and treatment options.",
+                  image: pulmonologyImg,
+                },
+                {
+                  name: "Nephrology",
+                  desc: "Specialized kidney care including diagnosis, dialysis management, and transplant support.",
+                  image: nephrologyImg,
+                },
+                {
+                  name: "Urology",
+                  desc: "Comprehensive care for urinary tract and male reproductive system disorders with modern techniques.",
+                  image: urologyImg,
+                },
+              ].map((item, i) => (
+                <div className="treat-card" key={i}>
+                  <div className="treat-img-wrap">
+                    <img src={item.image} alt={item.name} />
+                  </div>
+                  <h3 className="treat-name">{item.name}</h3>
+                  <p className="treat-desc">{item.desc}</p>
+                  <button className="treat-btn">View Treatments</button>
                 </div>
               ))}
             </div>

@@ -17,7 +17,11 @@ import Dinshaw from "../assets/docters/dinshaw-pardiwala.webp";
 import Shailesh from "../assets/docters/shailesh_raina.webp";
 import Kamran from "../assets/docters/kamran-khan.webp";
 import Sanjeev from "../assets/docters/sanjiv-amin.webp";
+<<<<<<< HEAD
 import Fatuque from "../assets/docters/farokh-udwadia.webp";
+=======
+import Farokh from "../assets/docters/farokh-udwadia.webp";
+>>>>>>> 64d7a29285ac008eb2b6b531dc860d208d74a1e4
 import zarir from "../assets/docters/zarir-udwadia.webp";
 // -----------------DELHI--------------------------------------------------------------
 import Rakesh from "../assets/docters/rakesh-gupta.webp";
@@ -176,7 +180,7 @@ const doctors = [
     experience: "70+ years",
     city: "Mumbai",
     department: "Critical Care Medicine",
-    image: Fatuque,
+    image: Farokh,
     description:
       "Senior critical care specialist with extensive experience in managing ICU-level emergencies, sepsis, multi-organ failure, ventilation support, and complex acute care cases.",
   },
