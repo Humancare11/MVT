@@ -692,7 +692,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="treat-name">{item.name}</h3>
                   <p className="treat-desc">{item.desc}</p>
-                  <button className="treat-btn">View Treatments</button>
+                  {/* <button className="treat-btn">View Treatments</button> */}
                 </div>
               ))}
             </div>
