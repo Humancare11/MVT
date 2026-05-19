@@ -4191,9 +4191,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 30px 20px;
   animation: fadeIn 0.3s ease-out;
   overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .doctor-modal-overlay {
+    padding: 20px 10px;
+    align-items: flex-start;
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-modal-overlay {
+    padding: 20px 0 0;
+  }
 }
 
 @keyframes fadeIn {
@@ -4208,13 +4222,29 @@ body {
 .doctor-modal {
   background: white;
   border-radius: 20px;
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  max-height: 90vh;
+  max-height: 85vh;
   overflow-y: auto;
+  margin-top: 10rem;
+}
+
+@media (max-width: 768px) {
+  .doctor-modal {
+    max-width: 95%;
+    border-radius: 16px;
+    max-height: 80vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-modal {
+    border-radius: 12px 12px 0 0;
+    max-height: 90vh;
+  }
 }
 
 @keyframes slideUp {
@@ -4247,6 +4277,26 @@ body {
   font-size: 20px;
 }
 
+@media (max-width: 768px) {
+  .doctor-modal-close {
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-modal-close {
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
+
 .doctor-modal-close:hover {
   background: #e5e7eb;
   color: #111827;
@@ -4257,11 +4307,46 @@ body {
   padding: 40px;
 }
 
+@media (max-width: 768px) {
+  .doctor-modal-content {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .doctor-modal-content {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .doctor-modal-content {
+    padding: 20px 16px;
+  }
+}
+
 .doctor-modal-header {
   display: flex;
   gap: 24px;
   margin-bottom: 32px;
   align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .doctor-modal-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .doctor-modal-header {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
 }
 
 .doctor-modal-image {
@@ -4273,6 +4358,28 @@ body {
   flex-shrink: 0;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   border: 3px solid #f3f4f6;
+}
+
+@media (max-width: 768px) {
+  .doctor-modal-image {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 520px) {
+  .doctor-modal-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .doctor-modal-image {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .doctor-modal-info {
@@ -4292,12 +4399,45 @@ body {
   letter-spacing: 0.3px;
 }
 
+@media (max-width: 520px) {
+  .doctor-modal-spec {
+    font-size: 12px;
+    padding: 5px 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .doctor-modal-spec {
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+}
+
 .doctor-modal-name {
   font-size: 28px;
   font-weight: 700;
   color: #0a1754;
   margin: 0 0 12px;
   line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .doctor-modal-name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .doctor-modal-name {
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .doctor-modal-name {
+    font-size: 18px;
+  }
 }
 
 .doctor-modal-education {
@@ -4308,9 +4448,33 @@ body {
   font-weight: 500;
 }
 
+@media (max-width: 520px) {
+  .doctor-modal-education {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .doctor-modal-education {
+    font-size: 13px;
+  }
+}
+
 .doctor-modal-body {
   border-top: 2px solid #f3f4f6;
   padding-top: 24px;
+}
+
+@media (max-width: 520px) {
+  .doctor-modal-body {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .doctor-modal-body {
+    padding-top: 16px;
+  }
 }
 
 .doctor-modal-section-title {
@@ -4320,12 +4484,40 @@ body {
   margin: 0 0 16px;
 }
 
+@media (max-width: 520px) {
+  .doctor-modal-section-title {
+    font-size: 18px;
+    margin: 0 0 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .doctor-modal-section-title {
+    font-size: 16px;
+  }
+}
+
 .doctor-modal-desc {
   font-size: 15px;
   color: #4b5563;
   line-height: 1.8;
   text-align: justify;
   margin: 0;
+}
+
+@media (max-width: 520px) {
+  .doctor-modal-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left;
+  }
+}
+
+@media (max-width: 375px) {
+  .doctor-modal-desc {
+    font-size: 13px;
+    line-height: 1.6;
+  }
 }
 
 /* Modal Scrollbar Styling */
@@ -4425,36 +4617,6 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .doctor-modal-content {
-    padding: 30px 24px;
-  }
-
-  .doctor-modal-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .doctor-modal-image {
-    width: 140px;
-    height: 140px;
-  }
-
-  .doctor-modal-name {
-    font-size: 24px;
-  }
-
-  .doctor-modal-close {
-    top: 16px;
-    right: 16px;
-    width: 36px;
-    height: 36px;
-    font-size: 18px;
-  }
-}
-
 @media (max-width: 520px) {
   .doctor-card {
     flex-direction: column;
@@ -4477,41 +4639,6 @@ body {
 
   .doctor-h2 {
     font-size: 1.8rem;
-  }
-
-  .doctor-modal {
-    border-radius: 16px;
-    margin: 10px;
-  }
-
-  .doctor-modal-content {
-    padding: 24px 20px;
-  }
-
-  .doctor-modal-header {
-    gap: 16px;
-  }
-
-  .doctor-modal-image {
-    width: 120px;
-    height: 120px;
-  }
-
-  .doctor-modal-name {
-    font-size: 20px;
-  }
-
-  .doctor-modal-spec {
-    font-size: 12px;
-    padding: 5px 14px;
-  }
-
-  .doctor-modal-section-title {
-    font-size: 18px;
-  }
-
-  .doctor-modal-desc {
-    font-size: 14px;
   }
 
   .custom-learn-more-btn {

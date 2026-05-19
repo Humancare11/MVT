@@ -20,6 +20,11 @@ const Hospitals = lazy(() => import("./pages/Hospitals"));
 const HospitalDetails = lazy(() => import("./pages/HospitalDetails"));
 const Doctors = lazy(() => import("./pages/Doctors"));
 const Process = lazy(() => import("./pages/Process"));
+
+const DentalImplantIndia = lazy(() =>
+  import("./pages/DentalImplantIndia")
+);
+
 const CardiacLandingIndia = lazy(() =>
   import("./pages/CardiacLandingIndia")
 );
@@ -35,6 +40,7 @@ const PrivacyPolicyPage = lazy(() =>
 const MedicalTourismIndia = lazy(() =>
   import("./pages/medical-tourism-india")
 );
+
 
 // FIXED IMPORT
 // const OrthopedicTreatmentIndia = lazy(() =>
@@ -144,6 +150,11 @@ function App() {
           <Route
             path="/cardiac-treatment-india"
             element={<CardiacLandingIndia />}
+          />
+
+          <Route
+            path="/dental-implant-india"
+            element={<DentalImplantIndia />}
           />
         </Routes>
       </Suspense>
