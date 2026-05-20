@@ -1,47 +1,29 @@
 import { useState, useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 import "./CancerLandingIndia.css";
+import { Helmet } from "react-helmet";
 
 import {
-  FaArrowRight,
-  FaBed,
-  FaBolt,
-  FaBullseye,
-  FaChartLine,
   FaCheck,
-  FaUser,
   FaUserMd,
-  FaLightbulb,
-  FaGlobe,
-  FaHeart,
-  FaHeartbeat,
   FaMoneyBillWave,
   FaClock,
   FaRobot,
-  FaHandshake,
-  FaFileAlt,
-  FaMapMarkerAlt,
-  FaPassport,
-  FaPlaneArrival,
-  FaPills,
-  FaQuoteLeft,
-  FaClipboardList,
-  FaCheckCircle,
-  FaChild,
-  FaDotCircle,
-  FaExchangeAlt,
-  FaPhone,
-  FaLock,
+  FaGlobe,
   FaShieldAlt,
   FaPhoneAlt,
-  FaStar,
   FaWhatsapp,
-  FaChevronDown,
   FaPlus,
   FaHospital,
   FaMicroscope,
   FaGlobeAfrica,
   FaHandHoldingUsd,
+  FaTimes,
+  FaCheckCircle,
 } from "react-icons/fa";
 import heroImage from "../departments/dept-images/cancer-treatment-india-hero.webp";
 import OncologyAboutImage from "../departments/dept-images/oncology-care-india.webp";
@@ -74,13 +56,22 @@ import ThumbnailImage from "../departments/dept-images/thumbail-eye-surgery.webp
 
 import CtaImage from "../departments/dept-images/cta-oncology-image.webp";
 
-import apolloImage from "../departments/dept-images/best-dental-hospital-india.webp";
+import apolloImage from "../departments/dept-images/oncology/best-oncology-hospital-india.webp";
 
-import medantaImage from "../departments/dept-images/best-dental-hospital-india.webp";
+import medantaImage from "../departments/dept-images/medanta-hospital-for-oncology-treatment-in-india.webp";
 
-import fortisImage from "../departments/dept-images/multi-specialty-dental-hospital-india.webp";
+import fortisImage from "../departments/dept-images/oncology/multi-specialty-oncology-hospital-india.webp";
 
-import maxImage from "../departments/dept-images/top-dental-care-india.webp";
+import hcgImage from "../departments/dept-images/oncology/hcg-cancer-treatment-specialist.webp";
+
+import maxImage from "../departments/dept-images/oncology/top-oncology-hospital-india.webp";
+
+import ApolloApcc from "../departments/dept-images/oncology/apollo-proton-cancer-centre-top-cancer-treatment.webp";
+
+import VishnuAgarwalImage from "../departments/dept-images/oncology/vishnu-agarwal.webp";
+import KamranKhanImage from "../departments/dept-images/oncology/kamran-khan.webp";
+import ManishGAgarwalImage from "../departments/dept-images/oncology/manish-agarwal.webp";
+import SaritaShrivastvaImage from "../departments/dept-images/oncology/sarita-shrivastva.webp";
 
 const WA = ({ size = 5 }) => (
   <FaWhatsapp className={`icon-wa icon-wa--${size}`} />
@@ -180,7 +171,7 @@ const cancersServices = [
     alt: "Cervical cancer treatment in India",
   },
   {
-    id: 7,
+    id: 8,
     title: "Breast Lumpectomy",
     description:
       "Breast lumpectomy in India is performed by experienced surgical oncology teams using breast-conserving techniques whenever possible. This procedure helps remove cancerous tissue while preserving the appearance of the breast and supporting quicker recovery.",
@@ -188,7 +179,7 @@ const cancersServices = [
     alt: "Breast lumpectomy treatment in India",
   },
   {
-    id: 8,
+    id: 9,
     title: "Breast Cancer",
     description:
       "Breast cancer treatment in India includes surgery, chemotherapy, radiation therapy, hormone therapy, and targeted therapy. Patients benefit from multidisciplinary oncology care, modern breast imaging technologies, and experienced breast cancer specialists across leading cancer hospitals.",
@@ -196,7 +187,7 @@ const cancersServices = [
     alt: "Breast cancer treatment in India",
   },
   {
-    id: 9,
+    id: 10,
     title: "BMT (Bone Marrow Transplant)",
     description:
       "Bone marrow transplant in India is available for patients with leukemia, lymphoma, aplastic anemia, and other blood disorders. Advanced transplant units, experienced hematology specialists, and affordable treatment costs make India a preferred destination for BMT treatment.",
@@ -204,7 +195,7 @@ const cancersServices = [
     alt: "Bone marrow transplant treatment in India",
   },
   {
-    id: 10,
+    id: 11,
     title: "Prostate Cancer",
     description:
       "Prostate cancer treatment in India includes robotic surgery, radiation therapy, hormone therapy, immunotherapy, and targeted oncology care. International patients often choose India for affordable robotic prostate surgery and access to experienced uro-oncology specialists.",
@@ -212,7 +203,7 @@ const cancersServices = [
     alt: "Prostate cancer treatment in India",
   },
   {
-    id: 10,
+    id: 12,
     title: "Cancer Treatment",
     description:
       "Cancer treatment in India combines advanced medical technology, experienced oncologists, and personalized care plans for different types of cancers. Patients benefit from affordable oncology treatment, shorter waiting times, and dedicated international patient support services.",
@@ -220,7 +211,7 @@ const cancersServices = [
     alt: "Cancer treatment in India",
   },
   {
-    id: 10,
+    id: 13,
     title: "Stem Cell Therapy",
     description:
       "Stem cell therapy in India is used in selected oncology and hematology treatments under expert medical supervision. Advanced medical centers provide personalized treatment protocols and supportive care for eligible patients requiring regenerative or transplant-based therapies.",
@@ -228,7 +219,7 @@ const cancersServices = [
     alt: "Stem cell therapy in India",
   },
   {
-    id: 10,
+    id: 14,
     title: "Stomach Cancer",
     description:
       "Stomach cancer treatment in India includes surgical oncology, chemotherapy, targeted therapy, and radiation therapy based on the stage of cancer. Multidisciplinary treatment planning helps improve recovery and long-term treatment outcomes for international patients.",
@@ -236,7 +227,7 @@ const cancersServices = [
     alt: "Stomach cancer treatment in India",
   },
   {
-    id: 10,
+    id: 15,
     title: "Colon Cancer",
     description:
       "Colon cancer treatment in India includes minimally invasive surgery, chemotherapy, immunotherapy, and precision radiation therapy. Advanced diagnostic technologies and experienced gastrointestinal oncology specialists help provide personalized cancer care for better outcomes.",
@@ -244,7 +235,7 @@ const cancersServices = [
     alt: "Colon cancer treatment in India",
   },
   {
-    id: 10,
+    id: 16,
     title: "Esophageal Cancer",
     description:
       "Esophageal cancer treatment in India includes surgery, chemotherapy, radiation therapy, and targeted treatment approaches. Leading oncology hospitals provide advanced thoracic oncology care with personalized treatment plans and rehabilitation support for international patients.",
@@ -294,32 +285,33 @@ const steps = [
 
 const DOCTORS = [
   {
-    name: "Dr. Rajesh Kumar",
-    spec: "Ophthalmologist Surgeon",
-    desc: "25+ years of experience in total knee replacement, hip replacement, and advanced ophthalmology surgery in India.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=300&fit=crop",
+    name: "Dr. Vishnu Agarwal",
+    education: "MBBS, MS - General Surgery, Surgical Oncology Fellowship",
+    spec: "Surgical Oncologist, Robotic Cancer Surgeon, Laparoscopic Oncosurgeon",
+    desc: "Dr. Vishnu Agarwal is a highly accomplished Surgical Oncologist with over 15 years of experience specializing in laparoscopic and robotic cancer surgeries. He completed his MBBS and MS in General Surgery from Mumbai University and pursued advanced training in Surgical Oncology at the prestigious Tata Memorial Hospital, Mumbai. To further enhance his expertise in minimally invasive cancer treatment, Dr. Vishnu Agarwal completed a fellowship in Laparoscopic and Robotic Gynaecology and Colorectal Cancer Surgery at St. Mary’s Hospital, Seoul, South Korea, along with advanced robotic surgical training in France. He is widely recognized for delivering precision-driven minimally invasive cancer surgeries that promote faster recovery, reduced post-operative complications, and improved patient outcomes. Dr. Vishnu Agarwal has extensive expertise in the management of gynecological cancers, including advanced laparoscopic and robotic surgeries for endometrial, ovarian, and cervical cancers. He is also a pioneer in breast cancer surgery and performed the first robotic surgery for a breast tumor in India. Over his distinguished career, he has successfully performed more than a thousand breast cancer surgeries, including mastectomies, breast-conserving surgeries, sentinel lymph node biopsies, and oncoplastic procedures. His expertise further extends to minimally invasive colorectal cancer surgeries, where he has managed several highly complex cases with exceptional outcomes. Having treated over 6,000 national and international patients, Dr. Vishnu Agarwal is known for combining advanced robotic technology with compassionate, patient-focused cancer care. He actively participates in surgical teaching programs, live demonstrations, and academic training sessions, contributing significantly to the advancement of modern surgical oncology.",
+    photoUrl: VishnuAgarwalImage,
   },
   {
-    name: "Dr. Priya Nair",
-    spec: "Robotic Joint Replacement Specialist",
-    desc: "Specialist in robotic knee replacement surgery and minimally invasive ophthalmology procedures.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop",
+    name: "Dr. Kamran Khan",
+    education: "MBBS, MS - General Surgery",
+    spec: "General Surgeon, Surgical Oncologist, Robotic Cancer Surgeon",
+    desc: "Dr. Kamran Khan is a highly experienced General Surgeon and Surgical Oncologist with over 35 years of overall experience, including 32 years as a specialist. He specializes in minimally invasive and robotic surgeries for gastrointestinal and gynecologic cancers. With extensive clinical experience gained during his tenure at the renowned Tata Memorial Hospital (TMH), Mumbai, Dr. Kamran Khan is known for combining advanced surgical technology with precise, tissue-preserving oncologic techniques to deliver effective cancer care. His expertise includes laparoscopic and robotic cancer surgeries, pelvic oncology procedures, gastrointestinal oncology, and advanced gynecologic cancer management. Dr. Kamran Khan follows an evidence-based, patient-focused surgical approach aimed at minimizing surgical trauma, reducing post-operative complications, and promoting faster recovery. Recognized for his meticulous surgical planning, technical excellence, and commitment to patient safety, he has built a strong reputation in modern oncologic surgery. His training and research fellowship at Tata Memorial Hospital further strengthened his expertise in advanced minimally invasive cancer procedures and contemporary surgical oncology pathways.",
+    photoUrl: KamranKhanImage,
   },
   {
-    name: "Dr. Suresh Mehta",
-    spec: "Spine and Trauma Surgeon",
-    desc: "Expert in spine surgery, trauma care, and advanced ophthalmology treatment for international patients.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=300&fit=crop",
+    name: "Dr. Manish G. Agarwal",
+    education:
+      "MBBS, MS (Orthopaedics), DNB (Orthopaedics), Diploma in Tissue Banking",
+    spec: "Orthopaedic Oncosurgeon, Surgical Oncologist, Paediatric Orthopaedic Specialist",
+    desc: "Dr. Manish Agarwal is a renowned Orthopaedic Oncologist at the Department of Surgical Oncology at Sir H. N. Reliance Foundation Hospital and is also practicing at Nanavati Max Super Specialty Hospital, Mumbai. He has over two decades of experience in Orthopaedic Oncology. and is widely recognised as one of the pioneers of Orthopaedic Oncology in India. Dr. Agarwal completed his M.B.B.S. and M.S. from Seth GS Medical College and KEM Hospital, Mumbai. After completing his fellowship at Tata Memorial Hospital (June to December, 1993), he joined KEM Hospital as a Lecturer. In 2000, he joined Tata Memorial Hospital as a full time orthopaedic oncologist. He has published numerous papers in national and international journals, and has presented his research at various conferences and seminars. Dr. Agarwal has trained many young orthopaedic surgeons in orthopaedic oncology and has been actively involved in organising and participating in teaching programmes and workshops for orthopaedic surgeons across India. ",
+    photoUrl: ManishGAgarwalImage,
   },
   {
-    name: "Dr. Amit Verma",
-    spec: "Knee Replacement Specialist",
-    desc: "Experienced ophthalmology specialist focusing on knee replacement surgery and joint preservation treatment.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=300&fit=crop",
+    name: "Dr. Sarita Shrivastva",
+    education: "MBBS, MD - Radiotherapy, DM - Medical Oncology",
+    spec: "Medical Oncologist",
+    desc: "Dr. Sarita Shrivastva is an experienced Medical Oncologist with over 16 years of overall experience, including 6 years as a specialist in oncology. She specializes in comprehensive cancer care, including chemotherapy, targeted therapy, and advanced oncology treatments. Dr. Sarita Shrivastva completed her MBBS, MD in Radiotherapy, and DM in Medical Oncology, receiving extensive training in the diagnosis, staging, and treatment of various cancers. She strongly believes in preventive oncology and emphasizes the importance of cancer screening and early detection to improve treatment outcomes and increase the chances of cure. With deep expertise in radiation oncology, chemotherapy, and personalized cancer therapies, she is committed to providing evidence-based and up-to-date cancer treatment solutions tailored to each patient’s condition. Known for her compassionate and patient-focused approach, Dr. Sarita Shrivastva focuses on delivering accurate diagnosis, advanced treatment planning, and holistic cancer care to ensure the best possible outcomes for her patients.",
+    photoUrl: SaritaShrivastvaImage,
   },
 ];
 
@@ -332,9 +324,9 @@ const HOSPITALS = [
     rating: 4.9,
     accreditations: ["JCI", "NABH"],
     specialties: [
-      "Cardiothoracic Surgery (Heart Surgery)",
-      "Electrophysiology (Heart Rhythm)",
-      "Pediatric Cardiology",
+      "Medical Oncology",
+      "Radiation Oncology",
+      "Bone Marrow Transplant",
     ],
   },
   {
@@ -344,7 +336,25 @@ const HOSPITALS = [
     location: "Gurgaon, India",
     rating: 4.8,
     accreditations: ["JCI", "NABH"],
-    specialties: ["Heart Transplant", "TAVR", "Robotic Surgery"],
+    specialties: [
+      "Surgical Oncology",
+      "Immunotherapy",
+      "Precision Cancer Care",
+    ],
+  },
+
+  {
+    name: "Apollo Proton Cancer Centre",
+    sub: "Healthcare",
+    image: ApolloApcc,
+    location: "Gurgaon, India",
+    rating: 4.8,
+    accreditations: ["JCI", "NABH"],
+    specialties: [
+      "Surgical Oncology",
+      "Immunotherapy",
+      "Precision Cancer Care",
+    ],
   },
   {
     name: "Fortis",
@@ -354,9 +364,9 @@ const HOSPITALS = [
     rating: 4.7,
     accreditations: ["JCI", "NABH"],
     specialties: [
-      "Cardiothoracic & Vascular Surgery (CTVS)",
-      "Non-Invasive Cardiology",
-      "Advanced Cardiac Care",
+      "Breast Cancer Treatment",
+      "Radiation Therapy",
+      "Hematology & Oncology",
     ],
   },
   {
@@ -367,9 +377,22 @@ const HOSPITALS = [
     rating: 4.8,
     accreditations: ["NABH", "ISO"],
     specialties: [
-      "Interventional Cardiology",
-      "Electrophysiology",
-      "Heart Failure & Transplant Care",
+      "Targeted Therapy",
+      "PET-CT Diagnostics",
+      "Cancer Rehabilitation",
+    ],
+  },
+  {
+    name: "HCG",
+    sub: "Cancer Centre",
+    image: hcgImage,
+    location: "Bengaluru, India",
+    rating: 4.8,
+    accreditations: ["NABH", "NABL"],
+    specialties: [
+      "Medical Oncology",
+      "Radiation Oncology",
+      "Bone Marrow Transplant",
     ],
   },
 ];
@@ -463,20 +486,20 @@ function EyesServiceCard({ service }) {
 
 const reviews = [
   {
-    name: "Allison Hayes",
-    text: '"After my eye surgery in India, I finally have a healthy smile. The doctors were incredibly professional and caring."',
+    name: "Grace N., Kenya",
+    text: "“My mother was diagnosed with breast cancer in Nairobi, and we were very confused about where to go for treatment. Humancare World Wide helped us arrange everything in India, from the hospital appointment to airport pickup. The doctors were excellent and my mother is recovering well now. We are truly grateful.”",
   },
   {
-    name: "Brooke Sullivan",
-    text: '"The entire experience from online consultation to treatment was seamless. The clinic in Mumbai was world-class, and I saved significantly compared to back home."',
+    name: "— Daniel O., Uganda",
+    text: "“Thank you to Humancare World Wide for supporting my family during my leukemia treatment in India. Their team stayed connected with us throughout the journey and helped us with medical visa processing and accommodation. The treatment was successful and the care was beyond our expectations.”",
   },
   {
-    name: "Allison Hayes",
-    text: '"After my eye surgery in India, I finally have a healthy smile. The doctors were incredibly professional and caring."',
+    name: "— Amina S., Tanzania",
+    text: "“My father needed urgent liver cancer treatment, and the Humancare team guided us step by step. We were worried about costs and travel, but they explained everything clearly and helped us choose the right hospital. We felt supported from beginning to end.”",
   },
   {
-    name: "Allison Hayes",
-    text: '"After my eye surgery in India, I finally have a healthy smile. The doctors were incredibly professional and caring."',
+    name: "— Esther M., Nigeria",
+    text: "“When my husband was diagnosed with colon cancer in Lagos, we were under a lot of stress and didn’t know where to begin. Humancare World Wide helped us connect with a top oncology hospital in India and handled all the arrangements quickly. The doctors explained the treatment clearly, and the support team checked on us regularly during our stay. Today, my husband is doing much better and we are thankful for the care and guidance we received.”",
   },
 ];
 const Stars = () => (
@@ -492,8 +515,9 @@ export default function OncologyTreatmentIndia() {
   const [active, setActive] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const timerRef = useRef(null);
-
+  const [selectedDoctor, setSelectedDoctor] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null);
+
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -532,8 +556,127 @@ export default function OncologyTreatmentIndia() {
     };
   }, []);
 
+  // Truncate description helper
+  const truncateText = (text, maxLength = 120) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + "...";
+  };
+
+  // Close modal handler
+  const closeModal = () => setSelectedDoctor(null);
+
+  // Close modal on ESC key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") closeModal();
+    };
+    if (selectedDoctor) {
+      document.addEventListener("keydown", handleEsc);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleEsc);
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedDoctor]);
+
   return (
     <>
+      <Helmet>
+        {/* Primary SEO */}
+        <title>
+          Cancer Treatment in India | Affordable Oncology Care for International
+          Patients
+        </title>
+
+        <meta
+          name="description"
+          content="Get affordable cancer treatment in India with experienced oncologists, advanced cancer hospitals, robotic surgery, chemotherapy, radiation therapy, and personalized oncology care for international patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan."
+        />
+
+        <meta
+          name="keywords"
+          content="
+                    cancer treatment in india,
+                    oncology treatment in india,
+                    affordable cancer care india,
+                    oncology specialists in india,
+                    cancer hospitals in india,
+                    chemotherapy in india,
+                    radiation therapy india,
+                    robotic cancer surgery india,
+                    immunotherapy in india,
+                    targeted therapy india,
+                    breast cancer treatment india,
+                    lung cancer treatment india,
+                    prostate cancer treatment india,
+                    bone marrow transplant india,
+                    oncology surgery india,
+                    cancer care hospitals india,
+                    advanced oncology care,
+                    cancer treatment abroad,
+                    medical oncology india,
+                    radiation oncology india
+                  "
+        />
+
+        {/* Canonical URL */}
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/cancer-treatment-in-india"
+        />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Facebook */}
+        <meta
+          property="og:title"
+          content="Cancer Treatment in India | Affordable Oncology Care"
+        />
+
+        <meta
+          property="og:description"
+          content="Affordable oncology treatment in India with experienced cancer specialists, advanced hospitals, and personalized care for international patients."
+        />
+
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/src/departments/dept-images/cancer-treatment-india-hero.webp"
+        />
+
+        <meta
+          property="og:url"
+          content="https://humancaremedicaltourism.com/cancer-treatment-in-india"
+        />
+
+        <meta property="og:type" content="website" />
+
+        {/* Twitter SEO */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Cancer Treatment in India | Affordable Oncology Care"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Get advanced and affordable cancer treatment in India with modern oncology hospitals and experienced cancer specialists."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/src/departments/dept-images/cancer-treatment-india-hero.webp"
+        />
+
+        {/* Geo SEO */}
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content="India" />
+
+        {/* Language */}
+        <meta httpEquiv="content-language" content="en" />
+      </Helmet>
       {/* ════ SECTION 1 — HERO ════ */}
       <section className="oncology-hero-section">
         {/* Background Image */}
@@ -557,9 +700,9 @@ export default function OncologyTreatmentIndia() {
 
           <p>
             India is one of the leading destinations for affordable and advanced
-            cancer treatment. International patients trust Indian oncology
-            hospitals for experienced cancer specialists, modern technology, and
-            cost-effective treatment.
+            oncology care. International patients trust Indian cancer hospitals
+            for experienced oncology specialists, modern technology, and
+            personalized treatment plans.
           </p>
 
           <div className="oncology-hero-ctas">
@@ -583,23 +726,21 @@ export default function OncologyTreatmentIndia() {
         <div className="cancer-care-container">
           {/* ── Left Content Panel ── */}
           <div className="cancer-care-left">
-            <h1 className="cancer-care-heading">
+            <h2 className="cancer-care-heading">
               <span className="cancer-care-heading-accent">
-                <h1>
-                  Affordable Cancer Treatment in India with Top Oncologists
-                </h1>
+                Affordable Cancer Treatment in India with Top Oncologists
               </span>
-            </h1>
+            </h2>
 
             <p className="cancer-care-body">
-              Looking for the best oncologist in india for affordable and
-              advanced cancer treatment? India is trusted by international
+              Looking for experienced oncology specialists in India for advanced
+              and affordable cancer care? India is trusted by international
               patients for modern oncology care, experienced cancer specialists,
               and compassionate support.
             </p>
 
             <p className="cancer-care-body">
-              From prostate cancer and lung cancer treatment to chemotherapy,
+              From prostate oncology and lung oncology care to chemotherapy,
               immunotherapy, robotic surgery, and radiation therapy, India
               offers high-quality cancer care at affordable costs compared to
               South Africa, the UK, and the USA.
@@ -883,10 +1024,9 @@ export default function OncologyTreatmentIndia() {
                 <p className="oncology-card-text">
                   India is home to some of the most experienced medical
                   oncology, surgical oncology, and radiation oncology experts.
-                  Patients searching for the{" "}
-                  <strong>best oncologist in india</strong> often choose leading
-                  cancer centers in Mumbai, Delhi, Chennai, Hyderabad,
-                  Bangalore, Ahmedabad, Kolkata, and Kerala.
+                  International patients often choose leading oncology centers
+                  in Mumbai, Delhi, Chennai, Hyderabad, Bangalore, Ahmedabad,
+                  and Kolkata for specialized cancer care.
                 </p>
               </div>
 
@@ -911,10 +1051,9 @@ export default function OncologyTreatmentIndia() {
                 </h4>
                 <p className="oncology-card-text">
                   One of the biggest reasons patients choose India is
-                  affordability. <strong>Cancer treatment in India</strong> can
-                  often cost 50–80% less than treatment in South Africa, the UK,
-                  Europe, or the USA while still providing advanced medical
-                  care.
+                  affordability. Advanced oncology care in India can often cost
+                  50–80% less than treatment in South Africa, the UK, Europe, or
+                  the USA while still providing advanced medical care.
                 </p>
               </div>
 
@@ -942,12 +1081,12 @@ export default function OncologyTreatmentIndia() {
             Types of Cancer Treatments in India
           </h2>
           <p className="cancer-services-description">
-            India offers advanced and personalized{" "}
-            <strong>prostate cancer treatment in india</strong> using modern
-            technologies and multidisciplinary care. Patients looking for the
-            <strong>best prostate cancer treatment in india</strong> often
-            travel to Mumbai, Ahmedabad, Chennai, and Delhi for robotic surgery,
-            radiation therapy, hormone therapy, and immunotherapy.
+            IIndia offers advanced and personalized prostate oncology care
+            treatment in india using modern technologies, robotic surgery, and
+            multidisciplinary treatment approaches. Patients looking for the
+            <strong>advanced prostate oncology care</strong> often travel to
+            Mumbai, Ahmedabad, Chennai, and Delhi for robotic surgery, radiation
+            therapy, hormone therapy, and immunotherapy.
           </p>
         </div>
 
@@ -963,50 +1102,124 @@ export default function OncologyTreatmentIndia() {
         <div className="hn-container">
           <div className="hn-title-wrap">
             <span className="hn-label">Our Hospital Network</span>
-            <h2 className="hn-heading">Best Cancer Hospitals in India</h2>
+            <h2 className="hn-heading">
+              Best Cancer Hospitals in India for Oncology Treatment
+            </h2>
             <p className="hn-subtitle">
-              India has several internationally recognized oncology hospitals
-              equipped with advanced cancer technology, multidisciplinary
-              treatment teams, and dedicated international patient departments.
-              Leading cancer hospitals in Mumbai, Delhi, Chennai, Hyderabad,
-              Bangalore, and Ahmedabad offer comprehensive oncology care
-              including chemotherapy, robotic surgery, radiation therapy,
-              immunotherapy, targeted therapy, and personalized treatment
-              planning for various types of cancers.
+              We partner with India’s top NABH & JCI-accredited hospitals
             </p>
           </div>
-          <div className="hn-grid">
-            {HOSPITALS.map((h, i) => (
-              <div key={i} className="hn-card">
-                <div className="hn-card-top">
-                  <div
-                    className="hn-card-image"
-                    style={{ backgroundImage: `url(${h.image})` }}
-                  >
-                    <div className="hn-card-overlay" />
-                  </div>
-                  <div className="hn-card-header">
-                    <div className="hn-hospital-info">
-                      <h3 className="hn-hospital-name">{h.name}</h3>
-                      <p className="hn-hospital-sub">{h.sub}</p>
+          <div className="hn-slider-wrapper">
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              spaceBetween={28}
+              slidesPerView={1}
+              pagination={{
+                clickable: true,
+                dynamicBullets: true,
+                dynamicMainBullets: 3,
+              }}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              loop={true}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 24,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 24,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 26,
+                },
+                1280: {
+                  slidesPerView: 4,
+                  spaceBetween: 28,
+                },
+              }}
+              className="hn-swiper"
+            >
+              {HOSPITALS.map((h, i) => (
+                <SwiperSlide key={i}>
+                  <div className="hn-card">
+                    <div className="hn-card-top">
+                      <div
+                        className="hn-card-image"
+                        style={{ backgroundImage: `url(${h.image})` }}
+                      >
+                        <div className="hn-card-overlay" />
+                      </div>
+                      <div className="hn-card-header">
+                        <div className="hn-hospital-info">
+                          <h3 className="hn-hospital-name">{h.name}</h3>
+                          <p className="hn-hospital-sub">{h.sub}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="hn-card-body">
+                      <div className="hn-specialties">
+                        <p className="hn-specialties-label">
+                          Oncology Specialties:
+                        </p>
+                        <ul className="hn-specialties-list">
+                          {h.specialties.map((spec, j) => (
+                            <li key={j} className="hn-specialty-item">
+                              <Check />
+                              <span>{spec}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </section>
 
-                <div className="hn-card-body">
-                  <div className="hn-specialties">
-                    <p className="hn-specialties-label">
-                      Eye Care Specialties:
-                    </p>
-                    <ul className="hn-specialties-list">
-                      {h.specialties.map((spec, j) => (
-                        <li key={j} className="hn-specialty-item">
-                          <Check />
-                          <span>{spec}</span>
-                        </li>
-                      ))}
-                    </ul>
+      {/* ════ SECTION 4 — DOCTORS ════ */}
+      <section className="doctor-section-light">
+        <div className="doctor-container">
+          <div className="doctor-title-wrap">
+            <span className="doctor-label">Our Specialists</span>
+            <h2 className="doctor-h2">
+              Best Oncologists in India for Cancer Treatment
+            </h2>
+          </div>
+          <div className="doctor-cards-grid">
+            {DOCTORS.map((d, i) => (
+              <div key={i} className="doctor-card">
+                <img
+                  src={d.photoUrl}
+                  alt={`${d.name} – ${d.spec}`}
+                  className="doctor-card-photo"
+                  loading="lazy"
+                />
+                <div className="doctor-card-body">
+                  <div className="doctor-card-content">
+                    <span className="doctor-spec">{d.spec}</span>
+                    <h3 className="doctor-name">{d.name}</h3>
+                    <h4 className="doctor-education">- {d.education}</h4>
+                    <p className="doctor-desc">{truncateText(d.desc, 120)}</p>
                   </div>
+                  <button
+                    className="doctor-read-more custom-learn-more-btn"
+                    onClick={() => setSelectedDoctor(d)}
+                    aria-label={`Read more about ${d.name}`}
+                  >
+                    <span className="button-text">Read More</span>
+                    <div className="circle"></div>
+                    <div className="arrow"></div>
+                  </button>
                 </div>
               </div>
             ))}
@@ -1014,7 +1227,54 @@ export default function OncologyTreatmentIndia() {
         </div>
       </section>
 
-      <section className="doctor-section-light">
+      {/* ════ DOCTOR MODAL ════ */}
+      {selectedDoctor && (
+        <div className="doctor-modal-overlay" onClick={closeModal}>
+          <div
+            className="doctor-modal"
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-labelledby="modal-title"
+            aria-modal="true"
+          >
+            <button
+              className="doctor-modal-close"
+              onClick={closeModal}
+              aria-label="Close modal"
+            >
+              <FaTimes />
+            </button>
+
+            <div className="doctor-modal-content">
+              <div className="doctor-modal-header">
+                <img
+                  src={selectedDoctor.photoUrl}
+                  alt={selectedDoctor.name}
+                  className="doctor-modal-image"
+                />
+                <div className="doctor-modal-info">
+                  <span className="doctor-modal-spec">
+                    {selectedDoctor.spec}
+                  </span>
+                  <h3 id="modal-title" className="doctor-modal-name">
+                    {selectedDoctor.name}
+                  </h3>
+                  <p className="doctor-modal-education">
+                    {selectedDoctor.education}
+                  </p>
+                </div>
+              </div>
+
+              <div className="doctor-modal-body">
+                <h4 className="doctor-modal-section-title">About</h4>
+                <p className="doctor-modal-desc">{selectedDoctor.desc}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* <section className="doctor-section-light">
         <div className="doctor-container">
           <div className="doctor-title-wrap">
             <span className="doctor-label">Our Specialists</span>
@@ -1045,13 +1305,13 @@ export default function OncologyTreatmentIndia() {
                   <span className="doctor-spec">{d.spec}</span>
                   <h3 className="doctor-name">{d.name}</h3>
                   <p className="doctor-desc">{d.desc}</p>
-                  {/* <button className="doctor-btn">See profile</button> */}
+                  <button className="doctor-btn">See profile</button>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="cancer-reviews-section">
         <div className="cancer-reviews-content">
@@ -1069,7 +1329,7 @@ export default function OncologyTreatmentIndia() {
                     <div key={cardIndex} className="cancer-reviews-card">
                       <Stars />
                       <p className="cancer-reviews-card-text">{r.text}</p>
-                      <p className="cancer-reviews-card-name">{r.name}</p>
+                      {/* <p className="cancer-reviews-card-name">{r.name}</p> */}
                     </div>
                   ))}
                 </div>
@@ -1088,25 +1348,6 @@ export default function OncologyTreatmentIndia() {
               />
             ))}
           </div>
-
-          {/* Rating summary */}
-          <div className="cancer-reviews-summary">
-            <div>
-              <span className="cancer-reviews-rating-number">4.98</span>
-              <span className="cancer-reviews-rating-label">Ratings</span>
-              <div
-                className="cancer-reviews-stars"
-                style={{ marginTop: "6px" }}
-              >
-                {"★★★★★".split("").map((s, i) => (
-                  <span key={i}>{s}</span>
-                ))}
-              </div>
-              <p className="cancer-reviews-rating-description">
-                Rated 4.9 stars based on 1200+ reviews
-              </p>
-            </div>
-          </div>
         </div>
 
         <div className="cancer-reviews-image-wrapper">
@@ -1124,7 +1365,7 @@ export default function OncologyTreatmentIndia() {
           <div className="cancer-faq-header">
             <span className="cancer-faq-badge">Oncology Treatment FAQs</span>
             <h2 id="faq-heading" className="cancer-faq-title">
-              Frequently Asked Questions About cancer Treatment in India
+              Frequently Asked Questions About Cancer Treatment in India
             </h2>
             <p className="cancer-faq-subtitle">
               Get answers to common questions about cancer care, best cancer
@@ -1150,7 +1391,12 @@ export default function OncologyTreatmentIndia() {
                     aria-expanded={isActive}
                     aria-controls={`faq-answer-${faq.id}`}
                   >
-                    <h3 className="cancer-faq-question-text">{faq.question}</h3>
+                    <h3
+                      id={`faq-question-${faq.id}`}
+                      className="cancer-faq-question-text"
+                    >
+                      {faq.question}
+                    </h3>
                     <FaPlus
                       className={`cancer-faq-icon ${isActive ? "rotate" : ""}`}
                       aria-hidden="true"
@@ -1191,7 +1437,7 @@ export default function OncologyTreatmentIndia() {
         <div className="cancer-cta-container">
           <div className="cancer-cta-content">
             <span className="cancer-cta-badge">
-              Protect & Restore Your Vision
+              Advanced Cancer Care for International Patients
             </span>
 
             <h2 className="cancer-cta-title">
@@ -1199,9 +1445,8 @@ export default function OncologyTreatmentIndia() {
             </h2>
 
             <p className="cancer-cta-subtitle">
-              Start your ophthalmology treatment journey in India with
-              experienced joint replacement specialists and internationally
-              trusted hospitals.
+              Start your oncology treatment journey in India with experienced
+              cancer specialists and internationally trusted hospitals.
             </p>
 
             <div className="cancer-cta-benefits-list">

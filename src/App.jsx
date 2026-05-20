@@ -37,6 +37,8 @@ const EyeSurgeryIndia = lazy(() => import("./pages/EyeSurgeryIndia"));
 
 const CancerLandingIndia = lazy(() => import("./pages/CancerLandingIndia"));
 
+const GeneralCategory = lazy(() => import("./pages/GeneralCategory"));
+
 // Loading component
 const PageLoader = () => (
   <div style={{ padding: "50px", textAlign: "center" }}>Loading...</div>
@@ -121,6 +123,10 @@ function App() {
           <Route
             path="/cancer-treatment-in-india"
             element={<CancerLandingIndia />}
+          />
+          <Route
+            path="/best-medical-treatment-in-india"
+            element={<GeneralCategory />}
           />
         </Routes>
       </Suspense>

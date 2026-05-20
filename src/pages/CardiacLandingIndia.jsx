@@ -48,10 +48,10 @@ import heroImage from "../departments/dept-images/cardiac-treatment-india-hero.w
 import heartBg from "../departments/dept-images/heart-surgery-india-specialist-1.webp";
 import doctorImg from "../departments/dept-images/heart-surgery-india-specialist.webp";
 
-import apolloImage from "../assets/hospitals/apollo.webp";
-import medantaImage from "../assets/hospitals/medanta.webp";
-import fortisImage from "../assets/hospitals/fortis.webp";
-import maxImage from "../assets/hospitals-photos/max.webp";
+import apolloImage from "../departments/dept-images/cardiology/best-cardiology-hospital-india.webp";
+import medantaImage from "../departments/dept-images/cardiology/medanta-for-best-cardiology-hospital-india.webp";
+import fortisImage from "../departments/dept-images/cardiology/fortis-cardiologist-hospital.webp";
+import maxImage from "../departments/dept-images/cardiology/medanta-for-best-cardiology-hospital-india.webp";
 import hindujaImage from "../departments/dept-images/pd_hinduja.webp";
 import saifeeImage from "../departments/dept-images/saifee-hospital.webp";
 import lilavatiImage from "../departments/dept-images/lilavati-hospital.webp";
