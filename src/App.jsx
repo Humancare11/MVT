@@ -59,6 +59,12 @@ const OrthopedicTreatmentIndia = lazy(
 
 const CancerLandingIndia = lazy(() => import("./pages/CancerLandingIndia"));
 
+// const GeneralCategory = lazy(() => import("./pages/GeneralCategory"));
+
+// const TurkeyLandingPage = lazy(() => import("./pages/TurkeyLandingPage"));
+
+// const SaudiEgypt = lazy(() => import("./pages/SaudiEgypt"));
+
 // Loading component
 const PageLoader = () => (
   <div style={{ padding: "50px", textAlign: "center" }}>
@@ -167,6 +173,27 @@ function App() {
             path="/dental-implant-india"
             element={<DentalImplantIndia />}
           />
+          <Route
+            path="/orthopedic-treatment-india"
+            element={<OrthopedicTreatmentIndia />}
+          />
+          {/* <Route path="/eye-surgery-in-india" element={<EyeSurgeryIndia />} /> */}
+          <Route
+            path="/cancer-treatment-in-india"
+            element={<CancerLandingIndia />}
+          />
+          {/* <Route
+            path="/best-medical-treatment-in-india"
+            element={<GeneralCategory />}
+          /> */}
+          {/* <Route
+            path="/best-hospital-in-turkey"
+            element={<TurkeyLandingPage />}
+          /> */}
+          {/* <Route
+            path="/german-saudi-hospital-cairo-egypt"
+            element={<SaudiEgypt />}
+          /> */}
         </Routes>
       </Suspense>
 

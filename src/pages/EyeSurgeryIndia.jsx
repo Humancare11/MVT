@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 import "./EyeSurgeryIndia.css";
 import {
   FaBed,
@@ -522,6 +523,102 @@ const EyeSurgeryIndia = () => {
   }, []);
   return (
     <>
+      <Helmet>
+        {/* Primary SEO */}
+        <title>
+          Eye Surgery in India | Affordable Eye Treatment for International
+          Patients
+        </title>
+
+        <meta
+          name="description"
+          content="Get affordable eye surgery in India with experienced ophthalmologists, advanced eye hospitals, LASIK, cataract surgery, retina treatment, and personalized eye care for international patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan."
+        />
+
+        <meta
+          name="keywords"
+          content="
+              eye surgery in india,
+              eye treatment in india,
+              affordable eye surgery india,
+              ophthalmology treatment india,
+              cataract surgery india,
+              lasik surgery india,
+              retina treatment india,
+              glaucoma treatment india,
+              cornea transplant india,
+              eye hospitals in india,
+              ophthalmologists in india,
+              laser eye surgery india,
+              advanced eye care india,
+              vision correction surgery india,
+              retinal surgery india,
+              pediatric ophthalmology india,
+              eye care hospitals india,
+              affordable ophthalmology care,
+              eye treatment abroad,
+              eye specialist india
+            "
+        />
+
+        {/* Canonical URL */}
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/eye-surgery-in-india"
+        />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Facebook */}
+        <meta
+          property="og:title"
+          content="Eye Surgery in India | Affordable Eye Treatment"
+        />
+
+        <meta
+          property="og:description"
+          content="Affordable eye surgery in India with experienced ophthalmologists, advanced eye hospitals, and personalized treatment for international patients."
+        />
+
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/src/departments/dept-images/eye-surgery-india-hero.webp"
+        />
+
+        <meta
+          property="og:url"
+          content="https://humancaremedicaltourism.com/eye-surgery-in-india"
+        />
+
+        <meta property="og:type" content="website" />
+
+        {/* Twitter SEO */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Eye Surgery in India | Affordable Eye Treatment"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Get advanced and affordable eye treatment in India with modern eye hospitals and experienced ophthalmology specialists."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/src/departments/dept-images/eye-surgery-in-india-hero.webp"
+        />
+
+        {/* Geo SEO */}
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content="India" />
+
+        {/* Language */}
+        <meta httpEquiv="content-language" content="en" />
+      </Helmet>
+
       {/* ════ SECTION 1 — HERO ════ */}
       <section className="eye-hero-section">
         {/* Background Image */}

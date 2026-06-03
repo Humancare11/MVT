@@ -9,6 +9,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
+
 import {
   FaCheck,
   FaCheckCircle,
@@ -65,9 +66,9 @@ import VarunSaojiImage from "../departments/dept-images/dentist/varun-saoji.webp
 import BinilaSBabuImage from "../departments/dept-images/dentist/binila-babu.webp";
 import SameerPImage from "../departments/dept-images/dentist/sameer-p.webp";
 import CSharathBabuImage from "../departments/dept-images/dentist/c-sharath-babu.webp";
+import ApurvaGujarathiImage from "../departments/dept-images/dentist/apurva-gujarathi.webp";
 
-const WA_URL =
-  "https://wa.me/919833166697?text=Hello%2C%20I%20need%20dental%20implant%20consultation";
+const WA_URL = "https://wa.me/919833166697";
 
 const WA = ({ size = 5 }) => (
   <FaWhatsapp className={`icon-wa icon-wa--${size}`} />
@@ -416,6 +417,13 @@ const DOCTORS = [
     spec: "Dentist, Prosthodontist, Implantologist",
     desc: "Dr. C. Sharath Babu is a highly experienced Prosthodontist and Implantologist with over 15 years of expertise in advanced dental care, implantology, and smile restoration treatments. Currently associated with Medicover Hospitals, Hitech City, Hyderabad, he is recognized for his compassionate patient care, accurate diagnosis, and advanced dental solutions. Dr. Sharath Babu completed his BDS from AME's Dental College and Hospital, Raichur in 2003 and earned his MDS in Prosthodontics from Dr. NTR University of Health Sciences, Vijayawada in 2010. He further enhanced his expertise by obtaining the prestigious FICOI (Fellowship of the International Congress of Oral Implantologists) in 2014. His advanced training also includes a Mastership in Implantology from the Asian Institute of Advanced Dentistry and a Professional Advanced Prosthetic Course in OSSTEM Implantology. Dr. C. Sharath Babu specializes in implant surgery, full-mouth rehabilitation, cosmetic smile designing, aesthetic dental restorations, and complex dental rehabilitation procedures. Known for combining technical precision with patient comfort, he focuses on delivering functional, long-lasting, and aesthetically pleasing dental outcomes.",
     photoUrl: CSharathBabuImage,
+  },
+  {
+    name: "Dr. Apurva Gujarathi",
+    education: "BDS, MDS (Pedodontics)",
+    spec: "Pediatric Dentist, Cosmetic Dentist, Preventive Dental Care Specialist",
+    desc: "Dr. Apurva Gujarathi is a highly experienced Pediatric Dentist and Cosmetic Dental Specialist with over 16 years of overall clinical experience, including more than 15 years of specialization in pediatric dentistry. He is widely recognized for providing comprehensive dental care for infants, children, adolescents, and young patients in a child-friendly and comfortable environment. Dr. Gujarathi completed his BDS followed by an MDS in Pedodontics, developing advanced expertise in preventive, restorative, and pediatric dental treatments. He practices at specialized pediatric dental centers in Andheri East and Andheri West, Mumbai, where he has established dedicated child-focused dental facilities equipped with pediatric operatories and play areas designed to create a positive and stress-free dental experience for children. His clinical expertise covers preventive dentistry, dental restorations, treatment of traumatic dental injuries, dental prophylaxis, teeth scaling and polishing, cavity management, pediatric root canal treatments, fluoride therapy, habit correction, and comprehensive oral health care for children from birth through adolescence. Dr. Gujarathi is known for his gentle approach, patience, and ability to effectively manage children's dental anxiety, making dental visits comfortable and enjoyable for young patients. He is committed to promoting early oral health education and preventive dental care, helping children develop healthy dental habits that last a lifetime. As an active member of the Indian Society of Pedodontics and Preventive Dentistry, Dr. Gujarathi remains updated with the latest advancements in pediatric dental care and minimally invasive treatment techniques. His dedication to delivering high-quality, child-centered dental services has earned him the trust of parents and an excellent reputation in pediatric dentistry.",
+    photoUrl: ApurvaGujarathiImage,
   },
 ];
 

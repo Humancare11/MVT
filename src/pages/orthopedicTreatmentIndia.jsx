@@ -1,5 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-
+// Swiper imports
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import "./orthopedicTreatmentIndia.css";
 
 import {
@@ -38,12 +42,20 @@ import {
   FaWhatsapp,
   FaChevronDown,
   FaPlus,
+  FaTimes,
 } from "react-icons/fa";
 import heroImage from "../departments/dept-images/orthopedics-treatment.webp";
 import about from "../departments/dept-images/orthopedic-surgeon-india.webp";
 import about1 from "../departments/dept-images/knee-replacement-patient-india.webp";
 import about2 from "../departments/dept-images/robotic-knee-surgery-india.webp";
 import whyChooseUs from "../departments/dept-images/why-choose-us.webp";
+
+import SatyenNabarImage from "../departments/dept-images/orthopedic/dr-satyen-nabar.webp";
+import DinshawPardiwalaImage from "../departments/dept-images/orthopedic/Dr.-Dinshaw-pardiwala.webp";
+import VivekAllahbadiaImage from "../departments/dept-images/orthopedic/Dr.-Vivek-Allahbadia.webp";
+import MihirBapatImage from "../departments/dept-images/orthopedic/Dr.-Mihir-Bapat.webp";
+import DDTannaImage from "../departments/dept-images/orthopedic/Dr.-D.D.-Tanna.webp";
+import AshokJohariImage from "../departments/dept-images/orthopedic/Dr.-Ashok-Johari.webp";
 
 const WA = ({ size = 5 }) => (
   <FaWhatsapp className={`icon-wa icon-wa--${size}`} />
@@ -233,101 +245,134 @@ import fortisImage from "../departments/dept-images/multi-specialty-dental-hospi
 
 import maxImage from "../departments/dept-images/top-dental-care-india.webp";
 
+import kokilabenImage from "../departments/dept-images/orthopedic/best-orthopedic-hospital-in-india.webp";
+import nanavatiImage from "../departments/dept-images/orthopedic/affordable-orthopedic-hospital-in-india.webp";
+import jaslokImage from "../departments/dept-images/orthopedic/orthopedic-hospital-in-india.webp";
+
 const HOSPITALS = [
+  {
+    name: "Max",
+    sub: "Super Speciality Hospital",
+    image: maxImage,
+    location: "New Delhi, India",
+    rating: 4.9,
+    accreditations: ["NABH", "JCI"],
+    specialties: [
+      "Joint Replacement Surgery",
+      "Spine Surgery",
+      "Sports Injury Treatment",
+    ],
+  },
   {
     name: "Apollo",
     sub: "Hospitals",
     image: apolloImage,
-    location: "New Delhi, India",
+    location: "Chennai, India",
     rating: 4.9,
     accreditations: ["JCI", "NABH"],
     specialties: [
-      "Cardiothoracic Surgery (Heart Surgery)",
-      "Electrophysiology (Heart Rhythm)",
-      "Pediatric Cardiology",
+      "Robotic Knee Replacement",
+      "Hip Replacement Surgery",
+      "Orthopedic Trauma Care",
     ],
-  },
-  {
-    name: "Medanta",
-    sub: "The Medicity",
-    image: medantaImage,
-    location: "Gurgaon, India",
-    rating: 4.8,
-    accreditations: ["JCI", "NABH"],
-    specialties: ["Heart Transplant", "TAVR", "Robotic Surgery"],
   },
   {
     name: "Fortis",
-    sub: "Healthcare",
+    sub: "Memorial Research Institute",
     image: fortisImage,
-    location: "Delhi NCR, India",
-    rating: 4.7,
+    location: "Gurgaon, India",
+    rating: 4.8,
     accreditations: ["JCI", "NABH"],
     specialties: [
-      "Cardiothoracic & Vascular Surgery (CTVS)",
-      "Non-Invasive Cardiology",
-      "Advanced Cardiac Care",
+      "Joint Replacement",
+      "Arthroscopy & Sports Medicine",
+      "Complex Trauma Surgery",
     ],
   },
   {
-    name: "Max",
-    sub: "Healthcare",
-    image: maxImage,
-    location: "Delhi, India",
-    rating: 4.8,
-    accreditations: ["NABH", "ISO"],
+    name: "Kokilaben Dhirubhai Ambani",
+    sub: "Hospital",
+    image: kokilabenImage,
+    location: "Mumbai, India",
+    rating: 4.9,
+    accreditations: ["JCI", "NABH"],
     specialties: [
-      "Interventional Cardiology",
-      "Electrophysiology",
-      "Heart Failure & Transplant Care",
+      "Sports Orthopaedics",
+      "Arthroscopic Surgery",
+      "Shoulder & Knee Reconstruction",
+    ],
+  },
+  {
+    name: "Nanavati Max",
+    sub: "Super Speciality Hospital",
+    image: nanavatiImage,
+    location: "Mumbai, India",
+    rating: 4.8,
+    accreditations: ["NABH"],
+    specialties: [
+      "Spine Surgery",
+      "Minimally Invasive Orthopedics",
+      "Joint Replacement Surgery",
+    ],
+  },
+  {
+    name: "Jaslok",
+    sub: "Hospital & Research Centre",
+    image: jaslokImage,
+    location: "Mumbai, India",
+    rating: 4.7,
+    accreditations: ["NABH"],
+    specialties: [
+      "Hip & Knee Replacement",
+      "Revision Joint Surgery",
+      "Orthopedic Rehabilitation",
     ],
   },
 ];
 
 const DOCTORS = [
   {
-    initials: "RK",
-    name: "Dr. Rajesh Kumar",
-    spec: "Orthopedic Surgeon",
-    hosp: "Apollo Hospitals, New Delhi",
-    desc: "25+ years of experience in total knee replacement, hip replacement, and advanced orthopedic surgery in India.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=300&fit=crop",
-    specClass: "spec-red",
-    gradClass: "grad-apollo",
+    name: "Dr. Satyen Nabar",
+    education: "MBBS, MS (Orthopaedics)",
+    spec: "Orthopaedic Surgeon, Joint Replacement Specialist, Sports Injury Expert",
+    desc: "Dr. Satyen Nabar is a highly experienced Orthopaedic Surgeon with over 24 years of expertise in diagnosing and treating a wide range of musculoskeletal disorders, joint conditions, sports injuries, and complex orthopedic trauma cases. He is currently associated with Sujay Hospital and Research Centre, Mumbai, and is widely recognized for his patient-focused approach, precise diagnosis, and advanced surgical skills. Throughout his distinguished career, Dr. Nabar has successfully managed numerous complex orthopedic cases across leading healthcare institutions in India. He completed his MBBS followed by an MS in Orthopaedics and has continually enhanced his expertise through advanced orthopedic training, research, workshops, and academic contributions. Dr. Nabar specializes in joint replacement and revision surgeries of the knee, hip, shoulder, and elbow, helping patients regain mobility and improve their quality of life through modern surgical techniques. His expertise also extends to arthroscopic procedures for knee and shoulder conditions, sports injury management, complex fracture fixation, deformity correction surgeries, limb reconstruction procedures, and pediatric orthopedic trauma care. Known for his commitment to excellence, Dr. Nabar combines advanced orthopedic treatment methods with personalized rehabilitation strategies to ensure optimal patient outcomes. In addition to his clinical work, he has actively participated in orthopedic research, presented scientific papers, and contributed to various academic forums. His dedication to innovation and orthopedic excellence has earned him recognition and awards within the field. With extensive experience in both surgical and non-surgical orthopedic treatments, Dr. Satyen Nabar remains a trusted specialist for patients seeking comprehensive care for joint disorders, trauma injuries, sports-related conditions, and reconstructive orthopedic procedures.",
+    photoUrl: SatyenNabarImage,
   },
   {
-    initials: "PN",
-    name: "Dr. Priya Nair",
-    spec: "Robotic Joint Replacement Specialist",
-    hosp: "Medanta, Gurgaon",
-    desc: "Specialist in robotic knee replacement surgery and minimally invasive orthopedic procedures.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop",
-    specClass: "spec-navy",
-    gradClass: "grad-medanta",
+    name: "Dr. Dinshaw Pardiwala",
+    education: "MS (Orthopaedics), DNB (Orthopaedics), FCPS",
+    spec: "Sports Orthopaedic Surgeon, Arthroscopy Specialist, Shoulder Surgeon, Sports Medicine Expert",
+    desc: "Dr. Dinshaw Pardiwala is one of India's most renowned Sports Orthopaedic Surgeons, with over 27 years of experience in sports medicine, arthroscopy, minimally invasive orthopedic surgery, shoulder surgery, and regenerative medicine. He serves as Director of Arthroscopy, Sports Orthopaedics & Shoulder Service and Head of the Centre for Sports Medicine at Kokilaben Dhirubhai Ambani Hospital, Mumbai. Widely regarded as a pioneer in sports injury management and arthroscopic surgery in India, Dr. Pardiwala has played a significant role in helping elite athletes return to peak performance following complex injuries. He completed his advanced orthopedic training with qualifications including MS (Orthopaedics), DNB (Orthopaedics), and FCPS. Over the course of his distinguished career, he has developed exceptional expertise in ligament reconstruction, knee arthroscopy, shoulder arthroscopy, cartilage restoration, sports trauma, joint preservation procedures, and minimally invasive orthopedic surgery. Dr. Pardiwala is internationally recognized for his contributions to arthroscopy and sports medicine. He is a committee member of the International Society of Arthroscopy, Knee Surgery and Orthopaedic Sports Medicine (ISAKOS), serves on the board of the Asia-Pacific Knee, Arthroscopy and Sports Medicine Society (APKASS), and is an active member of the Indian Arthroscopy Association and the Shoulder & Elbow Society of India. He has also served on the editorial boards of globally respected journals such as Arthroscopy and the American Journal of Sports Medicine. As India's representative on the International Cricket Council (ICC) Medical Committee and a trusted physician for multiple national sports teams, Dr. Pardiwala has treated some of India's most celebrated athletes across cricket, badminton, wrestling, boxing, rugby, and kabaddi. His patients include Olympic and international medalists such as Saina Nehwal, P. V. Sindhu, Parupalli Kashyap, Sushil Kumar, Yogeshwar Dutt, Vikas Krishan, and several leading Indian cricketers. Notably, among India's medal winners at the 2018 Commonwealth Games, 12 athletes had undergone sports injury surgeries under his care, contributing to multiple gold medal-winning performances. His research and innovations in arthroscopic surgery have earned international recognition, including the prestigious ISAKOS John Joyce Award. Known for combining advanced surgical techniques with athlete-focused rehabilitation programs, Dr. Dinshaw Pardiwala is widely recognized as one of India's leading experts in sports medicine, arthroscopy, and orthopedic surgery.",
+    photoUrl: DinshawPardiwalaImage,
   },
   {
-    initials: "SM",
-    name: "Dr. Suresh Mehta",
-    spec: "Spine and Trauma Surgeon",
-    hosp: "Fortis Hospitals, Delhi",
-    desc: "Expert in spine surgery, trauma care, and advanced orthopedic treatment for international patients.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=300&fit=crop",
-    specClass: "spec-red",
-    gradClass: "grad-fortis",
+    name: "Dr. Vivek Allahbadia",
+    education:
+      "MBBS, D.Orth, MS (Orthopaedics), FCPS Orthopaedics, MCh Orthopaedics (UK)",
+    spec: "Orthopaedic Surgeon, Joint Replacement Specialist, Robotic Knee Replacement Surgeon",
+    desc: "Dr. Vivek Allahbadia is a highly accomplished Orthopaedic and Joint Replacement Surgeon with over 28 years of surgical experience and expertise in advanced knee replacement, robotic-assisted joint surgery, sports injury management, and complex reconstructive orthopaedic procedures. He is currently associated with Hinduja Healthcare Surgical, Khar, Mumbai, and is recognized as one of the pioneers of robotic knee replacement surgery in Mumbai. Dr. Allahbadia completed his MBBS, Diploma in Orthopaedics, MS in Orthopaedics, FCPS Orthopaedics, and MCh Orthopaedics (UK), building a strong foundation in advanced orthopedic care. He further enhanced his expertise through prestigious international fellowships and advanced training programs at leading centers across the United Kingdom, Singapore, Prague, and Australia. His fellowship training includes Joint Replacement Surgery at the renowned Northern General Hospital, Sheffield, United Kingdom, along with specialized exposure to advanced orthopedic and reconstructive procedures in Singapore and Prague. To stay at the forefront of technological advancements in orthopaedics, Dr. Allahbadia underwent specialized training in Computer Navigation Knee Replacement Surgery in Perth, Australia, and is a certified CORI Robotic Surgery Specialist. Throughout his distinguished career, he has successfully treated thousands of patients suffering from severe arthritis, joint degeneration, sports injuries, deformities, and complex orthopedic conditions. His expertise encompasses robotic knee replacement, total knee replacement, hip replacement surgery, revision joint replacement procedures, minimally invasive orthopaedic surgery, sports injury treatment, arthroscopic surgery, and computer-assisted joint reconstruction. Known for combining precision, innovation, and compassionate patient care, Dr. Allahbadia focuses on delivering personalized treatment plans that optimize mobility, reduce recovery time, and improve long-term outcomes. His commitment to adopting cutting-edge robotic technology and evidence-based surgical techniques has established him as one of Mumbai's leading specialists in joint replacement and advanced orthopedic surgery. Patients value his meticulous surgical approach, accurate diagnosis, and dedication to restoring pain-free movement and enhanced quality of life.",
+    photoUrl: VivekAllahbadiaImage,
   },
   {
-    initials: "AV",
-    name: "Dr. Amit Verma",
-    spec: "Knee Replacement Specialist",
-    hosp: "Max Healthcare, Delhi",
-    desc: "Experienced orthopedic specialist focusing on knee replacement surgery and joint preservation treatment.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=300&fit=crop",
-    specClass: "spec-navy",
-    gradClass: "grad-max",
+    name: "Dr. Mihir Bapat",
+    education: "MS (Orthopaedics), DNB (Orthopaedics)",
+    spec: "Spine Surgeon, Minimally Invasive Spine Surgery Specialist, Orthopaedic Spine Expert",
+    desc: "Dr. Mihir Bapat is one of India's leading Spine Surgeons and currently serves as Vice Chairman – Orthopedics & Spinal Surgery at the Nanavati Max Institute of Advanced Orthopaedics, Spine & Joint Care, Mumbai. With over 25 years of experience and more than 8,000 successful spine surgeries to his credit, he is widely recognized for his expertise in minimally invasive spine surgery, complex spinal reconstruction, and advanced spinal deformity correction. Dr. Bapat leads multiple specialized spine programs, including the Spine Fusion Surgery Unit, Center of Spine Surgery, Microscopic and Endoscopic Disc Surgery Unit, and Back Pain Management Unit. Throughout his distinguished career, he has developed extensive expertise in treating degenerative spine disorders, slipped discs, spinal fractures, spinal tumors, scoliosis, kyphosis, spinal deformities, and chronic back pain conditions. His focus on minimally invasive and endoscopic spine procedures allows patients to benefit from smaller incisions, reduced pain, faster recovery, and improved surgical outcomes. Recognized internationally for his contributions to spinal surgery, Dr. Bapat has received numerous prestigious awards, including the Karmarkar Gold Medal in Surgery, the Pandurangi Award for Best Resident in Orthopaedics, and the highly regarded Global Outreach Fellowship awarded by the Scoliosis Research Society. He is actively involved in academic teaching and serves as a postgraduate educator affiliated with Mumbai University while also holding the distinction of being a Diplomate of the National Board. Dr. Bapat maintains strong affiliations with leading international spine organizations, including AO Spine Asia Pacific, and has contributed extensively to global spine research through numerous international publications, scientific presentations, and academic citations. Known for his surgical precision, evidence-based approach, and patient-centered care, Dr. Mihir Bapat is regarded as one of the foremost experts in spine surgery, spinal deformity correction, and minimally invasive spine treatment in India.",
+    photoUrl: MihirBapatImage,
+  },
+  {
+    name: "Dr. D. D. Tanna",
+    education: "MS (Orthopaedics)",
+    spec: "Orthopaedic Surgeon, Trauma Specialist, Joint Replacement Surgeon",
+    desc: "Dr. D. D. Tanna is one of India's most respected and accomplished Orthopaedic Surgeons, with an exceptional career spanning over 55 years in orthopedic surgery, trauma care, fracture management, and joint replacement surgery. Currently serving as Mentor in Orthopaedics, Dr. Tanna has played a transformative role in shaping modern orthopedic practice in India through his pioneering surgical innovations, academic leadership, and dedication to training future generations of orthopedic surgeons. A distinguished academician, he served as Professor of Orthopaedics at Nair Hospital and Topiwala National Medical College, Mumbai, where he mentored countless MBBS and MS Orthopaedics students who have gone on to become leading orthopedic specialists across the country. Dr. Tanna is widely recognized as a pioneer in Indian orthopedics for introducing interlocking nailing techniques in India and successfully adapting this advanced fracture fixation method to local healthcare settings. He was also among the first orthopedic surgeons in the private sector to introduce and utilize C-Arm imaging technology, significantly advancing the precision of orthopedic trauma surgeries. His expertise encompasses complex trauma management, revision trauma surgery, failed fracture treatment, fracture fixation procedures, joint replacement surgery, and advanced orthopedic reconstruction. Beyond his clinical contributions, Dr. Tanna is an internationally recognized author and educator. His landmark publication, 'Tanna's Interlocking Book,' now in its fifth edition, is regarded as a definitive reference for orthopedic surgeons worldwide. He has also authored several influential orthopedic texts, including 'Orthopaedic Tidbits,' 'Orthopaedic Secrets,' and 'Proximal Femur Fracture.' In addition, he has published numerous scientific articles in leading national and international journals, contributing significantly to orthopedic research and education. Throughout his distinguished career, Dr. Tanna has held prestigious leadership positions, serving as President of the Trauma Society Association, Maharashtra Orthopaedic Association, and Mumbai Orthopaedic Association. He is also an Honorary Fellow of the Indian Orthopaedic Association and has been recognized with multiple Lifetime Achievement Awards from the Trauma Society and the All India Orthopaedic Association for his extraordinary contributions to orthopedic surgery. Known for his surgical excellence, innovation, and lifelong commitment to orthopedic education, Dr. D. D. Tanna remains a towering figure in Indian orthopedics and continues to influence the advancement of trauma care, fracture management, and joint reconstruction surgery.",
+    photoUrl: DDTannaImage,
+  },
+  {
+    name: "Dr. Ashok Johari",
+    education: "MBBS, MS (Orthopaedics)",
+    spec: "Paediatric Orthopaedic Surgeon, Cerebral Palsy Specialist, Pediatric Deformity Correction Expert",
+    desc: "Dr. Ashok Johari is one of India's most respected Paediatric Orthopaedic Surgeons, with over 42 years of experience in the diagnosis, treatment, and surgical management of musculoskeletal disorders in children. Widely recognized for his pioneering contributions to pediatric orthopedics, Dr. Johari has earned both national and international acclaim as a surgeon, educator, researcher, and innovator. Throughout his distinguished career, he has dedicated himself to improving the lives of children affected by orthopedic disorders, congenital deformities, neuromuscular conditions, and complex mobility challenges. Dr. Johari is regarded as one of the driving forces behind the growth of Pediatric Orthopaedics in India and played a pivotal role in establishing and advancing the specialty across the country. He spearheaded the Pediatric Orthopaedic movement in India and is the founder of the Indian Academy of Cerebral Palsy (IACP), a landmark organization dedicated to improving care for children with cerebral palsy and related neurological disorders. His clinical expertise encompasses cerebral palsy management, pediatric deformity correction, clubfoot treatment, limb reconstruction, congenital orthopedic disorders, gait abnormalities, pediatric trauma, neuromuscular conditions, and complex orthopedic surgeries in children. In addition to his surgical excellence, Dr. Johari is a passionate educator who has trained and mentored numerous orthopedic surgeons, helping shape the future of pediatric orthopedic care in India. His commitment to social service is reflected through his active involvement in philanthropic initiatives such as the Johari Medical & Research Foundation (JMRF) and Child Care Foundation, organizations focused on delivering specialized orthopedic care to underprivileged children. Dr. Johari is also deeply engaged in clinical research and innovation, contributing to the development of advanced treatment techniques and rehabilitation strategies for children with orthopedic disabilities. Known for his compassionate approach, academic leadership, and dedication to improving children's mobility and quality of life, Dr. Ashok Johari remains one of India's foremost authorities in pediatric orthopedics and cerebral palsy management.",
+    photoUrl: AshokJohariImage,
   },
 ];
 
@@ -441,6 +486,7 @@ export default function OrthopedicTreatmentIndia() {
   const bottomCards = cards.filter((c) => c.wide);
   const [currentSlide, setCurrentSlide] = useState(0);
   const timerRef = useRef(null);
+  const [selectedDoctor, setSelectedDoctor] = useState(null);
 
   const [activeIndex, setActiveIndex] = useState(null);
   const toggleFAQ = (index) => {
@@ -452,6 +498,11 @@ export default function OrthopedicTreatmentIndia() {
       e.preventDefault();
       toggleFAQ(index);
     }
+  };
+
+  const truncateText = (text, maxLength = 120) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + "...";
   };
 
   // Group reviews into pairs → [[r0,r1], [r2,r3], ...]
@@ -480,6 +531,24 @@ export default function OrthopedicTreatmentIndia() {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, []);
+
+  // Close modal handler
+  const closeModal = () => setSelectedDoctor(null);
+
+  // Close modal on ESC key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") closeModal();
+    };
+    if (selectedDoctor) {
+      document.addEventListener("keydown", handleEsc);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleEsc);
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedDoctor]);
   return (
     <>
       {/* ════ SECTION 1 — HERO ════ */}
@@ -1005,49 +1074,90 @@ export default function OrthopedicTreatmentIndia() {
               surgeon in India or the best knee replacement surgeon in India.
             </p>
           </div>
-          <div className="hn-grid">
-            {HOSPITALS.map((h, i) => (
-              <div key={i} className="hn-card">
-                <div className="hn-card-top">
-                  <div
-                    className="hn-card-image"
-                    style={{ backgroundImage: `url(${h.image})` }}
-                  >
-                    <div className="hn-card-overlay" />
-                  </div>
-                  <div className="hn-card-header">
-                    <div className="hn-hospital-info">
-                      <h3 className="hn-hospital-name">{h.name}</h3>
-                      <p className="hn-hospital-sub">{h.sub}</p>
+          <div className="hn-slider-wrapper">
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              spaceBetween={28}
+              slidesPerView={1}
+              pagination={{
+                clickable: true,
+                dynamicBullets: true,
+                dynamicMainBullets: 3,
+              }}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              loop={true}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 24,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 24,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 26,
+                },
+                1280: {
+                  slidesPerView: 4,
+                  spaceBetween: 28,
+                },
+              }}
+              className="hn-swiper"
+            >
+              {HOSPITALS.map((h, i) => (
+                <SwiperSlide key={i}>
+                  <div className="hn-card">
+                    <div className="hn-card-top">
+                      <div
+                        className="hn-card-image"
+                        style={{ backgroundImage: `url(${h.image})` }}
+                      >
+                        <div className="hn-card-overlay" />
+                      </div>
+                      <div className="hn-card-header">
+                        <div className="hn-hospital-info">
+                          <h3 className="hn-hospital-name">{h.name}</h3>
+                          <p className="hn-hospital-sub">{h.sub}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="hn-card-body">
+                      <div className="hn-specialties">
+                        <p className="hn-specialties-label">
+                          Orthopedic Specialties:
+                        </p>
+                        <ul className="hn-specialties-list">
+                          {h.specialties.map((spec, j) => (
+                            <li key={j} className="hn-specialty-item">
+                              <Check />
+                              <span>{spec}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                <div className="hn-card-body">
-                  <div className="hn-specialties">
-                    <p className="hn-specialties-label">Dentist Specialties:</p>
-                    <ul className="hn-specialties-list">
-                      {h.specialties.map((spec, j) => (
-                        <li key={j} className="hn-specialty-item">
-                          <Check />
-                          <span>{spec}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>
 
+      {/* ════ SECTION 4 — DOCTORS ════ */}
       <section className="doctor-section-light">
         <div className="doctor-container">
           <div className="doctor-title-wrap">
             <span className="doctor-label">Our Specialists</span>
             <h2 className="doctor-h2">Best Orthopedic Surgeons in India</h2>
-            <p>
+            <p className="doctor-subtitle">
               India is home to many experienced joint replacement specialists
               known for handling complex orthopedic cases and advanced knee
               replacement procedures. Below are some well-known specialists
@@ -1060,23 +1170,78 @@ export default function OrthopedicTreatmentIndia() {
               <div key={i} className="doctor-card">
                 <img
                   src={d.photoUrl}
-                  alt={`${d.name} - ${d.spec} in India specializing in orthopedic surgery and knee replacement treatment`}
+                  alt={`${d.name} – ${d.spec}`}
                   className="doctor-card-photo"
                   loading="lazy"
-                  width="400"
-                  height="300"
                 />
                 <div className="doctor-card-body">
-                  <span className="doctor-spec">{d.spec}</span>
-                  <h3 className="doctor-name">{d.name}</h3>
-                  <p className="doctor-desc">{d.desc}</p>
-                  {/* <button className="doctor-btn">See profile</button> */}
+                  <div className="doctor-card-content">
+                    <span className="doctor-spec">{d.spec}</span>
+                    <h3 className="doctor-name">{d.name}</h3>
+                    <h4 className="doctor-education">- {d.education}</h4>
+                    <p className="doctor-desc">{truncateText(d.desc, 120)}</p>
+                  </div>
+                  <button
+                    className="doctor-read-more custom-learn-more-btn"
+                    onClick={() => setSelectedDoctor(d)}
+                    aria-label={`Read more about ${d.name}`}
+                  >
+                    <span className="button-text">Read More</span>
+                    <div className="circle"></div>
+                    <div className="arrow"></div>
+                  </button>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+      {/* ════ DOCTOR MODAL ════ */}
+      {selectedDoctor && (
+        <div className="doctor-modal-overlay" onClick={closeModal}>
+          <div
+            className="doctor-modal"
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-labelledby="modal-title"
+            aria-modal="true"
+          >
+            <button
+              className="doctor-modal-close"
+              onClick={closeModal}
+              aria-label="Close modal"
+            >
+              <FaTimes />
+            </button>
+
+            <div className="doctor-modal-content">
+              <div className="doctor-modal-header">
+                <img
+                  src={selectedDoctor.photoUrl}
+                  alt={selectedDoctor.name}
+                  className="doctor-modal-image"
+                />
+                <div className="doctor-modal-info">
+                  <span className="doctor-modal-spec">
+                    {selectedDoctor.spec}
+                  </span>
+                  <h3 id="modal-title" className="doctor-modal-name">
+                    {selectedDoctor.name}
+                  </h3>
+                  <p className="doctor-modal-education">
+                    {selectedDoctor.education}
+                  </p>
+                </div>
+              </div>
+
+              <div className="doctor-modal-body">
+                <h4 className="doctor-modal-section-title">About</h4>
+                <p className="doctor-modal-desc">{selectedDoctor.desc}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <section className="ortho-reviews-section">
         <div className="ortho-reviews-content">
@@ -1094,7 +1259,7 @@ export default function OrthopedicTreatmentIndia() {
                     <div key={cardIndex} className="ortho-reviews-card">
                       <Stars />
                       <p className="ortho-reviews-card-text">{r.text}</p>
-                      <p className="ortho-reviews-card-name">{r.name}</p>
+                      {/* <p className="ortho-reviews-card-name">{r.name}</p> */}
                     </div>
                   ))}
                 </div>
@@ -1124,9 +1289,6 @@ export default function OrthopedicTreatmentIndia() {
                   <span key={i}>{s}</span>
                 ))}
               </div>
-              <p className="ortho-reviews-rating-description">
-                Rated 4.9 stars based on 1200+ reviews
-              </p>
             </div>
           </div>
         </div>
