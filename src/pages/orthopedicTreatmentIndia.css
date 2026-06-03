@@ -1,0 +1,4488 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap");
+
+/* ═══════════════════════════════════════════
+   CSS VARIABLES
+═══════════════════════════════════════════ */
+:root {
+  --color-navy: #132944;
+  --color-navy-dark: #0b1f3a;
+  --color-navy-mid: #1a3558;
+  --color-red: #cc1f1f;
+  --color-red-dark: #a81818;
+  --color-red-light: #e02020;
+  --color-white: #ffffff;
+  --color-light-bg: #f5f7fa;
+  --color-text: #132944;
+  --color-text-muted: rgba(19, 41, 68, 0.6);
+
+  /* Typography Variables */
+  --font-primary:
+    "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Playfair Display", Georgia, serif;
+
+  /* Font Sizes */
+  --fs-hero: 52px;
+  --fs-h2: 38px;
+  --fs-h3: 24px;
+  --fs-body: 17px;
+  --fs-small: 15px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+/* ═══════════════════════════════════════════
+   HERO SECTION
+═══════════════════════════════════════════ */
+.orthopedic-hero-section {
+  color: #fff;
+  text-align: left;
+  padding: 50px 0;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.orthopedic-hero-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  z-index: 0;
+}
+
+.orthopedic-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 23, 84, 1) 0%,
+    rgba(10, 23, 84, 1) 20%,
+    rgba(10, 23, 84, 0.88) 45%,
+    rgba(10, 23, 84, 0.45) 65%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.orthopedic-hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.orthopedic-hero-content {
+  max-width: 1350px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 60px; /* desktop breathing room */
+  padding-right: 40px;
+}
+
+.orthopedic-hero-badge {
+  background: rgba(214, 0, 0, 0.9);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 24px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(214, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.orthopedic-hero-section h1,
+.orthopedic-hero-section h2 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-hero);
+  font-weight: 700;
+  max-width: 55rem;
+  margin: 0 0 28px 0;
+  line-height: 1.25;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+.orthopedic-hero-section p {
+  font-family: var(--font-primary);
+  font-size: var(--fs-body);
+  max-width: 60rem;
+  margin: 0 0 24px 0;
+  opacity: 0.95;
+  line-height: 1.75;
+  text-align: left;
+  font-weight: 400;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.orthopedic-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 8px;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .orthopedic-hero-content {
+    padding-left: 40px;
+    padding-right: 30px;
+  }
+
+  .orthopedic-hero-section h1,
+  .orthopedic-hero-section h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orthopedic-hero-section {
+    padding: 100px 0 80px;
+    min-height: 450px;
+  }
+
+  .orthopedic-hero-bg-image {
+    object-position: 70% center;
+  }
+
+  .orthopedic-hero-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(10, 23, 84, 1) 0%,
+      rgba(10, 23, 84, 0.95) 50%,
+      rgba(10, 23, 84, 0.75) 100%
+    );
+  }
+
+  .orthopedic-hero-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .orthopedic-hero-section h1,
+  .orthopedic-hero-section h2 {
+    font-size: 32px;
+    max-width: 100%;
+  }
+
+  .orthopedic-hero-section p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .orthopedic-hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .orthopedic-hero-section h1,
+  .orthopedic-hero-section h2 {
+    font-size: 26px;
+  }
+
+  .orthopedic-hero-badge {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   CTA BUTTONS
+═══════════════════════════════════════════ */
+.btn-wa,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-wa {
+  background: #25d366;
+  color: #ffffff;
+}
+
+.btn-wa:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-glow {
+  animation: whatsapp-pulse 2s ease-in-out infinite;
+}
+
+@keyframes whatsapp-pulse {
+  0%,
+  100% {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  }
+}
+
+.btn-outline {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.icon-wa {
+  font-size: 20px;
+  display: inline-block;
+}
+
+.icon-wa--5 {
+  font-size: 20px;
+}
+
+/* Mobile Button Styles */
+@media (max-width: 768px) {
+  .btn-wa,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-wa,
+  .btn-outline {
+    padding: 14px 20px;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .icon-wa {
+    font-size: 18px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+  OUR APPROACH SECTION
+═══════════════════════════════════════════ */
+/* ─── Section Wrapper ─────────────────────────────────────── */
+.approach-section {
+  padding: 3rem 1rem;
+  max-width: 1350px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* ─── Section Header ──────────────────────────────────────── */
+.approach-section__label {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  color: #0a1754;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin: 0 auto 8px;
+}
+
+.approach-section__label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 85px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.approach-section__label::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 85px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.approach-section__title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #0a1754;
+  max-width: 750px;
+  margin: 0 auto 16px;
+  line-height: 1.3;
+  font-family: var(--font-heading);
+}
+
+.approach-section__sub {
+  font-size: 17px;
+  color: #555;
+  margin: 0 auto 2.5rem;
+  max-width: 70rem;
+  line-height: 1.7;
+}
+
+/* ─── Grid Layouts ────────────────────────────────────────── */
+.approach-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.approach-grid--top {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 1.5rem;
+}
+
+.approach-grid--bottom {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ─── Feature Item (replaces dark cards) ──────────────────── */
+.approach-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  position: relative;
+  box-shadow: 0 2px 12px rgba(10, 23, 84, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  text-align: left;
+  border: 1px solid rgba(10, 24, 84, 0.507);
+}
+
+.approach-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(10, 23, 84, 0.15);
+}
+
+/* ─── Icon Box with Border ────────────────────────────────── */
+.approach-card__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border: 1.5px solid #0a1754;
+  background: rgba(255, 255, 255, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+  color: #0a1754;
+}
+
+/* ─── Tag Badge ───────────────────────────────────────────── */
+.approach-card__tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: rgba(219, 52, 52, 0.1);
+  color: #db3434;
+  border-radius: 5px;
+  padding: 4px 10px;
+  margin-bottom: 0.75rem;
+}
+
+/* ─── Title (Navy) ────────────────────────────────────────── */
+.approach-card__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a1754;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+  font-family: var(--font-primary);
+}
+
+/* ─── List (Muted Text) ───────────────────────────────────── */
+.approach-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.approach-card__list li {
+  font-size: 15px;
+  color: rgba(10, 23, 84, 0.75);
+  padding: 6px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.65;
+}
+
+/* Dot before each list item */
+.approach-card__list li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #db3434;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+/* ─── Wide Card: 3-col grid list ─────────────────────────── */
+.approach-card__list--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 1.5rem;
+}
+
+/* Remove unused number styles */
+.approach-card__num {
+  display: none;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .approach-section__title {
+    font-size: 32px;
+  }
+
+  .approach-section__sub {
+    font-size: 16px;
+  }
+
+  .approach-card__icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .approach-card__title {
+    font-size: 19px;
+  }
+
+  .approach-card__list li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  .approach-grid--top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .approach-grid--top,
+  .approach-grid--bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-card__list--grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-section {
+    padding: 2rem 1.25rem;
+    margin: 1.5rem auto;
+  }
+
+  .approach-section__title {
+    font-size: 28px;
+  }
+
+  .approach-section__label {
+    font-size: 22px;
+  }
+
+  .approach-section__label::before,
+  .approach-section__label::after {
+    left: 50%;
+  }
+
+  .approach-card__icon {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .approach-card__title {
+    font-size: 18px;
+  }
+}
+
+/* ── Section Wrapper ───────────────────────────────────────── */
+.about-section {
+  background: #f5f7fa;
+  padding: 3rem 1rem;
+  font-family: var(--font-primary);
+}
+
+/* ── Two-column container ──────────────────────────────────── */
+.about-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* ── IMAGE COLLAGE ─────────────────────────────────────────── */
+.about-images {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.about-images__main {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 650px;
+}
+
+.about-images__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-images__main:hover img {
+  transform: scale(1.04);
+}
+
+.about-images__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-images__small {
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1;
+  min-height: 318px;
+}
+
+.about-images__small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-images__small:hover img {
+  transform: scale(1.05);
+}
+
+/* ── CONTENT SIDE ──────────────────────────────────────────── */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Label */
+.about-content__label {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  color: #0a1754;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin: 0 0 8px;
+}
+
+.about-content__label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 12%;
+  transform: translateX(-50%);
+  width: 55px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.about-content__label::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 4%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+/* Heading */
+.about-content__title {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 700;
+  color: #0a1754;
+  margin: 0 0 1.25rem;
+  line-height: 1.3;
+}
+
+/* Body paragraphs */
+.about-content__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.about-content__body p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .about-content__body p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content__body {
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-content__body p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+/* ── Services grid ─────────────────────────────────────────── */
+.about-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-service {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #0a1754;
+  font-weight: 500;
+}
+
+.about-service__icon {
+  width: 20px;
+  height: 20px;
+  color: #0a1754;
+  flex-shrink: 0;
+}
+
+/* ── CTA Button ────────────────────────────────────────────── */
+.about-btn {
+  display: inline-block;
+  align-self: flex-start;
+  background: #0a1754;
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 13px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.about-btn:hover {
+  background: #132944;
+  transform: translateY(-2px);
+}
+
+.about-btn:active {
+  transform: translateY(0);
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .about-container {
+    gap: 2.5rem;
+  }
+
+  .about-images__main {
+    height: 550px;
+  }
+
+  .about-images__small {
+    min-height: 268px;
+  }
+
+  .about-content__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-images {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 12px;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .about-images__main {
+    height: 420px;
+  }
+
+  .about-images__small {
+    min-height: 204px;
+  }
+
+  .about-content__label {
+    font-size: 22px;
+  }
+
+  .about-content__title {
+    font-size: 26px;
+  }
+
+  .about-services {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-images {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .about-images__main {
+    height: 350px;
+  }
+
+  .about-images__stack {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .about-images__small {
+    min-height: 220px;
+  }
+
+  .about-content__label {
+    font-size: 20px;
+  }
+
+  .about-content__label::before,
+  .about-content__label::after {
+    left: 50%;
+  }
+
+  .about-content__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-images__main {
+    height: 280px;
+  }
+
+  .about-images__small {
+    min-height: 180px;
+  }
+
+  .about-content__label {
+    font-size: 18px;
+  }
+
+  .about-content__label::before,
+  .about-content__label::after {
+    width: 40px;
+  }
+
+  .about-content__title {
+    font-size: 22px;
+  }
+}
+
+/* ── Section ─────────────────────────────────────────────── */
+.why-section {
+  background: #f5f7fa;
+  padding: 3rem 1rem;
+  font-family: var(--font-primary);
+}
+
+/* ── Two-column container ────────────────────────────────── */
+.why-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ── LEFT: Image column ──────────────────────────────────── */
+.why-image-col {
+  position: sticky;
+  top: 2rem;
+}
+
+.why-image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+}
+
+.why-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.why-image-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+/* Badge overlay at bottom of image */
+.why-image-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.why-image-badge__num {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  color: #0a1754;
+  line-height: 1;
+}
+
+.why-image-badge__label {
+  font-size: 12px;
+  color: #555;
+  font-weight: 400;
+}
+
+/* ── RIGHT: Content column ───────────────────────────────── */
+.why-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-label {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  color: #0a1754;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin: 0 0 8px;
+}
+
+.why-label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.why-label::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.why-title {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 700;
+  color: #0a1754;
+  margin: 0 0 1.75rem;
+  line-height: 1.3;
+}
+
+/* ── Feature rows ────────────────────────────────────────── */
+.why-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.why-row {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 1.4rem;
+  background: #ffffff;
+  border: 0.5px solid rgba(10, 23, 84, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(10, 23, 84, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.why-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(10, 23, 84, 0.12);
+}
+
+/* ── Icon ────────────────────────────────────────────────── */
+.why-row__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.why-row__icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.why-row__icon--teal {
+  background: rgba(10, 23, 84, 0.08);
+  color: #0a1754;
+}
+.why-row__icon--coral {
+  background: rgba(219, 52, 52, 0.08);
+  color: #db3434;
+}
+.why-row__icon--blue {
+  background: rgba(10, 23, 84, 0.08);
+  color: #0a1754;
+}
+.why-row__icon--amber {
+  background: rgba(219, 52, 52, 0.08);
+  color: #db3434;
+}
+
+/* ── Row body ────────────────────────────────────────────── */
+.why-row__body {
+  flex: 1;
+}
+
+.why-row__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a1754;
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
+
+.why-row__desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 0.75rem;
+}
+
+/* ── Pills ───────────────────────────────────────────────── */
+.why-row__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.why-pill {
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.why-pill--teal {
+  background: rgba(10, 23, 84, 0.08);
+  color: #0a1754;
+}
+.why-pill--coral {
+  background: rgba(219, 52, 52, 0.08);
+  color: #db3434;
+}
+.why-pill--blue {
+  background: rgba(10, 23, 84, 0.08);
+  color: #0a1754;
+}
+.why-pill--amber {
+  background: rgba(219, 52, 52, 0.08);
+  color: #db3434;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .why-container {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2.5rem;
+  }
+
+  .why-title {
+    font-size: 32px;
+  }
+
+  .why-row__title {
+    font-size: 17px;
+  }
+
+  .why-row__desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-container {
+    grid-template-columns: 1fr;
+  }
+
+  .why-image-col {
+    position: static;
+  }
+
+  .why-image-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+
+  .why-title {
+    font-size: 28px;
+  }
+
+  .why-label {
+    font-size: 22px;
+  }
+
+  .why-label::before,
+  .why-label::after {
+    left: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-section {
+    padding: 3rem 1.25rem;
+  }
+
+  .why-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .why-title {
+    font-size: 26px;
+  }
+
+  .why-row__title {
+    font-size: 16px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   WHY ORTHOPEDIC SECTION - PROFESSIONAL DESIGN
+═══════════════════════════════════════════ */
+.wo-section {
+  background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
+  padding: 3rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.wo-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(10, 23, 84, 0.03) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.wo-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hero Banner ─────────────────────────────────────────── */
+.wo-hero {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  padding: 0 1rem;
+}
+
+/* .wo-hero__label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #db3434;
+  background: rgba(219, 52, 52, 0.08);
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+  transition: all 0.3s ease;
+} */
+
+.wo-hero__label {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  color: #0a1754;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 8px;
+}
+
+.wo-hero__label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.wo-hero__label::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.wo-hero__title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0a1754;
+  margin: 0;
+  line-height: 1.3;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── Accordion List ──────────────────────────────────────── */
+.wo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Single Row - CARD STYLE ──────────────────────────────────────────── */
+.wo-item {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow:
+    0 2px 8px rgba(10, 23, 84, 0.04),
+    0 1px 3px rgba(10, 23, 84, 0.02);
+  border: 1px solid rgba(10, 23, 84, 0.06);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wo-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 32px rgba(10, 23, 84, 0.12),
+    0 4px 12px rgba(10, 23, 84, 0.06);
+  border-color: rgba(10, 23, 84, 0.12);
+}
+
+.wo-item:hover::before {
+  opacity: 1;
+}
+
+.wo-item--last {
+  border-bottom: 1px solid rgba(10, 23, 84, 0.06);
+}
+
+/* Number Badge */
+.wo-item__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0a1754 0%, #1a3558 100%);
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 12px rgba(10, 23, 84, 0.2);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.wo-item__num::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.wo-item:hover .wo-item__num {
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(10, 23, 84, 0.3);
+}
+
+.wo-item:hover .wo-item__num::before {
+  opacity: 1;
+}
+
+/* Body */
+.wo-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.wo-item__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a1754;
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.wo-item:hover .wo-item__title {
+  color: #db3434;
+}
+
+.wo-item__desc {
+  font-size: 16px;
+  color: #556677;
+  line-height: 1.8;
+  margin: 0 0 1.25rem;
+}
+
+/* Tags */
+.wo-item__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.wo-tag {
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 6px 14px;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.wo-tag--teal {
+  background: rgba(10, 23, 84, 0.06);
+  color: #0a1754;
+  border-color: rgba(10, 23, 84, 0.08);
+}
+
+.wo-tag--teal:hover {
+  background: rgba(10, 23, 84, 0.12);
+  border-color: rgba(10, 23, 84, 0.2);
+  transform: translateY(-1px);
+}
+
+.wo-tag--amber {
+  background: rgba(255, 152, 0, 0.08);
+  color: #f57c00;
+  border-color: rgba(255, 152, 0, 0.12);
+}
+
+.wo-tag--amber:hover {
+  background: rgba(255, 152, 0, 0.15);
+  border-color: rgba(255, 152, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+.wo-tag--blue {
+  background: rgba(33, 150, 243, 0.08);
+  color: #1976d2;
+  border-color: rgba(33, 150, 243, 0.12);
+}
+
+.wo-tag--blue:hover {
+  background: rgba(33, 150, 243, 0.15);
+  border-color: rgba(33, 150, 243, 0.25);
+  transform: translateY(-1px);
+}
+
+.wo-tag--coral {
+  background: rgba(219, 52, 52, 0.08);
+  color: #db3434;
+  border-color: rgba(219, 52, 52, 0.12);
+}
+
+.wo-tag--coral:hover {
+  background: rgba(219, 52, 52, 0.15);
+  border-color: rgba(219, 52, 52, 0.25);
+  transform: translateY(-1px);
+}
+
+.wo-tag--purple {
+  background: rgba(103, 58, 183, 0.08);
+  color: #673ab7;
+  border-color: rgba(103, 58, 183, 0.12);
+}
+
+.wo-tag--purple:hover {
+  background: rgba(103, 58, 183, 0.15);
+  border-color: rgba(103, 58, 183, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Arrow - Remove since we're using card design */
+.wo-item__arrow {
+  display: none;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .wo-section {
+    padding: 4rem 1.25rem;
+  }
+
+  .wo-hero__title {
+    font-size: 36px;
+  }
+
+  .wo-item {
+    padding: 1.75rem 2rem;
+  }
+
+  .wo-item__num {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .wo-item__title {
+    font-size: 20px;
+  }
+
+  .wo-item__desc {
+    font-size: 15px;
+  }
+
+  .wo-tag {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wo-section {
+    padding: 3rem 1rem;
+  }
+
+  .wo-hero {
+    margin-bottom: 2.5rem;
+  }
+
+  .wo-hero__title {
+    font-size: 28px;
+  }
+
+  .wo-hero__label {
+    font-size: 11px;
+    padding: 7px 16px;
+  }
+
+  .wo-hero__label::before,
+  .wo-hero__label::after {
+    left: 50%;
+  }
+
+  .wo-list {
+    gap: 1.25rem;
+  }
+
+  .wo-item {
+    padding: 1.5rem 1.5rem;
+    border-radius: 12px;
+  }
+
+  .wo-item__num {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .wo-item__title {
+    font-size: 18px;
+    margin-bottom: 0.6rem;
+  }
+
+  .wo-item__desc {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .wo-item__tags {
+    gap: 6px;
+  }
+
+  .wo-tag {
+    font-size: 10.5px;
+    padding: 5px 10px;
+  }
+
+  .wo-item:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 480px) {
+  .wo-section {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .wo-hero__title {
+    font-size: 24px;
+    line-height: 1.35;
+  }
+
+  .wo-item {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .wo-item__num {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  .wo-item__title {
+    font-size: 17px;
+  }
+
+  .wo-item__desc {
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wo-section {
+    padding: 3rem 1rem;
+  }
+
+  .wo-item {
+    grid-template-columns: 30px 1fr;
+    padding: 1.1rem 1rem;
+  }
+
+  .wo-item__arrow {
+    display: none;
+  }
+
+  .wo-hero__title {
+    font-size: 26px;
+  }
+
+  .wo-item__title {
+    font-size: 16px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   SERVICES SECTION
+═══════════════════════════════════════════ */
+/* ═══════════════════════════════════════════
+   ORTHOPEDIC SERVICES SECTION
+═══════════════════════════════════════════ */
+.orthopedic-services-section {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  font-family: var(--font-primary);
+}
+
+.orthopedic-services-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.orthopedic-services-subtitle {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  color: #0a1754;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 8px;
+}
+
+.orthopedic-services-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: #0a1754;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 1rem;
+}
+
+.orthopedic-services-title::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 210px;
+  height: 3px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.orthopedic-services-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 210px;
+  height: 3px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.orthopedic-services-description {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  margin: 0 auto;
+  max-width: 70rem;
+  color: #556677;
+  line-height: 1.7;
+}
+
+/* ── Grid: 3 columns ── */
+.orthopedic-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.orthopedic-services-grid-row {
+  margin-bottom: 28px;
+}
+
+/* ── Card ── */
+.orthopedic-service-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 360px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(10, 23, 84, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.orthopedic-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(10, 23, 84, 0.15);
+}
+
+/* Card Image */
+.orthopedic-service-card-image {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.orthopedic-service-card:hover .orthopedic-service-card-image {
+  transform: scale(1.08);
+}
+
+/* ── Dark overlay ── */
+.orthopedic-service-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 23, 84, 0.5) 0%,
+    rgba(10, 23, 84, 0.75) 100%
+  );
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+
+.orthopedic-service-card:hover .orthopedic-service-card-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 23, 84, 0.65) 0%,
+    rgba(10, 23, 84, 0.85) 100%
+  );
+}
+
+/* ── Content ── */
+.orthopedic-service-card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 26px 24px;
+}
+
+.orthopedic-service-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.orthopedic-service-card-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  flex: 1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ── Description ── */
+.orthopedic-service-card-desc {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.96);
+  line-height: 1.65;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .orthopedic-services-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .orthopedic-services-header {
+    margin-bottom: 3rem;
+  }
+
+  .orthopedic-services-subtitle {
+    font-size: 34px;
+  }
+
+  .orthopedic-services-title {
+    font-size: 24px;
+  }
+
+  .orthopedic-services-title::before,
+  .orthopedic-services-title::after {
+    width: 65px;
+  }
+
+  .orthopedic-services-description {
+    font-size: 16px;
+  }
+
+  .orthopedic-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .orthopedic-services-grid-row {
+    margin-bottom: 20px;
+  }
+
+  .orthopedic-service-card {
+    min-height: 340px;
+  }
+
+  .orthopedic-service-card-image {
+    min-height: 340px;
+  }
+
+  .orthopedic-service-card-content {
+    min-height: 340px;
+    padding: 24px 22px;
+  }
+
+  .orthopedic-service-card-title {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+
+  .orthopedic-service-card-desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orthopedic-services-section {
+    padding: 3rem 1rem;
+  }
+
+  .orthopedic-services-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .orthopedic-services-subtitle {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .orthopedic-services-title {
+    font-size: 22px;
+  }
+
+  .orthopedic-services-title::before,
+  .orthopedic-services-title::after {
+    width: 60px;
+  }
+
+  .orthopedic-services-description {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .orthopedic-services-grid {
+    gap: 18px;
+  }
+
+  .orthopedic-services-grid-row {
+    margin-bottom: 18px;
+  }
+
+  .orthopedic-service-card {
+    min-height: 320px;
+    border-radius: 18px;
+  }
+
+  .orthopedic-service-card-image {
+    min-height: 320px;
+  }
+
+  .orthopedic-service-card-content {
+    min-height: 320px;
+    padding: 22px 20px;
+  }
+
+  .orthopedic-service-card-title {
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .orthopedic-service-card-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 640px) {
+  .orthopedic-services-section {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .orthopedic-services-header {
+    margin-bottom: 2rem;
+  }
+
+  .orthopedic-services-subtitle {
+    font-size: 26px;
+    line-height: 1.25;
+    padding: 4px 0;
+  }
+
+  .orthopedic-services-title {
+    font-size: 20px;
+  }
+
+  .orthopedic-services-title::before,
+  .orthopedic-services-title::after {
+    width: 55px;
+    left: 50%;
+  }
+
+  .orthopedic-services-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .orthopedic-services-grid {
+    gap: 16px;
+  }
+
+  .orthopedic-services-grid-row {
+    margin-bottom: 16px;
+  }
+
+  .orthopedic-service-card {
+    min-height: 300px;
+  }
+
+  .orthopedic-service-card-image {
+    min-height: 300px;
+  }
+
+  .orthopedic-service-card-content {
+    min-height: 300px;
+    padding: 20px 18px;
+  }
+
+  .orthopedic-service-card-title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .orthopedic-service-card-desc {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 560px) {
+  .orthopedic-services-section {
+    padding: 2.25rem 0.75rem;
+  }
+
+  .orthopedic-services-subtitle {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .orthopedic-services-title {
+    font-size: 19px;
+  }
+
+  .orthopedic-services-title::before,
+  .orthopedic-services-title::after {
+    width: 50px;
+  }
+
+  .orthopedic-services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .orthopedic-services-grid-row {
+    margin-bottom: 0;
+  }
+
+  .orthopedic-service-card {
+    min-height: 280px;
+  }
+
+  .orthopedic-service-card-image {
+    min-height: 280px;
+  }
+
+  .orthopedic-service-card-content {
+    min-height: 280px;
+  }
+
+  .orthopedic-service-card-title {
+    font-size: 19px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .orthopedic-services-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .orthopedic-services-header {
+    margin-bottom: 1.75rem;
+  }
+
+  .orthopedic-services-subtitle {
+    font-size: 22px;
+    line-height: 1.2;
+    padding: 3px 0;
+  }
+
+  .orthopedic-services-title {
+    font-size: 18px;
+  }
+
+  .orthopedic-services-title::before,
+  .orthopedic-services-title::after {
+    width: 45px;
+  }
+
+  .orthopedic-services-description {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .orthopedic-services-grid {
+    gap: 14px;
+  }
+
+  .orthopedic-service-card {
+    min-height: 260px;
+    border-radius: 16px;
+  }
+
+  .orthopedic-service-card-image {
+    min-height: 260px;
+  }
+
+  .orthopedic-service-card-content {
+    min-height: 260px;
+    padding: 18px 16px;
+  }
+
+  .orthopedic-service-card-top {
+    gap: 10px;
+  }
+
+  .orthopedic-service-card-title {
+    font-size: 18px;
+    line-height: 1.18;
+  }
+
+  .orthopedic-service-card-desc {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 400px) {
+  .orthopedic-services-section {
+    padding: 1.75rem 0.5rem;
+  }
+
+  .orthopedic-services-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .orthopedic-services-subtitle {
+    font-size: 20px;
+    line-height: 1.15;
+    padding: 3px 0;
+  }
+
+  .orthopedic-services-title {
+    font-size: 17px;
+  }
+
+  .orthopedic-services-title::before,
+  .orthopedic-services-title::after {
+    width: 40px;
+  }
+
+  .orthopedic-services-description {
+    font-size: 12px;
+  }
+
+  .orthopedic-services-grid {
+    gap: 12px;
+  }
+
+  .orthopedic-service-card {
+    min-height: 240px;
+    border-radius: 14px;
+  }
+
+  .orthopedic-service-card-image {
+    min-height: 240px;
+  }
+
+  .orthopedic-service-card-content {
+    min-height: 240px;
+    padding: 16px 14px;
+  }
+
+  .orthopedic-service-card-title {
+    font-size: 17px;
+    line-height: 1.18;
+  }
+
+  .orthopedic-service-card-desc {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   HOSPITAL NETWORK SECTION
+═══════════════════════════════════════════ */
+
+.hn-section {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fb 100%);
+  padding: 3rem 1rem;
+}
+
+.hn-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hn-title-wrap {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.hn-label {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  color: #0a1754;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 8px;
+}
+
+.hn-label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.hn-label::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.hn-title {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.hn-description {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.hn-heading {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+/* 4-column grid */
+.hn-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 1200px) {
+  .hn-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .hn-title,
+  .hn-heading {
+    font-size: 32px;
+  }
+
+  .hn-label {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hn-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 3rem;
+  }
+
+  .hn-title,
+  .hn-heading {
+    font-size: 30px;
+  }
+
+  .hn-description {
+    font-size: 16px;
+  }
+
+  .hn-hospital-name {
+    font-size: 22px;
+  }
+
+  .hn-card-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hn-section {
+    padding: 2rem 0.75rem;
+  }
+
+  .hn-container {
+    padding: 0 16px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 2.5rem;
+  }
+
+  .hn-title,
+  .hn-heading {
+    font-size: 28px;
+  }
+
+  .hn-label {
+    font-size: 20px;
+  }
+
+  .hn-description {
+    font-size: 15px;
+  }
+
+  .hn-grid {
+    gap: 20px;
+  }
+
+  .hn-card-header {
+    padding: 16px 20px 14px;
+  }
+
+  .hn-hospital-name {
+    font-size: 20px;
+  }
+
+  .hn-card-body {
+    padding: 16px 20px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hn-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .hn-title,
+  .hn-heading {
+    font-size: 26px;
+  }
+
+  .hn-label {
+    font-size: 18px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    left: 50%;
+  }
+
+  .hn-card-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hn-section {
+    padding: 2rem 1rem;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .hn-title,
+  .hn-heading {
+    font-size: 24px;
+  }
+
+  .hn-label {
+    font-size: 16px;
+  }
+
+  .hn-description {
+    font-size: 14px;
+  }
+
+  .hn-card-header {
+    padding: 14px 16px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hn-hospital-name {
+    font-size: 18px;
+  }
+
+  .hn-hospital-sub {
+    font-size: 13px;
+  }
+
+  .hn-card-body {
+    padding: 14px 16px 16px;
+    gap: 14px;
+  }
+
+  .hn-card-image {
+    height: 180px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 80px;
+  }
+}
+/* ── Card shell ── */
+.hn-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(19, 41, 68, 0.08);
+  box-shadow: 0 4px 16px rgba(19, 41, 68, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hn-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(19, 41, 68, 0.15);
+  border-color: #0a1754;
+}
+
+/* ── Card Top Section ── */
+.hn-card-top {
+  position: relative;
+}
+
+.hn-card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hn-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 23, 84, 0.1) 0%,
+    rgba(10, 23, 84, 0.7) 100%
+  );
+}
+
+.hn-card:hover .hn-card-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 23, 84, 0.2) 0%,
+    rgba(10, 23, 84, 0.8) 100%
+  );
+}
+
+/* ── Accreditation Badges ── */
+.hn-accreditation-badges {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.hn-badge {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  font-family: var(--font-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(204, 31, 31, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.hn-card:hover .hn-badge {
+  background: var(--color-red);
+  color: white;
+  border-color: var(--color-red);
+}
+
+/* ── Card Header ── */
+.hn-card-header {
+  padding: 20px 24px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  background: white;
+  border-bottom: 1px solid rgba(19, 41, 68, 0.06);
+}
+
+.hn-hospital-info {
+  flex: 1;
+}
+
+.hn-hospital-name {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.hn-hospital-sub {
+  font-family: var(--font-primary);
+  color: rgba(19, 41, 68, 0.65);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Rating ── */
+.hn-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  padding: 6px 12px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.hn-rating svg {
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.hn-rating-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+}
+
+/* ── Card Body ── */
+.hn-card-body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+/* ── Location ── */
+.hn-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-primary);
+  color: rgba(19, 41, 68, 0.65);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hn-location-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-red);
+  flex-shrink: 0;
+}
+
+/* ── Specialties ── */
+.hn-specialties {
+  flex: 1;
+}
+
+.hn-specialties-label {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hn-specialties-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hn-specialty-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(19, 41, 68, 0.8);
+  line-height: 1.6;
+}
+
+.hn-specialty-item svg {
+  color: var(--color-red);
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+}
+
+.hn-specialty-item span {
+  flex: 1;
+}
+
+/* ── Card Footer ── */
+.hn-card-footer {
+  padding-top: 16px;
+  border-top: 1px solid rgba(19, 41, 68, 0.06);
+}
+
+.hn-contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(
+    135deg,
+    var(--color-red) 0%,
+    var(--color-red-dark) 100%
+  );
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(204, 31, 31, 0.25);
+}
+
+.hn-contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(204, 31, 31, 0.35);
+  background: linear-gradient(
+    135deg,
+    var(--color-red-dark) 0%,
+    var(--color-red) 100%
+  );
+}
+
+.hn-contact-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hn-contact-btn span {
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE STYLES
+═══════════════════════════════════════════ */
+
+/* Large tablets and small laptops */
+@media (max-width: 1200px) {
+  .hn-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .hn-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 3rem;
+  }
+
+  .hn-heading {
+    font-size: 2.25rem;
+  }
+
+  .hn-subtitle {
+    font-size: 1rem;
+  }
+
+  .hn-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .hn-card-image {
+    height: 190px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.4rem;
+  }
+}
+
+/* Standard tablets */
+@media (max-width: 992px) {
+  .hn-section {
+    padding: 2.25rem 1rem;
+  }
+
+  .hn-label {
+    font-size: 22px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 110px;
+  }
+
+  .hn-heading {
+    font-size: 2rem;
+  }
+
+  .hn-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hn-grid {
+    gap: 20px;
+  }
+
+  .hn-card-image {
+    height: 180px;
+  }
+
+  .hn-card-header {
+    padding: 18px 20px 14px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.35rem;
+  }
+
+  .hn-hospital-sub {
+    font-size: 13px;
+  }
+
+  .hn-card-body {
+    padding: 18px 20px 20px;
+    gap: 16px;
+  }
+
+  .hn-specialties-label {
+    font-size: 12px;
+  }
+
+  .hn-specialty-item {
+    font-size: 12.5px;
+  }
+}
+
+/* Tablets portrait */
+@media (max-width: 860px) {
+  .hn-section {
+    padding: 2rem 0.75rem;
+  }
+
+  .hn-container {
+    padding: 0 16px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 2.5rem;
+  }
+
+  .hn-label {
+    font-size: 20px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 100px;
+  }
+
+  .hn-heading {
+    font-size: 1.85rem;
+    line-height: 1.25;
+  }
+
+  .hn-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hn-grid {
+    gap: 18px;
+  }
+
+  .hn-card-image {
+    height: 170px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.3rem;
+  }
+
+  .hn-accreditation-badges {
+    top: 12px;
+    right: 12px;
+    gap: 5px;
+  }
+
+  .hn-badge {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .hn-contact-btn {
+    padding: 11px 18px;
+    font-size: 13.5px;
+  }
+}
+
+/* Mobile landscape and large phones */
+@media (max-width: 768px) {
+  .hn-section {
+    padding: 1.75rem 0.5rem;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 2.25rem;
+  }
+
+  .hn-label {
+    font-size: 18px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 90px;
+  }
+
+  .hn-heading {
+    font-size: 1.75rem;
+  }
+
+  .hn-subtitle {
+    font-size: 0.875rem;
+    max-width: 600px;
+  }
+
+  .hn-grid {
+    gap: 16px;
+  }
+
+  .hn-card-image {
+    height: 160px;
+  }
+
+  .hn-card-header {
+    padding: 16px 18px 12px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.25rem;
+  }
+
+  .hn-hospital-sub {
+    font-size: 12.5px;
+  }
+
+  .hn-card-body {
+    padding: 16px 18px 18px;
+    gap: 14px;
+  }
+
+  .hn-location {
+    font-size: 13px;
+  }
+
+  .hn-specialties-label {
+    font-size: 11.5px;
+    margin-bottom: 8px;
+  }
+
+  .hn-specialty-item {
+    font-size: 12px;
+    gap: 7px;
+  }
+
+  .hn-specialty-item svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hn-contact-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .hn-contact-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 640px) {
+  .hn-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .hn-container {
+    padding: 0 12px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .hn-label {
+    font-size: 16px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 80px;
+  }
+
+  .hn-heading {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .hn-subtitle {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .hn-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hn-card {
+    border-radius: 14px;
+  }
+
+  .hn-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .hn-card-image {
+    height: 180px;
+  }
+
+  .hn-card-header {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.3rem;
+  }
+
+  .hn-hospital-sub {
+    font-size: 13px;
+  }
+
+  .hn-rating {
+    align-self: flex-start;
+  }
+
+  .hn-card-body {
+    padding: 16px;
+  }
+
+  .hn-accreditation-badges {
+    top: 10px;
+    right: 10px;
+  }
+
+  .hn-badge {
+    font-size: 9px;
+    padding: 4px 9px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 520px) {
+  .hn-section {
+    padding: 1.25rem 0.5rem;
+  }
+
+  .hn-container {
+    padding: 0 10px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 1.75rem;
+  }
+
+  .hn-label {
+    font-size: 15px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 70px;
+    height: 1.5px;
+  }
+
+  .hn-heading {
+    font-size: 1.35rem;
+  }
+
+  .hn-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .hn-grid {
+    gap: 14px;
+  }
+
+  .hn-card {
+    border-radius: 12px;
+  }
+
+  .hn-card-image {
+    height: 170px;
+  }
+
+  .hn-card-header {
+    padding: 14px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.2rem;
+  }
+
+  .hn-hospital-sub {
+    font-size: 12px;
+  }
+
+  .hn-card-body {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .hn-location {
+    font-size: 12px;
+  }
+
+  .hn-location-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hn-specialties-label {
+    font-size: 11px;
+    margin-bottom: 7px;
+  }
+
+  .hn-specialty-item {
+    font-size: 11.5px;
+    gap: 6px;
+  }
+
+  .hn-specialty-item svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .hn-contact-btn {
+    padding: 10px 14px;
+    font-size: 12.5px;
+    border-radius: 7px;
+  }
+
+  .hn-contact-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .hn-rating {
+    padding: 5px 10px;
+  }
+
+  .hn-rating svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hn-rating-value {
+    font-size: 13px;
+  }
+
+  .hn-accreditation-badges {
+    top: 8px;
+    right: 8px;
+    gap: 4px;
+  }
+
+  .hn-badge {
+    font-size: 8px;
+    padding: 4px 8px;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 400px) {
+  .hn-section {
+    padding: 1rem 0.5rem;
+  }
+
+  .hn-container {
+    padding: 0 8px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 1.5rem;
+  }
+
+  .hn-label {
+    font-size: 14px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 60px;
+  }
+
+  .hn-heading {
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+  .hn-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .hn-grid {
+    gap: 12px;
+  }
+
+  .hn-card {
+    border-radius: 10px;
+  }
+
+  .hn-card-image {
+    height: 160px;
+  }
+
+  .hn-card-header {
+    padding: 12px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.1rem;
+  }
+
+  .hn-hospital-sub {
+    font-size: 11px;
+  }
+
+  .hn-card-body {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .hn-location {
+    font-size: 11px;
+  }
+
+  .hn-specialties-label {
+    font-size: 10px;
+  }
+
+  .hn-specialty-item {
+    font-size: 11px;
+    gap: 5px;
+  }
+
+  .hn-specialty-item svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hn-contact-btn {
+    padding: 9px 12px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .hn-contact-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hn-rating {
+    padding: 4px 8px;
+  }
+
+  .hn-rating svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .hn-rating-value {
+    font-size: 12px;
+  }
+
+  .hn-badge {
+    font-size: 7px;
+    padding: 3px 7px;
+  }
+}
+
+.hn-thumb-img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  border: 1px solid rgba(19, 41, 68, 0.1);
+}
+
+.hn-thumb-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  line-height: 1.3;
+}
+
+/* ═══════════════════════════════════════════
+   DOCTORS SECTION — FULLY RESPONSIVE
+═══════════════════════════════════════════ */
+
+.doctor-section-light {
+  padding: 3rem 1rem;
+}
+
+.doctor-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.doctor-title-wrap {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.doctor-label {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  color: #0a1754;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 8px;
+}
+
+.doctor-label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.doctor-label::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.doctor-h2 {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 700;
+  color: #0a1754;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Base: 4-column */
+.doctor-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.doctor-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.13);
+}
+
+.doctor-card-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.doctor-card-body {
+  padding: 20px 20px 22px;
+}
+
+.doctor-spec {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  background: rgba(220, 53, 69, 0.1);
+  padding: 6px 14px;
+  border-radius: 25px;
+  color: #132944;
+  line-height: 1.3;
+}
+
+.doctor-name {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.doctor-text {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  color: rgba(19, 41, 68, 0.7);
+  line-height: 1.7;
+}
+
+/* ── 1200px: Large tablets & small laptops → 2-column ── */
+@media (max-width: 1200px) {
+  .doctor-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .doctor-card-photo {
+    height: 240px;
+  }
+  .doctor-h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ── 992px: Standard tablets ── */
+@media (max-width: 992px) {
+  .doctor-section-light {
+    padding: 2.5rem 1rem;
+  }
+  .doctor-title-wrap {
+    margin-bottom: 2.5rem;
+  }
+  .doctor-h2 {
+    font-size: 2rem;
+  }
+  .doctor-label {
+    font-size: 22px;
+  }
+  .doctor-cards-grid {
+    gap: 20px;
+  }
+  .doctor-card-photo {
+    height: 220px;
+  }
+  .doctor-card-body {
+    padding: 16px 16px 18px;
+  }
+  .doctor-name {
+    font-size: 17px;
+  }
+  .doctor-desc {
+    font-size: 14px;
+  }
+}
+
+/* ── 860px: Tablet portrait ── */
+@media (max-width: 860px) {
+  .doctor-h2 {
+    font-size: 1.8rem;
+  }
+  .doctor-label {
+    font-size: 20px;
+  }
+  .doctor-cards-grid {
+    gap: 18px;
+  }
+  .doctor-card-photo {
+    height: 200px;
+  }
+  .doctor-spec {
+    font-size: 11px;
+  }
+  .doctor-name {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .doctor-desc {
+    font-size: 13.5px;
+  }
+}
+
+/* ── 768px: Mobile landscape ── */
+@media (max-width: 768px) {
+  .doctor-section-light {
+    padding: 2rem 0.75rem;
+  }
+  .doctor-container {
+    padding: 0 10px;
+  }
+  .doctor-title-wrap {
+    margin-bottom: 2rem;
+  }
+  .doctor-h2 {
+    font-size: 1.6rem;
+  }
+  .doctor-label {
+    font-size: 18px;
+  }
+  .doctor-cards-grid {
+    gap: 16px;
+  }
+  .doctor-card-photo {
+    height: 185px;
+  }
+  .doctor-card-body {
+    padding: 14px 14px 16px;
+  }
+}
+
+/* ── 640px: Mobile portrait → 1-column + horizontal card layout ── */
+@media (max-width: 640px) {
+  .doctor-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .doctor-label {
+    font-size: 16px;
+  }
+
+  .doctor-label::before,
+  .doctor-label::after {
+    width: 70px;
+    left: 50%;
+  }
+
+  .doctor-h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Horizontal card: photo left, content right */
+  .doctor-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    border-radius: 10px;
+  }
+  .doctor-card-photo {
+    width: 130px;
+    min-width: 130px;
+    height: auto;
+    min-height: 160px;
+    border-radius: 0;
+    object-position: top center;
+  }
+  .doctor-card-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .doctor-spec {
+    font-size: 10px;
+  }
+  .doctor-name {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .doctor-desc {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* ── 520px: Small mobile ── */
+@media (max-width: 520px) {
+  .doctor-section-light {
+    padding: 1.75rem 0.5rem;
+  }
+  .doctor-h2 {
+    font-size: 1.35rem;
+  }
+  .doctor-label {
+    font-size: 16px;
+  }
+  .doctor-card-photo {
+    width: 110px;
+    min-width: 110px;
+    min-height: 140px;
+  }
+  .doctor-card-body {
+    padding: 12px;
+  }
+  .doctor-name {
+    font-size: 14px;
+  }
+  .doctor-desc {
+    font-size: 12.5px;
+  }
+}
+
+/* ── 400px: Extra small devices ── */
+@media (max-width: 400px) {
+  .doctor-h2 {
+    font-size: 1.2rem;
+  }
+  .doctor-label {
+    font-size: 15px;
+  }
+  .doctor-label::before,
+  .doctor-label::after {
+    width: 60px;
+  }
+  .doctor-cards-grid {
+    gap: 12px;
+  }
+  .doctor-card-photo {
+    width: 90px;
+    min-width: 90px;
+    min-height: 130px;
+  }
+  .doctor-card-body {
+    padding: 10px;
+  }
+  .doctor-spec {
+    font-size: 9px;
+    margin-bottom: 4px;
+  }
+  .doctor-name {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .doctor-desc {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   REVIEWS SECTION
+═══════════════════════════════════════════ */
+.ortho-reviews-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 480px;
+  max-height: 550px;
+  max-width: 1350px;
+  margin: 80px auto;
+  box-shadow: 0 10px 40px rgba(19, 41, 68, 0.08);
+}
+
+.ortho-reviews-content {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  padding: 30px 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.ortho-reviews-heading {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--color-navy);
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════
+   SLIDER WRAPPER — overflow hidden container
+═══════════════════════════════════════════ */
+.ortho-reviews-slider-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  width: 100%;
+  flex: 1;
+}
+
+/* ═══════════════════════════════════════════
+   SLIDER TRACK — flex row of all slides
+═══════════════════════════════════════════ */
+.ortho-reviews-slider-track {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  height: 100%;
+}
+
+/* ═══════════════════════════════════════════
+   EACH SLIDE — 2 cards side by side
+═══════════════════════════════════════════ */
+.ortho-reviews-slide {
+  min-width: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  box-sizing: border-box;
+  align-items: start;
+}
+
+/* ═══════════════════════════════════════════
+   REVIEW CARD
+═══════════════════════════════════════════ */
+.ortho-reviews-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 20px;
+  border: 1px solid rgba(19, 41, 68, 0.08);
+  box-shadow: 0 2px 8px rgba(19, 41, 68, 0.04);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.ortho-reviews-card:hover {
+  box-shadow: 0 4px 12px rgba(19, 41, 68, 0.1);
+  transform: translateY(-2px);
+}
+
+.ortho-reviews-card-text {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  color: rgba(19, 41, 68, 0.75);
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.ortho-reviews-card-name {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-navy);
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(19, 41, 68, 0.08);
+}
+
+/* ═══════════════════════════════════════════
+   DOTS PAGINATION
+═══════════════════════════════════════════ */
+.ortho-reviews-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.ortho-reviews-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(19, 41, 68, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.ortho-reviews-dot.active {
+  background: var(--color-navy);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.ortho-reviews-dot:hover:not(.active) {
+  background: rgba(19, 41, 68, 0.4);
+}
+
+/* ═══════════════════════════════════════════
+   STARS
+═══════════════════════════════════════════ */
+.ortho-reviews-stars {
+  display: flex;
+  gap: 3px;
+  color: #e8a020;
+  font-size: 15px;
+}
+
+/* ═══════════════════════════════════════════
+   RATING SUMMARY BAR
+═══════════════════════════════════════════ */
+.ortho-reviews-summary {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(19, 41, 68, 0.08);
+  box-shadow: 0 2px 8px rgba(19, 41, 68, 0.04);
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.ortho-reviews-rating-number {
+  font-family: Georgia, serif;
+  font-size: 2.4rem;
+  color: var(--color-navy);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ortho-reviews-rating-label {
+  font-size: 13px;
+  color: rgba(19, 41, 68, 0.6);
+  margin-left: 6px;
+}
+
+.ortho-reviews-rating-description {
+  font-size: 12px;
+  color: rgba(19, 41, 68, 0.5);
+  margin-top: 4px;
+}
+
+/* ═══════════════════════════════════════════
+   POST A REVIEW BUTTON
+═══════════════════════════════════════════ */
+.ortho-reviews-button {
+  background: var(--color-red);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 13px 26px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(204, 31, 31, 0.2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ortho-reviews-button:hover {
+  background: var(--color-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(204, 31, 31, 0.3);
+}
+
+/* ═══════════════════════════════════════════
+   RIGHT IMAGE PANEL
+═══════════════════════════════════════════ */
+.ortho-reviews-image-wrapper {
+  background: linear-gradient(135deg, #132944 0%, #1a3558 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.ortho-reviews-image {
+  width: 100%;
+  height: 100%;
+  max-height: 550px;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.95;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 1024px
+═══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .ortho-reviews-section {
+    grid-template-columns: 1fr;
+    max-height: none;
+    margin: 60px auto;
+  }
+
+  .ortho-reviews-image-wrapper {
+    min-height: 400px;
+    max-height: 400px;
+  }
+
+  .ortho-reviews-image {
+    max-height: 400px;
+  }
+
+  .ortho-reviews-slide {
+    gap: 12px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 768px
+═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .ortho-reviews-section {
+    margin: 40px auto;
+  }
+
+  .ortho-reviews-content {
+    padding: 32px 24px;
+  }
+
+  .ortho-reviews-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  /* Stack cards vertically on mobile */
+  .ortho-reviews-slide {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ortho-reviews-card {
+    padding: 20px 16px;
+  }
+
+  .ortho-reviews-card-text {
+    font-size: 12px;
+  }
+
+  .ortho-reviews-card-name {
+    font-size: 12px;
+  }
+
+  .ortho-reviews-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .ortho-reviews-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ortho-reviews-image-wrapper {
+    min-height: 350px;
+    max-height: 350px;
+  }
+
+  .ortho-reviews-image {
+    max-height: 350px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 480px
+═══════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .ortho-reviews-section {
+    margin: 30px 16px;
+    border-radius: 12px;
+  }
+
+  .ortho-reviews-content {
+    padding: 24px 16px;
+  }
+
+  .ortho-reviews-heading {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+  }
+
+  .ortho-reviews-card {
+    padding: 16px 14px;
+  }
+
+  .ortho-reviews-rating-number {
+    font-size: 2rem;
+  }
+
+  .ortho-reviews-summary {
+    padding: 16px;
+  }
+
+  .ortho-reviews-image-wrapper {
+    min-height: 280px;
+    max-height: 280px;
+  }
+
+  .ortho-reviews-image {
+    max-height: 280px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   ortho FAQ SECTION
+═══════════════════════════════════════════ */
+
+.ortho-faq-section {
+  position: relative;
+  padding: 3rem 1rem;
+}
+
+.ortho-faq-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* Header */
+.ortho-faq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.ortho-faq-badge {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  color: #0a1754;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 8px;
+}
+
+.ortho-faq-badge::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.ortho-faq-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  border-radius: 2px;
+}
+
+.ortho-faq-badge-icon {
+  font-size: 16px;
+}
+
+.ortho-faq-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: #0a1754;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.ortho-faq-subtitle {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* FAQ List */
+.ortho-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* FAQ Item */
+.ortho-faq-item {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border: 1px solid #0a1754;
+}
+
+.ortho-faq-item.active {
+  border-color: #c0392b;
+  box-shadow: 0 4px 20px rgba(192, 57, 43, 0.15);
+}
+
+/* Question Button */
+.ortho-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 28px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.ortho-faq-question:focus {
+  outline: 0.5px solid #c0392b;
+  outline-offset: -1px;
+}
+
+.ortho-faq-question-text {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  font-weight: 600;
+  color: #0a1754;
+  margin: 0;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.ortho-faq-item.active .ortho-faq-question-text {
+  color: #c0392b;
+}
+
+/* Icon */
+.ortho-faq-icon {
+  flex-shrink: 0;
+  font-size: 20px;
+  color: #999;
+  transition: all 0.3s ease;
+  color: #0a1754;
+}
+
+.ortho-faq-item.active .ortho-faq-icon {
+  color: #c0392b;
+}
+
+.ortho-faq-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Answer */
+.ortho-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease;
+  opacity: 0;
+}
+
+.ortho-faq-answer.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.ortho-faq-answer-content {
+  padding: 0 28px 24px 28px;
+  border-top: 1px solid #e5e7eb;
+  margin-top: -4px;
+}
+
+.ortho-faq-answer-content p {
+  font-family: var(--font-primary);
+  color: #555;
+  font-size: var(--fs-small);
+  line-height: 1.8;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+/* Footer */
+.ortho-faq-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.ortho-faq-footer p {
+  color: #666;
+  font-size: 16px;
+}
+
+.ortho-faq-link {
+  color: #c0392b;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.ortho-faq-link:hover {
+  border-bottom-color: #c0392b;
+  color: #a81818;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ortho-faq-section {
+    padding: 60px 16px;
+  }
+
+  .ortho-faq-title {
+    font-size: 28px;
+  }
+
+  .ortho-faq-subtitle {
+    font-size: 16px;
+  }
+
+  .ortho-faq-question {
+    padding: 20px 20px;
+  }
+
+  .ortho-faq-question-text {
+    font-size: 16px;
+  }
+
+  .ortho-faq-answer-content {
+    padding: 0 20px 20px 20px;
+  }
+
+  .ortho-faq-answer-content p {
+    font-size: 15px;
+  }
+
+  .ortho-faq-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ortho-faq-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .ortho-faq-header {
+    margin-bottom: 40px;
+  }
+
+  .ortho-faq-title {
+    font-size: 26px;
+  }
+
+  .ortho-faq-badge {
+    font-size: 18px;
+  }
+
+  .ortho-faq-badge::before,
+  .ortho-faq-badge::after {
+    left: 50%;
+  }
+
+  .ortho-faq-subtitle {
+    font-size: 15px;
+  }
+
+  .ortho-faq-question {
+    padding: 18px 18px;
+  }
+
+  .ortho-faq-question-text {
+    font-size: 15.5px;
+  }
+
+  .ortho-faq-answer-content {
+    padding: 0 18px 18px 18px;
+  }
+
+  .ortho-faq-answer-content p {
+    font-size: 14.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ortho-faq-section {
+    padding: 2rem 1rem;
+  }
+
+  .ortho-faq-header {
+    margin-bottom: 32px;
+  }
+
+  .ortho-faq-title {
+    font-size: 24px;
+  }
+
+  .ortho-faq-badge {
+    font-size: 16px;
+  }
+
+  .ortho-faq-badge::before,
+  .ortho-faq-badge::after {
+    width: 90px;
+  }
+
+  .ortho-faq-subtitle {
+    font-size: 14px;
+  }
+
+  .ortho-faq-question {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .ortho-faq-question-text {
+    font-size: 15px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   CTA SECTION
+═══════════════════════════════════════════ */
+.ortho-cta-section {
+  position: relative;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 100px 20px;
+}
+
+.ortho-cta-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.ortho-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 20, 60, 0.45) 0%,
+    rgba(10, 20, 60, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.ortho-cta-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1350px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ortho-cta-content {
+  max-width: 600px;
+  text-align: left;
+  color: var(--color-white);
+}
+
+.ortho-cta-badge {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-white);
+  padding: 0;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+.ortho-cta-title {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.ortho-cta-subtitle {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+.ortho-cta-benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-bottom: 36px;
+  max-width: 650px;
+}
+
+.ortho-cta-benefit-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ortho-cta-check-icon {
+  color: #25d366;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.ortho-cta-benefit-point span {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.4;
+}
+
+.ortho-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 8px;
+  justify-content: flex-start;
+}
+
+.ortho-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  gap: 12px;
+  background: #2563eb;
+  color: var(--color-white);
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.ortho-cta-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.ortho-cta-arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.ortho-cta-button:hover .ortho-cta-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive — CTA Section */
+@media (max-width: 1024px) {
+  .ortho-cta-section {
+    min-height: 500px;
+    padding: 80px 20px;
+  }
+
+  .ortho-cta-title {
+    font-size: 44px;
+  }
+
+  .ortho-cta-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ortho-cta-section {
+    min-height: 450px;
+    padding: 60px 20px;
+  }
+
+  .ortho-cta-content {
+    max-width: 100%;
+  }
+
+  .ortho-cta-badge {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .ortho-cta-title {
+    font-size: 36px;
+  }
+
+  .ortho-cta-subtitle {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .ortho-cta-benefits-list {
+    gap: 12px 20px;
+    margin-bottom: 30px;
+  }
+
+  .ortho-cta-benefit-point span {
+    font-size: 14px;
+  }
+
+  .ortho-cta-check-icon {
+    font-size: 14px;
+  }
+
+  .ortho-cta-button {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ortho-cta-section {
+    min-height: 400px;
+    padding: 50px 16px;
+  }
+
+  .ortho-cta-badge {
+    font-size: 11px;
+    margin-bottom: 16px;
+  }
+
+  .ortho-cta-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .ortho-cta-subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .ortho-cta-benefits-list {
+    gap: 10px 16px;
+    margin-bottom: 28px;
+  }
+
+  .ortho-cta-benefit-point span {
+    font-size: 13px;
+  }
+
+  .ortho-cta-check-icon {
+    font-size: 13px;
+  }
+
+  .ortho-cta-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}

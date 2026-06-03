@@ -1,0 +1,4214 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap");
+
+/* ═══════════════════════════════════════════
+   CSS VARIABLES
+═══════════════════════════════════════════ */
+:root {
+  --color-navy: #132944;
+  --color-navy-dark: #0b1f3a;
+  --color-navy-mid: #1a3558;
+  --color-red: #cc1f1f;
+  --color-red-dark: #a81818;
+  --color-red-light: #e02020;
+  --color-white: #ffffff;
+  --color-light-bg: #f5f7fa;
+  --color-text: #132944;
+  --color-text-muted: rgba(19, 41, 68, 0.6);
+
+  /* Typography Variables */
+  --font-primary:
+    "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Playfair Display", Georgia, serif;
+
+  /* Font Sizes */
+  --fs-hero: 52px;
+  --fs-h2: 38px;
+  --fs-h3: 24px;
+  --fs-body: 17px;
+  --fs-small: 15px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+/* ═══════════════════════════════════════════
+   HERO SECTION
+═══════════════════════════════════════════ */
+.oncology-hero-section {
+  color: #fff;
+  text-align: left;
+  padding: 50px 0;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.oncology-hero-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  z-index: 0;
+}
+
+.oncology-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 23, 84, 1) 0%,
+    rgba(10, 23, 84, 1) 20%,
+    rgba(10, 23, 84, 0.88) 45%,
+    rgba(10, 23, 84, 0.45) 65%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.oncology-hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.oncology-hero-content {
+  max-width: 1350px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 60px; /* desktop breathing room */
+  padding-right: 40px;
+}
+
+.oncology-hero-badge {
+  background: rgba(214, 0, 0, 0.9);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 24px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(214, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.oncology-hero-section h1,
+.oncology-hero-section h2 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-hero);
+  font-weight: 700;
+  max-width: 55rem;
+  margin: 0 0 28px 0;
+  line-height: 1.25;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+.oncology-hero-section p {
+  font-family: var(--font-primary);
+  font-size: var(--fs-body);
+  max-width: 60rem;
+  margin: 0 0 24px 0;
+  opacity: 0.95;
+  line-height: 1.75;
+  text-align: left;
+  font-weight: 400;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.oncology-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 8px;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .oncology-hero-content {
+    padding-left: 40px;
+    padding-right: 30px;
+  }
+
+  .oncology-hero-section h1,
+  .oncology-hero-section h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .oncology-hero-section {
+    padding: 100px 0 80px;
+    min-height: 450px;
+  }
+
+  .oncology-hero-bg-image {
+    object-position: 70% center;
+  }
+
+  .oncology-hero-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(10, 23, 84, 1) 0%,
+      rgba(10, 23, 84, 0.95) 50%,
+      rgba(10, 23, 84, 0.75) 100%
+    );
+  }
+
+  .oncology-hero-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .oncology-hero-section h1,
+  .oncology-hero-section h2 {
+    font-size: 32px;
+    max-width: 100%;
+  }
+
+  .oncology-hero-section p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .oncology-hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .oncology-hero-section h1,
+  .oncology-hero-section h2 {
+    font-size: 26px;
+  }
+
+  .oncology-hero-badge {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   CTA BUTTONS
+═══════════════════════════════════════════ */
+.btn-wa,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-wa {
+  background: #25d366;
+  color: #ffffff;
+}
+
+.btn-wa:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-glow {
+  animation: whatsapp-pulse 2s ease-in-out infinite;
+}
+
+@keyframes whatsapp-pulse {
+  0%,
+  100% {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  }
+}
+
+.btn-outline {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.icon-wa {
+  font-size: 20px;
+  display: inline-block;
+}
+
+.icon-wa--5 {
+  font-size: 20px;
+}
+
+/* Mobile Button Styles */
+@media (max-width: 768px) {
+  .btn-wa,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-wa,
+  .btn-outline {
+    padding: 14px 20px;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .icon-wa {
+    font-size: 18px;
+  }
+}
+
+/* ─────────────────────────────────────────
+   CancerCareSection.css
+   Layout A — Classic 50/50 split
+   Left: content | Right: 2 stacked images
+───────────────────────────────────────── */
+
+/* ── Section Wrapper ── */
+.cancer-care-section {
+  padding: 3rem 1rem;
+  font-family: var(--ec-font-body);
+}
+
+.cancer-care-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: stretch; /* ensure both columns match height */
+  overflow: hidden;
+}
+
+/* ─────────────────────────────────────────
+   LEFT PANEL
+───────────────────────────────────────── */
+
+.cancer-care-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* align to top so content aligns with right images */
+  gap: 0;
+  background: var(--color-white);
+  padding: 48px 40px; /* match dental spacing */
+  min-height: 600px; /* match right panel minimum */
+  box-shadow: var(--ec-shadow-sm);
+  border-radius: 12px;
+  animation: fadeSlideLeft 0.7s ease both;
+}
+
+.cancer-care-heading {
+  font-family: var(--ec-font-display);
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--ec-text-primary);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.cancer-care-heading-accent {
+  color: var(--color-navy-dark);
+  font-style: italic;
+}
+
+/* Body text */
+.cancer-care-body {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--ec-text-secondary);
+  margin-bottom: 16px;
+}
+
+/* Trust heading */
+.cancer-care-trust-heading {
+  font-family: var(--ec-font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ec-text-muted);
+  margin-bottom: 16px;
+}
+
+/* Trust list */
+.cancer-care-trust-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cancer-care-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--ec-blue-50);
+  border: 1px solid var(--color-navy);
+  border-radius: 10px;
+  transition:
+    background var(--ec-transition),
+    border-color var(--ec-transition),
+    transform var(--ec-transition);
+}
+
+.cancer-care-trust-item:hover {
+  background: rgba(227, 242, 253, 0.8);
+  border-color: var(--ec-blue-100);
+  transform: translateY(-2px);
+}
+
+.cancer-care-trust-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: var(--ec-blue-500);
+  border-radius: 8px;
+  box-shadow: var(--ec-shadow-sm);
+}
+
+.cancer-care-trust-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ec-text-primary);
+  line-height: 1.4;
+}
+
+/* ─────────────────────────────────────────
+   RIGHT PANEL
+───────────────────────────────────────── */
+.cancer-care-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-light-bg);
+  min-height: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: fadeSlideRight 0.7s ease 0.15s both;
+}
+
+/* Image wrappers — each takes half the height */
+.cancer-care-img-wrapper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.cancer-care-img-top {
+  border-bottom: 3px solid var(--color-white);
+}
+
+.cancer-care-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.cancer-care-img-wrapper:hover .cancer-care-img {
+  transform: scale(1.04);
+}
+
+/* ─────────────────────────────────────────
+   ANIMATIONS
+───────────────────────────────────────── */
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .cancer-care-container {
+    gap: 3rem;
+  }
+
+  .cancer-care-left {
+    padding: 48px 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cancer-care-section {
+    padding: 3rem 1rem;
+  }
+
+  .cancer-care-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-radius: var(--ec-radius-lg);
+  }
+
+  .cancer-care-left {
+    padding: 40px 28px;
+    border-bottom: 1px solid var(--ec-border);
+  }
+
+  .cancer-care-right {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 560px) {
+  .cancer-care-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .cancer-care-left {
+    padding: 32px 20px;
+  }
+
+  .cancer-care-heading {
+    font-size: 24px;
+  }
+
+  .cancer-care-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .cancer-care-trust-list {
+    gap: 8px;
+  }
+
+  .cancer-care-img-wrapper {
+    min-height: 220px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   WHY CHOOSE INDIA SECTION
+═══════════════════════════════════════════ */
+.why-choose-india-section {
+  padding: 3rem 1rem;
+  background: var(--color-light-bg);
+  font-family: var(--font-primary);
+}
+
+.why-choose-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+.why-choose-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeIn 0.8s ease both;
+}
+
+.why-choose-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.why-choose-subheading {
+  font-size: 18px;
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ── Cards Grid ── */
+.why-choose-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
+  animation: fadeIn 0.8s ease 0.2s both;
+}
+
+/* ── Individual Card ── */
+.why-choose-card {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 36px 32px;
+  box-shadow: 0 2px 8px rgba(19, 41, 68, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #1a35585e;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(19, 41, 68, 0.12);
+  border-color: var(--color-navy-mid);
+}
+
+.why-choose-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* ── Card Icon ── */
+.why-choose-card-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-navy-dark);
+  color: var(--color-white);
+  border-radius: 12px;
+  font-size: 26px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.why-choose-card:hover .why-choose-card-icon {
+  transform: scale(1.08) rotate(5deg);
+}
+
+/* ── Card Title ── */
+.why-choose-card-title {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* ── Card Text ── */
+.why-choose-card-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-weight: 400;
+  text-align: justify;
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .why-choose-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .why-choose-india-section {
+    padding: 60px 1rem;
+  }
+
+  .why-choose-header {
+    margin-bottom: 48px;
+  }
+
+  .why-choose-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .why-choose-card {
+    padding: 32px 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .why-choose-india-section {
+    padding: 48px 0.75rem;
+  }
+
+  .why-choose-heading {
+    font-size: 28px;
+  }
+
+  .why-choose-subheading {
+    font-size: 16px;
+  }
+
+  .why-choose-card {
+    padding: 28px 24px;
+  }
+
+  .why-choose-card-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .why-choose-card-title {
+    font-size: 18px;
+  }
+
+  .why-choose-card-text {
+    font-size: 14px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   ONCOLOGY TREATMENT SECTION
+═══════════════════════════════════════════ */
+.oncology-treatment-section {
+  padding: 3rem 1rem;
+  background: var(--color-white);
+  font-family: var(--font-primary);
+}
+
+.oncology-treatment-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ── Left: Images Grid ── */
+.oncology-treatment-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+  height: 100%;
+  min-height: 600px;
+  animation: fadeSlideLeft 0.8s ease both;
+}
+
+.oncology-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(19, 41, 68, 0.1);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.oncology-img-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(19, 41, 68, 0.15);
+}
+
+/* First image takes top-left position */
+.oncology-img-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+/* Second image takes top-right position */
+.oncology-img-2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+/* Third image spans bottom full width */
+.oncology-img-3 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.oncology-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.oncology-img-wrapper:hover .oncology-img {
+  transform: scale(1.05);
+}
+
+/* ── Right: Content ── */
+.oncology-treatment-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+  animation: fadeSlideRight 0.8s ease 0.2s both;
+}
+
+.oncology-treatment-label {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-navy-dark);
+  display: inline-block;
+}
+
+.oncology-treatment-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 3.5vw, 42px);
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.oncology-treatment-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-weight: 400;
+}
+
+.oncology-treatment-subheading {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  line-height: 1.3;
+}
+
+/* ── Cards Grid ── */
+.oncology-treatment-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.oncology-treatment-card {
+  background: var(--color-light-bg);
+  border: 1px solid rgba(19, 41, 68, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.oncology-treatment-card:hover {
+  background: var(--color-white);
+  border-color: var(--color-navy-mid);
+  box-shadow: 0 4px 16px rgba(19, 41, 68, 0.08);
+  transform: translateY(-2px);
+}
+
+.oncology-treatment-card:hover::before {
+  transform: scaleY(1);
+}
+
+.oncology-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0 0 12px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.oncology-card-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-weight: 400;
+  text-align: justify;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .oncology-treatment-container {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .oncology-treatment-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .oncology-treatment-images {
+    min-height: 500px;
+  }
+
+  .oncology-treatment-content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .oncology-treatment-section {
+    padding: 60px 1rem;
+  }
+
+  .oncology-treatment-images {
+    min-height: 400px;
+  }
+
+  .oncology-treatment-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .oncology-treatment-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .oncology-treatment-section {
+    padding: 48px 0.75rem;
+  }
+
+  .oncology-treatment-images {
+    min-height: 350px;
+    gap: 12px;
+  }
+
+  .oncology-treatment-heading {
+    font-size: 28px;
+  }
+
+  .oncology-treatment-text {
+    font-size: 15px;
+  }
+
+  .oncology-treatment-subheading {
+    font-size: 18px;
+  }
+
+  .oncology-card-title {
+    font-size: 15px;
+  }
+
+  .oncology-card-text {
+    font-size: 13px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   PATIENT JOURNEY SECTION
+═══════════════════════════════════════════ */
+.patient-journey-section {
+  padding: 3rem 1rem;
+  background: var(--color-white);
+  font-family: var(--font-primary);
+}
+
+.patient-journey-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 42% 58%;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ── Left: Image ── */
+.patient-journey-image {
+  position: sticky;
+  top: 100px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(19, 41, 68, 0.12);
+  animation: fadeSlideLeft 0.8s ease both;
+}
+
+.patient-journey-img {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.patient-journey-image:hover .patient-journey-img {
+  transform: scale(1.03);
+}
+
+/* ── Right: Content ── */
+.patient-journey-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeSlideRight 0.8s ease 0.2s both;
+}
+
+.patient-journey-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 3.5vw, 42px);
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.patient-journey-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+/* ── Steps List ── */
+.patient-journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.patient-journey-step {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  background: var(--color-light-bg);
+  border-radius: 12px;
+  border: 1px solid rgba(19, 41, 68, 0.418);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.patient-journey-step:hover {
+  background: var(--color-white);
+  border-color: var(--color-navy);
+  box-shadow: 0 4px 16px rgba(19, 41, 68, 0.08);
+  transform: translateX(4px);
+}
+
+.patient-journey-step:hover::before {
+  transform: scaleY(1);
+}
+
+/* Step Number Badge */
+.step-number-badge {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: var(--color-navy-mid); */
+  color: #0b1f3a41;
+  font-family: var(--font-heading);
+  font-size: 35px;
+  font-weight: 700;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.patient-journey-step:hover .step-number-badge {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* Step Content */
+.step-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step-title {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.step-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .patient-journey-container {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .patient-journey-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .patient-journey-image {
+    position: relative;
+    top: 0;
+  }
+
+  .patient-journey-img {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .patient-journey-section {
+    padding: 60px 1rem;
+  }
+
+  .patient-journey-img {
+    min-height: 400px;
+  }
+
+  .patient-journey-step {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .step-number-badge {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .patient-journey-section {
+    padding: 48px 0.75rem;
+  }
+
+  .patient-journey-heading {
+    font-size: 28px;
+  }
+
+  .patient-journey-text {
+    font-size: 16px;
+  }
+
+  .patient-journey-img {
+    min-height: 350px;
+  }
+
+  .patient-journey-steps {
+    gap: 16px;
+  }
+
+  .patient-journey-step {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .step-number-badge {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .step-title {
+    font-size: 16px;
+  }
+
+  .step-description {
+    font-size: 14px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   cancer SERVICES SECTION
+═══════════════════════════════════════════ */
+.cancer-services-section {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  font-family: var(--font-primary);
+}
+
+.cancer-services-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.cancer-services-subtitle {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  color: var(--color-navy-dark);
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 8px;
+}
+
+.cancer-services-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--color-navy-dark);
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 1rem;
+}
+
+.cancer-services-title::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 210px;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--color-red-light),
+    var(--color-navy-dark)
+  );
+  border-radius: 2px;
+}
+
+.cancer-services-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 210px;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--color-red-light),
+    var(--color-navy-dark)
+  );
+  border-radius: 2px;
+}
+
+.cancer-services-description {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  margin: 0 auto;
+  max-width: 70rem;
+  color: #556677;
+  line-height: 1.7;
+}
+
+/* ── Grid: 3 columns ── */
+.cancer-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.cancer-services-grid-row {
+  margin-bottom: 28px;
+}
+
+/* ── Card ── */
+.cancer-service-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 360px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(19, 41, 68, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cancer-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(19, 41, 68, 0.15);
+}
+
+/* Card Image */
+.cancer-service-card-image {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.cancer-service-card:hover .cancer-service-card-image {
+  transform: scale(1.08);
+}
+
+/* ── Dark overlay ── */
+.cancer-service-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 23, 84, 0.5) 0%,
+    rgba(10, 23, 84, 0.75) 100%
+  );
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+
+.cancer-service-card:hover .cancer-service-card-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 31, 58, 0.65) 0%,
+    rgba(11, 31, 58, 0.85) 100%
+  );
+}
+
+/* ── Content ── */
+.cancer-service-card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 26px 24px;
+}
+
+.cancer-service-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cancer-service-card-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.25;
+  flex: 1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ── Description ── */
+.cancer-service-card-desc {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.96);
+  line-height: 1.65;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .cancer-services-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .cancer-services-header {
+    margin-bottom: 3rem;
+  }
+
+  .cancer-services-title {
+    font-size: 24px;
+  }
+
+  .cancer-services-title::before,
+  .cancer-services-title::after {
+    width: 65px;
+  }
+
+  .cancer-services-description {
+    font-size: 16px;
+  }
+
+  .cancer-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cancer-service-card {
+    min-height: 340px;
+  }
+
+  .cancer-service-card-image {
+    min-height: 340px;
+  }
+
+  .cancer-service-card-content {
+    min-height: 340px;
+    padding: 24px 22px;
+  }
+
+  .cancer-service-card-title {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+
+  .cancer-service-card-desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cancer-services-section {
+    padding: 3rem 1rem;
+  }
+
+  .cancer-services-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .cancer-services-subtitle {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .cancer-services-title {
+    font-size: 22px;
+  }
+
+  .cancer-services-title::before,
+  .cancer-services-title::after {
+    width: 60px;
+  }
+
+  .cancer-services-description {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .cancer-services-grid {
+    gap: 18px;
+  }
+
+  .cancer-service-card {
+    min-height: 320px;
+    border-radius: 18px;
+  }
+
+  .cancer-service-card-image {
+    min-height: 320px;
+  }
+
+  .cancer-service-card-content {
+    min-height: 320px;
+    padding: 22px 20px;
+  }
+
+  .cancer-service-card-title {
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .cancer-service-card-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 640px) {
+  .cancer-services-section {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .cancer-services-header {
+    margin-bottom: 2rem;
+  }
+
+  .cancer-services-title {
+    font-size: 20px;
+  }
+
+  .cancer-services-title::before,
+  .cancer-services-title::after {
+    width: 55px;
+    left: 50%;
+  }
+
+  .cancer-services-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .cancer-services-grid {
+    gap: 16px;
+  }
+
+  .cancer-service-card {
+    min-height: 300px;
+  }
+
+  .cancer-service-card-image {
+    min-height: 300px;
+  }
+
+  .cancer-service-card-content {
+    min-height: 300px;
+    padding: 20px 18px;
+  }
+
+  .cancer-service-card-title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .cancer-service-card-desc {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 560px) {
+  .cancer-services-section {
+    padding: 2.25rem 0.75rem;
+  }
+
+  .cancer-services-subtitle {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .cancer-services-title {
+    font-size: 19px;
+  }
+
+  .cancer-services-title::before,
+  .cancer-services-title::after {
+    width: 50px;
+  }
+
+  .cancer-services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cancer-services-grid-row {
+    margin-bottom: 0;
+  }
+
+  .cancer-service-card {
+    min-height: 280px;
+  }
+
+  .cancer-service-card-image {
+    min-height: 280px;
+  }
+
+  .cancer-service-card-content {
+    min-height: 280px;
+  }
+
+  .cancer-service-card-title {
+    font-size: 19px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .cancer-services-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .cancer-services-header {
+    margin-bottom: 1.75rem;
+  }
+
+  .cancer-services-subtitle {
+    font-size: 22px;
+    line-height: 1.2;
+    padding: 3px 0;
+  }
+
+  .cancer-services-title {
+    font-size: 18px;
+  }
+
+  .cancer-services-title::before,
+  .cancer-services-title::after {
+    width: 45px;
+  }
+
+  .cancer-services-description {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .cancer-services-grid {
+    gap: 14px;
+  }
+
+  .cancer-service-card {
+    min-height: 260px;
+    border-radius: 16px;
+  }
+
+  .cancer-service-card-image {
+    min-height: 260px;
+  }
+
+  .cancer-service-card-content {
+    min-height: 260px;
+    padding: 18px 16px;
+  }
+
+  .cancer-service-card-top {
+    gap: 10px;
+  }
+
+  .cancer-service-card-title {
+    font-size: 18px;
+    line-height: 1.18;
+  }
+
+  .cancer-service-card-desc {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 400px) {
+  .cancer-services-section {
+    padding: 1.75rem 0.5rem;
+  }
+
+  .cancer-services-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .cancer-services-subtitle {
+    font-size: 20px;
+    line-height: 1.15;
+    padding: 3px 0;
+  }
+
+  .cancer-services-title {
+    font-size: 17px;
+  }
+
+  .cancer-services-title::before,
+  .cancer-services-title::after {
+    width: 40px;
+  }
+
+  .cancer-services-description {
+    font-size: 12px;
+  }
+
+  .cancer-services-grid {
+    gap: 12px;
+  }
+
+  .cancer-service-card {
+    min-height: 240px;
+    border-radius: 14px;
+  }
+
+  .cancer-service-card-image {
+    min-height: 240px;
+  }
+
+  .cancer-service-card-content {
+    min-height: 240px;
+    padding: 16px 14px;
+  }
+
+  .cancer-service-card-title {
+    font-size: 17px;
+    line-height: 1.18;
+  }
+
+  .cancer-service-card-desc {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+/* ── Section wrapper ── */
+.pj-section {
+  background: var(--color-white);
+  padding: 3rem 1rem;
+  font-family: var(--font-primary);
+}
+
+/* ── 6-column grid ── */
+.pj-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.pj-step:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.pj-step:not(:first-child) {
+  padding-left: 24px;
+}
+
+/* ── Step number ── */
+.pj-number {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+/* ── Step title ── */
+.pj-title {
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+/* ── Step description ── */
+.pj-desc {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Responsive: 3 columns on tablet ── */
+@media (max-width: 1024px) {
+  .pj-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 0;
+  }
+
+  .pj-step {
+    padding: 0 20px 0 0;
+  }
+
+  .pj-step:nth-child(3),
+  .pj-step:nth-child(6) {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .pj-step:nth-child(4) {
+    border-right: 1px solid rgba(19, 41, 68, 0.12);
+    padding-left: 0;
+  }
+
+  .pj-step:not(:first-child) {
+    padding-left: 20px;
+  }
+
+  .pj-step:nth-child(3n + 1) {
+    padding-left: 0;
+  }
+}
+
+/* ── Responsive: 2 columns on mobile ── */
+@media (max-width: 640px) {
+  .pj-section {
+    padding: 40px 20px;
+  }
+
+  .pj-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 0;
+  }
+
+  .pj-step {
+    padding: 0 16px 0 0;
+    border-right: 1px solid rgba(19, 41, 68, 0.12);
+  }
+
+  .pj-step:nth-child(even) {
+    border-right: none;
+    padding-right: 0;
+    padding-left: 16px;
+  }
+
+  .pj-step:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .pj-number {
+    font-size: 38px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   HOSPITAL NETWORK SECTION
+═══════════════════════════════════════════ */
+
+.hn-section {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fb 100%);
+  padding: 3rem 1rem;
+}
+
+.hn-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hn-title-wrap {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.hn-label {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  color: var(--color-navy-dark);
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 8px;
+}
+
+.hn-label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-red-light),
+    var(--color-navy-dark)
+  );
+  border-radius: 2px;
+}
+
+.hn-label::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-red-light),
+    var(--color-navy-dark)
+  );
+  border-radius: 2px;
+}
+
+.hn-title {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.hn-description {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.hn-heading {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.hn-subtitle {
+  max-width: 1150px;
+  margin: 0 auto;
+  font-family: var(--font-primary);
+  font-size: 17px;
+}
+/* 4-column grid */
+.hn-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 1200px) {
+  .hn-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .hn-title,
+  .hn-heading {
+    font-size: 32px;
+  }
+
+  .hn-label {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hn-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 3rem;
+  }
+
+  .hn-title,
+  .hn-heading {
+    font-size: 30px;
+  }
+
+  .hn-description {
+    font-size: 16px;
+  }
+
+  .hn-hospital-name {
+    font-size: 22px;
+  }
+
+  .hn-card-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hn-section {
+    padding: 2rem 0.75rem;
+  }
+
+  .hn-container {
+    padding: 0 16px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 2.5rem;
+  }
+
+  .hn-title,
+  .hn-heading {
+    font-size: 28px;
+  }
+
+  .hn-label {
+    font-size: 20px;
+  }
+
+  .hn-description {
+    font-size: 15px;
+  }
+
+  .hn-grid {
+    gap: 20px;
+  }
+
+  .hn-card-header {
+    padding: 16px 20px 14px;
+  }
+
+  .hn-hospital-name {
+    font-size: 20px;
+  }
+
+  .hn-card-body {
+    padding: 16px 20px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hn-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .hn-title,
+  .hn-heading {
+    font-size: 26px;
+  }
+
+  .hn-label {
+    font-size: 18px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    left: 50%;
+  }
+
+  .hn-card-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hn-section {
+    padding: 2rem 1rem;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .hn-title,
+  .hn-heading {
+    font-size: 24px;
+  }
+
+  .hn-label {
+    font-size: 16px;
+  }
+
+  .hn-description {
+    font-size: 14px;
+  }
+
+  .hn-card-header {
+    padding: 14px 16px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hn-hospital-name {
+    font-size: 18px;
+  }
+
+  .hn-hospital-sub {
+    font-size: 13px;
+  }
+
+  .hn-card-body {
+    padding: 14px 16px 16px;
+    gap: 14px;
+  }
+
+  .hn-card-image {
+    height: 180px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 80px;
+  }
+}
+/* ── Card shell ── */
+.hn-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(19, 41, 68, 0.08);
+  box-shadow: 0 4px 16px rgba(19, 41, 68, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hn-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(19, 41, 68, 0.15);
+  border-color: var(--color-navy-dark);
+}
+
+/* ── Card Top Section ── */
+.hn-card-top {
+  position: relative;
+}
+
+.hn-card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hn-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 23, 84, 0.1) 0%,
+    rgba(10, 23, 84, 0.7) 100%
+  );
+}
+
+.hn-card:hover .hn-card-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 23, 84, 0.2) 0%,
+    rgba(10, 23, 84, 0.8) 100%
+  );
+}
+
+/* ── Accreditation Badges ── */
+.hn-accreditation-badges {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.hn-badge {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  font-family: var(--font-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(204, 31, 31, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.hn-card:hover .hn-badge {
+  background: var(--color-red);
+  color: white;
+  border-color: var(--color-red);
+}
+
+/* ── Card Header ── */
+.hn-card-header {
+  padding: 20px 24px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  background: white;
+  border-bottom: 1px solid rgba(19, 41, 68, 0.06);
+}
+
+.hn-hospital-info {
+  flex: 1;
+}
+
+.hn-hospital-name {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.hn-hospital-sub {
+  font-family: var(--font-primary);
+  color: rgba(19, 41, 68, 0.65);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Rating ── */
+.hn-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  padding: 6px 12px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.hn-rating svg {
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.hn-rating-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+}
+
+/* ── Card Body ── */
+.hn-card-body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+/* ── Location ── */
+.hn-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-primary);
+  color: rgba(19, 41, 68, 0.65);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hn-location-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-red);
+  flex-shrink: 0;
+}
+
+/* ── Specialties ── */
+.hn-specialties {
+  flex: 1;
+}
+
+.hn-specialties-label {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hn-specialties-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hn-specialty-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(19, 41, 68, 0.8);
+  line-height: 1.6;
+}
+
+.hn-specialty-item svg {
+  color: var(--color-red);
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+}
+
+.hn-specialty-item span {
+  flex: 1;
+}
+
+/* ── Card Footer ── */
+.hn-card-footer {
+  padding-top: 16px;
+  border-top: 1px solid rgba(19, 41, 68, 0.06);
+}
+
+.hn-contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(
+    135deg,
+    var(--color-red) 0%,
+    var(--color-red-dark) 100%
+  );
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(204, 31, 31, 0.25);
+}
+
+.hn-contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(204, 31, 31, 0.35);
+  background: linear-gradient(
+    135deg,
+    var(--color-red-dark) 0%,
+    var(--color-red) 100%
+  );
+}
+
+.hn-contact-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hn-contact-btn span {
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE STYLES
+═══════════════════════════════════════════ */
+
+/* Large tablets and small laptops */
+@media (max-width: 1200px) {
+  .hn-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .hn-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 3rem;
+  }
+
+  .hn-heading {
+    font-size: 2.25rem;
+  }
+
+  .hn-subtitle {
+    font-size: 1rem;
+  }
+
+  .hn-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .hn-card-image {
+    height: 190px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.4rem;
+  }
+}
+
+/* Standard tablets */
+@media (max-width: 992px) {
+  .hn-section {
+    padding: 2.25rem 1rem;
+  }
+
+  .hn-label {
+    font-size: 22px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 110px;
+  }
+
+  .hn-heading {
+    font-size: 2rem;
+  }
+
+  .hn-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hn-grid {
+    gap: 20px;
+  }
+
+  .hn-card-image {
+    height: 180px;
+  }
+
+  .hn-card-header {
+    padding: 18px 20px 14px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.35rem;
+  }
+
+  .hn-hospital-sub {
+    font-size: 13px;
+  }
+
+  .hn-card-body {
+    padding: 18px 20px 20px;
+    gap: 16px;
+  }
+
+  .hn-specialties-label {
+    font-size: 12px;
+  }
+
+  .hn-specialty-item {
+    font-size: 12.5px;
+  }
+}
+
+/* Tablets portrait */
+@media (max-width: 860px) {
+  .hn-section {
+    padding: 2rem 0.75rem;
+  }
+
+  .hn-container {
+    padding: 0 16px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 2.5rem;
+  }
+
+  .hn-label {
+    font-size: 20px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 100px;
+  }
+
+  .hn-heading {
+    font-size: 1.85rem;
+    line-height: 1.25;
+  }
+
+  .hn-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hn-grid {
+    gap: 18px;
+  }
+
+  .hn-card-image {
+    height: 170px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.3rem;
+  }
+
+  .hn-accreditation-badges {
+    top: 12px;
+    right: 12px;
+    gap: 5px;
+  }
+
+  .hn-badge {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .hn-contact-btn {
+    padding: 11px 18px;
+    font-size: 13.5px;
+  }
+}
+
+/* Mobile landscape and large phones */
+@media (max-width: 768px) {
+  .hn-section {
+    padding: 1.75rem 0.5rem;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 2.25rem;
+  }
+
+  .hn-label {
+    font-size: 18px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 90px;
+  }
+
+  .hn-heading {
+    font-size: 1.75rem;
+  }
+
+  .hn-subtitle {
+    font-size: 0.875rem;
+    max-width: 600px;
+  }
+
+  .hn-grid {
+    gap: 16px;
+  }
+
+  .hn-card-image {
+    height: 160px;
+  }
+
+  .hn-card-header {
+    padding: 16px 18px 12px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.25rem;
+  }
+
+  .hn-hospital-sub {
+    font-size: 12.5px;
+  }
+
+  .hn-card-body {
+    padding: 16px 18px 18px;
+    gap: 14px;
+  }
+
+  .hn-location {
+    font-size: 13px;
+  }
+
+  .hn-specialties-label {
+    font-size: 11.5px;
+    margin-bottom: 8px;
+  }
+
+  .hn-specialty-item {
+    font-size: 12px;
+    gap: 7px;
+  }
+
+  .hn-specialty-item svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hn-contact-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .hn-contact-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 640px) {
+  .hn-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .hn-container {
+    padding: 0 12px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .hn-label {
+    font-size: 16px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 80px;
+  }
+
+  .hn-heading {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .hn-subtitle {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .hn-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hn-card {
+    border-radius: 14px;
+  }
+
+  .hn-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .hn-card-image {
+    height: 180px;
+  }
+
+  .hn-card-header {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.3rem;
+  }
+
+  .hn-hospital-sub {
+    font-size: 13px;
+  }
+
+  .hn-rating {
+    align-self: flex-start;
+  }
+
+  .hn-card-body {
+    padding: 16px;
+  }
+
+  .hn-accreditation-badges {
+    top: 10px;
+    right: 10px;
+  }
+
+  .hn-badge {
+    font-size: 9px;
+    padding: 4px 9px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 520px) {
+  .hn-section {
+    padding: 1.25rem 0.5rem;
+  }
+
+  .hn-container {
+    padding: 0 10px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 1.75rem;
+  }
+
+  .hn-label {
+    font-size: 15px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 70px;
+    height: 1.5px;
+  }
+
+  .hn-heading {
+    font-size: 1.35rem;
+  }
+
+  .hn-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .hn-grid {
+    gap: 14px;
+  }
+
+  .hn-card {
+    border-radius: 12px;
+  }
+
+  .hn-card-image {
+    height: 170px;
+  }
+
+  .hn-card-header {
+    padding: 14px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.2rem;
+  }
+
+  .hn-hospital-sub {
+    font-size: 12px;
+  }
+
+  .hn-card-body {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .hn-location {
+    font-size: 12px;
+  }
+
+  .hn-location-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hn-specialties-label {
+    font-size: 11px;
+    margin-bottom: 7px;
+  }
+
+  .hn-specialty-item {
+    font-size: 11.5px;
+    gap: 6px;
+  }
+
+  .hn-specialty-item svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .hn-contact-btn {
+    padding: 10px 14px;
+    font-size: 12.5px;
+    border-radius: 7px;
+  }
+
+  .hn-contact-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .hn-rating {
+    padding: 5px 10px;
+  }
+
+  .hn-rating svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hn-rating-value {
+    font-size: 13px;
+  }
+
+  .hn-accreditation-badges {
+    top: 8px;
+    right: 8px;
+    gap: 4px;
+  }
+
+  .hn-badge {
+    font-size: 8px;
+    padding: 4px 8px;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 400px) {
+  .hn-section {
+    padding: 1rem 0.5rem;
+  }
+
+  .hn-container {
+    padding: 0 8px;
+  }
+
+  .hn-title-wrap {
+    margin-bottom: 1.5rem;
+  }
+
+  .hn-label {
+    font-size: 14px;
+  }
+
+  .hn-label::before,
+  .hn-label::after {
+    width: 60px;
+  }
+
+  .hn-heading {
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+  .hn-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .hn-grid {
+    gap: 12px;
+  }
+
+  .hn-card {
+    border-radius: 10px;
+  }
+
+  .hn-card-image {
+    height: 160px;
+  }
+
+  .hn-card-header {
+    padding: 12px;
+  }
+
+  .hn-hospital-name {
+    font-size: 1.1rem;
+  }
+
+  .hn-hospital-sub {
+    font-size: 11px;
+  }
+
+  .hn-card-body {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .hn-location {
+    font-size: 11px;
+  }
+
+  .hn-specialties-label {
+    font-size: 10px;
+  }
+
+  .hn-specialty-item {
+    font-size: 11px;
+    gap: 5px;
+  }
+
+  .hn-specialty-item svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hn-contact-btn {
+    padding: 9px 12px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .hn-contact-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hn-rating {
+    padding: 4px 8px;
+  }
+
+  .hn-rating svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .hn-rating-value {
+    font-size: 12px;
+  }
+
+  .hn-badge {
+    font-size: 7px;
+    padding: 3px 7px;
+  }
+}
+
+.hn-thumb-img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  border: 1px solid rgba(19, 41, 68, 0.1);
+}
+
+.hn-thumb-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  line-height: 1.3;
+}
+
+/* ═══════════════════════════════════════════
+   DOCTORS SECTION — FULLY RESPONSIVE
+═══════════════════════════════════════════ */
+
+.doctor-section-light {
+  padding: 3rem 1rem;
+}
+
+.doctor-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.doctor-title-wrap {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.doctor-label {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  color: var(--color-navy-dark);
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 8px;
+}
+
+.doctor-label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-red-light),
+    var(--color-navy-dark)
+  );
+  border-radius: 2px;
+}
+
+.doctor-label::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-red-light),
+    var(--color-navy-dark)
+  );
+  border-radius: 2px;
+}
+
+.doctor-h2 {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin: 0;
+  line-height: 1.3;
+}
+.doctor-subtitle {
+  max-width: 1150px;
+  margin: 0 auto;
+  font-family: var(--font-primary);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Base: 4-column */
+.doctor-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.doctor-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.13);
+}
+
+.doctor-card-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.doctor-card-body {
+  padding: 20px 20px 22px;
+}
+
+.doctor-spec {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  background: rgba(220, 53, 69, 0.1);
+  padding: 6px 14px;
+  border-radius: 25px;
+  color: #132944;
+  line-height: 1.3;
+}
+
+.doctor-name {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+/* ── 1200px: Large tablets & small laptops → 2-column ── */
+@media (max-width: 1200px) {
+  .doctor-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .doctor-card-photo {
+    height: 240px;
+  }
+  .doctor-h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ── 992px: Standard tablets ── */
+@media (max-width: 992px) {
+  .doctor-section-light {
+    padding: 2.5rem 1rem;
+  }
+  .doctor-title-wrap {
+    margin-bottom: 2.5rem;
+  }
+  .doctor-h2 {
+    font-size: 2rem;
+  }
+  .doctor-label {
+    font-size: 22px;
+  }
+  .doctor-cards-grid {
+    gap: 20px;
+  }
+  .doctor-card-photo {
+    height: 220px;
+  }
+  .doctor-card-body {
+    padding: 16px 16px 18px;
+  }
+  .doctor-name {
+    font-size: 17px;
+  }
+  .doctor-desc {
+    font-size: 14px;
+  }
+}
+
+/* ── 860px: Tablet portrait ── */
+@media (max-width: 860px) {
+  .doctor-h2 {
+    font-size: 1.8rem;
+  }
+  .doctor-label {
+    font-size: 20px;
+  }
+  .doctor-cards-grid {
+    gap: 18px;
+  }
+  .doctor-card-photo {
+    height: 200px;
+  }
+  .doctor-spec {
+    font-size: 11px;
+  }
+  .doctor-name {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .doctor-desc {
+    font-size: 13.5px;
+  }
+}
+
+/* ── 768px: Mobile landscape ── */
+@media (max-width: 768px) {
+  .doctor-section-light {
+    padding: 2rem 0.75rem;
+  }
+  .doctor-container {
+    padding: 0 10px;
+  }
+  .doctor-title-wrap {
+    margin-bottom: 2rem;
+  }
+  .doctor-h2 {
+    font-size: 1.6rem;
+  }
+  .doctor-label {
+    font-size: 18px;
+  }
+  .doctor-cards-grid {
+    gap: 16px;
+  }
+  .doctor-card-photo {
+    height: 185px;
+  }
+  .doctor-card-body {
+    padding: 14px 14px 16px;
+  }
+}
+
+/* ── 640px: Mobile portrait → 1-column + horizontal card layout ── */
+@media (max-width: 640px) {
+  .doctor-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .doctor-label {
+    font-size: 16px;
+  }
+
+  .doctor-label::before,
+  .doctor-label::after {
+    width: 70px;
+    left: 50%;
+  }
+
+  .doctor-h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Horizontal card: photo left, content right */
+  .doctor-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    border-radius: 10px;
+  }
+  .doctor-card-photo {
+    width: 130px;
+    min-width: 130px;
+    height: auto;
+    min-height: 160px;
+    border-radius: 0;
+    object-position: top center;
+  }
+  .doctor-card-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .doctor-spec {
+    font-size: 10px;
+  }
+  .doctor-name {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .doctor-desc {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* ── 520px: Small mobile ── */
+@media (max-width: 520px) {
+  .doctor-section-light {
+    padding: 1.75rem 0.5rem;
+  }
+  .doctor-h2 {
+    font-size: 1.35rem;
+  }
+  .doctor-label {
+    font-size: 16px;
+  }
+  .doctor-card-photo {
+    width: 110px;
+    min-width: 110px;
+    min-height: 140px;
+  }
+  .doctor-card-body {
+    padding: 12px;
+  }
+  .doctor-name {
+    font-size: 14px;
+  }
+  .doctor-desc {
+    font-size: 12.5px;
+  }
+}
+
+/* ── 400px: Extra small devices ── */
+@media (max-width: 400px) {
+  .doctor-h2 {
+    font-size: 1.2rem;
+  }
+  .doctor-label {
+    font-size: 15px;
+  }
+  .doctor-label::before,
+  .doctor-label::after {
+    width: 60px;
+  }
+  .doctor-cards-grid {
+    gap: 12px;
+  }
+  .doctor-card-photo {
+    width: 90px;
+    min-width: 90px;
+    min-height: 130px;
+  }
+  .doctor-card-body {
+    padding: 10px;
+  }
+  .doctor-spec {
+    font-size: 9px;
+    margin-bottom: 4px;
+  }
+  .doctor-name {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .doctor-desc {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   cancer FAQ SECTION
+═══════════════════════════════════════════ */
+
+.cancer-faq-section {
+  position: relative;
+  padding: 3rem 1rem;
+}
+
+.cancer-faq-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* Header */
+.cancer-faq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cancer-faq-badge {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  color: var(--color-navy-dark);
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 8px;
+}
+
+.cancer-faq-badge::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-red-light),
+    var(--color-navy-dark)
+  );
+  border-radius: 2px;
+}
+
+.cancer-faq-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-red-light),
+    var(--color-navy-dark)
+  );
+  border-radius: 2px;
+}
+
+.cancer-faq-badge-icon {
+  font-size: 16px;
+}
+
+.cancer-faq-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.cancer-faq-subtitle {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* FAQ List */
+.cancer-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* FAQ Item */
+.cancer-faq-item {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border: 1px solid var(--color-navy-dark);
+}
+
+.cancer-faq-item.active {
+  border-color: var(--color-red);
+  box-shadow: 0 4px 20px rgba(204, 31, 31, 0.15);
+}
+
+/* Question Button */
+.cancer-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 28px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.cancer-faq-question:focus {
+  outline: 0.5px solid var(--color-red);
+  outline-offset: -1px;
+}
+
+.cancer-faq-question-text {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin: 0;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.cancer-faq-item.active .cancer-faq-question-text {
+  color: var(--color-red);
+}
+
+/* Icon */
+.cancer-faq-icon {
+  flex-shrink: 0;
+  font-size: 20px;
+  color: var(--color-text-muted);
+  transition: all 0.3s ease;
+  color: var(--color-navy-dark);
+}
+
+.cancer-faq-item.active .cancer-faq-icon {
+  color: var(--color-red);
+}
+
+.cancer-faq-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Answer */
+.cancer-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease;
+  opacity: 0;
+}
+
+.cancer-faq-answer.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.cancer-faq-answer-content {
+  padding: 0 28px 24px 28px;
+  border-top: 1px solid #e5e7eb;
+  margin-top: -4px;
+}
+
+.cancer-faq-answer-content p {
+  font-family: var(--font-primary);
+  color: var(--color-text-muted);
+  font-size: var(--fs-small);
+  line-height: 1.8;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+/* Footer */
+.cancer-faq-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cancer-faq-footer p {
+  color: var(--color-text-muted);
+  font-size: 16px;
+}
+
+.cancer-faq-link {
+  color: var(--color-red);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.cancer-faq-link:hover {
+  border-bottom-color: var(--color-red);
+  color: var(--color-red-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cancer-faq-section {
+    padding: 60px 16px;
+  }
+
+  .cancer-faq-title {
+    font-size: 28px;
+  }
+
+  .cancer-faq-subtitle {
+    font-size: 16px;
+  }
+
+  .cancer-faq-question {
+    padding: 20px 20px;
+  }
+
+  .cancer-faq-question-text {
+    font-size: 16px;
+  }
+
+  .cancer-faq-answer-content {
+    padding: 0 20px 20px 20px;
+  }
+
+  .cancer-faq-answer-content p {
+    font-size: 15px;
+  }
+
+  .cancer-faq-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cancer-faq-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .cancer-faq-header {
+    margin-bottom: 40px;
+  }
+
+  .cancer-faq-title {
+    font-size: 26px;
+  }
+
+  .cancer-faq-badge {
+    font-size: 18px;
+  }
+
+  .cancer-faq-badge::before,
+  .cancer-faq-badge::after {
+    left: 50%;
+  }
+
+  .cancer-faq-subtitle {
+    font-size: 15px;
+  }
+
+  .cancer-faq-question {
+    padding: 18px 18px;
+  }
+
+  .cancer-faq-question-text {
+    font-size: 15.5px;
+  }
+
+  .cancer-faq-answer-content {
+    padding: 0 18px 18px 18px;
+  }
+
+  .cancer-faq-answer-content p {
+    font-size: 14.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cancer-faq-section {
+    padding: 2rem 1rem;
+  }
+
+  .cancer-faq-header {
+    margin-bottom: 32px;
+  }
+
+  .cancer-faq-title {
+    font-size: 24px;
+  }
+
+  .cancer-faq-badge {
+    font-size: 16px;
+  }
+
+  .cancer-faq-badge::before,
+  .cancer-faq-badge::after {
+    width: 90px;
+  }
+
+  .cancer-faq-subtitle {
+    font-size: 14px;
+  }
+
+  .cancer-faq-question {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .cancer-faq-question-text {
+    font-size: 15px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   CTA SECTION
+═══════════════════════════════════════════ */
+.cancer-cta-section {
+  position: relative;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 100px 20px;
+}
+
+.cancer-cta-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.cancer-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 20, 60, 0.45) 0%,
+    rgba(10, 20, 60, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.cancer-cta-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1350px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cancer-cta-content {
+  max-width: 600px;
+  text-align: left;
+  color: var(--color-white);
+}
+
+.cancer-cta-badge {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-white);
+  padding: 0;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+.cancer-cta-title {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.cancer-cta-subtitle {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+.cancer-cta-benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-bottom: 36px;
+  max-width: 650px;
+}
+
+.cancer-cta-benefit-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cancer-cta-check-icon {
+  color: #25d366;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.cancer-cta-benefit-point span {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.4;
+}
+
+.cancer-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 8px;
+  justify-content: flex-start;
+}
+
+.cancer-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  gap: 12px;
+  background: #2563eb;
+  color: var(--color-white);
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.cancer-cta-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.cancer-cta-arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.cancer-cta-button:hover .cancer-cta-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive — CTA Section */
+@media (max-width: 1024px) {
+  .cancer-cta-section {
+    min-height: 500px;
+    padding: 80px 20px;
+  }
+
+  .cancer-cta-title {
+    font-size: 44px;
+  }
+
+  .cancer-cta-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cancer-cta-section {
+    min-height: 450px;
+    padding: 60px 20px;
+  }
+
+  .cancer-cta-content {
+    max-width: 100%;
+  }
+
+  .cancer-cta-badge {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .cancer-cta-title {
+    font-size: 36px;
+  }
+
+  .cancer-cta-subtitle {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .cancer-cta-benefits-list {
+    gap: 12px 20px;
+    margin-bottom: 30px;
+  }
+
+  .cancer-cta-benefit-point span {
+    font-size: 14px;
+  }
+
+  .cancer-cta-check-icon {
+    font-size: 14px;
+  }
+
+  .cancer-cta-button {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cancer-cta-section {
+    min-height: 400px;
+    padding: 50px 16px;
+  }
+
+  .cancer-cta-badge {
+    font-size: 11px;
+    margin-bottom: 16px;
+  }
+
+  .cancer-cta-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .cancer-cta-subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .cancer-cta-benefits-list {
+    gap: 10px 16px;
+    margin-bottom: 28px;
+  }
+
+  .cancer-cta-benefit-point span {
+    font-size: 13px;
+  }
+
+  .cancer-cta-check-icon {
+    font-size: 13px;
+  }
+
+  .cancer-cta-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   REVIEWS SECTION
+═══════════════════════════════════════════ */
+.cancer-reviews-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 480px;
+  max-height: 550px;
+  max-width: 1350px;
+  margin: 80px auto;
+  box-shadow: 0 10px 40px rgba(19, 41, 68, 0.08);
+}
+
+.cancer-reviews-content {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  padding: 30px 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.cancer-reviews-heading {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--color-navy);
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════
+   SLIDER WRAPPER — overflow hidden container
+═══════════════════════════════════════════ */
+.cancer-reviews-slider-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  width: 100%;
+  flex: 1;
+}
+
+/* ═══════════════════════════════════════════
+   SLIDER TRACK — flex row of all slides
+═══════════════════════════════════════════ */
+.cancer-reviews-slider-track {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  height: 100%;
+}
+
+/* ═══════════════════════════════════════════
+   EACH SLIDE — 2 cards side by side
+═══════════════════════════════════════════ */
+.cancer-reviews-slide {
+  min-width: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  box-sizing: border-box;
+  align-items: start;
+}
+
+/* ═══════════════════════════════════════════
+   REVIEW CARD
+═══════════════════════════════════════════ */
+.cancer-reviews-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 20px;
+  border: 1px solid rgba(19, 41, 68, 0.08);
+  box-shadow: 0 2px 8px rgba(19, 41, 68, 0.04);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.cancer-reviews-card:hover {
+  box-shadow: 0 4px 12px rgba(19, 41, 68, 0.1);
+  transform: translateY(-2px);
+}
+
+.cancer-reviews-card-text {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  color: rgba(19, 41, 68, 0.75);
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.cancer-reviews-card-name {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-navy);
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(19, 41, 68, 0.08);
+}
+
+/* ═══════════════════════════════════════════
+   DOTS PAGINATION
+═══════════════════════════════════════════ */
+.cancer-reviews-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.cancer-reviews-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(19, 41, 68, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.cancer-reviews-dot.active {
+  background: var(--color-navy);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.cancer-reviews-dot:hover:not(.active) {
+  background: rgba(19, 41, 68, 0.4);
+}
+
+/* ═══════════════════════════════════════════
+   STARS
+═══════════════════════════════════════════ */
+.cancer-reviews-stars {
+  display: flex;
+  gap: 3px;
+  color: #e8a020;
+  font-size: 15px;
+}
+
+/* ═══════════════════════════════════════════
+   RATING SUMMARY BAR
+═══════════════════════════════════════════ */
+.cancer-reviews-summary {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(19, 41, 68, 0.08);
+  box-shadow: 0 2px 8px rgba(19, 41, 68, 0.04);
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.cancer-reviews-rating-number {
+  font-family: Georgia, serif;
+  font-size: 2.4rem;
+  color: var(--color-navy);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cancer-reviews-rating-label {
+  font-size: 13px;
+  color: rgba(19, 41, 68, 0.6);
+  margin-left: 6px;
+}
+
+.cancer-reviews-rating-description {
+  font-size: 12px;
+  color: rgba(19, 41, 68, 0.5);
+  margin-top: 4px;
+}
+
+/* ═══════════════════════════════════════════
+   POST A REVIEW BUTTON
+═══════════════════════════════════════════ */
+.cancer-reviews-button {
+  background: var(--color-red);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 13px 26px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(204, 31, 31, 0.2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cancer-reviews-button:hover {
+  background: var(--color-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(204, 31, 31, 0.3);
+}
+
+/* ═══════════════════════════════════════════
+   RIGHT IMAGE PANEL
+═══════════════════════════════════════════ */
+.cancer-reviews-image-wrapper {
+  background: linear-gradient(135deg, #132944 0%, #1a3558 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cancer-reviews-image {
+  width: 100%;
+  height: 100%;
+  max-height: 550px;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.95;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 1024px
+═══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .cancer-reviews-section {
+    grid-template-columns: 1fr;
+    max-height: none;
+    margin: 60px auto;
+  }
+
+  .cancer-reviews-image-wrapper {
+    min-height: 400px;
+    max-height: 400px;
+  }
+
+  .cancer-reviews-image {
+    max-height: 400px;
+  }
+
+  .cancer-reviews-slide {
+    gap: 12px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 768px
+═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .cancer-reviews-section {
+    margin: 40px auto;
+  }
+
+  .cancer-reviews-content {
+    padding: 32px 24px;
+  }
+
+  .cancer-reviews-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  /* Stack cards vertically on mobile */
+  .cancer-reviews-slide {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cancer-reviews-card {
+    padding: 20px 16px;
+  }
+
+  .cancer-reviews-card-text {
+    font-size: 12px;
+  }
+
+  .cancer-reviews-card-name {
+    font-size: 12px;
+  }
+
+  .cancer-reviews-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .cancer-reviews-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cancer-reviews-image-wrapper {
+    min-height: 350px;
+    max-height: 350px;
+  }
+
+  .cancer-reviews-image {
+    max-height: 350px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 480px
+═══════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .cancer-reviews-section {
+    margin: 30px 16px;
+    border-radius: 12px;
+  }
+
+  .cancer-reviews-content {
+    padding: 24px 16px;
+  }
+
+  .cancer-reviews-heading {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+  }
+
+  .cancer-reviews-card {
+    padding: 16px 14px;
+  }
+
+  .cancer-reviews-rating-number {
+    font-size: 2rem;
+  }
+
+  .cancer-reviews-summary {
+    padding: 16px;
+  }
+
+  .cancer-reviews-image-wrapper {
+    min-height: 280px;
+    max-height: 280px;
+  }
+
+  .cancer-reviews-image {
+    max-height: 280px;
+  }
+}

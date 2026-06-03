@@ -25,9 +25,9 @@ const Process = lazy(() => import("./pages/Process"));
 //   import("./pages/DentalImplantIndia")
 // );
 
-// const CardiacLandingIndia = lazy(() =>
-//   import("./pages/CardiacLandingIndia")
-// );
+const CardiacLandingIndia = lazy(() =>
+  import("./pages/CardiacLandingIndia")
+);
 
 const TermsAndConditionsPage = lazy(() =>
   import("./pages/terms-and-conditions")
