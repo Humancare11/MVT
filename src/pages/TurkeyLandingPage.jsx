@@ -1,9 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import "./TurkeyLandingPage.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
 import { Helmet } from "react-helmet";
 
 import {
@@ -11,6 +7,8 @@ import {
   FaPhoneAlt,
   FaCheckCircle,
   FaCheck,
+  FaHospital,
+  FaMapMarkerAlt,
   FaStethoscope,
   FaPassport,
   FaPlane,
@@ -38,12 +36,11 @@ import aboutImage2 from "../departments/dept-images/turkey-country/medical-touri
 
 import whyChooseTurkeyImage from "../departments/dept-images/turkey-country/advanced-healthcare-in-turkey.webp";
 
-import apolloImage from "../departments/dept-images/oncology/best-oncology-hospital-india.webp";
-import medantaImage from "../departments/dept-images/medanta-hospital-for-oncology-treatment-in-india.webp";
-import fortisImage from "../departments/dept-images/oncology/multi-specialty-oncology-hospital-india.webp";
-import hcgImage from "../departments/dept-images/oncology/hcg-cancer-treatment-specialist.webp";
-import maxImage from "../departments/dept-images/oncology/top-oncology-hospital-india.webp";
-import ApolloApcc from "../departments/dept-images/oncology/apollo-proton-cancer-centre-top-cancer-treatment.webp";
+import livHospitalImage from "../assets/hospitals/liv-hospital-in-turkey.webp";
+import guvenHospitalImage from "../assets/hospitals/guven-hospital-turkey-ankara.webp";
+import medicalParkImage from "../assets/hospitals/medical-park-istanbul-turkey.webp";
+import istinyeDentalImage from "../assets/hospitals/istinye-dental-hospital-in-turkey.webp";
+import memorialHealthImage from "../assets/hospitals/memorial-hospital-group-in-turkey.webp";
 
 import cardiologyImage from "../departments/dept-images/turkey-country/cardiology-treatment-in-turkey.webp";
 import oncologyImage from "../departments/dept-images/turkey-country/oncology.webp";
@@ -75,82 +72,85 @@ const WA_URL =
 
 const HOSPITALS = [
   {
-    name: "Apollo",
-    sub: "Hospitals",
-    image: apolloImage,
-    location: "New Delhi, India",
-    rating: 4.9,
-    accreditations: ["JCI", "NABH"],
+    name: "Liv Hospital",
+    image: livHospitalImage,
+    type: "Multi-Speciality Hospital",
+    locations: "Ankara, Gaziantep, Samsun",
+    description:
+      "Liv Hospital is one of the top hospitals in Turkey, known for delivering high-quality healthcare to patients from around the world. Located in Istanbul and other major Turkish cities, the hospital offers comprehensive treatments including cancer care, heart surgery, orthopedics, neurology, fertility treatment, and organ transplantation. Its international patient services, experienced medical teams, and advanced technology have made Liv Hospital a preferred choice for medical tourism in Turkey.",
     specialties: [
-      "Medical Oncology",
-      "Radiation Oncology",
-      "Bone Marrow Transplant",
-    ],
-  },
-  {
-    name: "Medanta",
-    sub: "The Medicity",
-    image: medantaImage,
-    location: "Gurgaon, India",
-    rating: 4.8,
-    accreditations: ["JCI", "NABH"],
-    specialties: [
-      "Surgical Oncology",
-      "Immunotherapy",
-      "Precision Cancer Care",
+      "Cardiology",
+      "Oncology",
+      "Orthopedics",
+      "Organ Transplant",
+      "Fertility",
     ],
   },
 
   {
-    name: "Apollo Proton Cancer Centre",
-    sub: "Healthcare",
-    image: ApolloApcc,
-    location: "Gurgaon, India",
-    rating: 4.8,
-    accreditations: ["JCI", "NABH"],
+    name: "Güven Hospital",
+    image: guvenHospitalImage,
+    type: "Multi-Speciality Hospital",
+    locations: "Location available on request",
+    description:
+      "Güven Hospital is a renowned healthcare institution in Ankara, offering advanced medical care across multiple specialties. The hospital is recognized for its experienced specialists, modern medical technology, and comprehensive treatment programs. International patients choose Güven Hospital for cardiology, oncology, orthopedics, neurology, and surgical procedures. Its patient-centered approach, high clinical standards, and dedicated international patient services make it a trusted destination for medical treatment in Turkey.",
     specialties: [
-      "Surgical Oncology",
-      "Immunotherapy",
-      "Precision Cancer Care",
+      "Cardiology",
+      "Oncology",
+      "Orthopedics",
+      "Neurosurgery",
+      "General Surgery",
     ],
   },
+
   {
-    name: "Fortis",
-    sub: "Healthcare",
-    image: fortisImage,
-    location: "Delhi NCR, India",
-    rating: 4.7,
-    accreditations: ["JCI", "NABH"],
+    name: "Medical Park Hospital",
+    image: medicalParkImage,
+    type: "Multi-Speciality Hospital",
+    locations:
+      "Istanbul, Adana, Ankara, Izmir, Kocaeli, Mersin, Samsun, Trabzon",
+    description:
+      "Medical Park Hospital is one of Turkey’s leading healthcare providers, offering comprehensive medical services through its network of modern hospitals. Known for advanced diagnostics, specialized treatments, and experienced medical professionals, the hospital serves both local and international patients. Medical Park Hospital provides expert care in oncology, cardiology, orthopedics, neurology, and organ transplantation. Its commitment to quality healthcare, innovative technology, and international patient support has made it a preferred choice for medical treatment in Turkey.",
     specialties: [
-      "Breast Cancer Treatment",
-      "Radiation Therapy",
-      "Hematology & Oncology",
+      "Oncology",
+      "Cardiology",
+      "Orthopedics",
+      "Organ Transplant",
+      "Neurology",
     ],
   },
+
   {
-    name: "Max",
-    sub: "Healthcare",
-    image: maxImage,
-    location: "Delhi, India",
-    rating: 4.8,
-    accreditations: ["NABH", "ISO"],
+    name: "Istinye Dental Hospital",
+    image: istinyeDentalImage,
+    type: "Dental Specialty Hospital",
+    locations: "Istanbul",
+    description:
+      "Istinye Dental Hospital is a trusted destination for advanced dental care in Turkey, providing comprehensive oral health services for local and international patients. The hospital specializes in dental implants, cosmetic dentistry, orthodontics, oral surgery, and restorative treatments using modern technology and personalized care plans. With experienced dental specialists and a patient-focused approach, Istinye Dental Hospital is recognized for delivering high-quality dental treatment in Turkey while supporting the growing demand for dental tourism and smile transformation procedures.",
     specialties: [
-      "Targeted Therapy",
-      "PET-CT Diagnostics",
-      "Cancer Rehabilitation",
+      "Dental Implants",
+      "Cosmetic Dentistry",
+      "Orthodontics",
+      "Oral Surgery",
+      "Restorative Dentistry",
+      "More",
     ],
   },
+
   {
-    name: "HCG",
-    sub: "Cancer Centre",
-    image: hcgImage,
-    location: "Bengaluru, India",
-    rating: 4.8,
-    accreditations: ["NABH", "NABL"],
+    name: "Memorial Health Group",
+    image: memorialHealthImage,
+    type: "Multi-Speciality Hospital",
+    locations: "Ankara, Antalya, Kayseri, Diyarbakir, Mugla",
+    description:
+      "Memorial Health Group is one of the most recognized healthcare organizations in Turkey, offering advanced medical services through its network of modern hospitals and specialized medical centers. The group is known for excellence in oncology, organ transplantation, cardiology, neurosurgery, and robotic surgery. With internationally trained specialists, cutting-edge medical technology, and dedicated international patient services, Memorial Health Group attracts patients seeking high-quality medical treatment in Turkey and comprehensive healthcare solutions.",
     specialties: [
-      "Medical Oncology",
-      "Radiation Oncology",
-      "Bone Marrow Transplant",
+      "Oncology",
+      "Organ Transplant",
+      "Cardiology",
+      "Orthopedics",
+      "Robotic Surgery",
+      "More",
     ],
   },
 ];
@@ -896,77 +896,40 @@ function TurkeyLandingPage() {
               Turkey.
             </p>
           </div>
-          <div className="hn-slider-wrapper">
-            <Swiper
-              modules={[Pagination, Autoplay]}
-              spaceBetween={28}
-              slidesPerView={1}
-              pagination={{
-                clickable: true,
-                dynamicBullets: true,
-                dynamicMainBullets: 3,
-              }}
-              autoplay={{
-                delay: 3500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              loop={true}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 24,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 24,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 26,
-                },
-                1280: {
-                  slidesPerView: 4,
-                  spaceBetween: 28,
-                },
-              }}
-              className="hn-swiper"
-            >
-              {HOSPITALS.map((h, i) => (
-                <SwiperSlide key={i}>
-                  <div className="hn-card">
-                    <div className="hn-card-top">
-                      <div
-                        className="hn-card-image"
-                        style={{ backgroundImage: `url(${h.image})` }}
-                      >
-                        <div className="hn-card-overlay" />
-                      </div>
-                      <div className="hn-card-header">
-                        <div className="hn-hospital-info">
-                          <h3 className="hn-hospital-name">{h.name}</h3>
-                          <p className="hn-hospital-sub">{h.sub}</p>
-                        </div>
-                      </div>
+          <div className="hn-grid">
+            {HOSPITALS.map((h, i) => (
+              <div className="hn-card" key={i}>
+                <div
+                  className="hn-card-photo"
+                  style={{ backgroundImage: `url(${h.image})` }}
+                >
+                  <div className="hn-card-photo-overlay" />
+                  <div className="hn-card-photo-content">
+                    <div className="hn-card-icon">
+                      <FaHospital />
                     </div>
-
-                    <div className="hn-card-body">
-                      <div className="hn-specialties">
-                        <p className="hn-specialties-label">Key Specialties:</p>
-                        <ul className="hn-specialties-list">
-                          {h.specialties.map((spec, j) => (
-                            <li key={j} className="hn-specialty-item">
-                              <Check />
-                              <span>{spec}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+                    <span className="hn-card-type-label">{h.type}</span>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                </div>
+
+                <div className="hn-card-info">
+                  <h3 className="hn-card-name">{h.name}</h3>
+                  <p className="hn-card-location">
+                    <FaMapMarkerAlt className="hn-card-location-icon" />
+                    {h.locations}
+                  </p>
+                  <p className="hn-card-desc">{h.description}</p>
+
+                  <div className="hn-card-tags">
+                    {h.specialties.map((spec, j) => (
+                      <span className="hn-tag" key={j}>
+                        {spec}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

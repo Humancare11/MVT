@@ -1,9 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./SaudiEgypt.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
 
 import {
   FaPhoneAlt,
@@ -19,6 +15,8 @@ import {
   FaCheck,
   FaPlus,
   FaStar,
+  FaHospital,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 
 import heroImage from "../departments/dept-images/saudi-cairo/best-private-hospital-cairo-egypt.webp";
@@ -30,11 +28,9 @@ import whyPatientAfricaImage from "../departments/dept-images/saudi-cairo/intern
 
 import aboutSaudiGermanImage from "../departments/dept-images/saudi-cairo/saudi-german-hospital-cairo.webp";
 
-import apolloImage from "../departments/dept-images/oncology/best-oncology-hospital-india.webp";
-import medantaImage from "../departments/dept-images/medanta-hospital-for-oncology-treatment-in-india.webp";
-import fortisImage from "../departments/dept-images/oncology/multi-specialty-oncology-hospital-india.webp";
-import hcgImage from "../departments/dept-images/oncology/hcg-cancer-treatment-specialist.webp";
-import maxImage from "../departments/dept-images/oncology/top-oncology-hospital-india.webp";
+import SaudiGermanImage from "../assets/hospitals/saudi-german-hospital-cairo.webp";
+import CleopatraGroupImage from "../assets/hospitals/cleopatra-group-cairo-egypt.webp";
+import AsselMedicalImage from "../assets/hospitals/aseel-medical-care-hospital-hurghada-egypt.webp";
 
 import ctaImage from "../departments/dept-images/saudi-cairo/medical-treatment-egypt-consultation.webp";
 
@@ -79,53 +75,52 @@ const reviews = [
 
 const HOSPITALS = [
   {
-    name: "German Saudi",
-    sub: "Hospital Cairo",
-    image: apolloImage,
+    name: "Saudi German Hospital",
+    image: SaudiGermanImage,
+    type: "Multi-Speciality Hospital",
+    locations: "Alexandria, Cairo",
+    description:
+      "Saudi German Hospital is a well-established healthcare provider known for delivering comprehensive medical services through advanced facilities and experienced specialists. The hospital offers expert care across multiple specialties, including cardiology, oncology, orthopedics, neurology, and general surgery. Supported by modern diagnostic technology and patient-focused treatment plans, Saudi German Hospital is committed to high clinical standards and quality healthcare outcomes. Its multidisciplinary approach and dedicated patient services make it a preferred destination for specialized medical care.",
     specialties: [
-      "Cardiology & Heart Surgery",
-      "Oncology & Cancer Treatment",
-      "Orthopedics & Joint Replacement",
+      "Cardiology",
+      "Oncology",
+      "Orthopedics",
+      "Neurology",
+      "General Surgery",
+      "More",
     ],
   },
+
   {
-    name: "Dar Al Fouad",
-    sub: "Hospital",
-    image: medantaImage,
+    name: "Cleopatra Hospital",
+    image: CleopatraGroupImage,
+    type: "Multi-Speciality Hospital",
+    locations: "Giza, Beni Suef, New Cairo (Tagamoa)",
+    description:
+      "Cleopatra Hospital is one of Egypt’s leading healthcare institutions, providing advanced medical services through modern facilities and a team of highly qualified specialists. The hospital offers comprehensive care across cardiology, oncology, orthopedics, neurology, and critical care, supported by advanced diagnostic and treatment technologies. Known for its commitment to patient safety, clinical excellence, and personalized healthcare solutions, Cleopatra Hospital serves both local and international patients seeking high-quality medical care in Cairo.",
     specialties: [
-      "Neurology & Neurosurgery",
-      "Fertility & IVF Treatment",
-      "Advanced Diagnostic Services",
+      "Cardiology",
+      "Oncology",
+      "Orthopedics",
+      "Neurosurgery",
+      "General Surgery",
     ],
   },
+
   {
-    name: "Nile Badrawi",
-    sub: "Hospital",
-    image: fortisImage,
+    name: "Aseel Medical Care Hospital",
+    image: AsselMedicalImage,
+    type: "Multi-Speciality Hospital",
+    locations: "Cairo, Egypt",
+    description:
+      "Aseel Medical Centre is a trusted healthcare facility dedicated to providing comprehensive medical services through experienced specialists and modern healthcare practices. The center offers personalized care across multiple specialties, including family medicine, internal medicine, pediatrics, women's health, and preventive healthcare. With a focus on patient well-being, advanced diagnostic support, and quality treatment outcomes, Aseel Medical Centre serves as a reliable destination for individuals and families seeking accessible and professional healthcare services.",
     specialties: [
-      "Gastroenterology",
-      "Cosmetic Surgery",
-      "Emergency & Critical Care",
-    ],
-  },
-  {
-    name: "Cleopatra",
-    sub: "Hospital",
-    image: maxImage,
-    specialties: [
-      "Ophthalmology & Eye Surgery",
-      "Dental Implants",
-      "Dermatology Services",
-    ],
-  },
-  {
-    name: "Andalusia",
-    sub: "Hospital",
-    image: hcgImage,
-    specialties: [
-      "Pediatric Care",
-      "Maternity Services",
-      "Minimally Invasive Surgery",
+      "Family Medicine",
+      "Internal Medicine",
+      "Pediatrics",
+      "Women's Health",
+      "Preventive Care",
+      "More",
     ],
   },
 ];
@@ -728,87 +723,48 @@ const SaudiEgypt = () => {
         <div className="hn-container">
           <div className="hn-title-wrap">
             <span className="hn-label">Our Hospital Network</span>
-            <h2 className="hn-heading">
-              Experienced Doctors & Multispecialty Specialists at Saudi German
-              Hospital Cairo
-            </h2>
+            <h2 className="hn-heading">Best Hospitals in Turkey</h2>
             <p className="hn-subtitle">
-              Connect with experienced doctors and specialists at Saudi German
-              Hospital Cairo offering advanced treatment, personalized care, and
-              expert medical support.
+              Turkey is home to internationally accredited hospitals offering
+              advanced treatment, experienced specialists, and personalized care
+              for international patients seeking affordable medical treatment in
+              Turkey.
             </p>
           </div>
-          <div className="hn-slider-wrapper">
-            <Swiper
-              modules={[Pagination, Autoplay]}
-              spaceBetween={28}
-              slidesPerView={1}
-              pagination={{
-                clickable: true,
-                dynamicBullets: true,
-                dynamicMainBullets: 3,
-              }}
-              autoplay={{
-                delay: 3500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              loop={true}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 24,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 24,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 26,
-                },
-                1280: {
-                  slidesPerView: 4,
-                  spaceBetween: 28,
-                },
-              }}
-              className="hn-swiper"
-            >
-              {HOSPITALS.map((h, i) => (
-                <SwiperSlide key={i}>
-                  <div className="hn-card">
-                    <div className="hn-card-top">
-                      <div
-                        className="hn-card-image"
-                        style={{ backgroundImage: `url(${h.image})` }}
-                      >
-                        <div className="hn-card-overlay" />
-                      </div>
-                      <div className="hn-card-header">
-                        <div className="hn-hospital-info">
-                          <h3 className="hn-hospital-name">{h.name}</h3>
-                          <p className="hn-hospital-sub">{h.sub}</p>
-                        </div>
-                      </div>
+          <div className="hn-grid">
+            {HOSPITALS.map((h, i) => (
+              <div className="hn-card" key={i}>
+                <div
+                  className="hn-card-photo"
+                  style={{ backgroundImage: `url(${h.image})` }}
+                >
+                  <div className="hn-card-photo-overlay" />
+                  <div className="hn-card-photo-content">
+                    <div className="hn-card-icon">
+                      <FaHospital />
                     </div>
-
-                    <div className="hn-card-body">
-                      <div className="hn-specialties">
-                        <p className="hn-specialties-label">Key Specialties:</p>
-                        <ul className="hn-specialties-list">
-                          {h.specialties.map((spec, j) => (
-                            <li key={j} className="hn-specialty-item">
-                              <Check />
-                              <span>{spec}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+                    <span className="hn-card-type-label">{h.type}</span>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                </div>
+
+                <div className="hn-card-info">
+                  <h3 className="hn-card-name">{h.name}</h3>
+                  <p className="hn-card-location">
+                    <FaMapMarkerAlt className="hn-card-location-icon" />
+                    {h.locations}
+                  </p>
+                  <p className="hn-card-desc">{h.description}</p>
+
+                  <div className="hn-card-tags">
+                    {h.specialties.map((spec, j) => (
+                      <span className="hn-tag" key={j}>
+                        {spec}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
