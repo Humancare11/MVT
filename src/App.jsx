@@ -20,13 +20,34 @@ const Hospitals = lazy(() => import("./pages/Hospitals"));
 const HospitalDetails = lazy(() => import("./pages/HospitalDetails"));
 const Doctors = lazy(() => import("./pages/Doctors"));
 const Process = lazy(() => import("./pages/Process"));
-const TermsAndConditionsPage = lazy(
-  () => import("./pages/terms-and-conditions"),
-);
-const PrivacyPolicyPage = lazy(() => import("./pages/privacy-policy"));
-const MedicalTourismIndia = lazy(() => import("./pages/medical-tourism-india"));
 
-const CardiacLandingIndia = lazy(() => import("./pages/CardiacLandingIndia"));
+// const DentalImplantIndia = lazy(() =>
+//   import("./pages/DentalImplantIndia")
+// );
+
+const CardiacLandingIndia = lazy(() =>
+  import("./pages/CardiacLandingIndia")
+);
+
+const TermsAndConditionsPage = lazy(() =>
+  import("./pages/terms-and-conditions")
+);
+
+const PrivacyPolicyPage = lazy(() =>
+  import("./pages/privacy-policy")
+);
+
+const MedicalTourismIndia = lazy(() =>
+  import("./pages/medical-tourism-india")
+);
+
+
+// FIXED IMPORT
+// const OrthopedicTreatmentIndia = lazy(() =>
+//   import("./pages/OrthopedicTreatmentIndia")
+// );
+
+// const CardiacLandingIndia = lazy(() => import("./pages/CardiacLandingIndia"));
 
 const DentalImplantIndia = lazy(() => import("./pages/DentalImplantIndia"));
 
@@ -46,40 +67,54 @@ const SaudiEgypt = lazy(() => import("./pages/SaudiEgypt"));
 
 // Loading component
 const PageLoader = () => (
-  <div style={{ padding: "50px", textAlign: "center" }}>Loading...</div>
+  <div style={{ padding: "50px", textAlign: "center" }}>
+    Loading...
+  </div>
 );
 
 function App() {
   // REMOVE GOOGLE TOP BAR ALWAYS
   useEffect(() => {
-    // Remove Google Translate banner once when it appears using a MutationObserver.
     const removeGoogleBar = () => {
-      const iframe = document.querySelector("iframe.goog-te-banner-frame");
+      const iframe = document.querySelector(
+        "iframe.goog-te-banner-frame"
+      );
+
       if (iframe) iframe.remove();
 
       const body = document.querySelector("body");
-      if (body && body.style.top) body.style.top = "0px";
+
+      if (body && body.style.top) {
+        body.style.top = "0px";
+      }
     };
 
     const observer = new MutationObserver(() => {
       removeGoogleBar();
-      // If removed, disconnect observer to avoid repeated work
-      const iframeStill = document.querySelector("iframe.goog-te-banner-frame");
+
+      const iframeStill = document.querySelector(
+        "iframe.goog-te-banner-frame"
+      );
+
       if (!iframeStill) observer.disconnect();
     });
 
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
 
-    // One-time run in case the iframe is already present
     removeGoogleBar();
 
     return () => observer.disconnect();
   }, []);
 
-  // Defer mounting Translate until after initial load to avoid early iframe injection
+  // Defer mounting Translate until after initial load
   const [showTranslate, setShowTranslate] = useState(false);
+
   useEffect(() => {
     const t = setTimeout(() => setShowTranslate(true), 2500);
+
     return () => clearTimeout(t);
   }, []);
 
@@ -90,7 +125,9 @@ function App() {
           <Translate />
         </Suspense>
       )}
+
       <Header />
+
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -99,15 +136,30 @@ function App() {
           <Route path="/treatments" element={<Treatments />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/hospitals" element={<Hospitals />} />
-          <Route path="/hospital-details/:id" element={<HospitalDetails />} />
+
+          <Route
+            path="/hospital-details/:id"
+            element={<HospitalDetails />}
+          />
+
           <Route path="/process" element={<Process />} />
           <Route path="/doctors" element={<Doctors />} />
+
           <Route
             path="/terms-and-conditions"
             element={<TermsAndConditionsPage />}
           />
-          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          <Route path="/translate" element={<Translate />} />
+
+          <Route
+            path="/privacy-policy"
+            element={<PrivacyPolicyPage />}
+          />
+
+          <Route
+            path="/translate"
+            element={<Translate />}
+          />
+
           <Route
             path="/medical-treatment-in-india"
             element={<MedicalTourismIndia />}
@@ -116,8 +168,9 @@ function App() {
             path="/cardiac-treatment-india"
             element={<CardiacLandingIndia />}
           />
+
           <Route
-            path="/dental-implants-india"
+            path="/dental-implant-india"
             element={<DentalImplantIndia />}
           />
           <Route
@@ -144,6 +197,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
+
       <Footer />
       <ConnectWithUs />
       <ConnectWithUsCall />

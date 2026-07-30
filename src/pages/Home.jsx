@@ -55,6 +55,7 @@ import Narayana from "../assets/hospitals/narayana.webp";
 import Narendra from "../assets/docters/dr-naresh-trehan.webp";
 import Balkrisnan from "../assets/docters/balakrishna.webp";
 import Farokh from "../assets/docters/farokh-udwadia.webp";
+import Fatuque from "../assets/docters/farokh-udwadia.webp";
 import Nageshwar from "../assets/docters/nageshwar-reddy.webp";
 import aboutImage from "../assets/home-image-1.webp";
 

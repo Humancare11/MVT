@@ -36,10 +36,10 @@ export default function ContactSection() {
       formData.append("message", message);
       if (attachment) formData.append("attachment", attachment);
 
-      const res = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        body: formData,
-      });
+  const res = await fetch("https://humancaremedicaltourism.com/Contact.php", {
+  method: "POST",
+  body: formData,
+});
 
       const data = await res.json();
       alert(data.message || "Request sent");
