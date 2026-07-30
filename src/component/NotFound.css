@@ -1,0 +1,153 @@
+/* ===========================
+   404 WRAPPER
+=========================== */
+.notfound-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 60px 20px;
+  background: #f8f9fc;
+}
+
+.notfound-container {
+  max-width: 620px;
+  width: 100%;
+  text-align: center;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* ===========================
+   404 CODE
+=========================== */
+.notfound-code {
+  font-size: 130px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(to right, #db3434, #0a1754);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ===========================
+   TITLE
+=========================== */
+.notfound-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0a1754;
+  margin: 10px 0 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.notfound-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(to right, #db3434, #0a1754);
+}
+
+/* ===========================
+   DESCRIPTION
+=========================== */
+.notfound-desc {
+  font-size: 16px;
+  color: #555;
+  max-width: 480px;
+  margin: 24px auto 0;
+  line-height: 1.6;
+}
+
+/* ===========================
+   ACTIONS
+=========================== */
+.notfound-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 34px;
+  flex-wrap: wrap;
+}
+
+.notfound-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.notfound-btn.primary {
+  background: #001f54;
+  color: #fff;
+}
+
+.notfound-btn.primary:hover {
+  background: #003080;
+  transform: translateY(-2px);
+}
+
+.notfound-btn.secondary {
+  background: var(--red, #d90000);
+  color: #fff;
+}
+
+.notfound-btn.secondary:hover {
+  background: #b40000;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  .notfound-code {
+    font-size: 100px;
+  }
+
+  .notfound-title {
+    font-size: 24px;
+  }
+
+  .notfound-desc {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound-wrapper {
+    padding: 40px 16px;
+    min-height: 60vh;
+  }
+
+  .notfound-code {
+    font-size: 80px;
+  }
+
+  .notfound-title {
+    font-size: 20px;
+  }
+
+  .notfound-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .notfound-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
