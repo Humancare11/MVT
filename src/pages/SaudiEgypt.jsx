@@ -36,8 +36,7 @@ import ctaImage from "../departments/dept-images/saudi-cairo/medical-treatment-e
 
 import reviewsImage from "../departments/dept-images/general-category/best-reviews-for-international-treatment.webp";
 
-const WA_URL =
-  "https://wa.me/919833166697?text=Hello%2C%20I%20am%20looking%20for%20medical%20treatment%20in%20Turkey";
+const WA_URL = "https://wa.me/919833166697";
 
 const WA = ({ size = 5 }) => (
   <FaWhatsapp className={`icon-wa icon-wa--${size}`} />

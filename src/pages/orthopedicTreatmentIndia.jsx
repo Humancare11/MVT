@@ -1278,19 +1278,6 @@ export default function OrthopedicTreatmentIndia() {
               />
             ))}
           </div>
-
-          {/* Rating summary */}
-          <div className="ortho-reviews-summary">
-            <div>
-              <span className="ortho-reviews-rating-number">4.98</span>
-              <span className="ortho-reviews-rating-label">Ratings</span>
-              <div className="ortho-reviews-stars" style={{ marginTop: "6px" }}>
-                {"★★★★★".split("").map((s, i) => (
-                  <span key={i}>{s}</span>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="ortho-reviews-image-wrapper">

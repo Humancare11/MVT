@@ -1217,22 +1217,6 @@ const EyeSurgeryIndia = () => {
               />
             ))}
           </div>
-
-          {/* Rating summary */}
-          <div className="eye-reviews-summary">
-            <div>
-              <span className="eye-reviews-rating-number">4.98</span>
-              <span className="eye-reviews-rating-label">Ratings</span>
-              <div className="eye-reviews-stars" style={{ marginTop: "6px" }}>
-                {"★★★★★".split("").map((s, i) => (
-                  <span key={i}>{s}</span>
-                ))}
-              </div>
-              {/* <p className="eye-reviews-rating-description">
-                Rated 4.9 stars based on 1200+ reviews
-              </p> */}
-            </div>
-          </div>
         </div>
 
         <div className="eye-reviews-image-wrapper">

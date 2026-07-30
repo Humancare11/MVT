@@ -85,7 +85,7 @@ const WA = ({ size = 5 }) => (
 );
 
 const WA_URL =
-  "https://wa.me/919833166697?text=Hello%2C%20I%20need%20orthopedic%20treatment%20consultation";
+  "https://wa.me/919833166697?text=Hello%2C%20I%20need%20oncology%20treatment%20consultation";
 
 const Check = () => <FaCheck className="icon-check" />;
 
