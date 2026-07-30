@@ -73,13 +73,18 @@ const treatments = [
     ],
   },
   {
-    icon: Baby,
-    name: "Gynecology",
+    icon: Activity,
+    name: "Gastroenterology",
     description:
-      "Advanced reproductive medicine with high success rates at world-class fertility centers.",
-    price: "₹1,20,000",
-    savings: "Save up to 80%",
-    procedures: ["IVF Treatment", "ICSI", "Egg Freezing", "Surrogacy Support"],
+      "Comprehensive diagnosis and treatment for digestive, liver, pancreas, and gastrointestinal disorders using advanced medical technology.",
+    price: "₹1,00,000",
+    savings: "Save up to 75%",
+    procedures: [
+      "Endoscopy",
+      "Colonoscopy",
+      "Liver Disease Treatment",
+      "Gallbladder Surgery",
+    ],
   },
   {
     icon: Smile,
@@ -152,7 +157,7 @@ export default function TreatmentsPage() {
       </section>
       {/* HERO SECTION END */}
 
-       <Breadcrumb currentPage="Treatments" />
+      <Breadcrumb currentPage="Treatments" />
 
       {/* TREATMENTS SECTION START */}
       <section className="treatments-section">

@@ -18,6 +18,7 @@ import {
   FaGlobeAfrica,
   FaHandHoldingUsd,
   FaCalendarCheck,
+  FaTimes,
 } from "react-icons/fa";
 
 import heroImage from "../departments/dept-images/eye-surgery-india.webp";
@@ -36,6 +37,19 @@ import InternationalPatientServicesImage from "../departments/dept-images/intern
 import ThumbnailImage from "../departments/dept-images/thumbail-eye-surgery.webp";
 
 import CtaImage from "../departments/dept-images/cta-eye.webp";
+
+import MahipalSachdevImage from "../departments/dept-images/EyeSurgen/Dr-Mahipal-S-Sachdev.webp";
+import SathiDeviImage from "../departments/dept-images/EyeSurgen/dr_sathi_devi.webp";
+import YathishSImage from "../departments/dept-images/EyeSurgen/dr_yatish.webp";
+import AnjaliKiranImage from "../departments/dept-images/EyeSurgen/dr_anjali_kiran.webp";
+import AnandVinekarImage from "../departments/dept-images/EyeSurgen/dr_anand_vinekar.webp";
+import NarenShettyImage from "../departments/dept-images/EyeSurgen/dr_naren_shetty.webp";
+import SriGaneshImage from "../departments/dept-images/EyeSurgen/prof_dr_sri_ganesh.webp";
+import RohitModiImage from "../departments/dept-images/EyeSurgen/dr-rohit-modi.webp";
+import NoshirShroffImage from "../departments/dept-images/EyeSurgen/Dr-Noshir-Shroff.webp";
+import RushadShroffImage from "../departments/dept-images/EyeSurgen/Dr-Rushad-Shroff.webp";
+import CyrusShroffImage from "../departments/dept-images/EyeSurgen/Dr-Cyrus-Shroff.webp";
+import VarshiniShankerImage from "../departments/dept-images/EyeSurgen/Dr-Varshini-Shanker.webp";
 
 const WA = ({ size = 5 }) => (
   <FaWhatsapp className={`icon-wa icon-wa--${size}`} />
@@ -195,32 +209,91 @@ const specialtyBadges = [
 
 const DOCTORS = [
   {
-    name: "Dr. Rajesh Kumar",
-    spec: "Ophthalmologist Surgeon",
-    desc: "25+ years of experience in total knee replacement, hip replacement, and advanced ophthalmology surgery in India.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=300&fit=crop",
+    name: "Prof. Dr. Mahipal S Sachdev",
+    education:
+      "MBBS, MD, MS (Ophthalmology), DNB, MNAMS, FRCS, FICO (UK), FAICO",
+    spec: "Ophthalmologist, Cataract & Refractive Surgeon",
+    desc: "Prof. Dr. Mahipal S Sachdev is a Padma Shri award-winning Ophthalmologist, Cataract Surgeon, and Refractive Eye Surgeon with over 42 years of experience. He specializes in SMILE Eye Surgery, LASIK, SILK Surgery, Cataract Surgery, Cornea Transplant, Keratoconus Treatment, and Dry Eye Management. As Chairman and Medical Director of the Centre for Sight Group of Eye Hospitals, he has pioneered several advanced eye surgery techniques in India, including SMILE, bladeless LASIK, and femtosecond cataract surgery. Dr. Sachdev has received numerous national and international recognitions for his contributions to ophthalmology and eye care innovation.",
+    photoUrl: MahipalSachdevImage,
   },
   {
-    name: "Dr. Priya Nair",
-    spec: "Robotic Joint Replacement Specialist",
-    desc: "Specialist in robotic knee replacement surgery and minimally invasive ophthalmology procedures.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop",
+    name: "Dr. Sathi Devi A V",
+    education: "Postgraduate Training in Ophthalmology, Fellowship in Glaucoma",
+    spec: "Glaucoma Specialist",
+    desc: "Dr. Sathi Devi A V is a highly experienced Glaucoma Specialist with over 24 years of expertise in the diagnosis and management of glaucoma and related eye disorders. She serves as HOD & Consultant and has been practicing exclusive glaucoma care at Narayana Nethralaya since 1998. Dr. Sathi completed her postgraduate training at the Minto Regional Institute of Ophthalmology, Bangalore, and pursued a fellowship at the Medical Research Foundation, Sankara Nethralaya, where she further specialized in glaucoma services. She is recognized for her extensive experience in advanced glaucoma management and comprehensive eye care.",
+    photoUrl: SathiDeviImage,
   },
   {
-    name: "Dr. Suresh Mehta",
-    spec: "Spine and Trauma Surgeon",
-    desc: "Expert in spine surgery, trauma care, and advanced ophthalmology treatment for international patients.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=300&fit=crop",
+    name: "Dr. Yathish S",
+    education: "MBBS, DOMS, DNB (Ophthalmology), FCE",
+    spec: "Cornea Specialist",
+    desc: "Dr. Yathish S is an experienced Cornea Specialist with over 17 years of expertise in the diagnosis and treatment of corneal disorders. He serves as HOD & Consultant and specializes in cornea diseases, corneal transplants, and advanced corneal care. Dr. Yathish is skilled in managing complex corneal conditions and is dedicated to providing comprehensive eye care using the latest treatment techniques and technologies.",
+    photoUrl: YathishSImage,
   },
   {
-    name: "Dr. Amit Verma",
-    spec: "Knee Replacement Specialist",
-    desc: "Experienced ophthalmology specialist focusing on knee replacement surgery and joint preservation treatment.",
-    photoUrl:
-      "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=300&fit=crop",
+    name: "Dr. Anjali Kiran",
+    education: "MBBS, DO, FNN (Oculoplasty, Orbit & Ocular Oncology)",
+    spec: "Oculoplasty, Orbit & Ocular Oncology Specialist",
+    desc: "Dr. Anjali Kiran is an experienced Oculoplasty, Orbit & Ocular Oncology Specialist with over 14 years of expertise in the diagnosis and treatment of orbital disorders, eyelid conditions, eye tumors, and reconstructive eye surgeries. She completed her MBBS from Karnatak University and her postgraduate training in Ophthalmology from J.J.M. Medical College, Davangere. Dr. Anjali further specialized through a Fellowship in Orbit, Oculoplasty & Ocular Oncology Services at Narayana Nethralaya in 2013. She currently serves as HOD & Consultant and is dedicated to providing advanced surgical and medical care for complex orbital, oculoplastic, and ocular oncology conditions.",
+    photoUrl: AnjaliKiranImage,
+  },
+  {
+    name: "Dr. Anand Vinekar",
+    education:
+      "MBBS, MS (Ophthalmology), DNB (Ophthalmology), FRCS (Glasgow), FPVR (USA), PhD (Maastricht University), PGDMLE",
+    spec: "Pediatric Retina Specialist & Retinopathy of Prematurity (ROP) Expert",
+    desc: "Dr. Anand Vinekar is a renowned Pediatric Retina Specialist with over 23 years of experience in pediatric retinal diseases and Retinopathy of Prematurity (ROP). He serves as the Founder Program Director of KIDROP and Head of the Department of Pediatric Retina at Narayana Nethralaya, Bengaluru. Dr. Vinekar has treated more than 5,500 infants with ROP and is internationally recognized for his contributions to infant retinal imaging, telemedicine, and blindness prevention. Under his leadership, the KIDROP Tele-ROP Program has become one of the world's largest ROP screening initiatives, completing over 320,000 screening sessions across more than 190 neonatal centers. He graduated from St. John's Medical College with 17 gold medals and has received numerous national and international awards for his contributions to pediatric ophthalmology, retinal care, and medical innovation.",
+    photoUrl: AnandVinekarImage,
+  },
+  {
+    name: "Dr. Naren Shetty",
+    education: "MS (Ophthalmology), PhD (Maastricht University, Netherlands)",
+    spec: "LASIK, SMILE & Cataract Surgeon",
+    desc: "Dr. Naren Shetty is a renowned LASIK, SMILE, and Cataract Surgeon with over 12 years of experience in advanced refractive and cataract eye surgery. As Director and Head of Cataract & Refractive Services at Narayana Nethralaya, Bengaluru, he specializes in LASIK eye surgery, SMILE vision correction, Phakic IOL implantation, Premium IOLs, and complex cataract surgery. He has successfully performed more than 28,000 cataract and refractive procedures and is recognized internationally for his clinical research and innovation in ophthalmology. Dr. Shetty has authored numerous scientific publications, participated in multiple clinical trials, and received several national and international awards for excellence in cataract and refractive surgery.",
+    photoUrl: NarenShettyImage,
+  },
+  {
+    name: "Prof. Dr. Sri Ganesh",
+    education: "MBBS, MS, DNB, DSc (Hon), FRCS (Glasg), FWCRS",
+    spec: "Cataract, LASIK & Refractive Surgeon",
+    desc: "Prof. Dr. Sri Ganesh is a leading Cataract, LASIK, and Refractive Surgeon with over 30 years of experience in advanced ophthalmology. As Chairman and Managing Director of Nethradhama Hospitals, Bengaluru, he specializes in cataract surgery, LASIK eye surgery, refractive surgery, vision correction procedures, and complex eye treatments. He has performed more than 100,000 cataract surgeries and over 50,000 refractive procedures, making him one of the most experienced eye surgeons in India. Dr. Sri Ganesh is internationally recognized for his contributions to ophthalmic education, research, innovation, and patient care. He has trained over 200 ophthalmologists worldwide and continues to advance eye care through clinical excellence and research-driven innovation.",
+    photoUrl: SriGaneshImage,
+  },
+  {
+    name: "Dr. Rohit Modi",
+    education: "MBBS, MS (Ophthalmology), DNB (Ophthalmology), FAICO",
+    spec: "Ophthalmologist, Cataract & Retina Surgeon",
+    desc: "Dr. Rohit Modi is an experienced Ophthalmologist, Cataract Surgeon, and Retina Specialist with over 19 years of overall experience, including more than 11 years as a specialist. He has received advanced training from the renowned L.V. Prasad Eye Institute, India, and Associated Retina Consultants, USA. Dr. Modi is a Fellow of the Royal College of Surgeons, Glasgow, UK, and the International Council of Ophthalmology, UK. He has successfully performed over 10,000 eye surgeries and specializes in customized laser vision correction procedures, cataract surgery, retinal surgery, diabetic eye disease management, retinopathy of prematurity (ROP), and uveitis treatment. His extensive surgical expertise and patient-centered approach make him a trusted specialist for complex eye conditions.",
+    photoUrl: RohitModiImage,
+  },
+  {
+    name: "Dr. Noshir Shroff",
+    education: "MBBS, MS (Ophthalmology)",
+    spec: "Ophthalmologist & Eye Surgeon",
+    desc: "Dr. Noshir Shroff is a highly experienced Ophthalmologist and Eye Surgeon with over 45 years of overall experience, including more than 43 years as a specialist. He completed his MBBS from the University of Delhi in 1975 and MS in Ophthalmology from the University of Delhi in 1978. Dr. Shroff is known for his expertise in comprehensive eye care, ophthalmologic examinations, diabetic retinopathy screening and treatment, ocular inflammation, uveitis management, and the diagnosis and treatment of various eye disorders. With decades of clinical experience, he is recognized as one of the leading eye specialists dedicated to providing advanced and patient-focused ophthalmic care.",
+    photoUrl: NoshirShroffImage,
+  },
+  {
+    name: "Dr. Rushad Shroff",
+    education:
+      "MBBS (KMC Manipal), MS (Ophthalmology), Fellowship in Cataract, Cornea, Refractive & Optics",
+    spec: "LASIK, Cataract & Cornea Surgeon",
+    desc: "Dr. Rushad Shroff is a leading LASIK, Cataract, and Cornea Surgeon and Medical Director at Shroff Eye Centre. He specializes in LASIK eye surgery, PRK, ICL implantation, femtosecond laser cataract surgery, corneal transplantation, keratoconus treatment, and dry eye management. Trained at premier institutions including KMC Manipal, RIO Trivandrum, and Narayana Nethralaya, Bengaluru, he is recognized for his expertise in advanced vision correction and corneal procedures. Dr. Shroff has published extensively in international ophthalmology journals and has received multiple prestigious awards for excellence in cataract and refractive surgery. His commitment to innovation and patient-centered care has established him as one of the leading eye surgeons in India.",
+    photoUrl: RushadShroffImage,
+  },
+  {
+    name: "Dr. Cyrus M. Shroff",
+    education: "MBBS, MD (Ophthalmology)",
+    spec: "Retina Specialist & Vitreo-Retinal Surgeon",
+    desc: "Dr. Cyrus M. Shroff is a renowned Retina Specialist and Vitreo-Retinal Surgeon with over 47 years of experience in advanced retinal care. He founded the Retina & Vitreous Subspecialty Services at Shroff Eye Centre and has dedicated his career to the treatment of retinal diseases, diabetic retinopathy, retinal detachment, macular degeneration, vitreous disorders, and laser retinal procedures. Having performed more than 5,000 vitreo-retinal surgeries and over 10,000 retinal laser treatments, Dr. Shroff is widely recognized for his expertise in complex retinal conditions and surgical excellence. His extensive experience and commitment to innovation have made him one of the most trusted retina surgeons in India.",
+    photoUrl: CyrusShroffImage,
+  },
+  {
+    name: "Dr. Varshini Shanker",
+    education: "MBBS, DNB (Ophthalmology)",
+    spec: "Pediatric Eye Specialist, Squint & Neuro-Ophthalmologist",
+    desc: "Dr. Varshini Shanker is a leading Pediatric Eye Specialist, Squint Surgeon, and Neuro-Ophthalmologist with over 24 years of experience in advanced eye care. She specializes in children's eye disorders, squint correction surgery, neuro-ophthalmology, nerve palsy treatment, binocular vision disorders, hereditary retinal diseases, and pediatric eye trauma. Trained at Sankara Nethralaya, Chennai, she has extensive expertise in managing complex eye conditions in children, including those with developmental delays. Dr. Varshini is committed to early diagnosis and advanced treatment of pediatric eye diseases and has contributed significantly to ophthalmic research, education, and public awareness programs.",
+    photoUrl: VarshiniShankerImage,
   },
 ];
 
@@ -482,6 +555,7 @@ const EyeSurgeryIndia = () => {
   const [active, setActive] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const timerRef = useRef(null);
+  const [selectedDoctor, setSelectedDoctor] = useState(null);
 
   const [activeIndex, setActiveIndex] = useState(null);
   const toggleFAQ = (index) => {
@@ -521,6 +595,30 @@ const EyeSurgeryIndia = () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, []);
+
+  // Truncate description helper
+  const truncateText = (text, maxLength = 120) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + "...";
+  };
+
+  // Close modal handler
+  const closeModal = () => setSelectedDoctor(null);
+
+  // Close modal on ESC key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") closeModal();
+    };
+    if (selectedDoctor) {
+      document.addEventListener("keydown", handleEsc);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleEsc);
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedDoctor]);
   return (
     <>
       <Helmet>
@@ -861,7 +959,7 @@ const EyeSurgeryIndia = () => {
         </div>
       </section>
 
-      <section className="hn-section">
+      {/* <section className="hn-section">
         <div className="hn-container">
           <div className="hn-title-wrap">
             <span className="hn-label">Our Hospital Network</span>
@@ -909,40 +1007,93 @@ const EyeSurgeryIndia = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
+      {/* ════ SECTION 4 — DOCTORS ════ */}
       <section className="doctor-section-light">
         <div className="doctor-container">
           <div className="doctor-title-wrap">
             <span className="doctor-label">Our Specialists</span>
             <h2 className="doctor-h2">Best Ophthalmologists in India</h2>
-            <p>
-              India is home to highly qualified and experienced eye specialists
-              who are recognized internationally for their expertise.
-            </p>
           </div>
           <div className="doctor-cards-grid">
             {DOCTORS.map((d, i) => (
               <div key={i} className="doctor-card">
                 <img
                   src={d.photoUrl}
-                  alt={`${d.name} - ${d.spec} in India specializing in eye surgery and ophthalmology`}
+                  alt={`${d.name} – ${d.spec}`}
                   className="doctor-card-photo"
                   loading="lazy"
-                  width="400"
-                  height="300"
                 />
                 <div className="doctor-card-body">
-                  <span className="doctor-spec">{d.spec}</span>
-                  <h3 className="doctor-name">{d.name}</h3>
-                  <p className="doctor-desc">{d.desc}</p>
-                  {/* <button className="doctor-btn">See profile</button> */}
+                  <div className="doctor-card-content">
+                    <span className="doctor-spec">{d.spec}</span>
+                    <h3 className="doctor-name">{d.name}</h3>
+                    <h4 className="doctor-education">- {d.education}</h4>
+                    <p className="doctor-desc">{truncateText(d.desc, 120)}</p>
+                  </div>
+                  <button
+                    className="doctor-read-more custom-learn-more-btn"
+                    onClick={() => setSelectedDoctor(d)}
+                    aria-label={`Read more about ${d.name}`}
+                  >
+                    <span className="button-text">Read More</span>
+                    <div className="circle"></div>
+                    <div className="arrow"></div>
+                  </button>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* ════ DOCTOR MODAL ════ */}
+      {selectedDoctor && (
+        <div className="doctor-modal-overlay" onClick={closeModal}>
+          <div
+            className="doctor-modal"
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-labelledby="modal-title"
+            aria-modal="true"
+          >
+            <button
+              className="doctor-modal-close"
+              onClick={closeModal}
+              aria-label="Close modal"
+            >
+              <FaTimes />
+            </button>
+
+            <div className="doctor-modal-content">
+              <div className="doctor-modal-header">
+                <img
+                  src={selectedDoctor.photoUrl}
+                  alt={selectedDoctor.name}
+                  className="doctor-modal-image"
+                />
+                <div className="doctor-modal-info">
+                  <span className="doctor-modal-spec">
+                    {selectedDoctor.spec}
+                  </span>
+                  <h3 id="modal-title" className="doctor-modal-name">
+                    {selectedDoctor.name}
+                  </h3>
+                  <p className="doctor-modal-education">
+                    {selectedDoctor.education}
+                  </p>
+                </div>
+              </div>
+
+              <div className="doctor-modal-body">
+                <h4 className="doctor-modal-section-title">About</h4>
+                <p className="doctor-modal-desc">{selectedDoctor.desc}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <section className="eca-section">
         {/* Header */}
@@ -1047,7 +1198,7 @@ const EyeSurgeryIndia = () => {
                     <div key={cardIndex} className="eye-reviews-card">
                       <Stars />
                       <p className="eye-reviews-card-text">{r.text}</p>
-                      <p className="eye-reviews-card-name">{r.name}</p>
+                      {/* <p className="eye-reviews-card-name">{r.name}</p> */}
                     </div>
                   ))}
                 </div>
@@ -1077,9 +1228,9 @@ const EyeSurgeryIndia = () => {
                   <span key={i}>{s}</span>
                 ))}
               </div>
-              <p className="eye-reviews-rating-description">
+              {/* <p className="eye-reviews-rating-description">
                 Rated 4.9 stars based on 1200+ reviews
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

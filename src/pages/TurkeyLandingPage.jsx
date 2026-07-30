@@ -1,9 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import "./TurkeyLandingPage.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
 import { Helmet } from "react-helmet";
 
 import {
@@ -11,6 +7,8 @@ import {
   FaPhoneAlt,
   FaCheckCircle,
   FaCheck,
+  FaHospital,
+  FaMapMarkerAlt,
   FaStethoscope,
   FaPassport,
   FaPlane,
@@ -38,19 +36,17 @@ import aboutImage2 from "../departments/dept-images/turkey-country/medical-touri
 
 import whyChooseTurkeyImage from "../departments/dept-images/turkey-country/advanced-healthcare-in-turkey.webp";
 
-import apolloImage from "../departments/dept-images/oncology/best-oncology-hospital-india.webp";
-import medantaImage from "../departments/dept-images/medanta-hospital-for-oncology-treatment-in-india.webp";
-import fortisImage from "../departments/dept-images/oncology/multi-specialty-oncology-hospital-india.webp";
-import hcgImage from "../departments/dept-images/oncology/hcg-cancer-treatment-specialist.webp";
-import maxImage from "../departments/dept-images/oncology/top-oncology-hospital-india.webp";
-import ApolloApcc from "../departments/dept-images/oncology/apollo-proton-cancer-centre-top-cancer-treatment.webp";
+import livHospitalImage from "../assets/hospitals/liv-hospital-in-turkey.webp";
+import guvenHospitalImage from "../assets/hospitals/guven-hospital-turkey-ankara.webp";
+import medicalParkImage from "../assets/hospitals/medical-park-istanbul-turkey.webp";
+import istinyeDentalImage from "../assets/hospitals/istinye-dental-hospital-in-turkey.webp";
+import memorialHealthImage from "../assets/hospitals/memorial-hospital-group-in-turkey.webp";
 
 import cardiologyImage from "../departments/dept-images/turkey-country/cardiology-treatment-in-turkey.webp";
 import oncologyImage from "../departments/dept-images/turkey-country/oncology.webp";
 import organTransplantImage from "../departments/dept-images/turkey-country/organ-transplant.webp";
 import kneeReplacementImage from "../departments/dept-images/turkey-country/knee-replacement.webp";
 import neurologyImage from "../departments/dept-images/turkey-country/neurosurgen.webp";
-import ivfImage from "../departments/dept-images/turkey-country/fertility-evaluation.webp";
 import cosmeticSurgeryImage from "../departments/dept-images/turkey-country/cosmetic-surgery.webp";
 import eyeSurgeryImage from "../departments/dept-images/turkey-country/eye-treatment.webp";
 import dentalImage from "../departments/dept-images/turkey-country/dental-treatment.webp";
@@ -75,82 +71,85 @@ const WA_URL =
 
 const HOSPITALS = [
   {
-    name: "Apollo",
-    sub: "Hospitals",
-    image: apolloImage,
-    location: "New Delhi, India",
-    rating: 4.9,
-    accreditations: ["JCI", "NABH"],
+    name: "Liv Hospital",
+    image: livHospitalImage,
+    type: "Multi-Speciality Hospital",
+    locations: "Ankara, Gaziantep, Samsun",
+    description:
+      "Liv Hospital is one of the top hospitals in Turkey, known for delivering high-quality healthcare to patients from around the world. Located in Istanbul and other major Turkish cities, the hospital offers comprehensive treatments including cancer care, heart surgery, orthopedics, neurology, Women's Health, and organ transplantation. Its international patient services, experienced medical teams, and advanced technology have made Liv Hospital a preferred choice for medical tourism in Turkey.",
     specialties: [
-      "Medical Oncology",
-      "Radiation Oncology",
-      "Bone Marrow Transplant",
-    ],
-  },
-  {
-    name: "Medanta",
-    sub: "The Medicity",
-    image: medantaImage,
-    location: "Gurgaon, India",
-    rating: 4.8,
-    accreditations: ["JCI", "NABH"],
-    specialties: [
-      "Surgical Oncology",
-      "Immunotherapy",
-      "Precision Cancer Care",
+      "Cardiology",
+      "Oncology",
+      "Orthopedics",
+      "Organ Transplant",
+      " Specialized Healthcare",
     ],
   },
 
   {
-    name: "Apollo Proton Cancer Centre",
-    sub: "Healthcare",
-    image: ApolloApcc,
-    location: "Gurgaon, India",
-    rating: 4.8,
-    accreditations: ["JCI", "NABH"],
+    name: "Güven Hospital",
+    image: guvenHospitalImage,
+    type: "Multi-Speciality Hospital",
+    locations: "Location available on request",
+    description:
+      "Güven Hospital is a renowned healthcare institution in Ankara, offering advanced medical care across multiple specialties. The hospital is recognized for its experienced specialists, modern medical technology, and comprehensive treatment programs. International patients choose Güven Hospital for cardiology, oncology, orthopedics, neurology, and surgical procedures. Its patient-centered approach, high clinical standards, and dedicated international patient services make it a trusted destination for medical treatment in Turkey.",
     specialties: [
-      "Surgical Oncology",
-      "Immunotherapy",
-      "Precision Cancer Care",
+      "Cardiology",
+      "Oncology",
+      "Orthopedics",
+      "Neurosurgery",
+      "General Surgery",
     ],
   },
+
   {
-    name: "Fortis",
-    sub: "Healthcare",
-    image: fortisImage,
-    location: "Delhi NCR, India",
-    rating: 4.7,
-    accreditations: ["JCI", "NABH"],
+    name: "Medical Park Hospital",
+    image: medicalParkImage,
+    type: "Multi-Speciality Hospital",
+    locations:
+      "Istanbul, Adana, Ankara, Izmir, Kocaeli, Mersin, Samsun, Trabzon",
+    description:
+      "Medical Park Hospital is one of Turkey’s leading healthcare providers, offering comprehensive medical services through its network of modern hospitals. Known for advanced diagnostics, specialized treatments, and experienced medical professionals, the hospital serves both local and international patients. Medical Park Hospital provides expert care in oncology, cardiology, orthopedics, neurology, and organ transplantation. Its commitment to quality healthcare, innovative technology, and international patient support has made it a preferred choice for medical treatment in Turkey.",
     specialties: [
-      "Breast Cancer Treatment",
-      "Radiation Therapy",
-      "Hematology & Oncology",
+      "Oncology",
+      "Cardiology",
+      "Orthopedics",
+      "Organ Transplant",
+      "Neurology",
     ],
   },
+
   {
-    name: "Max",
-    sub: "Healthcare",
-    image: maxImage,
-    location: "Delhi, India",
-    rating: 4.8,
-    accreditations: ["NABH", "ISO"],
+    name: "Istinye Dental Hospital",
+    image: istinyeDentalImage,
+    type: "Dental Specialty Hospital",
+    locations: "Istanbul",
+    description:
+      "Istinye Dental Hospital is a trusted destination for advanced dental care in Turkey, providing comprehensive oral health services for local and international patients. The hospital specializes in dental implants, cosmetic dentistry, orthodontics, oral surgery, and restorative treatments using modern technology and personalized care plans. With experienced dental specialists and a patient-focused approach, Istinye Dental Hospital is recognized for delivering high-quality dental treatment in Turkey while supporting the growing demand for dental tourism and smile transformation procedures.",
     specialties: [
-      "Targeted Therapy",
-      "PET-CT Diagnostics",
-      "Cancer Rehabilitation",
+      "Dental Implants",
+      "Cosmetic Dentistry",
+      "Orthodontics",
+      "Oral Surgery",
+      "Restorative Dentistry",
+      "More",
     ],
   },
+
   {
-    name: "HCG",
-    sub: "Cancer Centre",
-    image: hcgImage,
-    location: "Bengaluru, India",
-    rating: 4.8,
-    accreditations: ["NABH", "NABL"],
+    name: "Memorial Health Group",
+    image: memorialHealthImage,
+    type: "Multi-Speciality Hospital",
+    locations: "Ankara, Antalya, Kayseri, Diyarbakir, Mugla",
+    description:
+      "Memorial Health Group is one of the most recognized healthcare organizations in Turkey, offering advanced medical services through its network of modern hospitals and specialized medical centers. The group is known for excellence in oncology, organ transplantation, cardiology, neurosurgery, and robotic surgery. With internationally trained specialists, cutting-edge medical technology, and dedicated international patient services, Memorial Health Group attracts patients seeking high-quality medical treatment in Turkey and comprehensive healthcare solutions.",
     specialties: [
-      "Medical Oncology",
-      "Radiation Oncology",
-      "Bone Marrow Transplant",
+      "Oncology",
+      "Organ Transplant",
+      "Cardiology",
+      "Orthopedics",
+      "Robotic Surgery",
+      "More",
     ],
   },
 ];
@@ -258,26 +257,6 @@ const specialties = [
     reversed: false,
   },
   {
-    id: 6,
-    sectionTag: "IVF & Fertility Treatment",
-    title:
-      "Affordable fertility treatment in Turkey with advanced IVF technology and personalized fertility care.",
-    description:
-      "Turkey has become a trusted destination for fertility treatment, offering experienced IVF specialists, advanced reproductive technology, and supportive patient care. Couples traveling for IVF treatment benefit from personalized fertility programs and modern laboratory facilities.",
-    treatments: [
-      "IVF Treatment",
-      "ICSI Treatment",
-      "Fertility Evaluation",
-      "Egg Freezing",
-      "Male Infertility Treatment",
-      "Embryo Transfer Procedures",
-    ],
-    ctaLabel: "Talk to Fertility Specialist",
-    image: ivfImage,
-    imageAlt: "Advanced Fertility Treatment in Turkey",
-    reversed: true,
-  },
-  {
     id: 7,
     sectionTag: "Cosmetic & Plastic Surgery",
     title:
@@ -295,7 +274,7 @@ const specialties = [
     ctaLabel: "Talk to Cosmetic Specialist",
     image: cosmeticSurgeryImage,
     imageAlt: "Advanced Cosmetic Surgery treatment in Turkey",
-    reversed: false,
+    reversed: true,
   },
   {
     id: 8,
@@ -315,7 +294,7 @@ const specialties = [
     ctaLabel: "Talk to Eye Specialist",
     image: eyeSurgeryImage,
     imageAlt: "Advanced Eye Surgery treatment in Turkey",
-    reversed: true,
+    reversed: false,
   },
   {
     id: 9,
@@ -335,7 +314,7 @@ const specialties = [
     ctaLabel: "Talk to Dental Specialist",
     image: dentalImage,
     imageAlt: "Advanced Dental Treatment in Turkey",
-    reversed: false,
+    reversed: true,
   },
 ];
 
@@ -395,7 +374,7 @@ const reviews = [
     text: "My knee pain had made it difficult to walk for years. After my knee replacement surgery in Istanbul, I can finally move comfortably again. The hospital facilities were excellent, and the recovery support was better than we expected.",
   },
   {
-    text: "We came to Turkey for IVF treatment after many years of trying to start a family. The medical team was supportive, kind, and highly experienced. We truly felt cared for throughout the entire treatment journey.",
+    text: "We came to Turkey for neurology treatment after many years of trying to start a family. The medical team was supportive, kind, and highly experienced. We truly felt cared for throughout the entire treatment journey.",
   },
   {
     text: "The medical treatment in Turkey was affordable compared to other countries, but the quality of care was exceptional. The doctors, translators, and coordinators made us feel safe and supported from the first day until discharge.",
@@ -417,7 +396,7 @@ const faqData = [
     question:
       "Which is the best hospital in Turkey for international patients?",
     answer:
-      "Turkey has many internationally recognized hospitals offering advanced treatment across cardiology, oncology, orthopedics, IVF, neurology, and cosmetic surgery. The best hospital in Turkey depends on the patient’s medical condition, treatment requirements, and specialist availability.",
+      "Turkey has many internationally recognized hospitals offering advanced treatment across cardiology, oncology, orthopedics, neurology, and cosmetic surgery. The best hospital in Turkey depends on the patient’s medical condition, treatment requirements, and specialist availability.",
   },
   {
     id: 2,
@@ -460,7 +439,7 @@ const faqData = [
     id: 8,
     question: "Which surgeries and treatments are popular in Turkey?",
     answer:
-      "Turkey is widely known for heart surgery, cancer treatment, orthopedic surgery, IVF treatment, cosmetic surgery, dental treatment, eye surgery, and organ transplantation.",
+      "Turkey is widely known for heart surgery, cancer treatment, orthopedic surgery, neurology treatment, cosmetic surgery, dental treatment, eye surgery, and organ transplantation.",
   },
 ];
 
@@ -709,13 +688,13 @@ function TurkeyLandingPage() {
             <p>
               Turkey is globally recognized for its modern healthcare system,
               internationally accredited hospitals, and highly experienced
-              specialists across cardiology, oncology, orthopedics, IVF,
-              neurology, cosmetic surgery, and many other specialties. Through
-              our trusted hospital network in Istanbul and other leading medical
-              cities, international patients can receive world-class treatment
-              at affordable costs without long waiting periods. Our goal is to
-              make medical tourism in Turkey simpler, safer, and more
-              comfortable for every patient and family we assist.
+              specialists across cardiology, oncology, orthopedics, neurology,
+              cosmetic surgery, and many other specialties. Through our trusted
+              hospital network in Istanbul and other leading medical cities,
+              international patients can receive world-class treatment at
+              affordable costs without long waiting periods. Our goal is to make
+              medical tourism in Turkey simpler, safer, and more comfortable for
+              every patient and family we assist.
             </p>
 
             <div className="turkey-about-features">
@@ -783,7 +762,7 @@ function TurkeyLandingPage() {
 
             <p>
               From complex heart surgeries and cancer treatment to orthopedic
-              procedures, IVF, dental care, and cosmetic surgery, Turkish
+              procedures, neurology, dental care, and cosmetic surgery, Turkish
               medical tourism continues to grow because patients can receive
               world-class care without the financial burden often associated
               with treatment in Europe or the United States. Hospitals in
@@ -838,7 +817,7 @@ function TurkeyLandingPage() {
             <h3>Experienced Specialists Across Multiple Medical Fields</h3>
             <p>
               Turkey is home to internationally trained doctors and surgeons
-              with expertise in cardiology, oncology, orthopedics, fertility
+              with expertise in cardiology, oncology, orthopedics, Women's Health
               treatment, neurology, and more.
             </p>
           </div>
@@ -896,77 +875,40 @@ function TurkeyLandingPage() {
               Turkey.
             </p>
           </div>
-          <div className="hn-slider-wrapper">
-            <Swiper
-              modules={[Pagination, Autoplay]}
-              spaceBetween={28}
-              slidesPerView={1}
-              pagination={{
-                clickable: true,
-                dynamicBullets: true,
-                dynamicMainBullets: 3,
-              }}
-              autoplay={{
-                delay: 3500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              loop={true}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 24,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 24,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 26,
-                },
-                1280: {
-                  slidesPerView: 4,
-                  spaceBetween: 28,
-                },
-              }}
-              className="hn-swiper"
-            >
-              {HOSPITALS.map((h, i) => (
-                <SwiperSlide key={i}>
-                  <div className="hn-card">
-                    <div className="hn-card-top">
-                      <div
-                        className="hn-card-image"
-                        style={{ backgroundImage: `url(${h.image})` }}
-                      >
-                        <div className="hn-card-overlay" />
-                      </div>
-                      <div className="hn-card-header">
-                        <div className="hn-hospital-info">
-                          <h3 className="hn-hospital-name">{h.name}</h3>
-                          <p className="hn-hospital-sub">{h.sub}</p>
-                        </div>
-                      </div>
+          <div className="hn-grid">
+            {HOSPITALS.map((h, i) => (
+              <div className="hn-card" key={i}>
+                <div
+                  className="hn-card-photo"
+                  style={{ backgroundImage: `url(${h.image})` }}
+                >
+                  <div className="hn-card-photo-overlay" />
+                  <div className="hn-card-photo-content">
+                    <div className="hn-card-icon">
+                      <FaHospital />
                     </div>
-
-                    <div className="hn-card-body">
-                      <div className="hn-specialties">
-                        <p className="hn-specialties-label">Key Specialties:</p>
-                        <ul className="hn-specialties-list">
-                          {h.specialties.map((spec, j) => (
-                            <li key={j} className="hn-specialty-item">
-                              <Check />
-                              <span>{spec}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+                    <span className="hn-card-type-label">{h.type}</span>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                </div>
+
+                <div className="hn-card-info">
+                  <h3 className="hn-card-name">{h.name}</h3>
+                  <p className="hn-card-location">
+                    <FaMapMarkerAlt className="hn-card-location-icon" />
+                    {h.locations}
+                  </p>
+                  <p className="hn-card-desc">{h.description}</p>
+
+                  <div className="hn-card-tags">
+                    {h.specialties.map((spec, j) => (
+                      <span className="hn-tag" key={j}>
+                        {spec}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -1284,7 +1226,7 @@ function TurkeyLandingPage() {
               access advanced healthcare, affordable treatment packages, and
               personalized medical support based on their healthcare needs.
               Whether you are seeking heart surgery, cancer treatment,
-              orthopedic procedures, IVF, cosmetic surgery, or specialized
+              orthopedic procedures, neurology, cosmetic surgery, or specialized
               medical care, our experienced coordinators ensure smooth
               communication, fast appointment scheduling, and complete travel
               support throughout your journey.

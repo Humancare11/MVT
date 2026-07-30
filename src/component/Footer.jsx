@@ -117,7 +117,7 @@ export default function Footer({ onNavigate }) {
               </li>
               <li>
                 <a className="footer-links" href="/treatments">
-                  IVF & Fertility
+                  Gastroenterology
                 </a>
               </li>
               <li>

@@ -39,13 +39,17 @@ import fortisImage from "../departments/dept-images/general-category/multi-speci
 import hcgImage from "../departments/dept-images/general-category/hcg-cancer-treatment-specialist.webp";
 import maxImage from "../departments/dept-images/general-category/top-oncology-hospital-india.webp";
 import ApolloApcc from "../departments/dept-images/general-category/apollo-proton-cancer-centre-top-cancer-treatment.webp";
+import manipalImage from "../departments/dept-images/general-category/best-manipal-hospital-for-medical-tourism.webp";
+import narayanaImage from "../departments/dept-images/general-category/narayana-multispeciality-hospital-india.webp";
 
 import ThumbnailImage from "../departments/dept-images/general-category/best-reviews-for-international-treatment.webp";
 
 import VishnuAgarwalImage from "../departments/dept-images/oncology/vishnu-agarwal.webp";
-import KamranKhanImage from "../departments/dept-images/oncology/kamran-khan.webp";
-import ManishGAgarwalImage from "../departments/dept-images/oncology/manish-agarwal.webp";
-import SaritaShrivastvaImage from "../departments/dept-images/oncology/sarita-shrivastva.webp";
+import VivekAllahbadiaImage from "../departments/dept-images/orthopedic/Dr.-Vivek-Allahbadia.webp";
+import NareshTrehanImage from "../departments/dept-images/doctors/naresh_trehan.webp";
+import KRBalakrishnanImage from "../departments/dept-images/doctors/kr_balakrishnan.webp";
+import MahipalSachdevImage from "../departments/dept-images/EyeSurgen/Dr-Mahipal-S-Sachdev.webp";
+import CSharathBabuImage from "../departments/dept-images/dentist/c-sharath-babu.webp";
 
 import cardiologyImage from "../departments/dept-images/general-category/advanced-heart-and-cardiology-treatment-in-india.webp";
 import oncologyImage from "../departments/dept-images/general-category/comprehensive-cancer-treatment-in-india.webp";
@@ -96,8 +100,7 @@ const reviews = [
   },
 ];
 
-const WA_URL =
-  "https://wa.me/919833166697?text=Hello%2C%20I%20need%20cardiac%20care%20consultation";
+const WA_URL = "https://wa.me/919833166697";
 
 const WA = ({ size = 5 }) => (
   <FaWhatsapp className={`icon-wa icon-wa--${size}`} />
@@ -112,9 +115,9 @@ const HOSPITALS = [
     rating: 4.9,
     accreditations: ["JCI", "NABH"],
     specialties: [
-      "Medical Oncology",
-      "Radiation Oncology",
-      "Bone Marrow Transplant",
+      "Cardiology & Cardiac Surgery",
+      "Organ Transplant",
+      "Cancer Care",
     ],
   },
   {
@@ -124,63 +127,50 @@ const HOSPITALS = [
     location: "Gurgaon, India",
     rating: 4.8,
     accreditations: ["JCI", "NABH"],
-    specialties: [
-      "Surgical Oncology",
-      "Immunotherapy",
-      "Precision Cancer Care",
-    ],
-  },
-
-  {
-    name: "Apollo Proton Cancer Centre",
-    sub: "Healthcare",
-    image: ApolloApcc,
-    location: "Gurgaon, India",
-    rating: 4.8,
-    accreditations: ["JCI", "NABH"],
-    specialties: [
-      "Surgical Oncology",
-      "Immunotherapy",
-      "Precision Cancer Care",
-    ],
+    specialties: ["Heart Institute", "Neurosciences", "Liver Transplant"],
   },
   {
     name: "Fortis",
     sub: "Healthcare",
     image: fortisImage,
-    location: "Delhi NCR, India",
-    rating: 4.7,
+    location: "New Delhi, India",
+    rating: 4.8,
     accreditations: ["JCI", "NABH"],
-    specialties: [
-      "Breast Cancer Treatment",
-      "Radiation Therapy",
-      "Hematology & Oncology",
-    ],
+    specialties: ["Cardiac Sciences", "Orthopedics", "Neurosurgery"],
   },
   {
     name: "Max",
     sub: "Healthcare",
     image: maxImage,
-    location: "Delhi, India",
+    location: "New Delhi, India",
     rating: 4.8,
     accreditations: ["NABH", "ISO"],
     specialties: [
-      "Targeted Therapy",
-      "PET-CT Diagnostics",
-      "Cancer Rehabilitation",
+      "Cancer Treatment",
+      "Bone Marrow Transplant",
+      "Kidney Transplant",
     ],
   },
   {
-    name: "HCG",
-    sub: "Cancer Centre",
-    image: hcgImage,
+    name: "Manipal",
+    sub: "Hospitals",
+    image: manipalImage,
     location: "Bengaluru, India",
     rating: 4.8,
-    accreditations: ["NABH", "NABL"],
+    accreditations: ["NABH"],
+    specialties: ["Multi Speciality Care", "Neurology", "Orthopedic Surgery"],
+  },
+  {
+    name: "Narayana",
+    sub: "Health",
+    image: narayanaImage,
+    location: "Bengaluru, India",
+    rating: 4.8,
+    accreditations: ["JCI", "NABH"],
     specialties: [
-      "Medical Oncology",
-      "Radiation Oncology",
-      "Bone Marrow Transplant",
+      "Cardiac Surgery",
+      "Pediatric Cardiology",
+      "Organ Transplant",
     ],
   },
 ];
@@ -444,26 +434,43 @@ const DOCTORS = [
     photoUrl: VishnuAgarwalImage,
   },
   {
-    name: "Dr. Kamran Khan",
-    education: "MBBS, MS - General Surgery",
-    spec: "General Surgeon, Surgical Oncologist, Robotic Cancer Surgeon",
-    desc: "Dr. Kamran Khan is a highly experienced General Surgeon and Surgical Oncologist with over 35 years of overall experience, including 32 years as a specialist. He specializes in minimally invasive and robotic surgeries for gastrointestinal and gynecologic cancers. With extensive clinical experience gained during his tenure at the renowned Tata Memorial Hospital (TMH), Mumbai, Dr. Kamran Khan is known for combining advanced surgical technology with precise, tissue-preserving oncologic techniques to deliver effective cancer care. His expertise includes laparoscopic and robotic cancer surgeries, pelvic oncology procedures, gastrointestinal oncology, and advanced gynecologic cancer management. Dr. Kamran Khan follows an evidence-based, patient-focused surgical approach aimed at minimizing surgical trauma, reducing post-operative complications, and promoting faster recovery. Recognized for his meticulous surgical planning, technical excellence, and commitment to patient safety, he has built a strong reputation in modern oncologic surgery. His training and research fellowship at Tata Memorial Hospital further strengthened his expertise in advanced minimally invasive cancer procedures and contemporary surgical oncology pathways.",
-    photoUrl: KamranKhanImage,
-  },
-  {
-    name: "Dr. Manish G. Agarwal",
+    name: "Dr. Vivek Allahbadia",
     education:
-      "MBBS, MS (Orthopaedics), DNB (Orthopaedics), Diploma in Tissue Banking",
-    spec: "Orthopaedic Oncosurgeon, Surgical Oncologist, Paediatric Orthopaedic Specialist",
-    desc: "Dr. Manish Agarwal is a renowned Orthopaedic Oncologist at the Department of Surgical Oncology at Sir H. N. Reliance Foundation Hospital and is also practicing at Nanavati Max Super Specialty Hospital, Mumbai. He has over two decades of experience in Orthopaedic Oncology. and is widely recognised as one of the pioneers of Orthopaedic Oncology in India. Dr. Agarwal completed his M.B.B.S. and M.S. from Seth GS Medical College and KEM Hospital, Mumbai. After completing his fellowship at Tata Memorial Hospital (June to December, 1993), he joined KEM Hospital as a Lecturer. In 2000, he joined Tata Memorial Hospital as a full time orthopaedic oncologist. He has published numerous papers in national and international journals, and has presented his research at various conferences and seminars. Dr. Agarwal has trained many young orthopaedic surgeons in orthopaedic oncology and has been actively involved in organising and participating in teaching programmes and workshops for orthopaedic surgeons across India. ",
-    photoUrl: ManishGAgarwalImage,
+      "MBBS, D.Orth, MS (Orthopaedics), FCPS Orthopaedics, MCh Orthopaedics (UK)",
+    spec: "Orthopaedic Surgeon, Robotic Joint Replacement Specialist",
+    desc: "Dr. Vivek Allahbadia is a highly experienced Orthopaedic and Joint Replacement Surgeon with over 28 years of expertise in robotic knee replacement, hip replacement surgery, sports injury treatment, and advanced orthopedic care. Internationally trained in the UK, Singapore, Prague, and Australia, he is recognized as one of Mumbai's pioneers in robotic joint replacement surgery. His specialties include robotic knee replacement, total hip replacement, revision joint replacement, minimally invasive orthopedic surgery, and sports injury management. Patients from around the world choose Dr. Allahbadia for advanced orthopedic treatment, modern surgical techniques, and personalized rehabilitation programs.",
+    photoUrl: VivekAllahbadiaImage,
   },
   {
-    name: "Dr. Sarita Shrivastva",
-    education: "MBBS, MD - Radiotherapy, DM - Medical Oncology",
-    spec: "Medical Oncologist",
-    desc: "Dr. Sarita Shrivastva is an experienced Medical Oncologist with over 16 years of overall experience, including 6 years as a specialist in oncology. She specializes in comprehensive cancer care, including chemotherapy, targeted therapy, and advanced oncology treatments. Dr. Sarita Shrivastva completed her MBBS, MD in Radiotherapy, and DM in Medical Oncology, receiving extensive training in the diagnosis, staging, and treatment of various cancers. She strongly believes in preventive oncology and emphasizes the importance of cancer screening and early detection to improve treatment outcomes and increase the chances of cure. With deep expertise in radiation oncology, chemotherapy, and personalized cancer therapies, she is committed to providing evidence-based and up-to-date cancer treatment solutions tailored to each patient’s condition. Known for her compassionate and patient-focused approach, Dr. Sarita Shrivastva focuses on delivering accurate diagnosis, advanced treatment planning, and holistic cancer care to ensure the best possible outcomes for her patients.",
-    photoUrl: SaritaShrivastvaImage,
+    name: "Dr. Naresh Trehan",
+    education:
+      "MBBS, Diplomate American Board of Surgery, Diplomate American Board of Cardiothoracic Surgery",
+    spec: "Cardiovascular and Cardiothoracic Surgeon",
+    desc: "Dr. Naresh Trehan is one of the most renowned Cardiovascular and Cardiothoracic Surgeons in India with over 40 years of experience in advanced heart surgery and cardiac care. Founder and Chairman of Medanta - The Medicity, Gurugram, he has successfully performed more than 48,000 cardiac surgeries. His expertise includes coronary artery bypass grafting (CABG), heart valve replacement, aortic aneurysm surgery, minimally invasive cardiac surgery, and complex cardiovascular procedures. International patients from across Africa, the Middle East, and Asia choose Dr. Trehan for advanced heart treatment, world-class surgical expertise, and exceptional patient outcomes.",
+    photoUrl: NareshTrehanImage,
+  },
+  {
+    name: "Dr. K R Balakrishnan",
+    education: "MBBS, MS (General Surgery), MCh (Cardiothoracic Surgery)",
+    spec: "Cardiothoracic and Heart Transplant Surgeon",
+    desc: "Dr. K R Balakrishnan is one of India's leading Heart Transplant and Cardiothoracic Surgeons with over 40 years of experience in advanced cardiac and transplant surgery. He has performed more than 18,000 cardiac procedures and over 190 heart transplants. His expertise includes heart transplant surgery, ventricular assist device (VAD) implantation, pediatric cardiac surgery, lung transplantation, and advanced heart failure management. Widely recognized as a pioneer in transplant medicine, Dr. Balakrishnan is trusted by international patients seeking complex heart treatment and transplant care in India.",
+    photoUrl: KRBalakrishnanImage,
+  },
+  {
+    name: "Prof. Dr. Mahipal S Sachdev",
+    education:
+      "MBBS, MD, MS (Ophthalmology), DNB, MNAMS, FRCS, FICO (UK), FAICO",
+    spec: "Ophthalmologist, Cataract & Refractive Surgeon",
+    desc: "Prof. Dr. Mahipal S Sachdev is a Padma Shri award-winning Ophthalmologist and one of India's most respected eye surgeons with over 42 years of experience. He specializes in LASIK, SMILE eye surgery, cataract surgery, cornea transplantation, keratoconus treatment, and advanced vision correction procedures. As Chairman and Medical Director of the Centre for Sight Group of Eye Hospitals, he has pioneered several modern eye surgery techniques in India and is widely recognized for excellence in ophthalmology and patient care.",
+    photoUrl: MahipalSachdevImage,
+  },
+
+  {
+    name: "Dr. C. Sharath Babu",
+    education: "BDS, MDS, FICOI",
+    spec: "Dental Implantologist, Prosthodontist",
+    desc: "Dr. C. Sharath Babu is a highly experienced Dental Implantologist and Prosthodontist with over 15 years of expertise in dental implants, full-mouth rehabilitation, smile designing, and advanced restorative dentistry. He specializes in implant surgery, cosmetic dental treatments, and comprehensive oral rehabilitation procedures. Known for combining modern dental technology with patient-focused care, Dr. Sharath Babu is a preferred choice for international patients seeking affordable and high-quality dental treatment in India.",
+    photoUrl: CSharathBabuImage,
   },
 ];
 

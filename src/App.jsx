@@ -55,15 +55,15 @@ const OrthopedicTreatmentIndia = lazy(
   () => import("./pages/orthopedicTreatmentIndia"),
 );
 
-// const EyeSurgeryIndia = lazy(() => import("./pages/EyeSurgeryIndia"));
+const EyeSurgeryIndia = lazy(() => import("./pages/EyeSurgeryIndia"));
 
 const CancerLandingIndia = lazy(() => import("./pages/CancerLandingIndia"));
 
-// const GeneralCategory = lazy(() => import("./pages/GeneralCategory"));
+const GeneralCategory = lazy(() => import("./pages/GeneralCategory"));
 
-// const TurkeyLandingPage = lazy(() => import("./pages/TurkeyLandingPage"));
+const TurkeyLandingPage = lazy(() => import("./pages/TurkeyLandingPage"));
 
-// const SaudiEgypt = lazy(() => import("./pages/SaudiEgypt"));
+const SaudiEgypt = lazy(() => import("./pages/SaudiEgypt"));
 
 // Loading component
 const PageLoader = () => (
@@ -177,23 +177,23 @@ function App() {
             path="/orthopedic-treatment-india"
             element={<OrthopedicTreatmentIndia />}
           />
-          {/* <Route path="/eye-surgery-in-india" element={<EyeSurgeryIndia />} /> */}
+          <Route path="/eye-surgery-in-india" element={<EyeSurgeryIndia />} />
           <Route
             path="/cancer-treatment-in-india"
             element={<CancerLandingIndia />}
           />
-          {/* <Route
+          <Route
             path="/best-medical-treatment-in-india"
             element={<GeneralCategory />}
-          /> */}
-          {/* <Route
+          />
+          <Route
             path="/best-hospital-in-turkey"
             element={<TurkeyLandingPage />}
-          /> */}
-          {/* <Route
+          />
+          <Route
             path="/german-saudi-hospital-cairo-egypt"
             element={<SaudiEgypt />}
-          /> */}
+          />
         </Routes>
       </Suspense>
 
