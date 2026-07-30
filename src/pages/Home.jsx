@@ -36,8 +36,6 @@ import {
 } from "lucide-react";
 
 import "./Home.css";
-import heroImage from "../assets/react.svg";
-import Testimonials from "../component/Testimonials";
 import Contactsection from "../component/Contactsection";
 import Apollo from "../assets/hospitals/apollo-1.webp";
 import Aster from "../assets/hospitals/aster-11.webp";
@@ -290,7 +288,6 @@ const testimonials = [
 ];
 
 import Breadcrumb from "../component/Breadcrumb";
-import { image } from "framer-motion/client";
 
 export default function HomePage() {
   return (

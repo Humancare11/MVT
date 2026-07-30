@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
 import "./Header.css";
-import logo from "../assets/humancare.webp";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,9 +77,10 @@ const Header = () => {
             {/* Logo */}
             <Link to="/" className="logo">
               <img
-                src={logo}
+                src="/humancare-logo.webp"
                 alt="Logo"
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
                 width="180"
                 height="48"
               />

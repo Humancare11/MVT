@@ -617,6 +617,12 @@ const DentalImplantIndia = () => {
   return (
     <>
       <Helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        />
         {/* Primary SEO */}
         <title>
           Dental Implants in India | Affordable Dental Treatment for
