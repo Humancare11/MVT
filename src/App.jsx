@@ -7,6 +7,7 @@ import Header from "./component/Header";
 import Footer from "./component/Footer";
 import ConnectWithUs from "./component/ConnectWithUsWhatsapp";
 import ConnectWithUsCall from "./component/ConnectWithUsCall";
+import NotFound from "./component/NotFound";
 const Translate = lazy(() => import("./pages/Translate"));
 
 // Lazy load all pages
@@ -140,6 +141,7 @@ function App() {
             path="/german-saudi-hospital-cairo-egypt"
             element={<SaudiEgypt />}
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Footer />
