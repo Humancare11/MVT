@@ -155,6 +155,29 @@ export default function PatientProcessPage() {
           rel="canonical"
           href="https://humancaremedicaltourism.com/process"
         />
+
+        <meta property="og:title" content="Medical Tourism Process | Treatment Process India" />
+        <meta
+          property="og:description"
+          content="Learn our simple step-by-step medical treatment process, from consultation to recovery, with Humancare World Wide."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://humancaremedicaltourism.com/process" />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medical Tourism Process | Treatment Process India" />
+        <meta
+          name="twitter:description"
+          content="Learn our simple step-by-step medical treatment process, from consultation to recovery, with Humancare World Wide."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
       </Helmet>
       {/* HELMET SECTION END */}
 

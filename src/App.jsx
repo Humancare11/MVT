@@ -128,6 +128,7 @@ function App() {
 
       <Header />
 
+      <main>
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -197,6 +198,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
+      </main>
 
       <Footer />
       <ConnectWithUs />

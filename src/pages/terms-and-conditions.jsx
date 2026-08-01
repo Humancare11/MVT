@@ -23,6 +23,29 @@ export default function TermsAndConditionsPage() {
           rel="canonical"
           href="https://humancaremedicaltourism.com/terms-and-conditions"
         />
+
+        <meta property="og:title" content="Terms and Conditions | HumanCare Medical Tourism" />
+        <meta
+          property="og:description"
+          content="Read the Terms and Conditions for using HumanCare Medical Tourism website. Understand our payment, refund, user responsibilities, and service policies."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://humancaremedicaltourism.com/terms-and-conditions" />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Terms and Conditions | HumanCare Medical Tourism" />
+        <meta
+          name="twitter:description"
+          content="Read the Terms and Conditions for using HumanCare Medical Tourism website. Understand our payment, refund, user responsibilities, and service policies."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
       </Helmet>
       {/* HELMET SECTION END */}
 

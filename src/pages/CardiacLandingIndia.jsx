@@ -693,12 +693,7 @@ export default function CardiacLanding() {
   return (
     <>
       <Helmet>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap"
-        />
+        
         <title>
           Affordable Cardiac Treatment in India | Affordable Heart Surgery &
           Bypass Surgery
@@ -715,6 +710,38 @@ export default function CardiacLanding() {
           rel="canonical"
           href="https://humancaremedicaltourism.com/cardiac-treatment-india"
         />
+
+        <meta
+          property="og:title"
+          content="Affordable Cardiac Treatment in India | Affordable Heart Surgery & Bypass Surgery"
+        />
+        <meta
+          property="og:description"
+          content="Get affordable cardiac treatment in India with top hospitals and expert surgeons. Save up to 80% on heart surgery, bypass surgery, and valve replacement with world-class care at JCI-accredited facilities."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://humancaremedicaltourism.com/cardiac-treatment-india"
+        />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Affordable Cardiac Treatment in India | Affordable Heart Surgery & Bypass Surgery"
+        />
+        <meta
+          name="twitter:description"
+          content="Get affordable cardiac treatment in India with top hospitals and expert surgeons. Save up to 80% on heart surgery, bypass surgery, and valve replacement with world-class care at JCI-accredited facilities."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
       </Helmet>
 
       {/* ════ SECTION 1 — HERO ════ */}
@@ -725,7 +752,11 @@ export default function CardiacLanding() {
           alt="cardiac treatment in India with advanced hospital care"
           className="hero-bg-image"
           loading="eager"
-        />
+        fetchPriority="high"
+        width={1920}
+        height={1280}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="hero-overlay" />
@@ -803,7 +834,11 @@ export default function CardiacLanding() {
       <section className="ht-section">
         {/* ── Background heart image ── */}
         <div className="ht-bg-overlay" aria-hidden="true">
-          <img src={heartBg} alt="" className="ht-bg-img" />
+          <img src={heartBg} alt="" className="ht-bg-img"
+        width={626}
+        height={417}
+        decoding="async"
+      />
         </div>
 
         <div className="ht-container">
@@ -815,7 +850,10 @@ export default function CardiacLanding() {
                 alt="heart specialist performing cardiac treatment in India"
                 className="ht-doctor-img"
                 loading="lazy"
-              />
+        width={626}
+        height={351}
+        decoding="async"
+      />
             </div>
           </div>
 
@@ -823,12 +861,12 @@ export default function CardiacLanding() {
           <div className="ht-right">
             <p className="ht-eyebrow">Cardiac Care Excellence</p>
 
-            <h1 className="ht-title">
+            <h2 className="ht-title">
               Affordable Heart Treatment{" "}
               <span className="ht-title--accent">
                 Without Compromising Quality
               </span>
-            </h1>
+            </h2>
 
             <p className="ht-description">
               Get high-quality cardiac care at significantly lower cost compared
@@ -1093,7 +1131,10 @@ export default function CardiacLanding() {
             alt="cardiac treatment heart illustration showing heart anatomy"
             className="support-image"
             loading="lazy"
-          />
+        width={1408}
+        height={768}
+        decoding="async"
+      />
         </div>
 
         {/* Right — Content */}
@@ -1173,7 +1214,10 @@ export default function CardiacLanding() {
               alt="experienced cardiac surgeon at best heart hospital in India"
               className="ts-doctor-img"
               loading="lazy"
-            />
+        width={612}
+        height={743}
+        decoding="async"
+      />
           </div>
         </div>
       </section>
@@ -1242,7 +1286,10 @@ export default function CardiacLanding() {
             alt="experienced cardiac surgeon in India"
             className="hcs-illo-img"
             loading="lazy"
-          />
+        width={322}
+        height={367}
+        decoding="async"
+      />
           <svg
             className="hcs-heartbeat"
             viewBox="0 0 200 50"
@@ -1308,7 +1355,10 @@ export default function CardiacLanding() {
             alt="best heart hospital in India for affordable cardiac treatment"
             className="hcs-illo-img"
             loading="lazy"
-          />
+        width={197}
+        height={252}
+        decoding="async"
+      />
         </div>
       </section>
     </>

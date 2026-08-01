@@ -493,6 +493,29 @@ export default function DoctorsPage() {
           rel="canonical"
           href="https://humancaremedicaltourism.com/doctors"
         />
+
+        <meta property="og:title" content="Indian Doctors | Top Medical Specialists in India" />
+        <meta
+          property="og:description"
+          content="indian doctors, heart doctor near me, neurosurgeon near me, good neurologist near me, pediatric dentist near me, eye specialist"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://humancaremedicaltourism.com/doctors" />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Indian Doctors | Top Medical Specialists in India" />
+        <meta
+          name="twitter:description"
+          content="indian doctors, heart doctor near me, neurosurgeon near me, good neurologist near me, pediatric dentist near me, eye specialist"
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
       </Helmet>
       {/* HELMET SECTION END */}
 
@@ -519,6 +542,7 @@ export default function DoctorsPage() {
             <input
               type="text"
               placeholder="Search by doctor name..."
+              aria-label="Search by doctor name"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -526,7 +550,11 @@ export default function DoctorsPage() {
 
           <div className="filter-group">
             <MapPin className="filter-icon" size={20} />
-            <select value={city} onChange={(e) => setCity(e.target.value)}>
+            <select
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              aria-label="Select city"
+            >
               <option value="">Select City</option>
               {cities.map((c) => (
                 <option key={c} value={c}>
@@ -541,6 +569,7 @@ export default function DoctorsPage() {
             <select
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
+              aria-label="Select department"
             >
               <option value="">Select Department</option>
               {departments.map((d) => (

@@ -159,6 +159,7 @@ const Header = () => {
                     href="https://www.facebook.com/humancareworldwide/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit our Facebook page"
                   >
                     <Facebook size={15} />
                   </a>
@@ -166,6 +167,7 @@ const Header = () => {
                     href="https://x.com/wwhumancare"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit our X (Twitter) page"
                   >
                     <FaXTwitter size={15} />
                   </a>
@@ -174,6 +176,7 @@ const Header = () => {
                     href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit our LinkedIn page"
                   >
                     <Linkedin size={15} />
                   </a>
@@ -181,6 +184,7 @@ const Header = () => {
                     href="https://wa.me/919833166697"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Chat with us on WhatsApp"
                   >
                     <FaWhatsapp size={15} />
                   </a>
@@ -188,6 +192,7 @@ const Header = () => {
                     href="https://www.instagram.com/humancareworldwideofficial/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit our Instagram page"
                   >
                     <Instagram size={15} />
                   </a>
@@ -195,6 +200,7 @@ const Header = () => {
                     href="https://www.youtube.com/@HumancareWorldWide"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit our YouTube channel"
                   >
                     <Youtube size={15} />
                   </a>
@@ -203,6 +209,7 @@ const Header = () => {
               <select
                 onChange={(e) => handleLangChange(e.target.value)}
                 className="lang-select"
+                aria-label="Select language"
               >
                 <option value="en">English</option>
                 <option value="ar">Arabic</option>
@@ -210,7 +217,13 @@ const Header = () => {
               </select>
             </div>
             {/* Mobile Menu Button */}
-            <button className="menu-btn" onClick={() => setIsOpen(!isOpen)}>
+            <button
+              className="menu-btn"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-nav"
+            >
               {isOpen ? <X /> : <Menu />}
             </button>
           </div>
@@ -235,6 +248,7 @@ const Header = () => {
             <select
               onChange={(e) => handleLangChange(e.target.value)}
               className="lang-select mobile"
+              aria-label="Select language"
             >
               <option value="">Select Language</option>
               <option value="en">English</option>
@@ -252,6 +266,7 @@ const Header = () => {
                   href="https://www.facebook.com/humancareworldwide/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit our Facebook page"
                 >
                   <Facebook size={15} />
                 </a>
@@ -259,6 +274,7 @@ const Header = () => {
                   href="https://x.com/wwhumancare"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit our X (Twitter) page"
                 >
                   <FaXTwitter size={15} />
                 </a>
@@ -266,6 +282,7 @@ const Header = () => {
                   href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit our LinkedIn page"
                 >
                   <Linkedin size={15} />
                 </a>
@@ -273,6 +290,7 @@ const Header = () => {
                   href="https://wa.me/+918655835979"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Chat with us on WhatsApp"
                 >
                   <FaWhatsapp size={15} />
                 </a>
@@ -280,6 +298,7 @@ const Header = () => {
                   href="https://www.instagram.com/humancareworldwideofficial/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit our Instagram page"
                 >
                   <Instagram size={15} />
                 </a>
@@ -287,6 +306,7 @@ const Header = () => {
                   href="https://www.youtube.com/@HumancareWorldWide"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit our YouTube channel"
                 >
                   <Youtube size={15} />
                 </a>

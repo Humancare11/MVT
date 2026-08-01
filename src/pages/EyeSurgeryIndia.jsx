@@ -731,7 +731,11 @@ const EyeSurgeryIndia = () => {
           alt="Eye surgery treatment in India for international patients"
           className="eye-hero-bg-image"
           loading="eager"
-        />
+        fetchPriority="high"
+        width={1200}
+        height={800}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="eye-hero-overlay" />
@@ -774,13 +778,13 @@ const EyeSurgeryIndia = () => {
         <div className="eyecare-container">
           {/* ── Left Content Panel ── */}
           <div className="eyecare-left">
-            <h1 className="eyecare-heading">
+            <h2 className="eyecare-heading">
               Eye Surgery in India –{" "}
               <span className="eyecare-heading-accent">
                 Advanced &amp; Affordable
               </span>{" "}
               Vision Care for International Patients
-            </h1>
+            </h2>
 
             <p className="eyecare-body">
               Eye problems can affect every part of daily life — from reading
@@ -818,7 +822,10 @@ const EyeSurgeryIndia = () => {
                 src={EyeAboutImage}
                 alt="Ophthalmologist performing advanced eye examination in India"
                 className="eyecare-img"
-              />
+        width={1920}
+        height={768}
+        decoding="async"
+      />
             </div>
 
             <div className="eyecare-img-wrapper eyecare-img-bottom">
@@ -826,7 +833,10 @@ const EyeSurgeryIndia = () => {
                 src={EyeAbout1Image}
                 alt="Ophthalmologist performing advanced eye examination in India"
                 className="eyecare-img"
-              />
+        width={1200}
+        height={800}
+        decoding="async"
+      />
             </div>
           </div>
         </div>
@@ -905,7 +915,10 @@ const EyeSurgeryIndia = () => {
             src={BestOphthalmologistsBanner}
             alt="Eye surgery background"
             className="bo-bg__image"
-          />
+        width={1920}
+        height={1280}
+        decoding="async"
+      />
           <div className="bo-bg__overlay" />
         </div>
 
@@ -914,10 +927,10 @@ const EyeSurgeryIndia = () => {
           <div className="bo-top">
             <span className="bo-eyebrow">Best Ophthalmologists in India</span>
 
-            <h1 className="bo-heading">
+            <h2 className="bo-heading">
               India is home to highly qualified and experienced eye specialists
               who are recognized internationally for their expertise.
-            </h1>
+            </h2>
           </div>
 
           {/* ── Split: left description + right expertise ── */}
@@ -1134,7 +1147,10 @@ const EyeSurgeryIndia = () => {
                 src={SymptomsEyeConditionTreated}
                 alt="Close-up of a human eye"
                 className="eca-image"
-              />
+        width={400}
+        height={400}
+        decoding="async"
+      />
             </div>
           </div>
 
@@ -1182,7 +1198,10 @@ const EyeSurgeryIndia = () => {
                 src={InternationalPatientServicesImage}
                 alt="International patient services"
                 className="ips__img"
-              />
+        width={493}
+        height={740}
+        decoding="async"
+      />
             </div>
           </div>
         </div>
@@ -1230,7 +1249,10 @@ const EyeSurgeryIndia = () => {
             src={ThumbnailImage}
             alt="Happy international eye patient in India"
             className="eye-reviews-image"
-          />
+        width={740}
+        height={536}
+        decoding="async"
+      />
         </div>
       </section>
 
@@ -1298,7 +1320,10 @@ const EyeSurgeryIndia = () => {
           alt="Book eye surgery consultation in India"
           className="eye-cta-bg-image"
           loading="lazy"
-        />
+        width={1080}
+        height={720}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="eye-cta-overlay" />

@@ -245,48 +245,6 @@ const trustHighlights = [
   },
 ];
 
-const treatments = [
-  { icon: HeartPulse, name: "Heart Surgery", price: "₹2,50,000" },
-  { icon: Bone, name: "Bone & Joint", price: "₹1,50,000" },
-  { icon: Brain, name: "Neurology", price: "₹3,00,000" },
-  { icon: Baby, name: "IVF & Fertility", price: "₹1,20,000" },
-  { icon: Smile, name: "Dental Care", price: "₹30,000" },
-  { icon: Sparkles, name: "Cosmetic Surgery", price: "₹80,000" },
-];
-
-const whyChooseUs = [
-  "NABH & JCI Accredited Hospitals",
-  "Dedicated Patient Coordinator",
-  "Transparent Pricing",
-  "No Hidden Charges",
-  "End-to-End Support",
-  "Multi-Language Assistance",
-];
-
-const testimonials = [
-  {
-    name: "Ahmed Al-Rashid",
-    country: "UAE",
-    text: "HumanCare MVT made my cardiac surgery journey stress-free.",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
-  },
-  {
-    name: "Grace Adeyemi",
-    country: "Nigeria",
-    text: "My mother received excellent cancer treatment in India.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
-  },
-  {
-    name: "Mohammad Rahman",
-    country: "Bangladesh",
-    text: "Affordable knee replacement surgery changed my life.",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
-  },
-];
-
 import Breadcrumb from "../component/Breadcrumb";
 
 export default function HomePage() {
@@ -810,7 +768,7 @@ export default function HomePage() {
           <div className="overlay"></div>
 
           <div className="hero-content">
-            <h1>How It Works</h1>
+            <h2>How It Works</h2>
             <p>
               Understand our step-by-step process from consultation to complete
               recovery. Quick, simple and fully transparent.

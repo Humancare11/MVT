@@ -726,7 +726,11 @@ const DentalImplantIndia = () => {
           alt="Affordable dental implants in India for international patients"
           className="dental-hero-bg-image"
           loading="eager"
-        />
+        fetchPriority="high"
+        width={1920}
+        height={1280}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="dental-hero-overlay" />
@@ -818,7 +822,10 @@ const DentalImplantIndia = () => {
               src={WhyChooseIndiaImage}
               alt="Advanced dental treatment in India with experienced dentists"
               className="dental-why-choose-image"
-            />
+        width={439}
+        height={429}
+        decoding="async"
+      />
           </div>
 
           {/* RIGHT COLUMN */}
@@ -923,18 +930,27 @@ const DentalImplantIndia = () => {
                 src={Dental3}
                 alt="Patient receiving professional dental care"
                 className="dental-comprehensive-image"
-              />
+        width={1920}
+        height={1277}
+        decoding="async"
+      />
               <img
                 src={Dental2}
                 alt="Experienced dental team at work"
                 className="dental-comprehensive-image"
-              />
+        width={1920}
+        height={1280}
+        decoding="async"
+      />
             </div>
             <img
               src={Dental1}
               alt="Modern dental clinic facility in India"
               className="dental-comprehensive-image-large"
-            />
+        width={1920}
+        height={2880}
+        decoding="async"
+      />
           </div>
 
           <div className="dental-comprehensive-content">
@@ -1206,7 +1222,10 @@ const DentalImplantIndia = () => {
             src={ReviewRightImage}
             alt="Happy international dental patient in India"
             className="dental-reviews-image"
-          />
+        width={1920}
+        height={1280}
+        decoding="async"
+      />
         </div>
       </section>
 
@@ -1274,7 +1293,10 @@ const DentalImplantIndia = () => {
           alt="Book dental consultation in India"
           className="dental-cta-bg-image"
           loading="lazy"
-        />
+        width={1920}
+        height={1025}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="dental-cta-overlay" />

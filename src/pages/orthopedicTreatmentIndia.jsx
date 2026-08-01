@@ -240,7 +240,6 @@ function OrthopedicServiceCard({ service }) {
 
 import apolloImage from "../departments/dept-images/best-dental-hospital-india.webp";
 
-import medantaImage from "../departments/dept-images/best-dental-hospital-india.webp";
 
 import fortisImage from "../departments/dept-images/multi-specialty-dental-hospital-india.webp";
 
@@ -553,12 +552,59 @@ export default function OrthopedicTreatmentIndia() {
   return (
     <>
       <Helmet>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        <title>
+          Affordable Orthopedic Treatment in India | Knee & Joint Replacement
+          Surgery
+        </title>
+
+        <meta
+          name="description"
+          content="Get affordable orthopedic treatment in India with top surgeons and JCI-accredited hospitals. Advanced knee replacement, joint replacement, and bone surgery for international patients."
         />
+
+        <meta
+          name="keywords"
+          content="orthopedic treatment india, knee replacement surgery india, joint replacement india, best orthopedic hospital india, bone surgery india"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/orthopedic-treatment-india"
+        />
+
+        <meta
+          property="og:title"
+          content="Affordable Orthopedic Treatment in India | Knee & Joint Replacement Surgery"
+        />
+        <meta
+          property="og:description"
+          content="Get affordable orthopedic treatment in India with top surgeons and JCI-accredited hospitals. Advanced knee replacement, joint replacement, and bone surgery for international patients."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://humancaremedicaltourism.com/orthopedic-treatment-india"
+        />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Affordable Orthopedic Treatment in India | Knee & Joint Replacement Surgery"
+        />
+        <meta
+          name="twitter:description"
+          content="Get affordable orthopedic treatment in India with top surgeons and JCI-accredited hospitals. Advanced knee replacement, joint replacement, and bone surgery for international patients."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+       
       </Helmet>
       {/* ════ SECTION 1 — HERO ════ */}
       <section className="orthopedic-hero-section">
@@ -568,7 +614,11 @@ export default function OrthopedicTreatmentIndia() {
           alt="Affordable orthopedic treatment in India with advanced knee replacement surgery for international patients"
           className="orthopedic-hero-bg-image"
           loading="eager"
-        />
+        fetchPriority="high"
+        width={735}
+        height={412}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="orthopedic-hero-overlay" />
@@ -580,10 +630,8 @@ export default function OrthopedicTreatmentIndia() {
           </span>
 
           <h1>
-            <h1>
-              Affordable Orthopedic Treatment in India for International
-              Patients
-            </h1>
+            Affordable Orthopedic Treatment in India for International
+            Patients
           </h1>
 
           <p>
@@ -622,20 +670,29 @@ export default function OrthopedicTreatmentIndia() {
               <img
                 src={about}
                 alt="Orthopedic surgeon in India performing advanced joint replacement treatment"
-              />
+        width={493}
+        height={740}
+        decoding="async"
+      />
             </div>
             <div className="about-images__stack">
               <div className="about-images__small">
                 <img
                   src={about1}
                   alt="Physiotherapy and rehabilitation support after knee replacement surgery in India"
-                />
+        width={493}
+        height={740}
+        decoding="async"
+      />
               </div>
               <div className="about-images__small">
                 <img
                   src={about2}
                   alt="Orthopedic doctor consultation in India for international joint replacement patients"
-                />
+        width={740}
+        height={494}
+        decoding="async"
+      />
               </div>
             </div>
           </div>
@@ -720,7 +777,10 @@ export default function OrthopedicTreatmentIndia() {
               <img
                 src={whyChooseUs}
                 alt="Robotic knee replacement surgery in India using advanced orthopedic technology"
-              />
+        width={736}
+        height={736}
+        decoding="async"
+      />
             </div>
           </div>
 
@@ -1294,7 +1354,10 @@ export default function OrthopedicTreatmentIndia() {
             src={ReviewRightImage}
             alt="Happy international ortho patient in India"
             className="ortho-reviews-image"
-          />
+        width={736}
+        height={552}
+        decoding="async"
+      />
         </div>
       </section>
 
@@ -1362,7 +1425,10 @@ export default function OrthopedicTreatmentIndia() {
           alt="Book orthopedic consultation in India for affordable knee replacement treatment"
           className="ortho-cta-bg-image"
           loading="lazy"
-        />
+        width={740}
+        height={416}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="ortho-cta-overlay" />

@@ -59,7 +59,6 @@ import ThumbnailImage from "../departments/dept-images/turkey-country/internatio
 
 import ctaImage from "../departments/dept-images/turkey-country/medical-treatment-turkey-consultation.webp";
 
-import reviewsImage from "../departments/dept-images/general-category/best-reviews-for-international-treatment.webp";
 
 const WA = ({ size = 5 }) => (
   <FaWhatsapp className={`icon-wa icon-wa--${size}`} />
@@ -601,7 +600,11 @@ function TurkeyLandingPage() {
           alt="Best hospital in Turkey for international patients"
           className="turkey-hero-bg-image"
           loading="eager"
-        />
+        fetchPriority="high"
+        width={1920}
+        height={1080}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="turkey-hero-overlay" />
@@ -659,14 +662,20 @@ function TurkeyLandingPage() {
                 src={aboutImage1}
                 alt="Modern hospital in Istanbul Turkey for international patients"
                 loading="lazy"
-              />
+        width={1920}
+        height={1080}
+        decoding="async"
+      />
             </div>
             <div className="turkey-about-image-wrapper">
               <img
                 src={aboutImage2}
                 alt="Medical treatment in Turkey for African patients"
                 loading="lazy"
-              />
+        width={1920}
+        height={1280}
+        decoding="async"
+      />
             </div>
           </div>
 
@@ -786,7 +795,10 @@ function TurkeyLandingPage() {
               src={whyChooseTurkeyImage}
               alt="Why international patients choose Turkey for medical treatment"
               loading="lazy"
-            />
+        width={500}
+        height={750}
+        decoding="async"
+      />
           </div>
         </div>
 
@@ -951,7 +963,10 @@ function TurkeyLandingPage() {
               src={whyPatientsChooseUsImage}
               alt="African patients receiving medical treatment in Turkey"
               loading="lazy"
-            />
+        width={1920}
+        height={1280}
+        decoding="async"
+      />
           </div>
 
           {/* Right Side - Content */}
@@ -1205,7 +1220,10 @@ function TurkeyLandingPage() {
             src={ThumbnailImage}
             alt="International patient testimonial for medical treatment in Turkey"
             className="general-reviews-image"
-          />
+        width={1200}
+        height={800}
+        decoding="async"
+      />
         </div>
       </section>
 
@@ -1242,7 +1260,10 @@ function TurkeyLandingPage() {
                 src={whyHumancareImage}
                 alt="Humancare World Wide - Medical tourism support for international patients"
                 loading="lazy"
-              />
+        width={740}
+        height={493}
+        decoding="async"
+      />
             </div>
           </div>
 
@@ -1383,7 +1404,10 @@ function TurkeyLandingPage() {
           alt="International patient support for treatment in Turkey"
           className="general-cta-bg-image"
           loading="lazy"
-        />
+        width={740}
+        height={493}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="general-cta-overlay" />

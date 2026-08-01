@@ -36,7 +36,6 @@ import WhyHumancare from "../departments/dept-images/general-category/humancare-
 import apolloImage from "../departments/dept-images/general-category/apollo-hospital-india.webp";
 import medantaImage from "../departments/dept-images/medanta-hospital-for-oncology-treatment-in-india.webp";
 import fortisImage from "../departments/dept-images/general-category/multi-specialty-oncology-hospital-india.webp";
-import hcgImage from "../departments/dept-images/general-category/hcg-cancer-treatment-specialist.webp";
 import maxImage from "../departments/dept-images/general-category/top-oncology-hospital-india.webp";
 import ApolloApcc from "../departments/dept-images/general-category/apollo-proton-cancer-centre-top-cancer-treatment.webp";
 import manipalImage from "../departments/dept-images/general-category/best-manipal-hospital-for-medical-tourism.webp";
@@ -59,7 +58,6 @@ import dentalImage from "../departments/dept-images/general-category/advanced-de
 
 import ctaImage from "../departments/dept-images/general-category/best-medical-treatment-in-india-for-international-patient.webp";
 
-import reviewsImage from "../departments/dept-images/general-category/best-reviews-for-international-treatment.webp";
 
 const Check = () => <FaCheck className="icon-check" />;
 
@@ -696,7 +694,11 @@ const GeneralCategory = () => {
           alt="International patient receiving medical treatment in India"
           className="general-hero-bg-image"
           loading="eager"
-        />
+        fetchPriority="high"
+        width={740}
+        height={493}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="general-hero-overlay" />
@@ -845,7 +847,10 @@ const GeneralCategory = () => {
               src={WhyHumancare}
               alt="Medical tourism support services in India for international patients"
               loading="lazy"
-            />
+        width={740}
+        height={463}
+        decoding="async"
+      />
             <div className="humancare-image-overlay" />
           </div>
 
@@ -1246,7 +1251,10 @@ const GeneralCategory = () => {
             src={ThumbnailImage}
             alt="Happy international general patient in India"
             className="general-reviews-image"
-          />
+        width={1200}
+        height={800}
+        decoding="async"
+      />
         </div>
       </section>
 
@@ -1318,7 +1326,10 @@ const GeneralCategory = () => {
           alt="Medical treatment in India for international patients"
           className="general-cta-bg-image"
           loading="lazy"
-        />
+        width={740}
+        height={493}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="general-cta-overlay" />

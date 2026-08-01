@@ -53,6 +53,29 @@ export default function HospitalDetails() {
           rel="canonical"
           href="https://humancaremedicaltourism.com/hospitals"
         />
+
+        <meta property="og:title" content="Best Hospitals in India | HumanCare Medical Tourism" />
+        <meta
+          property="og:description"
+          content="Discover top accredited hospitals in India with expert doctors and world-class healthcare services. HumanCare Medical Tourism ensures safe and affordable medical travel support."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://humancaremedicaltourism.com/hospitals" />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Best Hospitals in India | HumanCare Medical Tourism" />
+        <meta
+          name="twitter:description"
+          content="Discover top accredited hospitals in India with expert doctors and world-class healthcare services. HumanCare Medical Tourism ensures safe and affordable medical travel support."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
       </Helmet>
       {/* HELMET SECTION END */}
 
@@ -60,7 +83,7 @@ export default function HospitalDetails() {
       <section className="hospitals-hero-section">
         <div>
           <span className="hero-badge-hospitals">Medical Specialties</span>
-          <h1>{hospital.name}</h1>
+          <h2>{hospital.name}</h2>
           <p>{hospital.desc.slice(0, 200)}</p>
         </div>
       </section>

@@ -213,12 +213,59 @@ const SaudiEgypt = () => {
   return (
     <>
       <Helmet>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        <title>
+          German Saudi Hospital Cairo Egypt | Medical Treatment for
+          International Patients
+        </title>
+
+        <meta
+          name="description"
+          content="Get advanced, affordable medical treatment at German Saudi Hospital in Cairo, Egypt. HumanCare coordinates expert doctors, hospital care, and full support for international patients."
         />
+
+        <meta
+          name="keywords"
+          content="german saudi hospital cairo, medical treatment egypt, hospital in cairo egypt, international patients egypt, medical tourism egypt"
+        />
+
+        <link
+          rel="canonical"
+          href="https://humancaremedicaltourism.com/german-saudi-hospital-cairo-egypt"
+        />
+
+        <meta
+          property="og:title"
+          content="German Saudi Hospital Cairo Egypt | Medical Treatment for International Patients"
+        />
+        <meta
+          property="og:description"
+          content="Get advanced, affordable medical treatment at German Saudi Hospital in Cairo, Egypt. HumanCare coordinates expert doctors, hospital care, and full support for international patients."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://humancaremedicaltourism.com/german-saudi-hospital-cairo-egypt"
+        />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="German Saudi Hospital Cairo Egypt | Medical Treatment for International Patients"
+        />
+        <meta
+          name="twitter:description"
+          content="Get advanced, affordable medical treatment at German Saudi Hospital in Cairo, Egypt. HumanCare coordinates expert doctors, hospital care, and full support for international patients."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        
       </Helmet>
       {/* ════ SECTION 1 — HERO ════ */}
       <section className="saudi-hero-section">
@@ -228,7 +275,11 @@ const SaudiEgypt = () => {
           alt="German Saudi Hospital Cairo for international patients in Egypt"
           className="saudi-hero-bg-image"
           loading="eager"
-        />
+        fetchPriority="high"
+        width={740}
+        height={493}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="saudi-hero-overlay" />
@@ -299,14 +350,20 @@ const SaudiEgypt = () => {
                 src={aboutImage1}
                 alt="Advanced medical treatment hospital in Cairo Egypt"
                 loading="lazy"
-              />
+        width={1920}
+        height={1081}
+        decoding="async"
+      />
             </div>
             <div className="saudi-about-image-wrapper">
               <img
                 src={aboutImage2}
                 alt="Medical tourism services in Cairo Egypt for African patients"
                 loading="lazy"
-              />
+        width={1920}
+        height={1277}
+        decoding="async"
+      />
             </div>
           </div>
 
@@ -503,7 +560,10 @@ const SaudiEgypt = () => {
                 src={whyPatientAfricaImage}
                 alt="African international patients receiving advanced medical treatment in Cairo Egypt"
                 loading="lazy"
-              />
+        width={740}
+        height={463}
+        decoding="async"
+      />
             </div>
 
             {/* Right Side - Points */}
@@ -819,7 +879,10 @@ const SaudiEgypt = () => {
             src={reviewsImage}
             alt="International patient reviews and success stories at German Saudi Hospital Cairo"
             className="general-reviews-image"
-          />
+        width={1200}
+        height={800}
+        decoding="async"
+      />
         </div>
       </section>
 
@@ -889,7 +952,10 @@ const SaudiEgypt = () => {
           alt="Medical consultation and international patient support at German Saudi Hospital Cairo"
           className="general-cta-bg-image"
           loading="lazy"
-        />
+        width={740}
+        height={313}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="general-cta-overlay" />

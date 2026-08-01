@@ -124,6 +124,7 @@ export default function ContactSection() {
               <input
                 type="text"
                 placeholder="Your Name"
+                aria-label="Your Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -132,6 +133,7 @@ export default function ContactSection() {
               <input
                 type="email"
                 placeholder="Your Email"
+                aria-label="Your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -140,6 +142,7 @@ export default function ContactSection() {
               <input
                 type="text"
                 placeholder="Your Phone Number"
+                aria-label="Your Phone Number"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
@@ -148,6 +151,7 @@ export default function ContactSection() {
               <input
                 type="text"
                 placeholder="Nationality"
+                aria-label="Nationality"
                 value={nationality}
                 onChange={(e) => setNationality(e.target.value)}
               />
@@ -155,6 +159,7 @@ export default function ContactSection() {
               <textarea
                 rows="5"
                 placeholder="Your Concern"
+                aria-label="Your Concern"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />

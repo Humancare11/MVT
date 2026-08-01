@@ -752,7 +752,11 @@ export default function OncologyTreatmentIndia() {
           alt="Affordable Cancer treatment in India for international patients"
           className="oncology-hero-bg-image"
           loading="eager"
-        />
+        fetchPriority="high"
+        width={1920}
+        height={1280}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="oncology-hero-overlay" />
@@ -842,7 +846,10 @@ export default function OncologyTreatmentIndia() {
                 src={OncologyAboutImage}
                 alt="Advanced oncology care in India"
                 className="cancer-care-img"
-              />
+        width={1920}
+        height={1280}
+        decoding="async"
+      />
             </div>
 
             <div className="cancer-care-img-wrapper cancer-care-img-bottom">
@@ -850,7 +857,10 @@ export default function OncologyTreatmentIndia() {
                 src={OncologyAboutImage1}
                 alt="Oncology treatment in India with advanced cancer care"
                 className="cancer-care-img"
-              />
+        width={1920}
+        height={1280}
+        decoding="async"
+      />
             </div>
           </div>
         </div>
@@ -997,7 +1007,10 @@ export default function OncologyTreatmentIndia() {
               src={InternationalPatientServicesImage}
               alt="International patient services for cancer treatment in India"
               className="patient-journey-img"
-            />
+        width={493}
+        height={740}
+        decoding="async"
+      />
           </div>
 
           {/* ── Right: Content ── */}
@@ -1038,21 +1051,30 @@ export default function OncologyTreatmentIndia() {
                 src={oncologyImage1}
                 alt="Oncology consultation with cancer specialist in India"
                 className="oncology-img"
-              />
+        width={1920}
+        height={1281}
+        decoding="async"
+      />
             </div>
             <div className="oncology-img-wrapper oncology-img-2">
               <img
                 src={oncologyImage2}
                 alt="Cancer specialist providing oncology treatment in India"
                 className="oncology-img"
-              />
+        width={740}
+        height={492}
+        decoding="async"
+      />
             </div>
             <div className="oncology-img-wrapper oncology-img-3">
               <img
                 src={oncologyImage3}
                 alt="Multidisciplinary oncology treatment team in India"
                 className="oncology-img"
-              />
+        width={740}
+        height={494}
+        decoding="async"
+      />
             </div>
           </div>
 
@@ -1422,7 +1444,10 @@ export default function OncologyTreatmentIndia() {
             src={ThumbnailImage}
             alt="Happy international cancer patient in India"
             className="cancer-reviews-image"
-          />
+        width={740}
+        height={536}
+        decoding="async"
+      />
         </div>
       </section>
 
@@ -1495,7 +1520,10 @@ export default function OncologyTreatmentIndia() {
           alt="Book oncology consultation in India"
           className="cancer-cta-bg-image"
           loading="lazy"
-        />
+        width={740}
+        height={387}
+        decoding="async"
+      />
 
         {/* Gradient Overlay */}
         <div className="cancer-cta-overlay" />

@@ -110,6 +110,29 @@ export default function ServicesPage() {
           rel="canonical"
           href="https://humancaremedicaltourism.com/services"
         />
+
+        <meta property="og:title" content="Medical Tourism Services | Healthcare Services India" />
+        <meta
+          property="og:description"
+          content="Humancare World Wide is a complete medical tourism portal offering patients worldwide access to the best hospitals, diagnostic centers and super-specialty care for quick, effective and affordable treatment."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://humancaremedicaltourism.com/services" />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medical Tourism Services | Healthcare Services India" />
+        <meta
+          name="twitter:description"
+          content="Humancare World Wide is a complete medical tourism portal offering patients worldwide access to the best hospitals, diagnostic centers and super-specialty care for quick, effective and affordable treatment."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
       </Helmet>
       {/* HELMET SECTION END */}
 

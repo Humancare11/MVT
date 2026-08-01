@@ -585,6 +585,29 @@ export default function HospitalsPage() {
           rel="canonical"
           href="https://humancaremedicaltourism.com/hospitals"
         />
+
+        <meta property="og:title" content="Best Hospitals in India | Trusted Medical Centers" />
+        <meta
+          property="og:description"
+          content="Explore top hospitals in India including Apollo Hospital New Delhi and other leading healthcare centers for advanced and affordable treatment."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://humancaremedicaltourism.com/hospitals" />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Best Hospitals in India | Trusted Medical Centers" />
+        <meta
+          name="twitter:description"
+          content="Explore top hospitals in India including Apollo Hospital New Delhi and other leading healthcare centers for advanced and affordable treatment."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
       </Helmet>
       {/* HELMET SECTION END */}
 

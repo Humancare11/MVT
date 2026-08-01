@@ -141,6 +141,29 @@ export default function TreatmentsPage() {
           rel="canonical"
           href="https://humancaremedicaltourism.com/treatments"
         />
+
+        <meta property="og:title" content="Medical Treatment in India | Advanced Healthcare" />
+        <meta
+          property="og:description"
+          content="Explore advanced medical treatments in India including cardiology, neurology, oncology, dental care, ophthalmology and cosmetic surgery at top hospitals."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://humancaremedicaltourism.com/treatments" />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medical Treatment in India | Advanced Healthcare" />
+        <meta
+          name="twitter:description"
+          content="Explore advanced medical treatments in India including cardiology, neurology, oncology, dental care, ophthalmology and cosmetic surgery at top hospitals."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
       </Helmet>
       {/* HELMET SECTION END */}
 

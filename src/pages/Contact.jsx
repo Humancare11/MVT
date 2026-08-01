@@ -23,6 +23,29 @@ function Contact() {
           rel="canonical"
           href="https://humancaremedicaltourism.com/contact"
         />
+
+        <meta property="og:title" content="Doctor Consultation India | Contact Humancare World Wide" />
+        <meta
+          property="og:description"
+          content="Need help? Get in touch with Humancare World Wide expert doctors. Fill the form to send us a message"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://humancaremedicaltourism.com/contact" />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Doctor Consultation India | Contact Humancare World Wide" />
+        <meta
+          name="twitter:description"
+          content="Need help? Get in touch with Humancare World Wide expert doctors. Fill the form to send us a message"
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
       </Helmet>
       {/* HELMET SECTION END */}
 

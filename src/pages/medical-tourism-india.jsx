@@ -56,6 +56,29 @@ function MedicalTourismIndia() {
           rel="canonical"
           href="https://humancaremedicaltourism.com/medical-treatment-in-india"
         />
+
+        <meta property="og:title" content="Medical Treatment in India | Best Hospital in India | Top Hospitals in India" />
+        <meta
+          property="og:description"
+          content="Planning treatment in India? We guide you to the best hospital in India and trusted hospitals in India, ensuring quality care, clear communication, and full support from consultation to recovery."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://humancaremedicaltourism.com/medical-treatment-in-india" />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medical Treatment in India | Best Hospital in India | Top Hospitals in India" />
+        <meta
+          name="twitter:description"
+          content="Planning treatment in India? We guide you to the best hospital in India and trusted hospitals in India, ensuring quality care, clear communication, and full support from consultation to recovery."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
       </Helmet>
       {/* MEDICAL TOURISM HELMET SECTION END */}
 
@@ -126,7 +149,11 @@ function MedicalTourismIndia() {
           </div>
 
           <div className="about-image">
-            <img src={AboutImage} alt="Apollo Gleneagles Hospitals, Kolkata" />
+            <img src={AboutImage} alt="Apollo Gleneagles Hospitals, Kolkata"
+        width={360}
+        height={540}
+        decoding="async"
+      />
           </div>
         </div>
       </section>
@@ -243,7 +270,11 @@ function MedicalTourismIndia() {
       <section className="why-choose">
         <div className="why-container">
           <div className="why-image">
-            <img src={WhyChoose} alt="Doctor with patient" />
+            <img src={WhyChoose} alt="Doctor with patient"
+        width={736}
+        height={1308}
+        decoding="async"
+      />
           </div>
 
           <div className="why-content">
@@ -515,54 +546,118 @@ function MedicalTourismIndia() {
             <div className="hospitals-track">
               {/* First set of logos */}
               <div className="hospital-logo">
-                <img src={apolloLogo} alt="Apollo Hospitals" />
+                <img src={apolloLogo} alt="Apollo Hospitals"
+        width={1122}
+        height={1200}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={fortisLogo} alt="Fortis Healthcare" />
+                <img src={fortisLogo} alt="Fortis Healthcare"
+        width={591}
+        height={401}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={medantaLogo} alt="Medanta" />
+                <img src={medantaLogo} alt="Medanta"
+        width={320}
+        height={320}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={manipalLogo} alt="Manipal Hospitals" />
+                <img src={manipalLogo} alt="Manipal Hospitals"
+        width={500}
+        height={500}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={narayanaLogo} alt="Narayana Health" />
+                <img src={narayanaLogo} alt="Narayana Health"
+        width={700}
+        height={388}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={kokilabenLogo} alt="Kokilaben Hospital" />
+                <img src={kokilabenLogo} alt="Kokilaben Hospital"
+        width={1000}
+        height={485}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={hcgLogo} alt="HCG Hospitals" />
+                <img src={hcgLogo} alt="HCG Hospitals"
+        width={500}
+        height={200}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={nanavatiLogo} alt="Nanavati Hospital" />
+                <img src={nanavatiLogo} alt="Nanavati Hospital"
+        width={1536}
+        height={1536}
+        decoding="async"
+      />
               </div>
 
               {/* Duplicate set for seamless loop */}
               <div className="hospital-logo">
-                <img src={apolloLogo} alt="Apollo Hospitals" />
+                <img src={apolloLogo} alt="Apollo Hospitals"
+        width={1122}
+        height={1200}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={fortisLogo} alt="Fortis Healthcare" />
+                <img src={fortisLogo} alt="Fortis Healthcare"
+        width={591}
+        height={401}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={medantaLogo} alt="Medanta" />
+                <img src={medantaLogo} alt="Medanta"
+        width={320}
+        height={320}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={manipalLogo} alt="Manipal Hospitals" />
+                <img src={manipalLogo} alt="Manipal Hospitals"
+        width={500}
+        height={500}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={narayanaLogo} alt="Narayana Health" />
+                <img src={narayanaLogo} alt="Narayana Health"
+        width={700}
+        height={388}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={kokilabenLogo} alt="Kokilaben Hospital" />
+                <img src={kokilabenLogo} alt="Kokilaben Hospital"
+        width={1000}
+        height={485}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={hcgLogo} alt="HCG Hospitals" />
+                <img src={hcgLogo} alt="HCG Hospitals"
+        width={500}
+        height={200}
+        decoding="async"
+      />
               </div>
               <div className="hospital-logo">
-                <img src={nanavatiLogo} alt="Nanavati Hospital" />
+                <img src={nanavatiLogo} alt="Nanavati Hospital"
+        width={1536}
+        height={1536}
+        decoding="async"
+      />
               </div>
             </div>
           </div>

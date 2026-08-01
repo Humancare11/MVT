@@ -23,6 +23,29 @@ export default function PrivacyPolicyPage() {
           rel="canonical"
           href="https://humancaremedicaltourism.com/privacy-policy"
         />
+
+        <meta property="og:title" content="Privacy Policy | HumanCare Medical Tourism" />
+        <meta
+          property="og:description"
+          content="Read the Privacy Policy of HumanCare Medical Tourism. Learn how we collect, use, and protect your personal information when making payments or using our services."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://humancaremedicaltourism.com/privacy-policy" />
+        <meta
+          property="og:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy | HumanCare Medical Tourism" />
+        <meta
+          name="twitter:description"
+          content="Read the Privacy Policy of HumanCare Medical Tourism. Learn how we collect, use, and protect your personal information when making payments or using our services."
+        />
+        <meta
+          name="twitter:image"
+          content="https://humancaremedicaltourism.com/og-image.jpg"
+        />
       </Helmet>
       {/* HELMET SECTION END */}
 
