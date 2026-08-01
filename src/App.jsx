@@ -129,75 +129,75 @@ function App() {
       <Header />
 
       <main>
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/treatments" element={<Treatments />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/hospitals" element={<Hospitals />} />
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/treatments" element={<Treatments />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/hospitals" element={<Hospitals />} />
 
-          <Route
-            path="/hospital-details/:id"
-            element={<HospitalDetails />}
-          />
+            <Route
+              path="/hospital-details/:id"
+              element={<HospitalDetails />}
+            />
 
-          <Route path="/process" element={<Process />} />
-          <Route path="/doctors" element={<Doctors />} />
+            <Route path="/process" element={<Process />} />
+            <Route path="/doctors" element={<Doctors />} />
 
-          <Route
-            path="/terms-and-conditions"
-            element={<TermsAndConditionsPage />}
-          />
+            <Route
+              path="/terms-and-conditions"
+              element={<TermsAndConditionsPage />}
+            />
 
-          <Route
-            path="/privacy-policy"
-            element={<PrivacyPolicyPage />}
-          />
+            <Route
+              path="/privacy-policy"
+              element={<PrivacyPolicyPage />}
+            />
 
-          <Route
-            path="/translate"
-            element={<Translate />}
-          />
+            <Route
+              path="/translate"
+              element={<Translate />}
+            />
 
-          <Route
-            path="/medical-treatment-in-india"
-            element={<MedicalTourismIndia />}
-          />
-          <Route
-            path="/cardiac-treatment-india"
-            element={<CardiacLandingIndia />}
-          />
+            <Route
+              path="/medical-treatment-in-india"
+              element={<MedicalTourismIndia />}
+            />
+            <Route
+              path="/cardiac-treatment-india"
+              element={<CardiacLandingIndia />}
+            />
 
-          <Route
-            path="/dental-implant-india"
-            element={<DentalImplantIndia />}
-          />
-          <Route
-            path="/orthopedic-treatment-india"
-            element={<OrthopedicTreatmentIndia />}
-          />
-          <Route path="/eye-surgery-in-india" element={<EyeSurgeryIndia />} />
-          <Route
-            path="/cancer-treatment-in-india"
-            element={<CancerLandingIndia />}
-          />
-          <Route
-            path="/best-medical-treatment-in-india"
-            element={<GeneralCategory />}
-          />
-          <Route
-            path="/best-hospital-in-turkey"
-            element={<TurkeyLandingPage />}
-          />
-          <Route
-            path="/german-saudi-hospital-cairo-egypt"
-            element={<SaudiEgypt />}
-          />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+            <Route
+              path="/dental-implants-india"
+              element={<DentalImplantIndia />}
+            />
+            <Route
+              path="/orthopedic-treatment-india"
+              element={<OrthopedicTreatmentIndia />}
+            />
+            <Route path="/eye-surgery-in-india" element={<EyeSurgeryIndia />} />
+            <Route
+              path="/cancer-treatment-in-india"
+              element={<CancerLandingIndia />}
+            />
+            <Route
+              path="/best-medical-treatment-in-india"
+              element={<GeneralCategory />}
+            />
+            <Route
+              path="/best-hospital-in-turkey"
+              element={<TurkeyLandingPage />}
+            />
+            <Route
+              path="/german-saudi-hospital-cairo-egypt"
+              element={<SaudiEgypt />}
+            />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
 
       <Footer />
