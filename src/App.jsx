@@ -8,6 +8,8 @@ import Footer from "./component/Footer";
 import ConnectWithUs from "./component/ConnectWithUsWhatsapp";
 import ConnectWithUsCall from "./component/ConnectWithUsCall";
 import NotFound from "./component/NotFound";
+import GhanaLandingPage from "./pages/GhanaLandingPage.jsx";
+
 const Translate = lazy(() => import("./pages/Translate"));
 
 // Lazy load all pages
@@ -195,6 +197,8 @@ function App() {
               path="/german-saudi-hospital-cairo-egypt"
               element={<SaudiEgypt />}
             />
+            <Route path="/medical-value-treatment-in-ghana" element={<GhanaLandingPage />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

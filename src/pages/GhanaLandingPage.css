@@ -1,0 +1,1695 @@
+/* ═══════════════════════════════════════════
+   GHANA LANDING PAGE CSS
+   Theme Colors:
+   - Navy: #061656
+   - Red Accent: #DC3545
+   - Green WhatsApp: #25D366
+   - White: #FFFFFF
+   - Border: #E5E9F2
+   - Light BG: #F8FAFC
+═══════════════════════════════════════════ */
+
+:root {
+  --ghana-primary: #061656;
+  --ghana-primary-dark: #040e38;
+  --ghana-primary-light: #0d2780;
+  --ghana-red: #dc3545;
+  --ghana-red-hover: #c82333;
+  --ghana-green: #25d366;
+  --ghana-green-hover: #20bd5a;
+  --ghana-white: #ffffff;
+  --ghana-bg-light: #f8fafc;
+  --ghana-bg-alt: #f1f5f9;
+  --ghana-text-dark: #061656;
+  --ghana-text-muted: #556277;
+  --ghana-border: #e2e8f0;
+  --ghana-border-subtle: rgba(6, 22, 86, 0.08);
+  --ghana-card-shadow: 0 4px 16px rgba(6, 22, 86, 0.06);
+  --ghana-card-shadow-hover: 0 10px 24px rgba(6, 22, 86, 0.12);
+  --ghana-radius-sm: 8px;
+  --ghana-radius-md: 12px;
+  --ghana-radius-lg: 16px;
+  --ghana-radius-full: 9999px;
+}
+
+.ghana-landing-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--ghana-white);
+  color: var(--ghana-text-dark);
+  font-family:
+    "DM Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  line-height: 1.6;
+}
+
+/* ── Container ── */
+.ghana-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+/* ── Common Section Headers ── */
+.ghana-section {
+  padding: 70px 0;
+  position: relative;
+}
+
+.ghana-section-header {
+  margin-bottom: 45px;
+}
+
+.ghana-section-tag {
+  display: inline-block;
+  color: var(--ghana-red);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.ghana-section-title {
+  font-family: "DM Sans", serif;
+  font-size: clamp(26px, 2.5vw, 36px);
+  font-weight: 800;
+  color: var(--ghana-primary);
+  line-height: 1.25;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.ghana-section-subtitle {
+  font-size: 16px;
+  color: var(--ghana-text-muted);
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+/* ═══════════════════════════════════════════
+   1. HERO SECTION (Full Background Image + Left Gradient)
+═══════════════════════════════════════════ */
+.ghana-hero-bg-section {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 85px 0;
+  overflow: hidden;
+  background-color: var(--ghana-primary);
+  color: var(--ghana-white);
+}
+
+.ghana-hero-full-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 75% center;
+  z-index: 0;
+}
+
+.ghana-hero-full-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(6, 22, 86, 0.98) 0%,
+    rgba(6, 22, 86, 0.94) 35%,
+    rgba(6, 22, 86, 0.82) 58%,
+    rgba(6, 22, 86, 0.4) 80%,
+    rgba(6, 22, 86, 0.15) 100%
+  );
+  z-index: 1;
+}
+
+.ghana-hero-container-relative {
+  position: relative;
+  z-index: 2;
+}
+
+.ghana-hero-content-left {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Pill badge at top of hero */
+.ghana-hero-pill-badge {
+  background: rgba(220, 53, 69, 0.95);
+  color: var(--ghana-white);
+  padding: 8px 22px;
+  border-radius: var(--ghana-radius-full);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 16px rgba(220, 53, 69, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ghana-hero-main-title {
+  font-family: "Playfair Display", "DM Sans", serif;
+  font-size: clamp(32px, 3.4vw, 48px);
+  font-weight: 700;
+  color: var(--ghana-white);
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.ghana-hero-accent-sub {
+  color: #ff6b7a;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.ghana-hero-desc-white {
+  font-size: 15.5px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  margin-bottom: 26px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Accreditation Badges Box in Hero */
+.ghana-hero-badges-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--ghana-radius-md);
+  padding: 12px 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.ghana-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ghana-badge-icon-gold {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+}
+
+.ghana-badge-icon-nabh {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1.5px solid #061656;
+  overflow: hidden;
+  position: relative;
+}
+
+.ghana-nabh-img-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ghana-nabh-fallback-icon {
+  color: var(--ghana-red);
+  font-size: 18px;
+}
+
+.ghana-badge-text-white {
+  display: flex;
+  flex-direction: column;
+}
+
+.ghana-badge-text-white strong {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.ghana-badge-text-white span {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.5px;
+}
+
+.ghana-badge-divider-white {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ── BUTTONS ── */
+.ghana-hero-buttons-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ghana-btn-green-wa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 15.5px;
+  font-weight: 700;
+  border-radius: var(--ghana-radius-sm);
+  background: var(--ghana-green);
+  color: var(--ghana-white);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.ghana-btn-green-wa:hover {
+  background: var(--ghana-green-hover);
+  color: var(--ghana-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.ghana-btn-icon-wa {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.whatsapp-glow {
+  animation: ghana-wa-pulse 2s ease-in-out infinite;
+}
+
+@keyframes ghana-wa-pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  }
+  50% {
+    box-shadow: 0 4px 22px rgba(37, 211, 102, 0.65);
+  }
+}
+
+.ghana-btn-red-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 15.5px;
+  font-weight: 700;
+  border-radius: var(--ghana-radius-sm);
+  background: var(--ghana-red);
+  color: var(--ghana-white);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(220, 53, 69, 0.35);
+}
+
+.ghana-btn-red-call:hover {
+  background: var(--ghana-red-hover);
+  color: var(--ghana-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.5);
+}
+
+.ghana-btn-icon-phone {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* ── 4 Feature Cards Below Hero ── */
+.ghana-hero-features-section {
+  padding: 40px 0 20px;
+  background: var(--ghana-white);
+}
+
+.ghana-hero-features-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.ghana-feature-card {
+  background: var(--ghana-white);
+  border: 1px solid var(--ghana-border);
+  border-radius: var(--ghana-radius-md);
+  padding: 26px 22px;
+  text-align: center;
+  box-shadow: var(--ghana-card-shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ghana-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ghana-card-shadow-hover);
+  border-color: rgba(6, 22, 86, 0.2);
+}
+
+.ghana-feature-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(6, 22, 86, 0.06);
+  color: var(--ghana-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 14px;
+  transition: all 0.3s ease;
+}
+
+.ghana-feature-card:hover .ghana-feature-icon {
+  background: var(--ghana-primary);
+  color: var(--ghana-white);
+  transform: scale(1.08);
+}
+
+.ghana-feature-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ghana-primary);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.ghana-feature-desc {
+  font-size: 13.5px;
+  color: var(--ghana-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   2. WHY CHOOSE US SECTION
+═══════════════════════════════════════════ */
+.ghana-why-choose-section {
+  background: var(--ghana-bg-light);
+  border-top: 1px solid var(--ghana-border);
+  border-bottom: 1px solid var(--ghana-border);
+}
+
+.ghana-why-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.ghana-why-card {
+  background: var(--ghana-white);
+  border: 1px solid var(--ghana-border);
+  border-radius: var(--ghana-radius-md);
+  padding: 22px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(6, 22, 86, 0.03);
+  transition: all 0.3s ease;
+}
+
+.ghana-why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ghana-card-shadow-hover);
+  border-color: rgba(6, 22, 86, 0.2);
+}
+
+.ghana-why-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f0f4f8;
+  color: var(--ghana-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.ghana-why-card:hover .ghana-why-icon {
+  background: var(--ghana-red);
+  color: var(--ghana-white);
+}
+
+.ghana-why-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ghana-primary);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.ghana-why-text {
+  font-size: 12.5px;
+  color: var(--ghana-text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   3. GHANA PINPOINT SECTION
+═══════════════════════════════════════════ */
+.ghana-pinpoint-section {
+  background: var(--ghana-white);
+}
+
+.ghana-pinpoint-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.ghana-map-graphic-box {
+  background: #f8fafc;
+  border: 1px solid var(--ghana-border);
+  border-radius: var(--ghana-radius-lg);
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(6, 22, 86, 0.04);
+}
+
+.ghana-svg-map-wrapper {
+  width: 100%;
+  max-width: 560px;
+}
+
+.ghana-map-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.ghana-legacy-map {
+  display: none;
+}
+
+.ghana-map-body {
+  fill: #ffffff;
+  stroke: #cbd5e1;
+  stroke-width: 2.5;
+  filter: drop-shadow(0 4px 12px rgba(6, 22, 86, 0.06));
+}
+
+.ghana-flight-trail {
+  fill: none;
+  stroke: var(--ghana-primary);
+  stroke-width: 2.5;
+  stroke-dasharray: 6 6;
+  opacity: 0.85;
+}
+
+.ghana-pin-glow {
+  fill: rgba(220, 53, 69, 0.2);
+  animation: ghana-pulse 2s infinite ease-in-out;
+}
+
+@keyframes ghana-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.45);
+    opacity: 0.8;
+  }
+}
+
+.ghana-pin-label {
+  font-size: 13px;
+  font-weight: 700;
+  fill: var(--ghana-primary);
+  font-family: "DM Sans", sans-serif;
+}
+
+.ghana-pin-label-accent {
+  font-size: 14px;
+  font-weight: 800;
+  fill: var(--ghana-red);
+  font-family: "DM Sans", sans-serif;
+}
+
+.ghana-pinpoint-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ghana-pinpoint-heading {
+  font-size: clamp(24px, 2.3vw, 34px);
+  font-weight: 800;
+  color: var(--ghana-primary);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.ghana-pinpoint-desc {
+  font-size: 15px;
+  color: var(--ghana-text-muted);
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+
+.ghana-locations-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.ghana-location-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ghana-loc-pin {
+  color: var(--ghana-red);
+  font-size: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.ghana-loc-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ghana-primary);
+  margin: 0 0 3px 0;
+}
+
+.ghana-loc-desc {
+  font-size: 13px;
+  color: var(--ghana-text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.ghana-pill-badge-cta {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: var(--ghana-radius-full);
+  border: 1.5px solid var(--ghana-primary);
+  background: #f0f4f8;
+}
+
+.ghana-pill-text {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--ghana-primary);
+}
+
+/* ═══════════════════════════════════════════
+   4. ACCREDITED HOSPITAL SECTION
+═══════════════════════════════════════════ */
+.ghana-accredited-section {
+  background: var(--ghana-bg-light);
+  border-top: 1px solid var(--ghana-border);
+}
+
+.ghana-accredited-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.ghana-accredited-card {
+  background: var(--ghana-white);
+  border: 1px solid var(--ghana-border);
+  border-radius: var(--ghana-radius-md);
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--ghana-card-shadow);
+  transition: all 0.3s ease;
+}
+
+.ghana-accredited-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ghana-card-shadow-hover);
+  border-color: rgba(6, 22, 86, 0.2);
+}
+
+.ghana-acc-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(6, 22, 86, 0.05);
+  color: var(--ghana-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 14px;
+  transition: all 0.3s ease;
+}
+
+.ghana-accredited-card:hover .ghana-acc-icon {
+  background: var(--ghana-primary);
+  color: var(--ghana-white);
+}
+
+.ghana-acc-title {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--ghana-primary);
+  margin-bottom: 8px;
+}
+
+.ghana-acc-desc {
+  font-size: 13.5px;
+  color: var(--ghana-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ghana-accreditation-disclaimer {
+  font-size: 12.5px;
+  color: #718096;
+  margin-top: 18px;
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════════
+   5. MEDICAL SPECIALTIES SECTION
+═══════════════════════════════════════════ */
+.ghana-specialties-section {
+  background: var(--ghana-white);
+}
+
+.ghana-specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.ghana-spec-card {
+  background: var(--ghana-white);
+  border: 1px solid var(--ghana-border);
+  border-radius: var(--ghana-radius-md);
+  padding: 20px 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(6, 22, 86, 0.03);
+  transition: all 0.3s ease;
+}
+
+.ghana-spec-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ghana-card-shadow-hover);
+  border-color: rgba(6, 22, 86, 0.2);
+}
+
+.ghana-spec-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 1px solid var(--ghana-border);
+  color: var(--ghana-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.ghana-spec-card:hover .ghana-spec-icon-box {
+  background: var(--ghana-red);
+  color: var(--ghana-white);
+  border-color: var(--ghana-red);
+}
+
+.ghana-spec-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ghana-primary);
+  margin-bottom: 6px;
+}
+
+.ghana-spec-desc {
+  font-size: 12px;
+  color: var(--ghana-text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   6. FEATURED SPECIALISTS SECTION
+═══════════════════════════════════════════ */
+.ghana-doctors-section {
+  background: var(--ghana-bg-light);
+  border-top: 1px solid var(--ghana-border);
+  position: relative;
+}
+
+.ghana-doctors-slider-container {
+  position: relative;
+  padding: 0 45px;
+}
+
+.ghana-doctors-swiper {
+  padding: 10px 4px 45px !important;
+}
+
+.ghana-doctor-card {
+  background: var(--ghana-white);
+  border: 1px solid var(--ghana-border);
+  border-radius: var(--ghana-radius-md);
+  overflow: hidden;
+  box-shadow: var(--ghana-card-shadow);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ghana-doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ghana-card-shadow-hover);
+  border-color: rgba(6, 22, 86, 0.25);
+}
+
+.ghana-doctor-photo-wrap {
+  width: 100%;
+  height: 230px;
+  background: #f1f5f9;
+  overflow: hidden;
+  position: relative;
+}
+
+.ghana-doctor-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.ghana-doctor-card:hover .ghana-doctor-photo {
+  transform: scale(1.05);
+}
+
+.ghana-doctor-body {
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  align-items: center;
+}
+
+.ghana-doctor-name {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: var(--ghana-primary);
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.ghana-doctor-spec {
+  font-size: 13px;
+  color: var(--ghana-red);
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.ghana-doctor-exp-badge {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  background: rgba(6, 22, 86, 0.06);
+  color: var(--ghana-primary);
+  padding: 3px 10px;
+  border-radius: var(--ghana-radius-full);
+  margin-bottom: 10px;
+}
+
+.ghana-doctor-snippet {
+  font-size: 12.5px;
+  color: var(--ghana-text-muted);
+  line-height: 1.45;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.ghana-doctor-btn {
+  width: 100%;
+  background: var(--ghana-primary);
+  color: var(--ghana-white);
+  padding: 9px 16px;
+  border-radius: var(--ghana-radius-sm);
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ghana-doctor-btn:hover {
+  background: var(--ghana-primary-light);
+}
+
+.ghana-swiper-nav-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--ghana-white);
+  border: 1px solid var(--ghana-border);
+  color: var(--ghana-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(6, 22, 86, 0.1);
+  transition: all 0.2s ease;
+}
+
+.ghana-swiper-nav-btn:hover {
+  background: var(--ghana-primary);
+  color: var(--ghana-white);
+}
+
+.ghana-doc-swiper-prev {
+  left: 0;
+}
+
+.ghana-doc-swiper-next {
+  right: 0;
+}
+
+/* ═══════════════════════════════════════════
+   DOCTOR MODAL (Matches GeneralCategory)
+═══════════════════════════════════════════ */
+.doctor-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 22, 86, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: ghana-fadeIn 0.25s ease;
+}
+
+.doctor-modal {
+  background: var(--ghana-white);
+  border-radius: var(--ghana-radius-lg);
+  max-width: 680px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: 32px;
+  animation: ghana-slideUp 0.3s ease;
+}
+
+.doctor-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: none;
+  color: var(--ghana-primary);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doctor-modal-close:hover {
+  background: var(--ghana-red);
+  color: #fff;
+}
+
+.doctor-modal-header {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  border-bottom: 1px solid var(--ghana-border);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.doctor-modal-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e2e8f0;
+}
+
+.doctor-modal-info {
+  flex: 1;
+}
+
+.doctor-modal-spec {
+  color: var(--ghana-red);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.doctor-modal-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ghana-primary);
+  margin: 4px 0 6px;
+}
+
+.doctor-modal-education {
+  font-size: 13.5px;
+  color: var(--ghana-text-muted);
+  margin-bottom: 6px;
+}
+
+.doctor-modal-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ghana-primary);
+  margin-bottom: 10px;
+}
+
+.doctor-modal-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+@keyframes ghana-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ghana-slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   7. PATIENT SUPPORT SERVICES SECTION
+═══════════════════════════════════════════ */
+.ghana-patient-support-section {
+  background: var(--ghana-white);
+}
+
+.ghana-support-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.ghana-support-card {
+  background: var(--ghana-white);
+  border: 1px solid var(--ghana-border);
+  border-radius: var(--ghana-radius-md);
+  padding: 22px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(6, 22, 86, 0.03);
+  transition: all 0.3s ease;
+}
+
+.ghana-support-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ghana-card-shadow-hover);
+  border-color: rgba(6, 22, 86, 0.2);
+}
+
+.ghana-sup-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(6, 22, 86, 0.05);
+  color: var(--ghana-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.ghana-support-card:hover .ghana-sup-icon {
+  background: var(--ghana-primary);
+  color: var(--ghana-white);
+}
+
+.ghana-sup-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ghana-primary);
+  margin-bottom: 6px;
+}
+
+.ghana-sup-desc {
+  font-size: 12.5px;
+  color: var(--ghana-text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   8. DESTINATIONS / HOSPITALS SECTION
+═══════════════════════════════════════════ */
+.ghana-destinations-section {
+  background: var(--ghana-bg-light);
+  border-top: 1px solid var(--ghana-border);
+}
+
+.ghana-destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.ghana-dest-card {
+  background: var(--ghana-white);
+  border: 1px solid var(--ghana-border);
+  border-radius: var(--ghana-radius-md);
+  overflow: hidden;
+  box-shadow: var(--ghana-card-shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ghana-dest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ghana-card-shadow-hover);
+  border-color: rgba(6, 22, 86, 0.2);
+}
+
+.ghana-dest-img-wrap {
+  width: 100%;
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ghana-dest-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.ghana-dest-card:hover .ghana-dest-img-wrap img {
+  transform: scale(1.05);
+}
+
+.ghana-dest-city-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--ghana-primary);
+  color: var(--ghana-white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--ghana-radius-full);
+}
+
+.ghana-dest-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.ghana-dest-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ghana-primary);
+  margin-bottom: 8px;
+}
+
+.ghana-dest-desc {
+  font-size: 13px;
+  color: var(--ghana-text-muted);
+  line-height: 1.5;
+  margin-bottom: 14px;
+  flex-grow: 1;
+}
+
+.ghana-dest-hospitals {
+  font-size: 12px;
+  color: #4a5568;
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  border-left: 3px solid var(--ghana-red);
+}
+
+.ghana-dest-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ghana-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ghana-dest-link:hover {
+  color: var(--ghana-red);
+}
+
+/* ═══════════════════════════════════════════
+   9. REVIEWS SECTION (Matches GeneralCategory)
+═══════════════════════════════════════════ */
+.general-reviews-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  background: var(--ghana-primary);
+  color: var(--ghana-white);
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.general-reviews-content {
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.general-reviews-heading {
+  font-family: "DM Sans", serif;
+  font-size: clamp(28px, 2.5vw, 36px);
+  font-weight: 700;
+  color: var(--ghana-white);
+  margin-bottom: 30px;
+}
+
+.general-reviews-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.general-reviews-slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.general-reviews-slide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.general-reviews-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--ghana-radius-md);
+  padding: 24px;
+}
+
+.ghana-reviews-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+  color: #ffc107;
+  font-size: 15px;
+}
+
+.general-reviews-card-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.general-reviews-card-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ghana-red);
+  margin: 0;
+}
+
+.general-reviews-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.general-reviews-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.general-reviews-dot.active {
+  background: var(--ghana-red);
+  width: 26px;
+  border-radius: 10px;
+}
+
+.general-reviews-image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.general-reviews-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════
+   10. FAQ SECTION (Matches GeneralCategory)
+═══════════════════════════════════════════ */
+.general-faq-section {
+  padding: 80px 0;
+  background: var(--ghana-bg-light);
+}
+
+.general-faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.general-faq-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.general-faq-badge {
+  font-family: "DM Sans", serif;
+  font-size: clamp(26px, 2.5vw, 36px);
+  font-weight: 800;
+  color: var(--ghana-primary);
+  display: inline-block;
+}
+
+.general-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.general-faq-item {
+  background: var(--ghana-white);
+  border: 1px solid var(--ghana-border);
+  border-radius: var(--ghana-radius-md);
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.general-faq-item.active {
+  border-color: var(--ghana-primary);
+  box-shadow: var(--ghana-card-shadow);
+}
+
+.general-faq-question {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.general-faq-question-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ghana-primary);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.general-faq-icon {
+  font-size: 16px;
+  color: var(--ghana-red);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.general-faq-icon.rotate {
+  transform: rotate(45deg);
+}
+
+.general-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.general-faq-answer.open {
+  max-height: 400px;
+}
+
+.general-faq-answer-content {
+  padding: 0 24px 22px;
+  color: var(--ghana-text-muted);
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.general-faq-answer-content p {
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   11. FINAL CTA SECTION (Matches GeneralCategory)
+═══════════════════════════════════════════ */
+.general-cta-section {
+  position: relative;
+  padding: 90px 0;
+  overflow: hidden;
+  background: var(--ghana-primary);
+  color: var(--ghana-white);
+}
+
+.general-cta-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.22;
+}
+
+.general-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(6, 22, 86, 0.95) 0%,
+    rgba(6, 22, 86, 0.85) 100%
+  );
+}
+
+.general-cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.general-cta-badge {
+  background: rgba(220, 53, 69, 0.95);
+  color: #fff;
+  padding: 7px 20px;
+  border-radius: var(--ghana-radius-full);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.general-cta-title {
+  font-family: "Playfair Display", "DM Sans", serif;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 700;
+  color: var(--ghana-white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.general-cta-subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.65;
+  max-width: 760px;
+  margin: 0 auto 32px;
+}
+
+.general-cta-benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 28px;
+  margin-bottom: 38px;
+}
+
+.general-cta-benefit-point {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+}
+
+.general-cta-check-icon {
+  color: #25d366;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+═══════════════════════════════════════════ */
+
+/* 1200px and below */
+@media (max-width: 1200px) {
+  .ghana-why-cards-grid,
+  .ghana-specialties-grid,
+  .ghana-support-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ghana-destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ghana-accredited-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 992px and below */
+@media (max-width: 992px) {
+  .ghana-hero-bg-section {
+    min-height: 520px;
+    padding: 70px 0;
+  }
+
+  .ghana-hero-full-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(6, 22, 86, 0.98) 0%,
+      rgba(6, 22, 86, 0.95) 50%,
+      rgba(6, 22, 86, 0.75) 100%
+    );
+  }
+
+  .ghana-hero-features-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ghana-pinpoint-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .general-reviews-section {
+    grid-template-columns: 1fr;
+  }
+
+  .general-reviews-image-wrapper {
+    height: 300px;
+  }
+}
+
+/* 768px and below */
+@media (max-width: 768px) {
+  .ghana-section {
+    padding: 50px 0;
+  }
+
+  .ghana-hero-bg-section {
+    padding: 60px 0;
+    min-height: 480px;
+  }
+
+  .ghana-hero-main-title {
+    font-size: 32px;
+  }
+
+  .ghana-hero-desc-white {
+    font-size: 14.5px;
+  }
+
+  .ghana-hero-badges-pill {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .ghana-badge-divider-white {
+    display: none;
+  }
+
+  .ghana-hero-buttons-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ghana-btn-green-wa,
+  .ghana-btn-red-call {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+
+  .ghana-locations-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ghana-why-cards-grid,
+  .ghana-specialties-grid,
+  .ghana-support-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .general-reviews-content {
+    padding: 40px 24px;
+  }
+
+  .doctor-modal-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .doctor-modal {
+    padding: 24px 18px;
+  }
+}
+
+/* 576px and below */
+@media (max-width: 576px) {
+  .ghana-hero-features-row,
+  .ghana-why-cards-grid,
+  .ghana-accredited-grid,
+  .ghana-specialties-grid,
+  .ghana-support-grid-6,
+  .ghana-destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ghana-section-title {
+    font-size: 24px;
+  }
+
+  .general-cta-benefits-list {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 320px;
+    margin: 0 auto 30px;
+  }
+}
