@@ -12,6 +12,16 @@ import {
 import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
 import "./Header.css";
 
+const trackGTMEvent = (eventName) => {
+  if (window.gtag) {
+    window.gtag("event", eventName, {
+      event_category: "engagement",
+      event_label: eventName,
+      value: 1,
+    });
+  }
+};
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -228,11 +238,33 @@ const Header = () => {
             </button>
           </div>
 
+<<<<<<< HEAD
           {/* Mobile Navigation */}
           <div
             id="mobile-nav"
             className={`nav-mobile ${isOpen ? "open" : "closed"}`}
           >
+=======
+          {/* EMERGENCY BUTTON */}
+          <a
+            href="tel:+918655835979"
+            className="emergency-btn"
+            onClick={() => trackGTMEvent("Call Sticker button LP Ghana")}
+          >
+            <Phone size={16} />
+            Emergency
+          </a>
+
+          {/* MOBILE MENU BUTTON */}
+          <button className="menu-btn" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+
+        {/* MOBILE NAV */}
+        {isOpen && (
+          <div className="nav-mobile">
+>>>>>>> d64f7ef (GTM code and favicon updated)
             {navItems.map((item) => (
               <NavLink
                 key={item.name}
@@ -244,6 +276,7 @@ const Header = () => {
               </NavLink>
             ))}
 
+<<<<<<< HEAD
             {/* Mobile Language Dropdown */}
             <select
               onChange={(e) => handleLangChange(e.target.value)}
@@ -312,6 +345,16 @@ const Header = () => {
                 </a>
               </div>
             </div>
+=======
+            <a
+              href="tel:+918655835979"
+              className="emergency-btn mobile"
+              onClick={() => trackGTMEvent("Call Sticker button LP Ghana")}
+            >
+              <Phone size={16} />
+              Emergency Call
+            </a>
+>>>>>>> d64f7ef (GTM code and favicon updated)
           </div>
         </div>
       </nav>

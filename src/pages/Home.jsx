@@ -35,6 +35,7 @@ import {
   Activity,
 } from "lucide-react";
 
+<<<<<<< HEAD
 import "./Home.css";
 import Contactsection from "../component/Contactsection";
 import Apollo from "../assets/hospitals/apollo-1.webp";
@@ -72,6 +73,25 @@ import dentistsImg from "../departments/dept-images/dentists-treatment.webp";
 import pulmonologyImg from "../departments/dept-images/pulmonology-treatment.webp";
 import nephrologyImg from "../departments/dept-images/nephrology-treatment.webp";
 import urologyImg from "../departments/dept-images/urology-treatment.webp";
+=======
+const trackGTMEvent = (eventName) => {
+  if (window.gtag) {
+    window.gtag("event", eventName, {
+      event_category: "engagement",
+      event_label: eventName,
+      value: 1,
+    });
+  }
+};
+
+const handleWhatsAppConsultationClick = () => {
+  trackGTMEvent("Ghana WhatApp Consultation Button");
+};
+
+const handleMedicalCoordinatorClick = () => {
+  trackGTMEvent("Medicak Cordinator LP ghana");
+};
+>>>>>>> d64f7ef (GTM code and favicon updated)
 
 const hospitals = [
   {
@@ -266,6 +286,7 @@ export default function HomePage() {
           content="medical tourism in India, treatment in india, affordable medical treatment India, best hospitals India, international patient care, medical travel support"
         />
 
+<<<<<<< HEAD
         <link rel="canonical" href="https://humancaremedicaltourism.com/" />
 
         {/* 🔹 Open Graph (Social Media Previews) */}
@@ -385,6 +406,32 @@ export default function HomePage() {
                 WhatsApp Chat
               </a>
             </div>
+=======
+          <div className="hero-buttons">
+            <a
+              href="tel:+918655835979"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn red-btn"
+              onClick={handleMedicalCoordinatorClick}
+            >
+              <Phone size={18} />
+              Book Free Consultation
+            </a>
+            <a
+              href="https://wa.me/+918655835979"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn green-btn"
+              onClick={() => {
+                handleWhatsAppConsultationClick();
+                trackGTMEvent("Ghana LP contact WhatApp Stickker Button");
+              }}
+            >
+              <MessageCircle size={18} />
+              WhatsApp Chat
+            </a>
+>>>>>>> d64f7ef (GTM code and favicon updated)
           </div>
 
           <div className="hero-right">
