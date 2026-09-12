@@ -37,7 +37,6 @@ import apolloImage from "../departments/dept-images/general-category/apollo-hosp
 import medantaImage from "../departments/dept-images/medanta-hospital-for-oncology-treatment-in-india.webp";
 import fortisImage from "../departments/dept-images/general-category/multi-specialty-oncology-hospital-india.webp";
 import maxImage from "../departments/dept-images/general-category/top-oncology-hospital-india.webp";
-import ApolloApcc from "../departments/dept-images/general-category/apollo-proton-cancer-centre-top-cancer-treatment.webp";
 import manipalImage from "../departments/dept-images/general-category/best-manipal-hospital-for-medical-tourism.webp";
 import narayanaImage from "../departments/dept-images/general-category/narayana-multispeciality-hospital-india.webp";
 
@@ -58,7 +57,6 @@ import dentalImage from "../departments/dept-images/general-category/advanced-de
 
 import ctaImage from "../departments/dept-images/general-category/best-medical-treatment-in-india-for-international-patient.webp";
 
-
 const Check = () => <FaCheck className="icon-check" />;
 
 // Stars Component
@@ -73,27 +71,27 @@ const Stars = () => (
 // Reviews Data
 const reviews = [
   {
-    text: "Humancare World Wide made my cardiac treatment journey in India smooth and stress-free. Their team handled everything from visa to hospital admission. Highly recommended for international patients!",
+    text: "“Humancare World Wide helped coordinate our hospital appointments and medical visa for treatment in India. Their team remained accessible and guided us through the practical travel steps.”",
     name: "Patient from Kenya",
   },
   {
-    text: "I received world-class cancer treatment at an affordable cost. The medical coordinator was available 24/7 and the hospital facilities were excellent. Thank you Humancare!",
+    text: "“We received clear information about oncology hospital options and specialists in India. The coordination team assisted us with appointment scheduling and airport transfer arrangements.”",
     name: "Patient from Uganda",
   },
   {
-    text: "The entire process was seamless - from getting expert opinions to post-surgery follow-ups. The language support and accommodation assistance were incredibly helpful.",
+    text: "“The process for our medical visit was well organized, from sharing reports with doctors to scheduling follow-up consultations. The accommodation coordination was very helpful.”",
     name: "Patient from Tanzania",
   },
   {
-    text: "I had my knee replacement surgery in India through Humancare. The doctors were highly experienced and the treatment cost was 70% less than my home country. Great experience!",
+    text: "“Our family arranged orthopedic consultations in India through Humancare. The hospital facilities were modern and the team explained estimated costs and scheduling clearly.”",
     name: "Patient from Nigeria",
   },
   {
-    text: "Professional service from start to finish. They connected me with top specialists and provided complete travel support. My family and I felt well taken care of throughout.",
+    text: "“Reliable coordination support from initial inquiry to post-visit communication. They helped connect us with relevant specialists and provided travel guidance throughout.”",
     name: "Patient from South Sudan",
   },
   {
-    text: "Outstanding medical care and personal attention. The patient coordinator was always responsive and the hospital staff treated me with compassion. Highly satisfied with the service.",
+    text: "“Helpful coordination for our healthcare travel to India. The patient coordinator answered our questions promptly and assisted with communication at the hospital.”",
     name: "Patient from Kenya",
   },
 ];
@@ -177,9 +175,9 @@ const specialties = [
   {
     id: 1,
     sectionTag: "Cardiology",
-    title: "Advanced Heart & Cardiology Treatment in India",
+    title: "Cardiology & Heart Care in India",
     description:
-      "India is globally recognized for affordable and advanced cardiac treatment with experienced heart specialists and modern technology.",
+      "India offers diagnostic evaluation, medical management and advanced cardiac procedures through experienced heart specialists and modern hospital facilities.",
     treatments: [
       "Heart Bypass Surgery",
       "Angioplasty",
@@ -189,7 +187,7 @@ const specialties = [
     ],
     ctaLabel: "Talk to Heart Specialist",
     image: cardiologyImage,
-    imageAlt: "Cardiology treatment",
+    imageAlt: "Cardiology treatment in India",
     reversed: false,
   },
   {
@@ -197,7 +195,7 @@ const specialties = [
     sectionTag: "Oncology",
     title: "Comprehensive Cancer Treatment in India",
     description:
-      "Advanced oncology care using modern radiation therapy, immunotherapy, robotic surgery, and personalized treatment planning.",
+      "Oncology services in India encompass medical oncology, surgical procedures, radiation therapy, and personalized treatment planning based on clinical evaluation.",
     treatments: [
       "Chemotherapy",
       "Radiation Therapy",
@@ -207,7 +205,7 @@ const specialties = [
     ],
     ctaLabel: "Talk to Oncology Specialist",
     image: oncologyImage,
-    imageAlt: "Oncology treatment",
+    imageAlt: "Oncology treatment in India",
     reversed: true,
   },
   {
@@ -215,7 +213,7 @@ const specialties = [
     sectionTag: "Orthopedics",
     title: "Orthopedic & Joint Replacement Treatment",
     description:
-      "Experience superior orthopedic care with minimally invasive procedures, joint replacements, and spine surgeries performed by globally trained specialists.",
+      "Orthopedic specialists provide evaluation and surgical care for bone, joint, and spine conditions, including joint replacements and minimally invasive procedures.",
     treatments: [
       "Knee Replacement",
       "Hip Replacement",
@@ -225,15 +223,15 @@ const specialties = [
     ],
     ctaLabel: "Talk to Orthopedic Specialist",
     image: joinReplacementImage,
-    imageAlt: "Orthopedic treatment",
+    imageAlt: "Orthopedic treatment in India",
     reversed: false,
   },
   {
     id: 4,
     sectionTag: "Neurology",
-    title: "Expert Neurological & Brain Treatment in India",
+    title: "Neurological & Brain Treatment in India",
     description:
-      "India's top neurologists and neurosurgeons deliver advanced care for complex brain, spine, and nervous system disorders with precision and compassion.",
+      "Specialist neurology and neurosurgery teams evaluate and manage complex brain, spine, and nervous system conditions with modern diagnostic and surgical facilities.",
     treatments: [
       "Brain Tumor Surgery",
       "Stroke Management",
@@ -243,15 +241,15 @@ const specialties = [
     ],
     ctaLabel: "Talk to Neurology Specialist",
     image: neurologyImage,
-    imageAlt: "Neurology treatment",
+    imageAlt: "Neurology treatment in India",
     reversed: true,
   },
   {
     id: 5,
     sectionTag: "Dental Care",
-    title: "Advanced Dental Implant & Cosmetic Dentistry in India",
+    title: "Dental Care & Cosmetic Dentistry in India",
     description:
-      "India’s leading dental specialists provide affordable and high-quality dental treatments using advanced technology for smile restoration, full mouth rehabilitation, and cosmetic dentistry.",
+      "Dental specialists provide evaluation, restorative procedures, implant treatments, and cosmetic dentistry tailored to individual oral healthcare needs.",
     treatments: [
       "Dental Implants",
       "Full Mouth Rehabilitation",
@@ -261,7 +259,7 @@ const specialties = [
     ],
     ctaLabel: "Talk to Dental Specialist",
     image: dentalImage,
-    imageAlt: "Dental implant treatment in India",
+    imageAlt: "Dental treatment in India",
     reversed: false,
   },
 ];
@@ -269,157 +267,63 @@ const specialties = [
 const faqData = [
   {
     id: 1,
-    question:
-      "Why do international patients choose India for medical treatment?",
+    question: "What medical treatments are available in India?",
     answer:
-      "India is one of the world’s leading destinations for advanced and affordable healthcare. International patients choose India because of experienced doctors, modern hospitals, advanced medical technology, shorter waiting times, and significantly lower treatment costs compared to many Western countries.",
+      "India offers treatment and specialist services across many medical specialties. Available options depend on the patient's diagnosis, medical requirements and the hospital or specialist selected.",
   },
   {
     id: 2,
-    question:
-      "How can Humancare World Wide help me during my treatment journey?",
+    question: "How do I choose a hospital in India?",
     answer:
-      "Humancare World Wide provides complete medical tourism assistance including doctor consultations, hospital selection, medical visa support, travel coordination, airport pickup, accommodation assistance, language support, and personalized patient care throughout your treatment journey in India.",
+      "Hospital selection can be based on the required specialty, available departments and facilities, specialist availability, location, international patient services and other relevant requirements.",
   },
   {
     id: 3,
-    question: "What medical treatments are available in India?",
+    question: "Can international patients receive treatment in India?",
     answer:
-      "India offers advanced treatment across multiple specialties including cardiology, cancer care, dental implants, orthopedic surgery, eye treatment, neurology, organ transplants, spine surgery, fertility treatment, and robotic surgery.",
+      "International patients can seek planned medical care in India subject to the hospital's requirements, applicable travel rules and the patient's individual medical circumstances.",
   },
   {
     id: 4,
-    question: "Are hospitals in India safe for international patients?",
+    question: "Can I share my medical reports before travelling?",
     answer:
-      "Yes. Many top hospitals in India are internationally accredited with JCI and NABH certifications. These hospitals follow strict international healthcare protocols, infection control standards, and advanced patient safety measures.",
+      "Yes. Medical reports and relevant documents can be shared for coordination and to help identify suitable hospital or specialist options. Final medical decisions are made by the treating healthcare professional.",
   },
   {
     id: 5,
-    question: "How affordable is medical treatment in India?",
+    question: "Can Human Care help with specialist appointments?",
     answer:
-      "Medical treatment in India is highly affordable compared to countries like the USA, UK, and Europe. International patients can often save between 60% to 80% on treatment costs without compromising on healthcare quality.",
+      "Human Care can assist with appointment coordination based on the selected hospital, specialist availability and the patient's requirements.",
   },
   {
     id: 6,
-    question: "Can I get a medical opinion before traveling to India?",
+    question: "Can you provide treatment cost information?",
     answer:
-      "Yes. You can share your medical reports with Humancare World Wide and receive online consultations or second medical opinions from experienced specialists in India before making travel decisions.",
+      "Treatment costs vary depending on the medical condition, tests, procedures, hospital, specialist fees, duration of care and other requirements. Cost information should be confirmed with the relevant hospital or specialist.",
   },
   {
     id: 7,
-    question:
-      "Which are the best hospitals in India for international patients?",
+    question: "Can you help with travel and accommodation?",
     answer:
-      "India has many internationally recognized hospitals including Apollo Hospitals, Fortis Healthcare, Max Healthcare, Medanta, Manipal Hospitals, Narayana Health, and other advanced multi-specialty healthcare institutions.",
+      "Human Care can assist with selected travel, accommodation and local transfer arrangements for international patients, depending on the requested services and availability.",
   },
   {
     id: 8,
-    question: "Do Indian hospitals provide support for foreign patients?",
+    question: "How long does treatment in India take?",
     answer:
-      "Yes. Most leading hospitals in India have dedicated international patient departments that assist with travel, interpreters, visa documentation, accommodation, appointment scheduling, and personalized patient services.",
+      "Treatment duration varies by condition, procedure, medical evaluation, recovery requirements and follow-up. The treating healthcare professional can provide more specific guidance.",
   },
   {
     id: 9,
-    question: "How do I start the treatment process in India?",
+    question: "Are treatment results guaranteed?",
     answer:
-      "You can begin by contacting Humancare World Wide and sharing your medical reports. Our team will connect you with the right specialists, provide treatment plans, cost estimates, and guide you through the entire medical travel process.",
+      "No medical treatment can be presented as guaranteed for every patient. Outcomes vary according to the medical condition, treatment approach, individual circumstances and other clinical factors.",
   },
   {
     id: 10,
-    question: "How long does it take to receive treatment in India?",
+    question: "How can I contact Human Care Medical Tourism?",
     answer:
-      "Treatment timelines vary depending on the medical condition and procedure. However, one major advantage of India is faster appointment scheduling and minimal waiting periods for surgeries and specialist consultations.",
-  },
-  {
-    id: 11,
-    question: "Can my family member travel with me to India?",
-    answer:
-      "Yes. International patients can travel with attendants or family members. Humancare World Wide also helps arrange accommodation and travel support for companions during the treatment period.",
-  },
-  {
-    id: 12,
-    question: "Will language be a problem during treatment in India?",
-    answer:
-      "No. English is widely spoken in Indian hospitals by doctors, nurses, and hospital staff. Translation assistance can also be arranged for patients who prefer additional language support.",
-  },
-  {
-    id: 13,
-    question: "Do I need a medical visa for treatment in India?",
-    answer:
-      "Yes. Most international patients require an Indian medical visa. Humancare World Wide assists with hospital invitation letters and complete visa documentation support.",
-  },
-  {
-    id: 14,
-    question: "How quickly can I get a medical visa for India?",
-    answer:
-      "Medical visa processing times depend on your country and embassy procedures, but many patients receive approvals within a short period after submitting required documents.",
-  },
-  {
-    id: 15,
-    question:
-      "Can Humancare World Wide help with airport pickup and accommodation?",
-    answer:
-      "Yes. We provide airport pickup, hotel booking assistance, guest house arrangements, and accommodation support near your selected hospital in India.",
-  },
-  {
-    id: 16,
-    question: "Do hospitals in India offer advanced medical technology?",
-    answer:
-      "Yes. Many Indian hospitals use advanced technologies such as robotic surgery systems, Proton Beam Therapy, CyberKnife, AI-based diagnostics, minimally invasive surgical techniques, and advanced imaging systems.",
-  },
-  {
-    id: 17,
-    question: "Is cardiac treatment in India affordable?",
-    answer:
-      "Yes. India is globally recognized for affordable and advanced cardiac treatment including bypass surgery, angioplasty, valve replacement, and minimally invasive heart procedures.",
-  },
-  {
-    id: 18,
-    question: "Why choose India for cancer treatment?",
-    answer:
-      "India offers comprehensive cancer care with experienced oncologists, modern radiation technology, immunotherapy, targeted therapy, robotic surgery, and personalized treatment plans at affordable costs.",
-  },
-  {
-    id: 19,
-    question: "Are dental implants in India safe and affordable?",
-    answer:
-      "Yes. India has internationally trained dental specialists offering advanced implant procedures, smile makeovers, and full-mouth rehabilitation using modern digital dentistry technology at lower costs.",
-  },
-  {
-    id: 20,
-    question: "What orthopedic treatments are available in India?",
-    answer:
-      "India provides advanced orthopedic treatments including knee replacement, hip replacement, spine surgery, arthroscopy, sports injury treatment, and robotic joint replacement surgery.",
-  },
-  {
-    id: 21,
-    question: "Can I get eye surgery in India?",
-    answer:
-      "Yes. India is well known for advanced eye care treatments including LASIK, cataract surgery, retina treatment, cornea transplant, glaucoma treatment, and pediatric ophthalmology.",
-  },
-  {
-    id: 22,
-    question: "Do Indian hospitals provide organ transplant services?",
-    answer:
-      "Yes. India has highly specialized transplant centers offering liver transplant, kidney transplant, heart transplant, and bone marrow transplant programs with experienced medical teams.",
-  },
-  {
-    id: 23,
-    question: "What is included in international patient support services?",
-    answer:
-      "International patient services may include medical visa support, airport pickup, accommodation assistance, translators, appointment scheduling, treatment coordination, rehabilitation support, and post-treatment follow-up care.",
-  },
-  {
-    id: 24,
-    question: "Can I receive follow-up care after returning home?",
-    answer:
-      "Yes. Many hospitals and doctors in India offer online follow-up consultations and telemedicine support after you return to your home country.",
-  },
-  {
-    id: 25,
-    question: "Why should I choose Humancare World Wide?",
-    answer:
-      "Humancare World Wide focuses on providing compassionate, transparent, and personalized medical tourism support for international patients seeking high-quality healthcare in India. Our goal is to make your medical journey safe, smooth, and stress-free.",
+      "Use the contact options and CTA buttons provided on this page to speak with the Human Care Medical Tourism team about your medical-travel requirements.",
   },
 ];
 
@@ -427,16 +331,16 @@ const DOCTORS = [
   {
     name: "Dr. Vishnu Agarwal",
     education: "MBBS, MS - General Surgery, Surgical Oncology Fellowship",
-    spec: "Surgical Oncologist, Robotic Cancer Surgeon, Laparoscopic Oncosurgeon",
-    desc: "Dr. Vishnu Agarwal is a highly accomplished Surgical Oncologist with over 15 years of experience specializing in laparoscopic and robotic cancer surgeries. He completed his MBBS and MS in General Surgery from Mumbai University and pursued advanced training in Surgical Oncology at the prestigious Tata Memorial Hospital, Mumbai. To further enhance his expertise in minimally invasive cancer treatment, Dr. Vishnu Agarwal completed a fellowship in Laparoscopic and Robotic Gynaecology and Colorectal Cancer Surgery at St. Mary’s Hospital, Seoul, South Korea, along with advanced robotic surgical training in France. He is widely recognized for delivering precision-driven minimally invasive cancer surgeries that promote faster recovery, reduced post-operative complications, and improved patient outcomes. Dr. Vishnu Agarwal has extensive expertise in the management of gynecological cancers, including advanced laparoscopic and robotic surgeries for endometrial, ovarian, and cervical cancers. He is also a pioneer in breast cancer surgery and performed the first robotic surgery for a breast tumor in India. Over his distinguished career, he has successfully performed more than a thousand breast cancer surgeries, including mastectomies, breast-conserving surgeries, sentinel lymph node biopsies, and oncoplastic procedures. His expertise further extends to minimally invasive colorectal cancer surgeries, where he has managed several highly complex cases with exceptional outcomes. Having treated over 6,000 national and international patients, Dr. Vishnu Agarwal is known for combining advanced robotic technology with compassionate, patient-focused cancer care. He actively participates in surgical teaching programs, live demonstrations, and academic training sessions, contributing significantly to the advancement of modern surgical oncology.",
+    spec: "Surgical Oncologist, Laparoscopic & Robotic Surgery Specialist",
+    desc: "Dr. Vishnu Agarwal is a Surgical Oncologist with over 15 years of clinical experience in surgical oncology, laparoscopic and robotic surgical procedures. He completed his MBBS and MS in General Surgery from Mumbai University and received specialized surgical oncology training at Tata Memorial Hospital, Mumbai, followed by advanced surgical fellowships in South Korea and France. His clinical focus includes breast surgery, gynecologic oncology, and colorectal surgical procedures. He works with multidisciplinary teams to coordinate individualized treatment plans for national and international patients.",
     photoUrl: VishnuAgarwalImage,
   },
   {
     name: "Dr. Vivek Allahbadia",
     education:
       "MBBS, D.Orth, MS (Orthopaedics), FCPS Orthopaedics, MCh Orthopaedics (UK)",
-    spec: "Orthopaedic Surgeon, Robotic Joint Replacement Specialist",
-    desc: "Dr. Vivek Allahbadia is a highly experienced Orthopaedic and Joint Replacement Surgeon with over 28 years of expertise in robotic knee replacement, hip replacement surgery, sports injury treatment, and advanced orthopedic care. Internationally trained in the UK, Singapore, Prague, and Australia, he is recognized as one of Mumbai's pioneers in robotic joint replacement surgery. His specialties include robotic knee replacement, total hip replacement, revision joint replacement, minimally invasive orthopedic surgery, and sports injury management. Patients from around the world choose Dr. Allahbadia for advanced orthopedic treatment, modern surgical techniques, and personalized rehabilitation programs.",
+    spec: "Orthopaedic Surgeon, Joint Replacement Specialist",
+    desc: "Dr. Vivek Allahbadia is an Orthopaedic and Joint Replacement Surgeon with over 28 years of clinical experience in orthopedic care, joint replacement procedures, and sports injury management. He received postgraduate and advanced fellowship training in the UK, Singapore, Australia, and the Czech Republic. His clinical practice focuses on knee replacement, hip replacement, arthroscopic procedures, and post-surgical rehabilitation planning.",
     photoUrl: VivekAllahbadiaImage,
   },
   {
@@ -444,14 +348,14 @@ const DOCTORS = [
     education:
       "MBBS, Diplomate American Board of Surgery, Diplomate American Board of Cardiothoracic Surgery",
     spec: "Cardiovascular and Cardiothoracic Surgeon",
-    desc: "Dr. Naresh Trehan is one of the most renowned Cardiovascular and Cardiothoracic Surgeons in India with over 40 years of experience in advanced heart surgery and cardiac care. Founder and Chairman of Medanta - The Medicity, Gurugram, he has successfully performed more than 48,000 cardiac surgeries. His expertise includes coronary artery bypass grafting (CABG), heart valve replacement, aortic aneurysm surgery, minimally invasive cardiac surgery, and complex cardiovascular procedures. International patients from across Africa, the Middle East, and Asia choose Dr. Trehan for advanced heart treatment, world-class surgical expertise, and exceptional patient outcomes.",
+    desc: "Dr. Naresh Trehan is a Cardiovascular and Cardiothoracic Surgeon with over 40 years of clinical experience in cardiac surgery and cardiovascular care. Founder and Chairman of Medanta - The Medicity, Gurugram, he has extensive surgical experience in coronary artery bypass grafting (CABG), heart valve replacement, aortic surgery, and minimally invasive cardiac procedures for domestic and international patients.",
     photoUrl: NareshTrehanImage,
   },
   {
     name: "Dr. K R Balakrishnan",
     education: "MBBS, MS (General Surgery), MCh (Cardiothoracic Surgery)",
     spec: "Cardiothoracic and Heart Transplant Surgeon",
-    desc: "Dr. K R Balakrishnan is one of India's leading Heart Transplant and Cardiothoracic Surgeons with over 40 years of experience in advanced cardiac and transplant surgery. He has performed more than 18,000 cardiac procedures and over 190 heart transplants. His expertise includes heart transplant surgery, ventricular assist device (VAD) implantation, pediatric cardiac surgery, lung transplantation, and advanced heart failure management. Widely recognized as a pioneer in transplant medicine, Dr. Balakrishnan is trusted by international patients seeking complex heart treatment and transplant care in India.",
+    desc: "Dr. K R Balakrishnan is a Cardiothoracic and Heart Transplant Surgeon with over 40 years of experience in advanced cardiovascular surgery and transplant care. His clinical practice includes cardiothoracic surgical procedures, ventricular assist device (VAD) management, pediatric cardiac surgery, and heart failure management for patients seeking specialized cardiac care.",
     photoUrl: KRBalakrishnanImage,
   },
   {
@@ -459,15 +363,14 @@ const DOCTORS = [
     education:
       "MBBS, MD, MS (Ophthalmology), DNB, MNAMS, FRCS, FICO (UK), FAICO",
     spec: "Ophthalmologist, Cataract & Refractive Surgeon",
-    desc: "Prof. Dr. Mahipal S Sachdev is a Padma Shri award-winning Ophthalmologist and one of India's most respected eye surgeons with over 42 years of experience. He specializes in LASIK, SMILE eye surgery, cataract surgery, cornea transplantation, keratoconus treatment, and advanced vision correction procedures. As Chairman and Medical Director of the Centre for Sight Group of Eye Hospitals, he has pioneered several modern eye surgery techniques in India and is widely recognized for excellence in ophthalmology and patient care.",
+    desc: "Prof. Dr. Mahipal S Sachdev is a recipient of the Padma Shri award and an experienced Ophthalmologist with over 42 years of clinical practice. As Chairman and Medical Director of the Centre for Sight Group of Eye Hospitals, his clinical focus includes refractive procedures, cataract surgery, corneal conditions, and comprehensive vision care services.",
     photoUrl: MahipalSachdevImage,
   },
-
   {
     name: "Dr. C. Sharath Babu",
     education: "BDS, MDS, FICOI",
     spec: "Dental Implantologist, Prosthodontist",
-    desc: "Dr. C. Sharath Babu is a highly experienced Dental Implantologist and Prosthodontist with over 15 years of expertise in dental implants, full-mouth rehabilitation, smile designing, and advanced restorative dentistry. He specializes in implant surgery, cosmetic dental treatments, and comprehensive oral rehabilitation procedures. Known for combining modern dental technology with patient-focused care, Dr. Sharath Babu is a preferred choice for international patients seeking affordable and high-quality dental treatment in India.",
+    desc: "Dr. C. Sharath Babu is a Dental Implantologist and Prosthodontist with over 15 years of experience in restorative and cosmetic dentistry. His practice focuses on dental implant procedures, oral rehabilitation, and restorative dental care for local and international patients.",
     photoUrl: CSharathBabuImage,
   },
 ];
@@ -519,7 +422,6 @@ const TreatmentCard = ({ specialty }) => {
 const GeneralCategory = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const timerRef = useRef(null);
-  // Group reviews into pairs → [[r0,r1], [r2,r3], ...]
   const [activeIndex, setActiveIndex] = useState(null);
   const [selectedDoctor, setSelectedDoctor] = useState(null);
 
@@ -533,6 +435,7 @@ const GeneralCategory = () => {
       toggleFAQ(index);
     }
   };
+
   const slides = [];
   for (let i = 0; i < reviews.length; i += 2) {
     slides.push(reviews.slice(i, i + 2));
@@ -594,45 +497,39 @@ const GeneralCategory = () => {
         />
         {/* Primary SEO */}
         <title>
-          Medical Treatment in India | Affordable Healthcare for International
-          Patients
+          Best Medical Treatment in India for International Patients | Human Care Medical Tourism
         </title>
 
         <meta
           name="description"
-          content="Get affordable medical treatment in India with top hospitals, experienced doctors, advanced technology, and complete support for international patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan."
+          content="Explore medical treatment options in India with support for hospital selection, specialist appointments, medical-report coordination, treatment information and international patient arrangements."
         />
 
         <meta
           name="keywords"
           content="
-      medical treatment in india,
-      affordable healthcare india,
-      medical tourism india,
-      treatment in india for international patients,
-      best hospitals in india,
-      healthcare in india,
-      cardiology treatment india,
-      cancer treatment india,
-      dental treatment india,
-      orthopedic surgery india,
-      neurology treatment india,
-      eye surgery india,
-      robotic surgery india,
-      medical visa assistance india,
-      international patient care india,
-      affordable surgery in india,
-      top doctors in india,
-      medical tourism company india,
-      advanced treatment india,
-      humancare world wide
-    "
+            best medical treatment in India,
+            medical treatment in India,
+            best medical treatment in India for international patients,
+            medical treatment in India for international patients,
+            medical tourism in India,
+            hospitals in India,
+            best hospitals in India,
+            hospitals in India for international patients,
+            medical specialists in India,
+            doctors in India,
+            treatment cost in India,
+            international patient services,
+            healthcare in India,
+            specialist hospitals in India,
+            medical treatment cost in India
+          "
         />
 
         {/* Canonical URL */}
         <link
           rel="canonical"
-          href="https://humancaremedicaltourism.com/medical-treatment-in-india"
+          href="https://humancaremedicaltourism.com/best-medical-treatment-in-india"
         />
 
         {/* Robots */}
@@ -641,12 +538,12 @@ const GeneralCategory = () => {
         {/* Open Graph / Facebook */}
         <meta
           property="og:title"
-          content="Medical Treatment in India | Affordable Healthcare for International Patients"
+          content="Best Medical Treatment in India for International Patients | Human Care Medical Tourism"
         />
 
         <meta
           property="og:description"
-          content="Connect with top hospitals and experienced specialists in India for affordable and advanced medical treatment with complete international patient support."
+          content="Explore medical treatment options in India with support for hospital selection, specialist appointments, medical-report coordination, treatment information and international patient arrangements."
         />
 
         <meta
@@ -656,7 +553,7 @@ const GeneralCategory = () => {
 
         <meta
           property="og:url"
-          content="https://humancaremedicaltourism.com/medical-treatment-in-india"
+          content="https://humancaremedicaltourism.com/best-medical-treatment-in-india"
         />
 
         <meta property="og:type" content="website" />
@@ -666,12 +563,12 @@ const GeneralCategory = () => {
 
         <meta
           name="twitter:title"
-          content="Medical Treatment in India | Affordable Healthcare"
+          content="Best Medical Treatment in India for International Patients | Human Care Medical Tourism"
         />
 
         <meta
           name="twitter:description"
-          content="Affordable medical treatment in India with top hospitals, advanced technology, and trusted support for international patients."
+          content="Explore medical treatment options in India with support for hospital selection, specialist appointments, medical-report coordination, treatment information and international patient arrangements."
         />
 
         <meta
@@ -686,19 +583,20 @@ const GeneralCategory = () => {
         {/* Language */}
         <meta httpEquiv="content-language" content="en" />
       </Helmet>
+
       {/* ════ SECTION 1 — HERO ════ */}
       <section className="general-hero-section">
         {/* Background Image */}
         <img
           src={heroImage}
-          alt="International patient receiving medical treatment in India"
+          alt="Best medical treatment in India for international patients"
           className="general-hero-bg-image"
           loading="eager"
-        fetchPriority="high"
-        width={740}
-        height={493}
-        decoding="async"
-      />
+          fetchPriority="high"
+          width={740}
+          height={493}
+          decoding="async"
+        />
 
         {/* Gradient Overlay */}
         <div className="general-hero-overlay" />
@@ -706,20 +604,30 @@ const GeneralCategory = () => {
         {/* Content */}
         <div className="general-hero-content">
           <span className="general-hero-badge">
-            Trusted by 50,000+ International Patients
+            International Patient Support in India
           </span>
 
           <h1 className="general-hero-heading">
-            Your Health, Our Mission: World-Class Medical Treatment in India
+            Best Medical Treatment in India for International Patients
           </h1>
 
           <p className="general-hero-subheading">
-            Humancare World Wide helps patients from Kenya, Uganda, Tanzania,
-            Nigeria, and South Sudan connect with the best hospitals in India
-            for advanced cardiology, cancer treatment, dental implants,
-            orthopedic surgery, and eye care. We guide you through every step,
-            from doctor consultation and medical visa assistance to hospital
-            admission and recovery support.
+            Explore medical treatment options in India with support for hospital
+            selection, specialist appointments, medical-report coordination,
+            treatment information and international patient arrangements.
+          </p>
+
+          <p
+            style={{
+              marginTop: "12px",
+              fontSize: "0.95rem",
+              color: "rgba(255, 255, 255, 0.9)",
+              lineHeight: "1.6",
+            }}
+          >
+            Human Care Medical Tourism helps international patients coordinate
+            healthcare-related services in India based on their medical
+            requirements and travel needs.
           </p>
 
           <div className="general-hero-ctas">
@@ -739,6 +647,7 @@ const GeneralCategory = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 2 — WHY CHOOSE INDIA FOR MEDICAL TREATMENT? ════ */}
       <section className="why-choose-india-section">
         <div className="why-choose-container">
           <div className="why-choose-header">
@@ -746,100 +655,113 @@ const GeneralCategory = () => {
               Why Choose India for Medical Treatment?
             </h2>
             <p className="why-choose-subheading">
-              India has become one of the world’s leading destinations for
-              affordable and advanced healthcare. International patients choose
-              India because of world-class hospitals, experienced doctors,
-              modern medical technology, and significantly lower treatment
-              costs.
+              India offers a broad range of hospitals, medical specialties and
+              healthcare services for patients seeking treatment internationally.
+              The appropriate hospital and specialist depend on the patient's
+              diagnosis, medical requirements and individual circumstances.
+            </p>
+            <p
+              style={{
+                marginTop: "10px",
+                color: "#64748b",
+                fontSize: "0.95rem",
+                lineHeight: "1.6",
+              }}
+            >
+              International patients can explore treatment options across different
+              specialties while receiving assistance with appointment
+              coordination, medical-document sharing and travel-related
+              arrangements.
             </p>
           </div>
 
           <div className="why-choose-cards-grid">
-            {/* Card 1: Advanced Medical Technology */}
+            {/* Card 1: Multiple Medical Specialties */}
             <div className="why-choose-card">
               <div className="why-choose-card-icon">
                 <FaRobot />
               </div>
               <h3 className="why-choose-card-title">
-                Advanced Medical Technology
+                Multiple Medical Specialties
               </h3>
               <p className="why-choose-card-text">
-                Robotic surgery systems, Proton Beam Therapy, CyberKnife,
-                advanced imaging systems, and minimally invasive procedures
+                Access information about hospitals and specialists across a wide
+                range of treatment areas.
               </p>
             </div>
 
-            {/* Card 2: Affordable Treatment Costs */}
-            <div className="why-choose-card">
-              <div className="why-choose-card-icon">
-                <FaMoneyBillWave />
-              </div>
-              <h3 className="why-choose-card-title">
-                Affordable Treatment Costs
-              </h3>
-              <p className="why-choose-card-text">
-                Save up to 70–80% compared to treatment costs in Western
-                countries.
-              </p>
-            </div>
-
-            {/* Card 3: Globally Experienced Doctors */}
+            {/* Card 2: Specialist-Led Care */}
             <div className="why-choose-card">
               <div className="why-choose-card-icon">
                 <FaUserMd />
               </div>
               <h3 className="why-choose-card-title">
-                Globally Experienced Doctors
+                Specialist-Led Care
               </h3>
               <p className="why-choose-card-text">
-                US/UK-trained specialists with years of international
-                experience.
+                Coordinate consultations with relevant medical specialists based on
+                the patient's requirements.
               </p>
             </div>
 
-            {/* Card 4: Faster Treatment Access */}
+            {/* Card 3: Hospital Options */}
+            <div className="why-choose-card">
+              <div className="why-choose-card-icon">
+                <FaHospital />
+              </div>
+              <h3 className="why-choose-card-title">
+                Hospital Options
+              </h3>
+              <p className="why-choose-card-text">
+                Compare available hospitals using verified information about
+                departments, facilities and international patient services.
+              </p>
+            </div>
+
+            {/* Card 4: Treatment Information */}
             <div className="why-choose-card">
               <div className="why-choose-card-icon">
                 <FaClock />
               </div>
-              <h3 className="why-choose-card-title">Faster Treatment Access</h3>
+              <h3 className="why-choose-card-title">Treatment Information</h3>
               <p className="why-choose-card-text">
-                Minimal waiting time for surgeries and specialist consultations.
+                Receive general information about available procedures and treatment
+                approaches before making arrangements.
               </p>
             </div>
 
-            {/* Card 5: International Patient Care */}
+            {/* Card 5: International Patient Support */}
             <div className="why-choose-card">
               <div className="why-choose-card-icon">
                 <FaGlobe />
               </div>
               <h3 className="why-choose-card-title">
-                International Patient Care
+                International Patient Support
               </h3>
               <p className="why-choose-card-text">
-                Dedicated teams for travel, language support, and accommodation
-                assistance.
+                Assistance with appointments, medical reports, travel coordination
+                and communication.
               </p>
             </div>
 
-            {/* Card 6: Personalized Recovery Support */}
+            {/* Card 6: Cost Information */}
             <div className="why-choose-card">
               <div className="why-choose-card-icon">
-                <FaHeartbeat />
+                <FaMoneyBillWave />
               </div>
               <h3 className="why-choose-card-title">
-                Personalized Recovery Support
+                Cost Information
               </h3>
               <p className="why-choose-card-text">
-                Post-treatment rehabilitation and online follow-up consultation
-                support.
+                Request treatment-cost information based on the available medical
+                details and hospital requirements.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ════ WHY CHOOSE HUMANCARE WORLDWIDE ════ */}
+      {/* ════ SECTION 3 — MEDICAL TOURISM IN INDIA ════ */}
       <section className="humancare-support-section">
         <div className="humancare-support-container">
           <div className="humancare-support-image">
@@ -847,67 +769,72 @@ const GeneralCategory = () => {
               src={WhyHumancare}
               alt="Medical tourism support services in India for international patients"
               loading="lazy"
-        width={740}
-        height={463}
-        decoding="async"
-      />
+              width={740}
+              height={463}
+              decoding="async"
+            />
             <div className="humancare-image-overlay" />
           </div>
 
           <div className="humancare-support-content">
             <h2 className="humancare-support-heading">
-              WHY CHOOSE HUMANCARE MEDICAL TOURISM?
+              Medical Tourism in India
             </h2>
             <p className="humancare-support-subheading">
-              Complete Support Throughout Your Medical Journey
+              Medical tourism in India involves travelling for planned medical
+              consultations, procedures or treatment while coordinating healthcare
+              and travel arrangements. Human Care Medical Tourism supports
+              international patients with hospital and specialist coordination,
+              medical-document sharing, appointment assistance and selected
+              travel-related services.
             </p>
 
             <div className="humancare-services-list">
               <div className="humancare-service-item">
+                <FaHospital className="humancare-service-icon" />
+                <div className="humancare-service-text">
+                  <h3>Hospital & Specialist Options</h3>
+                  <p>Explore verified hospitals and specialist departments in India.</p>
+                </div>
+              </div>
+
+              <div className="humancare-service-item">
+                <FaFileAlt className="humancare-service-icon" />
+                <div className="humancare-service-text">
+                  <h3>Medical Report Coordination</h3>
+                  <p>Coordination for sharing medical reports and diagnostic records.</p>
+                </div>
+              </div>
+
+              <div className="humancare-service-item">
                 <FaUserMd className="humancare-service-icon" />
                 <div className="humancare-service-text">
-                  <h3>Medical Consultation</h3>
-                  <p>Get treatment opinions from top specialists.</p>
+                  <h3>Consultation & Appointment Assistance</h3>
+                  <p>Scheduling consultations with relevant healthcare professionals.</p>
+                </div>
+              </div>
+
+              <div className="humancare-service-item">
+                <FaClipboardList className="humancare-service-icon" />
+                <div className="humancare-service-text">
+                  <h3>Treatment & Procedure Information</h3>
+                  <p>General information on available procedures and treatment approaches.</p>
+                </div>
+              </div>
+
+              <div className="humancare-service-item">
+                <FaPassport className="humancare-service-icon" />
+                <div className="humancare-service-text">
+                  <h3>Travel & Accommodation Coordination</h3>
+                  <p>Assistance with accommodation and practical travel planning.</p>
                 </div>
               </div>
 
               <div className="humancare-service-item">
                 <FaGlobe className="humancare-service-icon" />
                 <div className="humancare-service-text">
-                  <h3>Medical Visa Assistance</h3>
-                  <p>Fast visa invitation and documentation support.</p>
-                </div>
-              </div>
-
-              <div className="humancare-service-item">
-                <FaPhoneAlt className="humancare-service-icon" />
-                <div className="humancare-service-text">
-                  <h3>Travel & Airport Pickup</h3>
-                  <p>End-to-end transport coordination.</p>
-                </div>
-              </div>
-
-              <div className="humancare-service-item">
-                <FaHeartbeat className="humancare-service-icon" />
-                <div className="humancare-service-text">
-                  <h3>Accommodation Support</h3>
-                  <p>Affordable hotels and apartments near hospitals.</p>
-                </div>
-              </div>
-
-              <div className="humancare-service-item">
-                <FaClock className="humancare-service-icon" />
-                <div className="humancare-service-text">
-                  <h3>Dedicated Patient Coordinator</h3>
-                  <p>24/7 personal support throughout treatment.</p>
-                </div>
-              </div>
-
-              <div className="humancare-service-item">
-                <FaGlobe className="humancare-service-icon" />
-                <div className="humancare-service-text">
-                  <h3>Language Assistance</h3>
-                  <p>Translators for Swahili, Hausa, Arabic, and more.</p>
+                  <h3>Airport Transfer & Communication</h3>
+                  <p>Airport assistance and ongoing international patient communication.</p>
                 </div>
               </div>
             </div>
@@ -915,6 +842,7 @@ const GeneralCategory = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 4 — BEST HOSPITALS IN INDIA ════ */}
       <section className="hn-section">
         <div className="hn-container">
           <div className="hn-title-wrap">
@@ -923,9 +851,10 @@ const GeneralCategory = () => {
               Best Hospitals in India for International Patients
             </h2>
             <p className="hn-subtitle">
-              Humancare World Wide partners with some of the top hospitals in
-              India known for advanced medical care, international patient
-              services, and high treatment success rates.
+              Hospitals in India provide care across a wide range of medical
+              specialties. The most suitable hospital depends on the patient's
+              treatment requirements, specialty, location, available services and
+              specialist availability.
             </p>
           </div>
           <div className="hn-slider-wrapper">
@@ -971,7 +900,7 @@ const GeneralCategory = () => {
                       <div className="hn-card-image">
                         <img
                           src={h.image}
-                          alt={`${h.name} ${h.sub} - ${h.location} - Best hospital for ${h.specialties[0]} in india for international patients`}
+                          alt={`${h.name} ${h.sub} - ${h.location} - hospital for ${h.specialties[0]} in India`}
                           loading="lazy"
                         />
                         <div className="hn-card-overlay" />
@@ -1007,6 +936,7 @@ const GeneralCategory = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 5 — TREATMENT SPECIALTIES ════ */}
       <section className="ts-section">
         {/* Section Header */}
         <div className="ts-header">
@@ -1015,8 +945,10 @@ const GeneralCategory = () => {
             Explore World-Class Treatment Specialties in India
           </h2>
           <p className="ts-header__sub">
-            Designed to deliver advanced care, faster recovery, and better
-            patient outcomes across leading medical disciplines.
+            Explore medical treatment specialties available in India and learn about
+            the relevant hospital and specialist options. Treatment suitability
+            depends on the patient's medical condition and evaluation by a
+            qualified healthcare professional.
           </p>
         </div>
 
@@ -1028,14 +960,27 @@ const GeneralCategory = () => {
         </div>
       </section>
 
-      {/* ════ SECTION 4 — DOCTORS ════ */}
+      {/* ════ SECTION 6 — DOCTORS & SPECIALISTS ════ */}
       <section className="doctor-section-light">
         <div className="doctor-container">
           <div className="doctor-title-wrap">
-            <span className="doctor-label">Our Specialists</span>
+            <span className="doctor-label">Medical Specialists</span>
             <h2 className="doctor-h2">
-              Best Doctors & Specialists in India for International Patients
+              Medical Specialists in India for International Patients
             </h2>
+            <p
+              style={{
+                maxWidth: "700px",
+                margin: "12px auto 0",
+                color: "#64748b",
+                fontSize: "0.95rem",
+                lineHeight: "1.5",
+              }}
+            >
+              International patients can explore specialist options based on their
+              medical requirements, specialty, hospital affiliation, qualifications
+              and verified professional information.
+            </p>
           </div>
           <div className="doctor-cards-grid">
             {DOCTORS.map((d, i) => (
@@ -1116,14 +1061,17 @@ const GeneralCategory = () => {
         </div>
       )}
 
-      {/* ════ MEDICAL JOURNEY PROCESS ════ */}
+      {/* ════ SECTION 7 — INTERNATIONAL PATIENT SERVICES ════ */}
       <section className="journey-process-section">
         <div className="journey-process-container">
           {/* Section Header */}
           <div className="journey-process-header">
-            <h2 className="journey-process-heading">MEDICAL JOURNEY PROCESS</h2>
+            <h2 className="journey-process-heading">International Patient Services</h2>
             <p className="journey-process-subheading">
-              Your Treatment Journey Made Simple
+              Human Care provides coordination support for international patients
+              travelling to India for planned medical care. Services can be arranged
+              according to the patient's requirements and the availability of the
+              selected hospital or specialist.
             </p>
           </div>
 
@@ -1135,10 +1083,9 @@ const GeneralCategory = () => {
               <div className="journey-step-icon">
                 <FaFileAlt />
               </div>
-              <h3 className="journey-step-title">Share Medical Reports</h3>
+              <h3 className="journey-step-title">Medical Report Sharing</h3>
               <p className="journey-step-description">
-                Send us your medical reports and diagnostic documents for
-                initial assessment.
+                Medical report sharing and coordination with selected hospital departments.
               </p>
             </div>
 
@@ -1146,12 +1093,11 @@ const GeneralCategory = () => {
             <div className="journey-step-card">
               <div className="journey-step-number">02</div>
               <div className="journey-step-icon">
-                <FaStethoscope />
+                <FaHospital />
               </div>
-              <h3 className="journey-step-title">Get Expert Opinion</h3>
+              <h3 className="journey-step-title">Hospital & Specialist Selection</h3>
               <p className="journey-step-description">
-                Receive professional consultation from India's top medical
-                specialists.
+                Assistance with identifying suitable hospital and specialist options.
               </p>
             </div>
 
@@ -1159,11 +1105,11 @@ const GeneralCategory = () => {
             <div className="journey-step-card">
               <div className="journey-step-number">03</div>
               <div className="journey-step-icon">
-                <FaClipboardList />
+                <FaStethoscope />
               </div>
-              <h3 className="journey-step-title">Receive Treatment Plan</h3>
+              <h3 className="journey-step-title">Appointment Scheduling</h3>
               <p className="journey-step-description">
-                Get a detailed treatment plan with cost estimates and timeline.
+                Coordinating consultations and specialist appointment scheduling.
               </p>
             </div>
 
@@ -1171,12 +1117,11 @@ const GeneralCategory = () => {
             <div className="journey-step-card">
               <div className="journey-step-number">04</div>
               <div className="journey-step-icon">
-                <FaPassport />
+                <FaClipboardList />
               </div>
-              <h3 className="journey-step-title">Visa & Travel Support</h3>
+              <h3 className="journey-step-title">Treatment Information</h3>
               <p className="journey-step-description">
-                Complete assistance with visa invitation letters and travel
-                arrangements.
+                Treatment information, documentation support, and cost estimates.
               </p>
             </div>
 
@@ -1184,12 +1129,11 @@ const GeneralCategory = () => {
             <div className="journey-step-card">
               <div className="journey-step-number">05</div>
               <div className="journey-step-icon">
-                <FaHospital />
+                <FaPassport />
               </div>
-              <h3 className="journey-step-title">Hospital Admission</h3>
+              <h3 className="journey-step-title">Travel & Accommodation</h3>
               <p className="journey-step-description">
-                Seamless hospital admission with dedicated patient coordinator
-                support.
+                Assistance with medical visa guidance, travel planning, and lodging.
               </p>
             </div>
 
@@ -1199,19 +1143,32 @@ const GeneralCategory = () => {
               <div className="journey-step-icon">
                 <FaHandHoldingHeart />
               </div>
-              <h3 className="journey-step-title">Recovery & Follow-Up</h3>
+              <h3 className="journey-step-title">Communication & Follow-Up</h3>
               <p className="journey-step-description">
-                Post-treatment care with online follow-ups and recovery
-                monitoring.
+                Ongoing communication support during the visit and follow-up coordination.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* ════ SECTION 8 — PATIENT REVIEWS ════ */}
       <section className="general-reviews-section">
         <div className="general-reviews-content">
-          <h2 className="general-reviews-heading">Our Clients Review</h2>
+          <h2 className="general-reviews-heading">Our Patients' Reviews</h2>
+          <p
+            style={{
+              maxWidth: "600px",
+              margin: "0 0 20px 0",
+              color: "#64748b",
+              fontSize: "0.95rem",
+              lineHeight: "1.5",
+            }}
+          >
+            Read experiences shared by patients who have used Human Care's
+            coordination services. Every patient's healthcare journey is different,
+            and individual feedback is not a guarantee of medical outcomes.
+          </p>
 
           {/* Slider wrapper */}
           <div className="general-reviews-slider-wrapper">
@@ -1225,7 +1182,18 @@ const GeneralCategory = () => {
                     <div key={cardIndex} className="general-reviews-card">
                       <Stars />
                       <p className="general-reviews-card-text">{r.text}</p>
-                      {/* <p className="general-reviews-card-name">{r.name}</p> */}
+                      {r.name && (
+                        <p
+                          style={{
+                            marginTop: "12px",
+                            fontWeight: "600",
+                            fontSize: "0.9rem",
+                            color: "#0f172a",
+                          }}
+                        >
+                          {r.name}
+                        </p>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -1249,15 +1217,16 @@ const GeneralCategory = () => {
         <div className="general-reviews-image-wrapper">
           <img
             src={ThumbnailImage}
-            alt="Happy international general patient in India"
+            alt="International patient feedback for medical treatment in India"
             className="general-reviews-image"
-        width={1200}
-        height={800}
-        decoding="async"
-      />
+            width={1200}
+            height={800}
+            decoding="async"
+          />
         </div>
       </section>
 
+      {/* ════ SECTION 9 — FREQUENTLY ASKED QUESTIONS ════ */}
       <section className="general-faq-section" aria-labelledby="faq-heading">
         <div className="general-faq-container">
           {/* Section Header */}
@@ -1265,10 +1234,6 @@ const GeneralCategory = () => {
             <span className="general-faq-badge">
               Frequently Asked Questions
             </span>
-            {/* <p className="general-faq-subtitle">
-              Get answers to common questions about general care, best general
-              hospitals, and treatment options in India
-            </p> */}
           </div>
 
           {/* FAQ Accordion */}
@@ -1319,6 +1284,7 @@ const GeneralCategory = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 10 — FINAL CTA SECTION ════ */}
       <section className="general-cta-section">
         {/* Background Image */}
         <img
@@ -1326,10 +1292,10 @@ const GeneralCategory = () => {
           alt="Medical treatment in India for international patients"
           className="general-cta-bg-image"
           loading="lazy"
-        width={740}
-        height={493}
-        decoding="async"
-      />
+          width={740}
+          height={493}
+          decoding="async"
+        />
 
         {/* Gradient Overlay */}
         <div className="general-cta-overlay" />
@@ -1338,7 +1304,7 @@ const GeneralCategory = () => {
         <div className="general-cta-container">
           <div className="general-cta-content">
             <span className="general-cta-badge">
-              Trusted Medical Tourism Partner for African Patients
+              Medical Treatment Coordination
             </span>
 
             <h2 className="general-cta-title">
@@ -1346,36 +1312,35 @@ const GeneralCategory = () => {
             </h2>
 
             <p className="general-cta-subtitle">
-              Connect with experienced doctors and the best hospitals in India
-              for advanced cardiology, cancer treatment, dental implants,
-              orthopedic surgery, eye care, and more with complete international
-              patient support.
+              Speak with Human Care Medical Tourism to discuss your medical
+              requirements, hospital options, specialist coordination and
+              international patient support.
             </p>
 
             <div className="general-cta-benefits-list">
               <div className="general-cta-benefit-point">
                 <FaCheckCircle className="general-cta-check-icon" />
-                <span>Best Medical opinion from specialists</span>
+                <span>Specialist consultation and hospital selection support</span>
               </div>
 
               <div className="general-cta-benefit-point">
                 <FaCheckCircle className="general-cta-check-icon" />
-                <span>Affordable treatment packages in India</span>
+                <span>Treatment information and available cost estimates</span>
               </div>
 
               <div className="general-cta-benefit-point">
                 <FaCheckCircle className="general-cta-check-icon" />
-                <span>Medical visa & travel assistance</span>
+                <span>Medical visa and travel coordination</span>
               </div>
 
               <div className="general-cta-benefit-point">
                 <FaCheckCircle className="general-cta-check-icon" />
-                <span>Partnered with top hospitals in India</span>
+                <span>Hospital appointment and admission assistance</span>
               </div>
 
               <div className="general-cta-benefit-point">
                 <FaCheckCircle className="general-cta-check-icon" />
-                <span>24/7 international patient support</span>
+                <span>Dedicated international patient support</span>
               </div>
             </div>
 
@@ -1393,6 +1358,22 @@ const GeneralCategory = () => {
                 <FaPhoneAlt /> Contact Medical Coordinator
               </a>
             </div>
+
+            <p
+              style={{
+                marginTop: "24px",
+                fontSize: "0.82rem",
+                opacity: 0.8,
+                lineHeight: "1.5",
+                maxWidth: "700px",
+              }}
+            >
+              Medical disclaimer: Healthcare information on this page is provided
+              for general informational purposes. Diagnosis, treatment suitability,
+              expected outcomes, duration and final cost vary according to
+              individual circumstances and should be discussed with a qualified
+              healthcare professional.
+            </p>
           </div>
         </div>
       </section>

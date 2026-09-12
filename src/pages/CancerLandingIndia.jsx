@@ -24,6 +24,9 @@ import {
   FaHandHoldingUsd,
   FaTimes,
   FaCheckCircle,
+  FaFileAlt,
+  FaClipboardList,
+  FaPassport,
 } from "react-icons/fa";
 import heroImage from "../departments/dept-images/cancer-treatment-india-hero.webp";
 import OncologyAboutImage from "../departments/dept-images/oncology-care-india.webp";
@@ -91,32 +94,36 @@ const Check = () => <FaCheck className="icon-check" />;
 
 const trustSignals = [
   {
-    icon: <FaUserMd />,
-    label: "Experienced medical, surgical, and radiation oncologists",
-  },
-  {
     icon: <FaHospital />,
-    label: "Affordable cancer treatment abroad with transparent pricing",
+    label: "Hospital and oncology specialist coordination",
   },
   {
-    icon: <FaMicroscope />,
-    label: "Robotic cancer surgery & precision oncology",
+    icon: <FaFileAlt />,
+    label: "Medical report and document sharing",
+  },
+  {
+    icon: <FaUserMd />,
+    label: "Specialist consultation appointment assistance",
+  },
+  {
+    icon: <FaClipboardList />,
+    label: "Treatment information coordination",
+  },
+  {
+    icon: <FaHandHoldingUsd />,
+    label: "Available cost estimate information",
+  },
+  {
+    icon: <FaPassport />,
+    label: "Travel and accommodation assistance",
   },
   {
     icon: <FaGlobeAfrica />,
-    label: "Advanced immunotherapy and targeted therapy in India",
+    label: "Airport and local transfer coordination",
   },
   {
-    icon: <FaHandHoldingUsd />,
-    label: "International patient departments with English-speaking staff",
-  },
-  {
-    icon: <FaHandHoldingUsd />,
-    label: "Modern cancer hospitals with global treatment standards",
-  },
-  {
-    icon: <FaHandHoldingUsd />,
-    label: "Faster treatment access and personalized care plans",
+    icon: <FaPhoneAlt />,
+    label: "International patient communication support",
   },
 ];
 
@@ -125,7 +132,7 @@ const cancersServices = [
     id: 1,
     title: "Blood Cancer",
     description:
-      "Advanced blood cancer treatment in India includes chemotherapy, targeted therapy, immunotherapy, and bone marrow transplant procedures. Experienced hematology specialists provide personalized care for leukemia, lymphoma, and myeloma using modern diagnostic and treatment technologies.",
+      "Specialized hematology and oncology teams may evaluate conditions such as leukemia, lymphoma and other blood-related cancers. Treatment planning is individualized based on the patient's diagnosis, clinical findings and overall health.",
     image: BloodCancer,
     alt: "Blood cancer treatment in India",
   },
@@ -133,23 +140,23 @@ const cancersServices = [
     id: 2,
     title: "CyberKnife Treatment",
     description:
-      "CyberKnife treatment in India offers non-invasive and highly precise radiation therapy for tumors affecting the brain, spine, lungs, prostate, and other organs. This advanced technology helps target cancer cells accurately while reducing damage to surrounding healthy tissues.",
+      "CyberKnife is a radiation delivery system used for certain tumors. Its suitability depends on the tumor type, location, stage and other clinical factors determined by the treating radiation oncology team.",
     image: CyberKnife,
     alt: "CyberKnife cancer treatment in India",
   },
   {
     id: 3,
-    title: "Mouth Cancer",
+    title: "Oral & Head and Neck Cancer",
     description:
-      "Mouth cancer treatment in India includes surgery, radiation therapy, chemotherapy, and reconstructive procedures based on the stage and location of the tumor. Early diagnosis and multidisciplinary oncology care help improve recovery and treatment outcomes for international patients.",
+      "Specialist evaluation may involve surgical oncology, medical oncology, radiation oncology and supportive-care teams. Treatment planning depends on the tumor location, stage and other clinical findings.",
     image: MouthCancer,
-    alt: "Mouth cancer treatment in India",
+    alt: "Oral and head neck cancer treatment in India",
   },
   {
     id: 4,
     title: "Lung Cancer",
     description:
-      "Lung cancer treatment in India includes minimally invasive surgery, chemotherapy, immunotherapy, targeted therapy, and precision radiation oncology. Patients searching for affordable lung cancer treatment abroad choose India for experienced specialists, advanced technology, and personalized treatment plans.",
+      "Treatment planning depends on cancer type, stage, test results, overall health and other medical factors. The treating oncology team determines the appropriate approach after clinical evaluation.",
     image: LungCancer,
     alt: "Lung cancer treatment in India",
   },
@@ -157,7 +164,7 @@ const cancersServices = [
     id: 5,
     title: "Chemotherapy",
     description:
-      "Chemotherapy in India is provided using modern oncology protocols and careful patient monitoring. Treatment plans are personalized based on cancer type, stage, and patient health condition, helping improve treatment effectiveness while managing side effects safely.",
+      "Some cancers may require medicines that work throughout the body. The treating oncologist determines the appropriate systemic treatment based on the patient's diagnosis and clinical condition.",
     image: Chemotherapy,
     alt: "Chemotherapy treatment in India",
   },
@@ -165,7 +172,7 @@ const cancersServices = [
     id: 6,
     title: "Radiation Therapy",
     description:
-      "Radiation therapy in India uses advanced technologies such as IMRT, IGRT, and precision radiation oncology to treat different types of cancers. Modern radiation treatment helps improve accuracy, reduce side effects, and support faster recovery for patients.",
+      "Radiation therapy may be used as part of cancer treatment when considered appropriate by the radiation oncology team. The suitability and schedule are determined based on the patient's clinical evaluation.",
     image: RadiationTherapy,
     alt: "Radiation therapy treatment in India",
   },
@@ -173,7 +180,7 @@ const cancersServices = [
     id: 7,
     title: "Cervical Cancer",
     description:
-      "Cervical cancer treatment in India includes surgery, chemotherapy, radiation therapy, and targeted oncology care. Leading cancer hospitals provide advanced diagnosis and personalized treatment plans for early-stage and advanced cervical cancer patients from international locations.",
+      "Patients may be evaluated by gynecologic oncology and other relevant specialist teams. Treatment planning may involve surgery, systemic treatment, radiation therapy or a combination depending on the diagnosis.",
     image: CervicalCancer,
     alt: "Cervical cancer treatment in India",
   },
@@ -181,7 +188,7 @@ const cancersServices = [
     id: 8,
     title: "Breast Lumpectomy",
     description:
-      "Breast lumpectomy in India is performed by experienced surgical oncology teams using breast-conserving techniques whenever possible. This procedure helps remove cancerous tissue while preserving the appearance of the breast and supporting quicker recovery.",
+      "Breast-conserving surgery may be considered for certain breast cancer patients depending on clinical factors. The treating surgical oncology team determines suitability based on the patient's individual assessment.",
     image: BreastLumpectomy,
     alt: "Breast lumpectomy treatment in India",
   },
@@ -189,7 +196,7 @@ const cancersServices = [
     id: 9,
     title: "Breast Cancer",
     description:
-      "Breast cancer treatment in India includes surgery, chemotherapy, radiation therapy, hormone therapy, and targeted therapy. Patients benefit from multidisciplinary oncology care, modern breast imaging technologies, and experienced breast cancer specialists across leading cancer hospitals.",
+      "Treatment planning may involve imaging, pathology, surgery, systemic treatment, radiation therapy or other approaches depending on the clinical assessment. Multidisciplinary oncology teams coordinate the treatment plan.",
     image: BreastCancer,
     alt: "Breast cancer treatment in India",
   },
@@ -197,7 +204,7 @@ const cancersServices = [
     id: 10,
     title: "BMT (Bone Marrow Transplant)",
     description:
-      "Bone marrow transplant in India is available for patients with leukemia, lymphoma, aplastic anemia, and other blood disorders. Advanced transplant units, experienced hematology specialists, and affordable treatment costs make India a preferred destination for BMT treatment.",
+      "Bone marrow transplant may be considered for patients with certain blood-related conditions. Eligibility and treatment planning are determined by specialist hematology and oncology teams after clinical evaluation.",
     image: BoneMarrowTransplant,
     alt: "Bone marrow transplant treatment in India",
   },
@@ -205,7 +212,7 @@ const cancersServices = [
     id: 11,
     title: "Prostate Cancer",
     description:
-      "Prostate cancer treatment in India includes robotic surgery, radiation therapy, hormone therapy, immunotherapy, and targeted oncology care. International patients often choose India for affordable robotic prostate surgery and access to experienced uro-oncology specialists.",
+      "Treatment options depend on disease characteristics, overall health and clinical evaluation. The treating specialist team determines the appropriate approach, which may involve surgery, radiation, systemic treatment or observation.",
     image: ProstateCancer,
     alt: "Prostate cancer treatment in India",
   },
@@ -213,7 +220,7 @@ const cancersServices = [
     id: 12,
     title: "Cancer Treatment",
     description:
-      "Cancer treatment in India combines advanced medical technology, experienced oncologists, and personalized care plans for different types of cancers. Patients benefit from affordable oncology treatment, shorter waiting times, and dedicated international patient support services.",
+      "Cancer treatment in India is planned according to individual clinical findings, diagnosis and treatment requirements. Patients can explore available options by sharing their medical reports with the treating oncology team.",
     image: CancerTreatment,
     alt: "Cancer treatment in India",
   },
@@ -221,7 +228,7 @@ const cancersServices = [
     id: 13,
     title: "Stem Cell Therapy",
     description:
-      "Stem cell therapy in India is used in selected oncology and hematology treatments under expert medical supervision. Advanced medical centers provide personalized treatment protocols and supportive care for eligible patients requiring regenerative or transplant-based therapies.",
+      "Stem cell therapy may be considered for selected oncology and hematology conditions. Eligibility and treatment protocols are determined by specialist medical teams after thorough clinical evaluation.",
     image: StemCellTherapy,
     alt: "Stem cell therapy in India",
   },
@@ -229,23 +236,23 @@ const cancersServices = [
     id: 14,
     title: "Stomach Cancer",
     description:
-      "Stomach cancer treatment in India includes surgical oncology, chemotherapy, targeted therapy, and radiation therapy based on the stage of cancer. Multidisciplinary treatment planning helps improve recovery and long-term treatment outcomes for international patients.",
+      "Treatment planning depends on diagnostic findings, cancer stage and the patient's overall health. The treating oncology team may recommend surgery, systemic treatment, radiation therapy or a combination of approaches.",
     image: StomachCancer,
     alt: "Stomach cancer treatment in India",
   },
   {
     id: 15,
-    title: "Colon Cancer",
+    title: "Colorectal Cancer",
     description:
-      "Colon cancer treatment in India includes minimally invasive surgery, chemotherapy, immunotherapy, and precision radiation therapy. Advanced diagnostic technologies and experienced gastrointestinal oncology specialists help provide personalized cancer care for better outcomes.",
+      "Treatment may involve surgery, systemic treatment, radiation therapy or combinations depending on the diagnosis and stage. The treating team determines the appropriate approach after clinical assessment.",
     image: ColonCancer,
-    alt: "Colon cancer treatment in India",
+    alt: "Colorectal cancer treatment in India",
   },
   {
     id: 16,
     title: "Esophageal Cancer",
     description:
-      "Esophageal cancer treatment in India includes surgery, chemotherapy, radiation therapy, and targeted treatment approaches. Leading oncology hospitals provide advanced thoracic oncology care with personalized treatment plans and rehabilitation support for international patients.",
+      "Treatment planning may involve surgical oncology, medical oncology, radiation oncology and supportive-care teams. The appropriate approach is determined based on the patient's clinical evaluation and diagnosis.",
     image: EsophagealCancer,
     alt: "Esophageal cancer treatment in India",
   },
@@ -256,37 +263,37 @@ const steps = [
     number: "01",
     title: "Share Medical Reports",
     description:
-      "Patients can send scans, biopsy reports, pathology slides, and previous treatment records online for review.",
+      "Patients can share relevant medical reports, scans, pathology results and previous treatment records for review and appointment coordination.",
   },
   {
     number: "02",
-    title: "Online Consultation",
+    title: "Hospital and Specialist Coordination",
     description:
-      "International patient coordinators arrange virtual consultations with cancer specialists in India.",
+      "Our team helps coordinate suitable hospital options and oncology specialist appointments based on the patient's diagnosis and requirements.",
   },
   {
     number: "03",
-    title: "Personalized Treatment Plan & Cost Estimate",
+    title: "Treatment Information and Cost Estimate",
     description:
-      "Doctors provide treatment recommendations, expected duration, and estimated treatment costs.",
+      "Available treatment information and cost estimates can be discussed after reviewing relevant medical reports and requirements.",
   },
   {
     number: "04",
-    title: "Medical Visa & Travel Assistance",
+    title: "Travel and Accommodation Assistance",
     description:
-      "Hospitals assist with medical visa invitation letters, airport pickup, hotel stay, and local travel support.",
+      "International-patient support may include coordination for travel, accommodation, airport transfers and other practical requirements.",
   },
   {
     number: "05",
-    title: "Cancer Treatment in India",
+    title: "Hospital Visit and Treatment",
     description:
-      "Patients receive treatment using advanced oncology technology and personalized care protocols.",
+      "Patients receive support during their hospital visit, including appointment coordination, communication assistance and help with hospital-related requirements.",
   },
   {
     number: "06",
-    title: "Recovery & Follow-Up Support",
+    title: "Follow-Up Coordination",
     description:
-      "Post-treatment monitoring, online follow-ups, rehabilitation, and medication guidance continue even after returning home.",
+      "After the visit, support may include follow-up appointment coordination, communication with the healthcare provider and assistance with future appointments.",
   },
 ];
 
@@ -294,38 +301,38 @@ const DOCTORS = [
   {
     name: "Dr. Vishnu Agarwal",
     education: "MBBS, MS - General Surgery, Surgical Oncology Fellowship",
-    spec: "Surgical Oncologist, Robotic Cancer Surgeon, Laparoscopic Oncosurgeon",
-    desc: "Dr. Vishnu Agarwal is a highly accomplished Surgical Oncologist with over 15 years of experience specializing in laparoscopic and robotic cancer surgeries. He completed his MBBS and MS in General Surgery from Mumbai University and pursued advanced training in Surgical Oncology at the prestigious Tata Memorial Hospital, Mumbai. To further enhance his expertise in minimally invasive cancer treatment, Dr. Vishnu Agarwal completed a fellowship in Laparoscopic and Robotic Gynaecology and Colorectal Cancer Surgery at St. Mary’s Hospital, Seoul, South Korea, along with advanced robotic surgical training in France. He is widely recognized for delivering precision-driven minimally invasive cancer surgeries that promote faster recovery, reduced post-operative complications, and improved patient outcomes. Dr. Vishnu Agarwal has extensive expertise in the management of gynecological cancers, including advanced laparoscopic and robotic surgeries for endometrial, ovarian, and cervical cancers. He is also a pioneer in breast cancer surgery and performed the first robotic surgery for a breast tumor in India. Over his distinguished career, he has successfully performed more than a thousand breast cancer surgeries, including mastectomies, breast-conserving surgeries, sentinel lymph node biopsies, and oncoplastic procedures. His expertise further extends to minimally invasive colorectal cancer surgeries, where he has managed several highly complex cases with exceptional outcomes. Having treated over 6,000 national and international patients, Dr. Vishnu Agarwal is known for combining advanced robotic technology with compassionate, patient-focused cancer care. He actively participates in surgical teaching programs, live demonstrations, and academic training sessions, contributing significantly to the advancement of modern surgical oncology.",
+    spec: "Surgical Oncologist, Laparoscopic & Robotic Cancer Surgeon",
+    desc: "Dr. Vishnu Agarwal is a Surgical Oncologist with over 15 years of clinical experience in surgical oncology, laparoscopic and robotic surgical procedures. He completed his MBBS and MS in General Surgery from Mumbai University and received specialized surgical oncology training at Tata Memorial Hospital, Mumbai, followed by advanced surgical fellowships in South Korea and France. His clinical focus includes breast cancer surgery, gynecologic oncology, and colorectal surgical procedures for domestic and international patients.",
     photoUrl: VishnuAgarwalImage,
   },
   {
     name: "Dr. Kamran Khan",
     education: "MBBS, MS - General Surgery",
-    spec: "General Surgeon, Surgical Oncologist, Robotic Cancer Surgeon",
-    desc: "Dr. Kamran Khan is a highly experienced General Surgeon and Surgical Oncologist with over 35 years of overall experience, including 32 years as a specialist. He specializes in minimally invasive and robotic surgeries for gastrointestinal and gynecologic cancers. With extensive clinical experience gained during his tenure at the renowned Tata Memorial Hospital (TMH), Mumbai, Dr. Kamran Khan is known for combining advanced surgical technology with precise, tissue-preserving oncologic techniques to deliver effective cancer care. His expertise includes laparoscopic and robotic cancer surgeries, pelvic oncology procedures, gastrointestinal oncology, and advanced gynecologic cancer management. Dr. Kamran Khan follows an evidence-based, patient-focused surgical approach aimed at minimizing surgical trauma, reducing post-operative complications, and promoting faster recovery. Recognized for his meticulous surgical planning, technical excellence, and commitment to patient safety, he has built a strong reputation in modern oncologic surgery. His training and research fellowship at Tata Memorial Hospital further strengthened his expertise in advanced minimally invasive cancer procedures and contemporary surgical oncology pathways.",
+    spec: "General Surgeon, Surgical Oncologist",
+    desc: "Dr. Kamran Khan is a General Surgeon and Surgical Oncologist with over 35 years of clinical experience, including 32 years as a specialist. He specializes in minimally invasive and robotic procedures for gastrointestinal and gynecologic cancers, with clinical experience from Tata Memorial Hospital, Mumbai. His clinical practice includes laparoscopic oncology procedures, pelvic surgery, and advanced gynecologic cancer management.",
     photoUrl: KamranKhanImage,
   },
   {
     name: "Dr. Manish G. Agarwal",
     education:
       "MBBS, MS (Orthopaedics), DNB (Orthopaedics), Diploma in Tissue Banking",
-    spec: "Orthopaedic Oncosurgeon, Surgical Oncologist, Paediatric Orthopaedic Specialist",
-    desc: "Dr. Manish Agarwal is a renowned Orthopaedic Oncologist at the Department of Surgical Oncology at Sir H. N. Reliance Foundation Hospital and is also practicing at Nanavati Max Super Specialty Hospital, Mumbai. He has over two decades of experience in Orthopaedic Oncology. and is widely recognised as one of the pioneers of Orthopaedic Oncology in India. Dr. Agarwal completed his M.B.B.S. and M.S. from Seth GS Medical College and KEM Hospital, Mumbai. After completing his fellowship at Tata Memorial Hospital (June to December, 1993), he joined KEM Hospital as a Lecturer. In 2000, he joined Tata Memorial Hospital as a full time orthopaedic oncologist. He has published numerous papers in national and international journals, and has presented his research at various conferences and seminars. Dr. Agarwal has trained many young orthopaedic surgeons in orthopaedic oncology and has been actively involved in organising and participating in teaching programmes and workshops for orthopaedic surgeons across India. ",
+    spec: "Orthopaedic Oncosurgeon, Surgical Oncologist",
+    desc: "Dr. Manish Agarwal is an Orthopaedic Oncologist at Sir H. N. Reliance Foundation Hospital and Nanavati Max Super Specialty Hospital, Mumbai, with over two decades of clinical experience. He completed his MBBS and MS from Seth GS Medical College and KEM Hospital, Mumbai, followed by a fellowship at Tata Memorial Hospital. His clinical focus includes bone and soft tissue tumor surgery, limb salvage procedures, and pediatric orthopaedic oncology.",
     photoUrl: ManishGAgarwalImage,
   },
   {
     name: "Dr. Sarita Shrivastva",
     education: "MBBS, MD - Radiotherapy, DM - Medical Oncology",
     spec: "Medical Oncologist",
-    desc: "Dr. Sarita Shrivastva is an experienced Medical Oncologist with over 16 years of overall experience, including 6 years as a specialist in oncology. She specializes in comprehensive cancer care, including chemotherapy, targeted therapy, and advanced oncology treatments. Dr. Sarita Shrivastva completed her MBBS, MD in Radiotherapy, and DM in Medical Oncology, receiving extensive training in the diagnosis, staging, and treatment of various cancers. She strongly believes in preventive oncology and emphasizes the importance of cancer screening and early detection to improve treatment outcomes and increase the chances of cure. With deep expertise in radiation oncology, chemotherapy, and personalized cancer therapies, she is committed to providing evidence-based and up-to-date cancer treatment solutions tailored to each patient’s condition. Known for her compassionate and patient-focused approach, Dr. Sarita Shrivastva focuses on delivering accurate diagnosis, advanced treatment planning, and holistic cancer care to ensure the best possible outcomes for her patients.",
+    desc: "Dr. Sarita Shrivastva is a Medical Oncologist with over 16 years of clinical experience. She completed her MBBS, MD in Radiotherapy, and DM in Medical Oncology, receiving extensive training in cancer diagnosis, staging, and systemic therapies. Her practice focuses on chemotherapy, targeted therapies, cancer screening, and personalized oncology treatment planning.",
     photoUrl: SaritaShrivastvaImage,
   },
   {
     name: "Dr. Ganapathi Bhat",
     education:
-      "DNB (General Medicine), M.N.A.M.S, Affiliate AACR Medical Oncology & Hemato-Oncology (Clinical) and Stem Cell Transplant",
-    spec: "Medical Oncologist, Hemato-Oncologist, Bone Marrow Transplant Specialist",
-    desc: "Dr. Ganapathi Bhat is a highly respected Medical Oncologist and Bone Marrow Transplant Specialist with extensive expertise in the treatment of hematological malignancies, solid tumors, immunotherapy, targeted therapy, and stem cell transplantation. He currently serves as Senior Consultant in the Department of Medical Oncology and Bone Marrow Transplant at Jaslok Hospital & Research Centre, Mumbai, India. With decades of clinical experience, Dr. Bhat has established himself as a leading expert in autologous and allogeneic hematopoietic stem cell transplantation, advanced chemotherapy protocols, immunotherapy, and precision oncology. His areas of specialization include bone marrow transplantation, CAR-T cell therapy, targeted therapies, bispecific antibody treatments for leukemia and multiple myeloma, radioimmunotherapy for lymphoma, and Peptide Receptor Radionuclide Therapy (PRRT) for neuroendocrine tumors and metastatic prostate cancer. Dr. Bhat has also been actively involved in the clinical application of mesenchymal stem cells in regenerative medicine. He gained significant international experience while working at Kuwait Cancer Control Centre, where he specialized in lymphoma management and bone marrow transplantation. To further enhance his expertise, he completed advanced training in Blood Cell Transplantation at ULM University, Germany, and attended prestigious ESH-EBMT Hematopoietic Stem Cell Transplantation programs in France and Spain. Dr. Bhat is affiliated with several renowned international oncology and hematology organizations, including the Asian-Pacific Blood and Bone Marrow Transplantation Group, European Hematology Association, European Society for Medical Oncology, American Association for Cancer Research, and the College of Chest Physicians of India. Beyond clinical practice, he is actively involved in academic research, mentoring MSc, PhD, and Fellowship students in Medical Oncology under Mumbai University and MUHS. He has authored numerous scientific publications, book chapters, and research papers, contributing significantly to advancements in oncology and stem cell transplantation. Throughout his distinguished career, Dr. Ganapathi Bhat has received multiple prestigious honors, including the National Health Achievers Award for Best Oncologist of India, the Excellent Medical Oncologist Award, and the Iconic Healthcare Leader Award. His commitment to innovation, research, and patient-centered cancer care has made him one of India's leading specialists in medical oncology and bone marrow transplantation.",
+      "DNB (General Medicine), M.N.A.M.S, Affiliate AACR Medical Oncology & Hemato-Oncology and Stem Cell Transplant",
+    spec: "Medical Oncologist, Hemato-Oncologist, Stem Cell Transplant Specialist",
+    desc: "Dr. Ganapathi Bhat is a Medical Oncologist and Stem Cell Transplant Specialist serving as Senior Consultant at Jaslok Hospital & Research Centre, Mumbai. With extensive clinical experience in India and abroad, he completed specialized training in blood cell transplantation at ULM University, Germany. His practice focuses on hematological conditions, solid tumors, chemotherapy protocols, immunotherapy, and hematopoietic stem cell transplantation.",
     photoUrl: GanapathiBhatImage,
   },
   {
@@ -333,45 +340,45 @@ const DOCTORS = [
     education:
       "MBBS, MD, FRCPA (Fellow of the Royal College of Pathologists of Australasia)",
     spec: "Medical Oncologist, Haemato-Oncologist, Bone Marrow Transplant Specialist",
-    desc: "Dr. Abhay Bhave is a highly experienced Medical Oncologist, Haemato-Oncologist, and Bone Marrow Transplant Specialist with over 30 years of expertise in the diagnosis and treatment of complex blood disorders and cancers. He currently serves as Senior Consultant in Medical Oncology, Haemato-Oncology, and Bone Marrow Transplantation at S L Raheja Hospital – A Fortis Associate, Mumbai. Dr. Bhave completed his MBBS and MD from the prestigious Lokmanya Tilak Municipal Medical College and further advanced his specialization through training in Haematology at Christian Medical College, Vellore. He also holds the distinguished FRCPA (Fellow of the Royal College of Pathologists of Australasia), reflecting his international recognition in the field of hematology and oncology. Throughout his distinguished career, Dr. Bhave has developed extensive expertise in the management of anemia, thrombocytopenia (low platelet disorders), deep vein thrombosis, blood cancers, lymphoma, and bone marrow transplantation. His patient-centered approach, combined with evidence-based treatment strategies, has helped numerous patients achieve successful outcomes in both benign and malignant hematological conditions. Dr. Bhave has gained valuable international experience through his work at Sultan Qaboos University Hospital in Oman and Westmead Hospital in Sydney, Australia. During his tenure with the Australian Red Cross Blood Service, he played a crucial role in blood safety management, blood transfusion services, and coordinating blood supplies across New South Wales. In addition to his clinical achievements, Dr. Bhave has been actively involved in community healthcare initiatives, organizing anemia and thalassemia screening camps and conducting educational programs on blood donation and cancer awareness. A respected researcher and academician, he has authored more than 40 publications in national and international medical journals and has contributed to the development of national clinical guidelines for Myelodysplastic Syndrome, Deep Vein Thrombosis, and the use of newer anticoagulant therapies. Dr. Bhave is also dedicated to medical education and has served as a lecturer at leading medical institutions, sharing his knowledge and expertise with future healthcare professionals. His exceptional contributions to hematology and oncology have earned him several accolades, including the prestigious Ekta Manch Award for community service. Known for his clinical excellence, compassionate patient care, and commitment to advancing hematological sciences, Dr. Abhay Bhave remains one of India's most respected specialists in haemato-oncology and bone marrow transplantation.",
+    desc: "Dr. Abhay Bhave is a Medical Oncologist and Hematologist with over 30 years of clinical experience in blood disorders and hematological malignancies. He serves as Senior Consultant at S L Raheja Hospital (A Fortis Associate), Mumbai, holding an MBBS, MD, and FRCPA qualification. His clinical practice focuses on lymphomas, leukemias, bone marrow transplantation, and clinical hematology.",
     photoUrl: AbhayBhaveImage,
   },
   {
     name: "Dr. Muzammil Shaikh",
     education:
       "MBBS, MD (Internal Medicine), DM (Medical Oncology), DNB (Medical Oncology)",
-    spec: "Medical Oncologist, Precision Oncology Specialist, Cancer Care Expert",
-    desc: "Dr. Muzammil Shaikh is a highly accomplished Medical Oncologist with more than 20 years of experience in the diagnosis and treatment of a wide range of cancers. He currently serves as Consultant Medical Oncologist at P.D. Hinduja National Hospital & Medical Research Centre, Mumbai, where he has been providing advanced cancer care since 2013. Dr. Shaikh completed his MBBS from the prestigious Grant Medical College & Sir J.J. Hospital, University of Mumbai, followed by an MD in Internal Medicine from Seth G.S. Medical College & KEM Hospital, Mumbai. He further pursued super-specialty training in Medical Oncology by obtaining a DM in Medical Oncology from The Gujarat Cancer & Research Institute and a DNB in Medical Oncology from the National Board, New Delhi. To strengthen his expertise in modern cancer therapies, Dr. Shaikh underwent international training through a perceptorship in metastatic colorectal malignancies in Liverpool, United Kingdom, and completed an observership at the world-renowned M.D. Anderson Cancer Center in Houston, Texas, USA. Throughout his career, he has gained extensive experience in managing both common and complex cancers using evidence-based treatment approaches, including chemotherapy, targeted therapy, immunotherapy, precision oncology, and personalized cancer treatment strategies. Dr. Shaikh has a special interest in Precision and Molecular Oncology, enabling him to tailor cancer treatments based on genetic and molecular profiling to improve outcomes and minimize treatment-related side effects. His clinical expertise spans breast cancer, ovarian cancer, lung cancer, gastrointestinal cancers, hepatobiliary cancers, head and neck cancers, genitourinary cancers, bone and soft tissue sarcomas, as well as geriatric oncology and palliative cancer care. Known for his patient-centric approach, Dr. Shaikh focuses on delivering comprehensive cancer care that combines advanced medical treatments with compassionate support throughout the patient's cancer journey. His commitment to innovation, clinical excellence, and personalized oncology care has earned him recognition as one of Mumbai's leading medical oncologists.",
+    spec: "Medical Oncologist, Precision Oncology Specialist",
+    desc: "Dr. Muzammil Shaikh is a Consultant Medical Oncologist at P.D. Hinduja National Hospital & Medical Research Centre, Mumbai, with over 20 years of clinical experience. He holds an MBBS, MD in Internal Medicine, and DM in Medical Oncology, with advanced international observerships in the US and UK. His clinical focus includes systemic cancer therapies, precision oncology, targeted therapy, and comprehensive cancer care for solid tumors.",
     photoUrl: MuzammilShaikhImage,
   },
   {
     name: "Dr. Suresh Advani",
     education: "MBBS, MD (General Medicine), FICP, MNAMS, FNAMS, UICC, IRCETT",
-    spec: "Medical Oncologist, Haematologist, Bone Marrow Transplant Pioneer, Pediatric Oncologist",
-    desc: "Dr. Suresh Advani is one of India's most distinguished Medical Oncologists and Haematologists, with over 50 years of exceptional experience in cancer care, hematology, and bone marrow transplantation. He currently serves as Mentor in the Department of Medical Oncology at Sir H. N. Reliance Foundation Hospital, Mumbai. Dr. Advani graduated from Bombay University in 1969 and completed his MD in General Medicine in 1973. He further enhanced his expertise through specialized international training in Bone Marrow Transplantation and Medical Oncology at the prestigious Fred Hutchinson Cancer Research Center, Seattle, USA, under the International Cancer Research Technology Transfer (ICRETT) program in 1981. In 1986, he completed an advanced fellowship through the Yamagiwa-Yoshida Memorial International Cancer Study Grant awarded by the International Union Against Cancer (UICC). Widely recognized as the pioneer of Bone Marrow Transplantation (BMT) programs in India, Dr. Advani has played a transformative role in advancing cancer treatment and hematology services across the country. His expertise encompasses medical oncology, hematological malignancies, pediatric oncology, bone marrow transplantation, targeted therapies, and precision cancer treatment. Throughout his illustrious career, he has contributed significantly to the development of modern oncology practices in India and has been instrumental in introducing innovative cancer therapies. As Professor of Medical Oncology at Tata Memorial Hospital, Mumbai, he has mentored generations of oncologists and healthcare professionals while shaping the future of cancer care. Dr. Advani has authored more than 600 scientific publications in national and international journals and serves on the editorial boards of several prestigious medical publications. A brilliant academician, he was a first-rank holder in Anatomy and Physiology during his medical education. His remarkable contributions to oncology, research, education, and patient care have earned him numerous national and international honors, including the prestigious Padma Bhushan awarded by the Government of India in 2012. Known for his pioneering vision, clinical excellence, and lifelong dedication to cancer treatment, Dr. Suresh Advani remains one of the most respected and influential figures in the field of medical oncology and hematology in India.",
+    spec: "Medical Oncologist, Haematologist, Pediatric Oncologist",
+    desc: "Dr. Suresh Advani is a Senior Medical Oncologist and Hematologist with over 50 years of clinical experience in cancer management, hematology, and bone marrow transplantation. Recipient of the Padma Bhushan award, he serves as Mentor in Medical Oncology at Sir H. N. Reliance Foundation Hospital, Mumbai. His clinical practice encompasses medical oncology, hematological conditions, pediatric oncology, and systemic cancer therapies.",
     photoUrl: SureshAdvaniImage,
   },
   {
     name: "Dr. Sandeep Goyle",
     education:
       "MBBS, MD (General Medicine), MRCP (London), CCST (Medical Oncology, UK), DNB (General Medicine), FCPS (General Medicine)",
-    spec: "Medical Oncologist, Cancer Specialist, Chemotherapy & Immunotherapy Expert",
-    desc: "Dr. Sandeep Goyle is a renowned Medical Oncologist with over 18 years of experience in the treatment and management of various cancers using advanced systemic therapies. He currently serves as the Head of Medical Oncology and is recognized for his expertise in chemotherapy, targeted therapy, immunotherapy, and precision-based cancer treatment. Dr. Goyle completed his MBBS and MD in General Medicine from premier medical institutions in Mumbai before pursuing advanced specialist training in Medical Oncology at leading teaching hospitals in the United Kingdom. He earned the prestigious MRCP (London) qualification and completed his CCST (Certificate of Completion of Specialist Training) in Medical Oncology in the UK, further strengthening his expertise in modern cancer management. After returning to India, Dr. Goyle played a pivotal role in establishing the Department of Medical Oncology and Chemotherapy Daycare services at Kokilaben Dhirubhai Ambani Hospital in 2008. Since then, he has been instrumental in delivering comprehensive cancer care through evidence-based treatment protocols and multidisciplinary oncology management. His clinical focus is on systemic cancer therapies, including chemotherapy, targeted therapies, immunotherapy, and personalized cancer treatment approaches designed to improve outcomes and quality of life for patients. Dr. Goyle has extensive experience in treating a wide spectrum of solid tumors and hematological malignancies, utilizing the latest advancements in oncology to provide individualized treatment plans. Known for his patient-centered approach, he combines international expertise with compassionate care, helping patients navigate every stage of their cancer journey. His commitment to innovation, clinical excellence, and advanced cancer therapeutics has established him as one of Mumbai's leading medical oncologists.",
+    spec: "Medical Oncologist, Chemotherapy & Immunotherapy Specialist",
+    desc: "Dr. Sandeep Goyle is a Medical Oncologist with over 18 years of clinical experience in medical oncology and systemic cancer management. Holding an MBBS, MD, MRCP (London), and CCST in Medical Oncology (UK), he has served as Head of Medical Oncology at Kokilaben Dhirubhai Ambani Hospital, Mumbai. His practice focuses on chemotherapy, targeted therapy, immunotherapy, and evidence-based cancer management.",
     photoUrl: SandeepGoyleImage,
   },
   {
     name: "Dr. R. K. Deshpande",
     education: "MBBS, MS (General Surgery)",
-    spec: "Thoracic Surgical Oncologist, Cancer Surgeon, Pediatric Oncology Specialist",
-    desc: "Dr. R. K. Deshpande, also known as Dr. Ramakant Deshpande, is one of India's most distinguished Surgical Oncologists with over 44 years of experience in cancer surgery and thoracic oncology. He currently serves as the Director of the Asian Institute of Oncology, Mumbai, and is widely recognized as a pioneer in thoracic cancer surgery in India. Dr. Deshpande completed his MBBS from Karnataka Medical College, Hubli, and pursued his MS in General Surgery at the prestigious Tata Memorial Hospital, Mumbai. To further advance his expertise in cancer surgery, he underwent specialized training at the renowned Memorial Sloan Kettering Cancer Center, New York, USA. He began his oncology career at Kidwai Memorial Institute of Oncology, Bengaluru, in 1982 before joining Tata Memorial Hospital, Mumbai, where he served as a leading Surgical Oncologist and Chief of Thoracic Services from 1985 to 2002. Throughout his illustrious career, Dr. Deshpande has been instrumental in advancing thoracic oncology and minimally invasive cancer surgery in India. He holds the distinction of introducing thoracoscopic surgery at Tata Memorial Hospital, revolutionizing the surgical management of thoracic tumors through minimally invasive techniques. His expertise includes the treatment of lung cancer, esophageal cancer, breast cancer, and pediatric cancers, with a particular focus on thoracic malignancies and endoscopic surgical procedures. Dr. Deshpande has authored more than 50 scientific publications in national and international medical journals and has contributed chapters on lung cancer management to leading oncology textbooks published by the National Book Trust of India. He has organized numerous national and international oncology conferences and remains actively involved in cancer awareness programs, public education initiatives, and the promotion of early cancer detection. Known for his surgical precision, innovation, and patient-centered approach, Dr. R. K. Deshpande has earned immense respect within the oncology community and continues to be a leading authority in thoracic surgical oncology and advanced cancer surgery in India.",
+    spec: "Thoracic Surgical Oncologist",
+    desc: "Dr. R. K. Deshpande is a Surgical Oncologist with over 44 years of experience in thoracic oncology and cancer surgery. Director of the Asian Institute of Oncology, Mumbai, he trained at Tata Memorial Hospital and Memorial Sloan Kettering Cancer Center, New York. His clinical practice focuses on thoracic surgical oncology, lung cancer surgery, esophageal cancer, and minimally invasive thoracic procedures.",
     photoUrl: RKDeshpandeImage,
   },
   {
     name: "Dr. Tushar Thorat",
     education:
       "MBBS, MS (General Surgery), M.Ch. (Plastic Surgery), DNB (Plastic Surgery)",
-    spec: "Plastic & Reconstructive Surgeon, Oncoplastic Surgeon, Microsurgery Specialist",
-    desc: "Dr. Tushar Thorat is a highly skilled Plastic and Reconstructive Surgeon with over 8 years of experience in advanced reconstructive, microsurgical, and oncoplastic procedures. He currently serves as a Consultant in the Departments of Plastic & Reconstructive Surgery and Surgical Oncology at Sir H. N. Reliance Foundation Hospital, Mumbai. Dr. Thorat completed his MBBS before pursuing an MS in General Surgery in 2011 and an M.Ch. in Plastic Surgery in 2014 from the prestigious Nair Hospital, Mumbai. He further strengthened his academic credentials by obtaining a DNB in Plastic Surgery in 2015 while serving as a faculty member at KEM Hospital, Mumbai. To gain international expertise in advanced reconstructive and aesthetic procedures, Dr. Thorat completed a prestigious International Fellowship in Microsurgery and Aesthetic Surgery at the Department of Plastic Surgery, Hanyang University College of Medicine, Seoul, South Korea. Throughout his career, he has developed extensive expertise in reconstructive surgery following cancer treatment, trauma, burns, and congenital deformities. His specialization includes microsurgical reconstruction, oncoplastic surgery, craniofacial surgery, cosmetic surgery, hair transplantation, laser skin treatments, and complex soft tissue reconstruction. Dr. Thorat has played a transformative role in restoring both function and appearance for patients affected by cancer, severe injuries, burns, and congenital anomalies, helping thousands regain confidence, dignity, and an improved quality of life. In addition to his clinical practice, he has actively contributed to academic medicine by teaching plastic surgery residents at Seth G.S. Medical College and presenting scientific papers at numerous national and international medical conferences. He has also completed advanced certifications in Microsurgery, Craniofacial Surgery, Cosmetic Surgery, Hair Transplantation, and Laser Skin Treatments. Known for combining surgical precision with artistic reconstruction techniques, Dr. Tushar Thorat is widely recognized for delivering personalized, patient-centered care and exceptional reconstructive outcomes across a broad spectrum of complex surgical conditions.",
+    spec: "Plastic & Reconstructive Surgeon, Oncoplastic Surgeon",
+    desc: "Dr. Tushar Thorat is a Plastic and Reconstructive Surgeon serving as Consultant at Sir H. N. Reliance Foundation Hospital, Mumbai. He holds an MBBS, MS in General Surgery, M.Ch. in Plastic Surgery, and completed an International Fellowship in Microsurgery in South Korea. His clinical practice includes reconstructive surgery following oncologic resections, oncoplastic procedures, microsurgical reconstruction, and soft tissue repair.",
     photoUrl: TusharThoratImage,
   },
 ];
@@ -462,65 +469,71 @@ const faqData = [
   {
     id: 1,
     question:
-      "Why do international patients choose India for cancer treatment?",
+      "Is cancer treatment available in India for international patients?",
     answer:
-      "India offers affordable cancer treatment, experienced oncologists, advanced medical technology, internationally accredited hospitals, and dedicated international patient support services.",
+      "Yes. Many hospitals in India have international-patient departments and provide oncology services. Availability depends on the patient's diagnosis and the hospital's clinical facilities.",
   },
   {
     id: 2,
     question: "How much does cancer treatment cost in India?",
     answer:
-      "Cancer treatment costs in India depend on the cancer type, treatment plan, hospital, and duration, but are generally lower than South Africa, the UK, and the USA.",
+      "The cost varies according to cancer type, stage, treatment approach, hospital, specialist, investigations and duration of care. A more specific estimate requires relevant medical information.",
   },
   {
     id: 3,
-    question: "Is chemotherapy affordable in India?",
+    question: "How do I choose a cancer hospital in India?",
     answer:
-      "Yes, chemotherapy cost in India is comparatively affordable while maintaining high treatment standards, modern oncology protocols, and personalized patient care.",
+      "Hospital selection depends on cancer type, required specialty, available facilities, specialist availability, location and international-patient services.",
   },
   {
     id: 4,
-    question: "What types of cancers are treated in India?",
+    question: "Can I share my medical reports before travelling to India?",
     answer:
-      "Hospitals in India treat prostate cancer, lung cancer, breast cancer, blood cancer, colon cancer, stomach cancer, cervical cancer, and many other complex cancers.",
+      "Yes. Relevant medical reports can be shared for appointment and hospital coordination. The treating healthcare provider makes the final clinical assessment.",
   },
   {
     id: 5,
-    question: "Is robotic surgery available for cancer treatment in India?",
+    question: "How long does cancer treatment take in India?",
     answer:
-      "Yes, many leading oncology hospitals in India offer robotic cancer surgery for prostate cancer, gastrointestinal cancers, and other complex oncology procedures.",
+      "Treatment duration varies according to diagnosis, recommended treatment plan, hospital schedule, recovery requirements and follow-up needs.",
   },
   {
     id: 6,
-    question: "Do hospitals in India provide medical visa assistance?",
+    question: "Can international patients get assistance with hospital appointments?",
     answer:
-      "Most international patient departments help with medical visa invitation letters, documentation support, and travel coordination for overseas patients.",
+      "Yes. Medical-tourism support can assist with coordinating hospital and specialist appointments based on the patient's requirements.",
   },
   {
     id: 7,
-    question: "How can I get a treatment plan before traveling to India?",
+    question: "Can you help with travel and accommodation arrangements?",
     answer:
-      "Patients can share medical reports online and receive an expert opinion, estimated treatment plan, and approximate treatment cost before traveling.",
+      "International-patient support may include coordination for accommodation, airport transfers, local transportation and other practical requirements.",
   },
   {
     id: 8,
     question:
-      "Are international patient coordinators available in Indian hospitals?",
+      "Can I get a cancer treatment cost estimate before travelling to India?",
     answer:
-      "Yes, dedicated coordinators assist international patients with appointments, accommodation, airport pickup, interpreters, and follow-up support.",
+      "An initial estimate may be possible after reviewing relevant medical information, but final costs can vary according to the treatment plan and clinical requirements.",
   },
   {
     id: 9,
     question:
-      "How long do cancer patients usually stay in India for treatment?",
+      "Is cancer treatment the same for every patient?",
     answer:
-      "The duration depends on the treatment type, cancer stage, surgery requirements, chemotherapy cycles, and recovery progress recommended by the oncology team.",
+      "No. Cancer treatment is individualized according to factors such as cancer type, stage, medical history, test results and overall health.",
   },
   {
     id: 10,
-    question: "How do I choose the best oncologist in India?",
+    question: "Are cancer treatment outcomes guaranteed?",
     answer:
-      "Patients should consider doctor experience, specialization, hospital infrastructure, treatment technology, patient reviews, and multidisciplinary cancer care expertise.",
+      "No medical outcome should be presented as guaranteed. Treatment suitability and outcomes vary according to individual circumstances and should be discussed with the treating healthcare professional.",
+  },
+  {
+    id: 11,
+    question: "How can I contact Human Care Medical Tourism?",
+    answer:
+      "You can contact our team to discuss hospital coordination, oncology appointments, treatment information, estimated costs and international patient support.",
   },
 ];
 
@@ -560,7 +573,7 @@ const reviews = [
   },
   {
     name: "— Esther M., Nigeria",
-    text: "“When my husband was diagnosed with colon cancer in Lagos, we were under a lot of stress and didn’t know where to begin. Humancare World Wide helped us connect with a top oncology hospital in India and handled all the arrangements quickly. The doctors explained the treatment clearly, and the support team checked on us regularly during our stay. Today, my husband is doing much better and we are thankful for the care and guidance we received.”",
+    text: "“When my husband was diagnosed with colon cancer in Lagos, we were under a lot of stress and didn't know where to begin. Humancare World Wide helped us connect with a top oncology hospital in India and handled all the arrangements quickly. The doctors explained the treatment clearly, and the support team checked on us regularly during our stay. Today, my husband is doing much better and we are thankful for the care and guidance we received.”",
   },
 ];
 const Stars = () => (
@@ -652,38 +665,30 @@ export default function OncologyTreatmentIndia() {
         />
         {/* Primary SEO */}
         <title>
-          Cancer Treatment in India | Affordable Oncology Care for International
-          Patients
+          Cancer Treatment in India | International Patient Services – Human Care Medical Tourism
         </title>
 
         <meta
           name="description"
-          content="Get affordable cancer treatment in India with experienced oncologists, advanced cancer hospitals, robotic surgery, chemotherapy, radiation therapy, and personalized oncology care for international patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan."
+          content="Explore cancer treatment options in India with coordinated support for hospital selection, specialist appointments, treatment information, travel arrangements and other international patient requirements."
         />
 
         <meta
           name="keywords"
           content="
                     cancer treatment in india,
+                    cancer treatment in india for international patients,
                     oncology treatment in india,
-                    affordable cancer care india,
-                    oncology specialists in india,
                     cancer hospitals in india,
-                    chemotherapy in india,
-                    radiation therapy india,
-                    robotic cancer surgery india,
-                    immunotherapy in india,
-                    targeted therapy india,
-                    breast cancer treatment india,
-                    lung cancer treatment india,
-                    prostate cancer treatment india,
-                    bone marrow transplant india,
-                    oncology surgery india,
-                    cancer care hospitals india,
-                    advanced oncology care,
-                    cancer treatment abroad,
-                    medical oncology india,
-                    radiation oncology india
+                    oncology specialists in india,
+                    cancer treatment cost in india,
+                    cancer care in india,
+                    oncology care in india,
+                    international cancer treatment,
+                    cancer specialist in india,
+                    medical tourism for cancer treatment,
+                    international patient services,
+                    oncology consultation in india
                   "
         />
 
@@ -699,12 +704,12 @@ export default function OncologyTreatmentIndia() {
         {/* Open Graph / Facebook */}
         <meta
           property="og:title"
-          content="Cancer Treatment in India | Affordable Oncology Care"
+          content="Cancer Treatment in India | International Patient Services – Human Care Medical Tourism"
         />
 
         <meta
           property="og:description"
-          content="Affordable oncology treatment in India with experienced cancer specialists, advanced hospitals, and personalized care for international patients."
+          content="Explore cancer treatment options in India with coordinated support for hospital selection, specialist appointments, treatment information and international patient requirements."
         />
 
         <meta
@@ -724,12 +729,12 @@ export default function OncologyTreatmentIndia() {
 
         <meta
           name="twitter:title"
-          content="Cancer Treatment in India | Affordable Oncology Care"
+          content="Cancer Treatment in India | International Patient Services – Human Care Medical Tourism"
         />
 
         <meta
           name="twitter:description"
-          content="Get advanced and affordable cancer treatment in India with modern oncology hospitals and experienced cancer specialists."
+          content="Explore cancer treatment options in India with coordinated hospital selection, specialist appointments, treatment information and international patient support."
         />
 
         <meta
@@ -749,7 +754,7 @@ export default function OncologyTreatmentIndia() {
         {/* Background Image */}
         <img
           src={heroImage}
-          alt="Affordable Cancer treatment in India for international patients"
+          alt="Cancer treatment in India for international patients"
           className="oncology-hero-bg-image"
           loading="eager"
         fetchPriority="high"
@@ -764,16 +769,13 @@ export default function OncologyTreatmentIndia() {
         {/* Content */}
         <div className="oncology-hero-content">
           <span className="oncology-hero-badge">
-            Trusted by 50,000+ International Patients
+            International Patient Support for Cancer Care in India
           </span>
 
           <h1>Cancer Treatment in India for International Patients</h1>
 
           <p>
-            India is one of the leading destinations for affordable and advanced
-            oncology care. International patients trust Indian cancer hospitals
-            for experienced oncology specialists, modern technology, and
-            personalized treatment plans.
+            Explore oncology care options in India with coordinated support for hospital selection, specialist appointments, treatment information, travel arrangements and other international patient requirements.
           </p>
 
           <div className="oncology-hero-ctas">
@@ -783,11 +785,11 @@ export default function OncologyTreatmentIndia() {
               rel="noreferrer"
               className="btn-wa whatsapp-glow"
             >
-              <WA size={5} /> WhatsApp Consultation
+              <WA size={5} /> Get Treatment Assistance
             </a>
 
             <a href="tel:+919833166697" className="btn-outline">
-              <FaPhoneAlt /> Contact Medical Coordinator
+              <FaPhoneAlt /> Speak With Our Team
             </a>
           </div>
         </div>
@@ -799,32 +801,23 @@ export default function OncologyTreatmentIndia() {
           <div className="cancer-care-left">
             <h2 className="cancer-care-heading">
               <span className="cancer-care-heading-accent">
-                Affordable Cancer Treatment in India with Top Oncologists
+                Explore Cancer Treatment Options in India
               </span>
             </h2>
 
             <p className="cancer-care-body">
-              Looking for experienced oncology specialists in India for advanced
-              and affordable cancer care? India is trusted by international
-              patients for modern oncology care, experienced cancer specialists,
-              and compassionate support.
+              India has hospitals and oncology specialists providing a range of cancer-care services. International patients can explore treatment options based on their diagnosis, medical reports, treatment requirements, specialist availability and individual circumstances.
             </p>
 
             <p className="cancer-care-body">
-              From prostate oncology and lung oncology care to chemotherapy,
-              immunotherapy, robotic surgery, and radiation therapy, India
-              offers high-quality cancer care at affordable costs compared to
-              South Africa, the UK, and the USA.
+              Human Care Medical Tourism helps international patients coordinate the practical aspects of seeking oncology care in India, including hospital selection, specialist appointments, medical-report sharing, treatment information and travel-related arrangements.
             </p>
             <p className="cancer-care-body">
-              Patients from Kenya, Uganda, Tanzania, Nigeria, and other African
-              countries choose India for personalized treatment plans, advanced
-              technology, shorter waiting times, and dedicated international
-              patient services.
+              Connect with our medical tourism team to understand available hospital options, oncology specialties, treatment information, estimated costs and the process for planning cancer care in India.
             </p>
 
             <h2 className="cancer-care-trust-heading">
-              Why International Patients Choose India
+              Our Support May Include
             </h2>
 
             <ul className="cancer-care-trust-list">
@@ -844,7 +837,7 @@ export default function OncologyTreatmentIndia() {
             <div className="cancer-care-img-wrapper cancer-care-img-top">
               <img
                 src={OncologyAboutImage}
-                alt="Advanced oncology care in India"
+                alt="Cancer care options in India for international patients"
                 className="cancer-care-img"
         width={1920}
         height={1280}
@@ -855,7 +848,7 @@ export default function OncologyTreatmentIndia() {
             <div className="cancer-care-img-wrapper cancer-care-img-bottom">
               <img
                 src={OncologyAboutImage1}
-                alt="Oncology treatment in India with advanced cancer care"
+                alt="Oncology treatment in India with coordinated international patient support"
                 className="cancer-care-img"
         width={1920}
         height={1280}
@@ -871,127 +864,87 @@ export default function OncologyTreatmentIndia() {
         <div className="why-choose-container">
           <div className="why-choose-header">
             <h2 className="why-choose-heading">
-              Why Choose India for Cancer Treatment?
+              Why Consider India for Cancer Treatment?
             </h2>
             <p className="why-choose-subheading">
-              India has become a preferred destination for patients seeking
-              affordable and high-quality oncology care.
+              India has a broad healthcare network with oncology departments and specialists across medical, surgical and radiation oncology. Patients may consider hospitals based on their cancer type, clinical requirements, specialist availability, hospital facilities and location.
             </p>
           </div>
 
           <div className="why-choose-cards-grid">
-            {/* Card 1: Affordable Treatment Costs */}
+            {/* Card 1: Treatment Cost Information */}
             <div className="why-choose-card">
               <div className="why-choose-card-icon">
                 <FaMoneyBillWave />
               </div>
               <h3 className="why-choose-card-title">
-                Affordable Treatment Costs
+                Treatment Cost Information
               </h3>
               <p className="why-choose-card-text">
-                India offers advanced cancer treatment at significantly lower
-                costs compared to South Africa, the UK, and the USA.
-                International patients can access high-quality oncology care,
-                modern treatment technologies, and experienced cancer
-                specialists without the financial burden often associated with
-                cancer treatment abroad. Transparent pricing and personalized
-                treatment plans also help patients plan their medical journey
-                with confidence.
+                Cancer treatment costs vary according to cancer type, stage, investigations, treatment approach, hospital, specialist and duration of care. An initial cost estimate can be discussed after reviewing relevant medical reports and treatment requirements.
               </p>
             </div>
 
-            {/* Card 2: Internationally Accredited Hospitals */}
+            {/* Card 2: Hospital Infrastructure */}
             <div className="why-choose-card">
               <div className="why-choose-card-icon">
                 <FaShieldAlt />
               </div>
               <h3 className="why-choose-card-title">
-                Internationally Accredited Hospitals
+                Hospital Infrastructure
               </h3>
               <p className="why-choose-card-text">
-                Many <strong>oncology hospitals in India</strong> are
-                internationally recognized for their advanced infrastructure,
-                patient safety standards, and multidisciplinary cancer care.
-                These hospitals provide modern diagnostic facilities,
-                specialized oncology departments, and dedicated international
-                patient services, ensuring a safe, comfortable, and trusted
-                treatment experience for patients traveling from African
-                countries and other international destinations.
+                Depending on the hospital, oncology services in India may include diagnostic imaging, pathology, surgical facilities, radiation services, intensive care and supportive-care departments. Hospital facilities and accreditation should be verified for each patient's specific requirements.
               </p>
             </div>
 
-            {/* Card 3: Experienced Oncology Specialists */}
+            {/* Card 3: Oncology Specialist Teams */}
             <div className="why-choose-card">
               <div className="why-choose-card-icon">
                 <FaUserMd />
               </div>
               <h3 className="why-choose-card-title">
-                Experienced Oncology Specialists
+                Oncology Specialist Teams
               </h3>
               <p className="why-choose-card-text">
-                India is home to highly experienced medical oncologists,
-                surgical oncologists, radiation oncologists, and cancer surgeons
-                who manage complex cancer cases every day. Patients benefit from
-                personalized treatment planning, multidisciplinary tumor board
-                discussions, and access to specialists for prostate cancer, lung
-                cancer, breast cancer, and other advanced oncology treatments
-                across leading hospitals in major Indian cities.
+                Hospitals in India have specialist teams working across different areas of cancer care, including medical oncology, surgical oncology, radiation oncology and related fields. The appropriate specialist depends on the patient's diagnosis and clinical evaluation.
               </p>
             </div>
 
-            {/* Card 4: Advanced Oncology Technology */}
+            {/* Card 4: Range of Treatment Approaches */}
             <div className="why-choose-card">
               <div className="why-choose-card-icon">
                 <FaRobot />
               </div>
               <h3 className="why-choose-card-title">
-                Advanced Oncology Technology
+                Range of Treatment Approaches
               </h3>
               <p className="why-choose-card-text">
-                Leading cancer hospitals in India use advanced technologies such
-                as robotic surgery, PET-CT imaging, precision radiation therapy,
-                immunotherapy, targeted therapy, and genomic-based treatment
-                planning. These modern treatment approaches help improve
-                treatment accuracy, reduce side effects, support faster
-                recovery, and provide personalized cancer care for both
-                early-stage and advanced cancer patients.
+                Depending on the diagnosis and clinical assessment, a treating team may consider surgery, radiation therapy, systemic treatment, targeted treatment, immunotherapy or a combination of approaches. The treating oncologist determines the appropriate plan after evaluation.
               </p>
             </div>
 
-            {/* Card 5: Dedicated International Patient Services */}
+            {/* Card 5: International Patient Support */}
             <div className="why-choose-card">
               <div className="why-choose-card-icon">
                 <FaGlobe />
               </div>
               <h3 className="why-choose-card-title">
-                Dedicated International Patient Services
+                International Patient Support
               </h3>
               <p className="why-choose-card-text">
-                International patients traveling to India for cancer treatment
-                receive complete support throughout their medical journey.
-                Hospitals assist with medical visa documentation, airport
-                pickup, accommodation arrangements, appointment scheduling,
-                interpreter services, and post-treatment follow-up coordination.
-                Dedicated international patient teams help make the treatment
-                process smoother, more comfortable, and stress-free for patients
-                and their families.
+                Many hospitals provide international-patient departments that assist with appointments, documentation, communication and practical requirements. Our team can help coordinate these aspects before, during and after your hospital visit.
               </p>
             </div>
 
-            {/* Card 6: Short Waiting Time */}
+            {/* Card 6: Multiple Oncology Specialties */}
             <div className="why-choose-card">
               <div className="why-choose-card-icon">
                 <FaClock />
               </div>
-              <h3 className="why-choose-card-title">Short Waiting Time</h3>
+              <h3 className="why-choose-card-title">Multiple Oncology Specialties</h3>
               <p className="why-choose-card-text">
-                Unlike many countries where cancer treatment may involve long
-                waiting periods, hospitals in India often provide faster access
-                to consultations, diagnostics, surgery, chemotherapy, and
-                radiation therapy. Early diagnosis and timely treatment can play
-                an important role in improving outcomes, making India a
-                preferred destination for patients seeking quicker oncology care
-                and immediate medical attention.
+                Patients can explore medical oncology, surgical oncology, radiation oncology and other related specialist services according to their clinical requirements. Hospital selection depends on the availability of the relevant specialty and facilities.
               </p>
             </div>
           </div>
@@ -1005,7 +958,7 @@ export default function OncologyTreatmentIndia() {
           <div className="patient-journey-image">
             <img
               src={InternationalPatientServicesImage}
-              alt="International patient services for cancer treatment in India"
+              alt="International patient support for cancer care coordination in India"
               className="patient-journey-img"
         width={493}
         height={740}
@@ -1016,14 +969,11 @@ export default function OncologyTreatmentIndia() {
           {/* ── Right: Content ── */}
           <div className="patient-journey-content">
             <h2 className="patient-journey-heading">
-              International Patient Journey
+              International Patient Support for Cancer Care
             </h2>
 
             <p className="patient-journey-text">
-              From initial consultation to post-treatment follow-up, we guide
-              international patients through every step of their cancer
-              treatment journey in India with complete support and personalized
-              care coordination.
+              Planning cancer care in another country can involve medical appointments as well as documentation, travel, accommodation and communication requirements. Our team helps international patients coordinate these practical aspects.
             </p>
 
             <div className="patient-journey-steps">
@@ -1081,7 +1031,7 @@ export default function OncologyTreatmentIndia() {
           {/* ── Right: Content ── */}
           <div className="oncology-treatment-content">
             <span className="oncology-treatment-label">
-              WHAT IS INCLUDED IN CANCER TREATMENT IN INDIA
+              ONCOLOGY TREATMENT IN INDIA
             </span>
 
             <h2 className="oncology-treatment-heading">
@@ -1089,73 +1039,55 @@ export default function OncologyTreatmentIndia() {
             </h2>
 
             <p className="oncology-treatment-text">
-              India is now recognized globally for advanced oncology treatment,
-              highly trained cancer specialists, and affordable healthcare
-              infrastructure.
+              Cancer treatment is planned according to factors such as cancer type, stage, medical history, test results, overall health and other clinical findings. The treating oncology team determines which treatment approach is appropriate after evaluation.
             </p>
 
             <p className="oncology-treatment-text">
-              International patients choose India because they can access modern
-              cancer care without the extremely high treatment costs often seen
-              in Western countries.
+              Medical disclaimer: Treatment suitability, expected outcomes, duration and cost vary from patient to patient. Final treatment decisions should be made by a qualified healthcare professional after reviewing the patient's medical information.
             </p>
 
             <h3 className="oncology-treatment-subheading">
-              Why Patients Travel to India for Cancer Treatment
+              Treatment Approaches in Oncology Care
             </h3>
 
             <div className="oncology-treatment-cards">
-              {/* Card 1: Advanced Cancer Technology */}
+              {/* Card 1 */}
               <div className="oncology-treatment-card">
                 <h4 className="oncology-card-title">
-                  Experienced Cancer Specialists
+                  Surgery
                 </h4>
                 <p className="oncology-card-text">
-                  India is home to some of the most experienced medical
-                  oncology, surgical oncology, and radiation oncology experts.
-                  International patients often choose leading oncology centers
-                  in Mumbai, Delhi, Chennai, Hyderabad, Bangalore, Ahmedabad,
-                  and Kolkata for specialized cancer care.
+                  Surgical treatment may be considered for certain cancers depending on the location, size, stage and other clinical factors. The treating surgical oncology team determines suitability after clinical evaluation.
                 </p>
               </div>
 
-              {/* Card 2: International Treatment Standards */}
+              {/* Card 2 */}
               <div className="oncology-treatment-card">
                 <h4 className="oncology-card-title">
-                  International Treatment Standards
+                  Radiation Therapy
                 </h4>
                 <p className="oncology-card-text">
-                  Many <strong>cancer hospitals in India</strong> follow
-                  international clinical protocols and have globally accredited
-                  facilities focusing on patient safety, infection control,
-                  personalized oncology care, multidisciplinary treatment
-                  planning, and evidence-based approaches.
+                  Radiation therapy may be used as part of cancer treatment when considered appropriate by the radiation oncology team. The suitability and treatment schedule are determined based on the patient's clinical assessment.
                 </p>
               </div>
 
-              {/* Card 3: Affordable Cancer Treatment */}
+              {/* Card 3 */}
               <div className="oncology-treatment-card">
                 <h4 className="oncology-card-title">
-                  Affordable Cancer Treatment
+                  Systemic and Targeted Treatment
                 </h4>
                 <p className="oncology-card-text">
-                  One of the biggest reasons patients choose India is
-                  affordability. Advanced oncology care in India can often cost
-                  50–80% less than treatment in South Africa, the UK, Europe, or
-                  the USA while still providing advanced medical care.
+                  Some cancers may require medicines that work throughout the body, or targeted approaches based on specific biological or molecular characteristics. The treating oncologist determines the appropriate option based on clinical findings.
                 </p>
               </div>
 
-              {/* Card 4: Benefits for International Patients */}
+              {/* Card 4 */}
               <div className="oncology-treatment-card">
                 <h4 className="oncology-card-title">
-                  Benefits for International Patients
+                  Combined Treatment Approaches
                 </h4>
                 <p className="oncology-card-text">
-                  Short waiting periods, faster diagnosis and treatment
-                  initiation, English-speaking medical teams, dedicated
-                  international patient departments, advanced diagnostic
-                  facilities, and personalized treatment coordination.
+                  Some patients may require more than one treatment modality. The treating medical team determines the appropriate combination and sequence based on the patient's individual clinical assessment.
                 </p>
               </div>
             </div>
@@ -1167,15 +1099,10 @@ export default function OncologyTreatmentIndia() {
         {/* Header */}
         <div className="cancer-services-header">
           <h2 className="cancer-services-title">
-            Types of Cancer Treatments in India
+            Cancer Types Treated at Hospitals in India
           </h2>
           <p className="cancer-services-description">
-            IIndia offers advanced and personalized prostate oncology care
-            treatment in india using modern technologies, robotic surgery, and
-            multidisciplinary treatment approaches. Patients looking for the
-            <strong>advanced prostate oncology care</strong> often travel to
-            Mumbai, Ahmedabad, Chennai, and Delhi for robotic surgery, radiation
-            therapy, hormone therapy, and immunotherapy.
+            Depending on the hospital and specialist team, oncology services in India may cover different cancer types. The availability of a particular service should be confirmed with the selected hospital. Treatment planning is individualized based on the patient's diagnosis, clinical findings and overall health.
           </p>
         </div>
 
@@ -1192,10 +1119,10 @@ export default function OncologyTreatmentIndia() {
           <div className="hn-title-wrap">
             <span className="hn-label">Our Hospital Network</span>
             <h2 className="hn-heading">
-              Best Cancer Hospitals in India for Oncology Treatment
+              Cancer Hospitals in India for Oncology Care
             </h2>
             <p className="hn-subtitle">
-              We partner with India’s top NABH & JCI-accredited hospitals
+              India has hospitals with dedicated oncology departments and multidisciplinary medical teams. Hospital selection depends on cancer type, required specialty, specialist availability, facilities, location and individual requirements.
             </p>
           </div>
           <div className="hn-slider-wrapper">
@@ -1281,7 +1208,7 @@ export default function OncologyTreatmentIndia() {
           <div className="doctor-title-wrap">
             <span className="doctor-label">Our Specialists</span>
             <h2 className="doctor-h2">
-              Best Oncologists in India for Cancer Treatment
+              Oncology Specialists in India
             </h2>
           </div>
           <div className="doctor-cards-grid">
@@ -1404,7 +1331,7 @@ export default function OncologyTreatmentIndia() {
 
       <section className="cancer-reviews-section">
         <div className="cancer-reviews-content">
-          <h2 className="cancer-reviews-heading">Our Clients Review</h2>
+          <h2 className="cancer-reviews-heading">Our Patients' Experiences</h2>
 
           {/* Slider wrapper */}
           <div className="cancer-reviews-slider-wrapper">
@@ -1442,7 +1369,7 @@ export default function OncologyTreatmentIndia() {
         <div className="cancer-reviews-image-wrapper">
           <img
             src={ThumbnailImage}
-            alt="Happy international cancer patient in India"
+            alt="International patient experiences with cancer care in India"
             className="cancer-reviews-image"
         width={740}
         height={536}
@@ -1460,8 +1387,7 @@ export default function OncologyTreatmentIndia() {
               Frequently Asked Questions About Cancer Treatment in India
             </h2>
             <p className="cancer-faq-subtitle">
-              Get answers to common questions about cancer care, best cancer
-              hospitals, and treatment options in India
+              Get answers to common questions about cancer care, hospital options, treatment approaches and international patient support in India
             </p>
           </div>
 
@@ -1517,7 +1443,7 @@ export default function OncologyTreatmentIndia() {
         {/* Background Image */}
         <img
           src={CtaImage}
-          alt="Book oncology consultation in India"
+          alt="Discuss your cancer treatment requirements with Human Care Medical Tourism"
           className="cancer-cta-bg-image"
           loading="lazy"
         width={740}
@@ -1532,30 +1458,29 @@ export default function OncologyTreatmentIndia() {
         <div className="cancer-cta-container">
           <div className="cancer-cta-content">
             <span className="cancer-cta-badge">
-              Advanced Cancer Care for International Patients
+              International Patient Support
             </span>
 
             <h2 className="cancer-cta-title">
-              Book Your Oncology Consultation
+              Discuss Your Cancer Treatment Requirements
             </h2>
 
             <p className="cancer-cta-subtitle">
-              Start your oncology treatment journey in India with experienced
-              cancer specialists and internationally trusted hospitals.
+              Get assistance with hospital selection, oncology specialist appointment coordination, treatment information, estimated costs and international patient support.
             </p>
 
             <div className="cancer-cta-benefits-list">
               <div className="cancer-cta-benefit-point">
                 <FaCheckCircle className="cancer-cta-check-icon" />
-                <span>Personalized treatment plans</span>
+                <span>Hospital selection assistance</span>
               </div>
               <div className="cancer-cta-benefit-point">
                 <FaCheckCircle className="cancer-cta-check-icon" />
-                <span>Transparent pricing</span>
+                <span>Specialist appointment coordination</span>
               </div>
               <div className="cancer-cta-benefit-point">
                 <FaCheckCircle className="cancer-cta-check-icon" />
-                <span>Expert cancer specialists</span>
+                <span>Treatment cost information</span>
               </div>
               <div className="cancer-cta-benefit-point">
                 <FaCheckCircle className="cancer-cta-check-icon" />
@@ -1563,7 +1488,7 @@ export default function OncologyTreatmentIndia() {
               </div>
               <div className="cancer-cta-benefit-point">
                 <FaCheckCircle className="cancer-cta-check-icon" />
-                <span>Modern and safe cancer care</span>
+                <span>Travel and accommodation coordination</span>
               </div>
             </div>
 
@@ -1574,13 +1499,25 @@ export default function OncologyTreatmentIndia() {
                 rel="noreferrer"
                 className="btn-wa whatsapp-glow"
               >
-                <WA size={5} /> WhatsApp Consultation
+                <WA size={5} /> Get Treatment Assistance
               </a>
 
               <a href="tel:+919833166697" className="btn-outline">
-                <FaPhoneAlt /> Contact Medical Coordinator
+                <FaPhoneAlt /> Speak With Our Team
               </a>
             </div>
+
+            <p
+              className="cancer-cta-disclaimer"
+              style={{
+                fontSize: "0.82rem",
+                opacity: 0.85,
+                marginTop: "1.25rem",
+                lineHeight: "1.4",
+              }}
+            >
+              Medical disclaimer: Healthcare information on this page is provided for general informational purposes. Diagnosis, treatment suitability, expected outcomes, duration and final cost vary according to individual circumstances and should be discussed with a qualified healthcare professional.
+            </p>
           </div>
         </div>
       </section>

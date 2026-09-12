@@ -61,114 +61,121 @@ const WA_URL =
 const trustSignals = [
   {
     icon: <FaUserMd />,
-    label: "Experienced Ophthalmologists",
-  },
-  {
-    icon: <FaHospital />,
-    label: "Internationally Accredited Hospitals",
+    label: "Ophthalmology consultation and evaluation",
   },
   {
     icon: <FaMicroscope />,
-    label: "Advanced Eye Surgery Technology",
+    label: "Diagnostic eye examinations",
+  },
+  {
+    icon: <FaHospital />,
+    label: "Cataract and lens-related procedures",
+  },
+  {
+    icon: <FaCheckCircle />,
+    label: "Corneal and retinal care",
   },
   {
     icon: <FaGlobeAfrica />,
-    label: "Personalized International Patient Support",
+    label: "Glaucoma evaluation and treatment",
   },
   {
-    icon: <FaHandHoldingUsd />,
-    label: "Affordable & Transparent Treatment Planning",
+    icon: <FaMicroscope />,
+    label: "Refractive and other ophthalmic procedures",
+  },
+  {
+    icon: <FaHandshake />,
+    label: "Post-procedure follow-up and coordination",
   },
 ];
 
 const cards = [
   {
     id: 1,
-    icon: <FaMicroscope />,
-    title: "Advanced Eye Surgery Technology",
-    body: "India is known for advanced ophthalmology hospitals equipped with modern diagnostic and surgical technology for precise and safe vision treatment. From blade-free LASIK systems and retina microsurgery to premium cataract lenses and digital eye imaging, patients receive world-class treatment using internationally accepted standards. Many international patients searching for laser eye surgery cost Mumbai choose India because of its advanced medical infrastructure, modern eye care techniques, and trusted surgical outcomes.",
+    icon: <FaUserMd />,
+    title: "Ophthalmology Specialist Options",
+    body: "Patients can explore ophthalmologists based on their diagnosis, required eye specialty, qualifications and consultation requirements.",
   },
   {
     id: 2,
-    icon: <FaUserMd />,
-    title: "Experienced Eye Specialists",
-    body: "The Best Ophthalmologists in India are highly experienced in treating both simple and complex eye disorders with precision and patient-focused care. Many eye specialists are internationally trained and perform thousands of successful procedures every year. Their expertise includes LASIK surgery, retina surgery, glaucoma treatment, cornea transplantation, cataract procedures, and squint correction surgery, making India a trusted destination for advanced eye treatment.",
+    icon: <FaMicroscope />,
+    title: "Range of Eye-Care Procedures",
+    body: "Hospitals provide consultations, diagnostics and various surgical or non-surgical options depending on individual clinical evaluation.",
   },
   {
     id: 3,
-    icon: <FaHandHoldingUsd />,
-    title: "Affordable & Cost-Effective Treatment",
-    body: "One of the main reasons patients travel for affordable eye surgery cost in India is the combination of high-quality treatment and budget-friendly medical care. India offers transparent pricing, personalized treatment plans, and cost-effective surgical options without compromising safety or technology. International patients benefit from affordable healthcare solutions while receiving treatment from experienced specialists in modern hospitals.",
+    icon: <FaHospital />,
+    title: "Diagnostic & Surgical Facilities",
+    body: "Available facilities vary by hospital, including digital eye imaging, specialized surgical suites, advanced laser equipment and dedicated eye departments.",
   },
   {
     id: 4,
-    icon: <FaCalendarCheck />,
-    tag: "Speed",
-    title: "Fast Appointments & Reduced Waiting Time",
-    body: "Choosing an eye operation in India allows international patients to receive quicker consultations, faster diagnosis, and timely surgery scheduling compared to many countries with long waiting periods. Early treatment is important for protecting vision, especially in conditions like cataracts, glaucoma, retina disorders, and corneal diseases. India’s streamlined healthcare system helps patients access expert treatment without unnecessary delays.",
+    icon: <FaGlobeAfrica />,
+    title: "Hospital Options for International Patients",
+    body: "International patients can compare and choose from accredited hospitals and eye care centers across major medical hubs in India.",
   },
   {
     id: 5,
-    icon: <FaGlobeAfrica />,
-    title: "International Patient-Friendly Services",
-    body: "Patients searching for eye surgery India cost often choose India not only for affordability but also for its excellent international patient support services. Leading hospitals provide medical visa assistance, airport pickup, hotel accommodation support, language interpretation, online consultations, and dedicated coordinators for international visitors from Kenya, Uganda, Tanzania, Nigeria, and South Sudan. These services ensure a smooth and stress-free medical journey.",
+    icon: <FaHandHoldingUsd />,
+    title: "Treatment & Cost Information",
+    body: "Patients can review transparent cost estimates, procedure details and hospital options based on their medical reports before confirming plans.",
   },
   {
     id: 6,
-    icon: <FaHospital />,
-    title: "Modern Hospitals & Global Standards",
-    body: "India’s top ophthalmology hospitals are internationally recognized for advanced infrastructure, specialized eye departments, and modern surgical facilities. Patients looking for the best LASIK eye surgery cost in India often prefer India because hospitals combine affordable treatment with global healthcare standards. From advanced laser systems and digital diagnostics to modern operation theaters and comprehensive post-treatment care, Indian hospitals provide safe and reliable eye treatment for international patients.",
+    icon: <FaCalendarCheck />,
+    title: "International Patient Coordination",
+    body: "Comprehensive support is available for medical documentation, appointment scheduling, translation services and local travel logistics.",
   },
 ];
 
 const eyesServices = [
   {
     id: 1,
-    title: "LASIK Eye Surgery",
+    title: "Cataract Surgery",
     description:
-      "LASIK is an advanced vision correction procedure that helps reduce dependence on glasses or contact lenses. Patients searching for the best LASIK eye surgery in Mumbai or LASIK eye surgery Pune choose India for advanced laser technology, experienced ophthalmologists, affordable treatment options, and faster recovery outcomes.",
-    image: LasikEyeImage,
-    alt: "LASIK eye surgery treatment in India",
+      "A procedure used to treat cataracts when surgery is clinically recommended after comprehensive ophthalmic evaluation.",
+    image: CataractSurgeryImage,
+    alt: "Cataract surgery in India",
   },
   {
     id: 2,
-    title: "Cataract Surgery",
+    title: "Corneal Treatment",
     description:
-      "Cataract surgery in India uses modern lens implants and minimally invasive techniques to restore clear vision. International patients seeking affordable eye surgery cost in India prefer India because of experienced eye specialists, advanced hospitals, personalized treatment planning, and high-quality cataract care with international standards.",
-    image: CataractSurgeryImage,
-    alt: "Advanced cataract surgery in India",
+      "Evaluation and treatment options for selected corneal conditions, including corneal dystrophies and transplants.",
+    image: CorneaSurgeryImage,
+    alt: "Corneal treatment in India",
   },
   {
     id: 3,
-    title: "Retina Surgery",
+    title: "Retinal Treatment",
     description:
-      "Retina surgery helps treat retinal detachment, diabetic retinopathy, and other serious eye conditions. Patients looking for advanced eye operation in India often choose India for specialized retina surgeons, modern microsurgical technology, digital retinal imaging systems, and comprehensive eye care services for better vision protection.",
+      "Specialist assessment and available treatment options for certain retinal conditions, including diabetic retinopathy and detachment.",
     image: RetinaSurgeryImage,
-    alt: "Retina surgery treatment in India",
+    alt: "Retinal treatment in India",
   },
   {
     id: 4,
-    title: "Glaucoma Surgery",
+    title: "Glaucoma Treatment",
     description:
-      "Glaucoma surgery in India helps control eye pressure and prevent vision loss caused by optic nerve damage. International patients searching for eye surgery India cost choose India for advanced glaucoma treatment, experienced ophthalmologists, minimally invasive procedures, and affordable healthcare with modern medical infrastructure.",
+      "Evaluation and management options for glaucoma and related eye-pressure conditions to help preserve optic nerve health.",
     image: GlaucomaSurgeryImage,
-    alt: "Glaucoma surgery in India for managing intraocular pressure",
+    alt: "Glaucoma treatment in India",
   },
   {
     id: 5,
-    title: "Cornea Surgery",
+    title: "Refractive Eye Procedures",
     description:
-      "Cornea surgery in India treats corneal infections, scarring, keratoconus, and other vision-related disorders. Patients searching for laser eye surgery in Kerala often prefer India because of advanced corneal transplant procedures, modern laser technology, skilled specialists, and affordable treatment options for international patients.",
-    image: CorneaSurgeryImage,
-    alt: "Cornea surgery in India for treating corneal conditions",
+      "Procedures that may be considered for selected refractive errors after appropriate clinical assessment and corneal topography.",
+    image: LasikEyeImage,
+    alt: "Refractive eye procedures in India",
   },
   {
     id: 6,
-    title: "Squint Eye Surgery",
+    title: "Oculoplastic / Other Eye Procedures",
     description:
-      "Squint eye surgery corrects eye misalignment and improves both vision coordination and appearance. Patients searching for squint eye surgery cost in India or cross eye surgery cost in India choose India for advanced surgical techniques, experienced ophthalmologists, affordable care, and excellent international patient support services.",
+      "Specialist evaluation and treatment options for selected conditions involving the eyelids, orbit or related ocular structures.",
     image: SquintSurgeryImage,
-    alt: "Squint eye surgery in India for correcting eye misalignment",
+    alt: "Oculoplastic and other eye procedures in India",
   },
 ];
 
@@ -190,21 +197,22 @@ const EyesServiceCard = ({ service }) => {
   );
 };
 
-const trustPoints = [
-  "Globally trained surgeons",
-  "Expertise in minimally invasive techniques",
-  "Modern diagnostic facilities",
-  "Comprehensive vision care",
-  "Strong focus on patient safety",
+const costFactors = [
+  "Type of eye condition or procedure",
+  "Diagnostic tests and specialist consultations",
+  "Hospital and surgical procedure charges",
+  "Ophthalmologist or surgeon fees",
+  "Room and stay requirements",
+  "Follow-up and additional medical services",
 ];
 
-const specialtyBadges = [
-  "Extensive surgical experience",
-  "Advanced technology expertise",
-  "International treatment standards",
-  "Patient-centered care",
-  "High success rates",
-  "Personalized treatment planning",
+const costHighlights = [
+  "Transparent cost estimates",
+  "Detailed procedure scope",
+  "Hospital category options",
+  "Pre-travel guidance",
+  "Individualized planning",
+  "Follow-up coordination",
 ];
 
 const DOCTORS = [
@@ -213,28 +221,28 @@ const DOCTORS = [
     education:
       "MBBS, MD, MS (Ophthalmology), DNB, MNAMS, FRCS, FICO (UK), FAICO",
     spec: "Ophthalmologist, Cataract & Refractive Surgeon",
-    desc: "Prof. Dr. Mahipal S Sachdev is a Padma Shri award-winning Ophthalmologist, Cataract Surgeon, and Refractive Eye Surgeon with over 42 years of experience. He specializes in SMILE Eye Surgery, LASIK, SILK Surgery, Cataract Surgery, Cornea Transplant, Keratoconus Treatment, and Dry Eye Management. As Chairman and Medical Director of the Centre for Sight Group of Eye Hospitals, he has pioneered several advanced eye surgery techniques in India, including SMILE, bladeless LASIK, and femtosecond cataract surgery. Dr. Sachdev has received numerous national and international recognitions for his contributions to ophthalmology and eye care innovation.",
+    desc: "Prof. Dr. Mahipal S Sachdev is a Padma Shri recipient and Senior Ophthalmologist with over 42 years of clinical experience in cataract, cornea, and refractive eye surgery. Chairman and Medical Director of Centre for Sight Group of Eye Hospitals, he specializes in cataract surgery, refractive procedures, cornea transplants, and dry eye management. He has contributed extensively to ophthalmic clinical research and academic training in India.",
     photoUrl: MahipalSachdevImage,
   },
   {
     name: "Dr. Sathi Devi A V",
     education: "Postgraduate Training in Ophthalmology, Fellowship in Glaucoma",
     spec: "Glaucoma Specialist",
-    desc: "Dr. Sathi Devi A V is a highly experienced Glaucoma Specialist with over 24 years of expertise in the diagnosis and management of glaucoma and related eye disorders. She serves as HOD & Consultant and has been practicing exclusive glaucoma care at Narayana Nethralaya since 1998. Dr. Sathi completed her postgraduate training at the Minto Regional Institute of Ophthalmology, Bangalore, and pursued a fellowship at the Medical Research Foundation, Sankara Nethralaya, where she further specialized in glaucoma services. She is recognized for her extensive experience in advanced glaucoma management and comprehensive eye care.",
+    desc: "Dr. Sathi Devi A V is a Glaucoma Specialist with over 24 years of clinical experience in the diagnosis, medical management, and surgical treatment of glaucoma and intraocular pressure disorders. She serves as Consultant at Narayana Nethralaya, Bangalore, having completed fellowship training at Sankara Nethralaya, Chennai. Her clinical practice focuses on early glaucoma detection, optic nerve assessment, and comprehensive glaucoma care.",
     photoUrl: SathiDeviImage,
   },
   {
     name: "Dr. Yathish S",
     education: "MBBS, DOMS, DNB (Ophthalmology), FCE",
     spec: "Cornea Specialist",
-    desc: "Dr. Yathish S is an experienced Cornea Specialist with over 17 years of expertise in the diagnosis and treatment of corneal disorders. He serves as HOD & Consultant and specializes in cornea diseases, corneal transplants, and advanced corneal care. Dr. Yathish is skilled in managing complex corneal conditions and is dedicated to providing comprehensive eye care using the latest treatment techniques and technologies.",
+    desc: "Dr. Yathish S is a Cornea Specialist with over 17 years of experience in the diagnosis, medical management, and surgical treatment of corneal disorders. Serving as Consultant at Narayana Nethralaya, he specializes in corneal dystrophies, keratoconus management, corneal transplants, and ocular surface disorders.",
     photoUrl: YathishSImage,
   },
   {
     name: "Dr. Anjali Kiran",
     education: "MBBS, DO, FNN (Oculoplasty, Orbit & Ocular Oncology)",
     spec: "Oculoplasty, Orbit & Ocular Oncology Specialist",
-    desc: "Dr. Anjali Kiran is an experienced Oculoplasty, Orbit & Ocular Oncology Specialist with over 14 years of expertise in the diagnosis and treatment of orbital disorders, eyelid conditions, eye tumors, and reconstructive eye surgeries. She completed her MBBS from Karnatak University and her postgraduate training in Ophthalmology from J.J.M. Medical College, Davangere. Dr. Anjali further specialized through a Fellowship in Orbit, Oculoplasty & Ocular Oncology Services at Narayana Nethralaya in 2013. She currently serves as HOD & Consultant and is dedicated to providing advanced surgical and medical care for complex orbital, oculoplastic, and ocular oncology conditions.",
+    desc: "Dr. Anjali Kiran is an Oculoplasty and Ocular Oncology Specialist with over 14 years of clinical experience in orbital disorders, eyelid conditions, and reconstructive ocular surgeries. Consultant at Narayana Nethralaya, she completed fellowship training in Orbit, Oculoplasty & Ocular Oncology Services and manages complex eyelid, tear duct, and orbital conditions.",
     photoUrl: AnjaliKiranImage,
   },
   {
@@ -242,57 +250,57 @@ const DOCTORS = [
     education:
       "MBBS, MS (Ophthalmology), DNB (Ophthalmology), FRCS (Glasgow), FPVR (USA), PhD (Maastricht University), PGDMLE",
     spec: "Pediatric Retina Specialist & Retinopathy of Prematurity (ROP) Expert",
-    desc: "Dr. Anand Vinekar is a renowned Pediatric Retina Specialist with over 23 years of experience in pediatric retinal diseases and Retinopathy of Prematurity (ROP). He serves as the Founder Program Director of KIDROP and Head of the Department of Pediatric Retina at Narayana Nethralaya, Bengaluru. Dr. Vinekar has treated more than 5,500 infants with ROP and is internationally recognized for his contributions to infant retinal imaging, telemedicine, and blindness prevention. Under his leadership, the KIDROP Tele-ROP Program has become one of the world's largest ROP screening initiatives, completing over 320,000 screening sessions across more than 190 neonatal centers. He graduated from St. John's Medical College with 17 gold medals and has received numerous national and international awards for his contributions to pediatric ophthalmology, retinal care, and medical innovation.",
+    desc: "Dr. Anand Vinekar is a Pediatric Retina Specialist with over 23 years of clinical experience in infant and pediatric retinal disorders. Head of the Department of Pediatric Retina at Narayana Nethralaya, Bengaluru, he leads the KIDROP tele-ophthalmology screening program and specializes in Retinopathy of Prematurity, pediatric retinal imaging, and pediatric vitreo-retinal conditions.",
     photoUrl: AnandVinekarImage,
   },
   {
     name: "Dr. Naren Shetty",
     education: "MS (Ophthalmology), PhD (Maastricht University, Netherlands)",
-    spec: "LASIK, SMILE & Cataract Surgeon",
-    desc: "Dr. Naren Shetty is a renowned LASIK, SMILE, and Cataract Surgeon with over 12 years of experience in advanced refractive and cataract eye surgery. As Director and Head of Cataract & Refractive Services at Narayana Nethralaya, Bengaluru, he specializes in LASIK eye surgery, SMILE vision correction, Phakic IOL implantation, Premium IOLs, and complex cataract surgery. He has successfully performed more than 28,000 cataract and refractive procedures and is recognized internationally for his clinical research and innovation in ophthalmology. Dr. Shetty has authored numerous scientific publications, participated in multiple clinical trials, and received several national and international awards for excellence in cataract and refractive surgery.",
+    spec: "Refractive & Cataract Surgeon",
+    desc: "Dr. Naren Shetty is an Ophthalmologist specializing in cataract and refractive surgery with over 12 years of clinical experience. Serving as Head of Cataract & Refractive Services at Narayana Nethralaya, Bengaluru, he specializes in refractive vision correction, intraocular lens implantation, and cataract surgery, with extensive research contributions in ophthalmic imaging.",
     photoUrl: NarenShettyImage,
   },
   {
     name: "Prof. Dr. Sri Ganesh",
     education: "MBBS, MS, DNB, DSc (Hon), FRCS (Glasg), FWCRS",
-    spec: "Cataract, LASIK & Refractive Surgeon",
-    desc: "Prof. Dr. Sri Ganesh is a leading Cataract, LASIK, and Refractive Surgeon with over 30 years of experience in advanced ophthalmology. As Chairman and Managing Director of Nethradhama Hospitals, Bengaluru, he specializes in cataract surgery, LASIK eye surgery, refractive surgery, vision correction procedures, and complex eye treatments. He has performed more than 100,000 cataract surgeries and over 50,000 refractive procedures, making him one of the most experienced eye surgeons in India. Dr. Sri Ganesh is internationally recognized for his contributions to ophthalmic education, research, innovation, and patient care. He has trained over 200 ophthalmologists worldwide and continues to advance eye care through clinical excellence and research-driven innovation.",
+    spec: "Cataract & Refractive Surgeon",
+    desc: "Prof. Dr. Sri Ganesh is a Senior Cataract and Refractive Surgeon with over 30 years of clinical experience in ophthalmology. Chairman and Managing Director of Nethradhama Hospitals, Bengaluru, he specializes in cataract surgery, refractive vision correction, and anterior segment procedures, having trained numerous ophthalmologists across India and internationally.",
     photoUrl: SriGaneshImage,
   },
   {
     name: "Dr. Rohit Modi",
     education: "MBBS, MS (Ophthalmology), DNB (Ophthalmology), FAICO",
     spec: "Ophthalmologist, Cataract & Retina Surgeon",
-    desc: "Dr. Rohit Modi is an experienced Ophthalmologist, Cataract Surgeon, and Retina Specialist with over 19 years of overall experience, including more than 11 years as a specialist. He has received advanced training from the renowned L.V. Prasad Eye Institute, India, and Associated Retina Consultants, USA. Dr. Modi is a Fellow of the Royal College of Surgeons, Glasgow, UK, and the International Council of Ophthalmology, UK. He has successfully performed over 10,000 eye surgeries and specializes in customized laser vision correction procedures, cataract surgery, retinal surgery, diabetic eye disease management, retinopathy of prematurity (ROP), and uveitis treatment. His extensive surgical expertise and patient-centered approach make him a trusted specialist for complex eye conditions.",
+    desc: "Dr. Rohit Modi is an Ophthalmologist and Vitreo-Retinal Surgeon with over 19 years of clinical experience. A Fellow of the Royal College of Surgeons (Glasgow) and trained at the L.V. Prasad Eye Institute, he specializes in retinal surgery, diabetic retinopathy management, macular disorders, and cataract surgery.",
     photoUrl: RohitModiImage,
   },
   {
     name: "Dr. Noshir Shroff",
     education: "MBBS, MS (Ophthalmology)",
     spec: "Ophthalmologist & Eye Surgeon",
-    desc: "Dr. Noshir Shroff is a highly experienced Ophthalmologist and Eye Surgeon with over 45 years of overall experience, including more than 43 years as a specialist. He completed his MBBS from the University of Delhi in 1975 and MS in Ophthalmology from the University of Delhi in 1978. Dr. Shroff is known for his expertise in comprehensive eye care, ophthalmologic examinations, diabetic retinopathy screening and treatment, ocular inflammation, uveitis management, and the diagnosis and treatment of various eye disorders. With decades of clinical experience, he is recognized as one of the leading eye specialists dedicated to providing advanced and patient-focused ophthalmic care.",
+    desc: "Dr. Noshir Shroff is a Senior Ophthalmologist and Eye Surgeon with over 45 years of clinical experience in comprehensive ophthalmology. Having completed his MS in Ophthalmology from the University of Delhi, he focuses on comprehensive eye care, diabetic retinopathy evaluation, uveitis management, and general ophthalmic surgery.",
     photoUrl: NoshirShroffImage,
   },
   {
     name: "Dr. Rushad Shroff",
     education:
       "MBBS (KMC Manipal), MS (Ophthalmology), Fellowship in Cataract, Cornea, Refractive & Optics",
-    spec: "LASIK, Cataract & Cornea Surgeon",
-    desc: "Dr. Rushad Shroff is a leading LASIK, Cataract, and Cornea Surgeon and Medical Director at Shroff Eye Centre. He specializes in LASIK eye surgery, PRK, ICL implantation, femtosecond laser cataract surgery, corneal transplantation, keratoconus treatment, and dry eye management. Trained at premier institutions including KMC Manipal, RIO Trivandrum, and Narayana Nethralaya, Bengaluru, he is recognized for his expertise in advanced vision correction and corneal procedures. Dr. Shroff has published extensively in international ophthalmology journals and has received multiple prestigious awards for excellence in cataract and refractive surgery. His commitment to innovation and patient-centered care has established him as one of the leading eye surgeons in India.",
+    spec: "Refractive, Cataract & Cornea Surgeon",
+    desc: "Dr. Rushad Shroff is an Ophthalmologist and Medical Director at Shroff Eye Centre with specialized training in cataract, cornea, and refractive procedures. He completed fellowships in anterior segment surgery and optics, specializing in corneal disease management, keratoconus, and laser vision correction.",
     photoUrl: RushadShroffImage,
   },
   {
     name: "Dr. Cyrus M. Shroff",
     education: "MBBS, MD (Ophthalmology)",
     spec: "Retina Specialist & Vitreo-Retinal Surgeon",
-    desc: "Dr. Cyrus M. Shroff is a renowned Retina Specialist and Vitreo-Retinal Surgeon with over 47 years of experience in advanced retinal care. He founded the Retina & Vitreous Subspecialty Services at Shroff Eye Centre and has dedicated his career to the treatment of retinal diseases, diabetic retinopathy, retinal detachment, macular degeneration, vitreous disorders, and laser retinal procedures. Having performed more than 5,000 vitreo-retinal surgeries and over 10,000 retinal laser treatments, Dr. Shroff is widely recognized for his expertise in complex retinal conditions and surgical excellence. His extensive experience and commitment to innovation have made him one of the most trusted retina surgeons in India.",
+    desc: "Dr. Cyrus M. Shroff is a Senior Retina Specialist and Vitreo-Retinal Surgeon with over 47 years of experience in retinal disease management. Director of Retina Services at Shroff Eye Centre, he specializes in diabetic eye disease, retinal detachment surgery, macular degeneration management, and vitreo-retinal procedures.",
     photoUrl: CyrusShroffImage,
   },
   {
     name: "Dr. Varshini Shanker",
     education: "MBBS, DNB (Ophthalmology)",
     spec: "Pediatric Eye Specialist, Squint & Neuro-Ophthalmologist",
-    desc: "Dr. Varshini Shanker is a leading Pediatric Eye Specialist, Squint Surgeon, and Neuro-Ophthalmologist with over 24 years of experience in advanced eye care. She specializes in children's eye disorders, squint correction surgery, neuro-ophthalmology, nerve palsy treatment, binocular vision disorders, hereditary retinal diseases, and pediatric eye trauma. Trained at Sankara Nethralaya, Chennai, she has extensive expertise in managing complex eye conditions in children, including those with developmental delays. Dr. Varshini is committed to early diagnosis and advanced treatment of pediatric eye diseases and has contributed significantly to ophthalmic research, education, and public awareness programs.",
+    desc: "Dr. Varshini Shanker is a Pediatric Ophthalmologist and Strabismus Specialist with over 24 years of experience. Trained at Sankara Nethralaya, Chennai, her clinical practice encompasses pediatric eye disorders, strabismus (squint) evaluation and surgical alignment, neuro-ophthalmology, and amblyopia therapy.",
     photoUrl: VarshiniShankerImage,
   },
 ];
@@ -359,56 +367,56 @@ const HOSPITALS = [
 const leftCards = [
   {
     id: 1,
-    title: "Blurred Vision",
-    desc: "Blurred vision may result from cataracts, refractive errors, or retina disorders requiring advanced diagnosis and personalized eye treatment in India.",
+    title: "Blurred Vision Evaluation",
+    desc: "Blurred vision may occur due to cataracts, refractive errors, or retinal disorders, requiring diagnostic examination to determine clinical management.",
   },
   {
     id: 2,
-    title: "Eye Pain & Eye Strain",
-    desc: "Eye pain and strain may indicate glaucoma, infections, or excessive screen exposure requiring professional ophthalmology evaluation and care.",
+    title: "Eye Strain & Discomfort",
+    desc: "Persistent strain or discomfort may indicate dry eye syndrome, refractive changes, or intraocular pressure variations requiring specialist evaluation.",
   },
   {
     id: 3,
-    title: "Difficulty Seeing at Night",
-    desc: "Poor night vision may be linked to cataracts, retina disorders, or age-related vision problems needing specialized eye treatment.",
+    title: "Reduced Night Vision",
+    desc: "Difficulty seeing in low light can be associated with cataracts, retinal conditions, or corneal irregularities evaluated through ophthalmic imaging.",
   },
   {
     id: 4,
-    title: "Double Vision",
-    desc: "Double vision can occur due to squint conditions, nerve disorders, or muscle imbalance affecting eye coordination and visual clarity.",
+    title: "Double Vision (Diplopia)",
+    desc: "Double vision can stem from ocular muscle imbalance, strabismus, or neurological factors requiring comprehensive ophthalmic assessment.",
   },
   {
     id: 5,
-    title: "Watery Eyes & Excessive Tearing",
-    desc: "Excessive tearing or watery eyes may result from infections, allergies, blocked tear ducts, or underlying corneal conditions requiring treatment.",
+    title: "Tearing & Surface Irritation",
+    desc: "Excessive tearing or surface irritation may result from tear duct blockage, ocular surface allergies, or corneal conditions requiring care.",
   },
 ];
 
 const rightCards = [
   {
-    id: 5,
-    title: "Eye Redness & Irritation",
-    desc: "Persistent redness, itching, or irritation may indicate allergies, infections, dry eyes, or corneal inflammation requiring expert eye care.",
-  },
-  {
     id: 6,
-    title: "Frequent Headaches",
-    desc: "Frequent headaches with vision problems may be caused by refractive errors, glaucoma, or eye strain affecting daily activities.",
+    title: "Eye Redness & Inflammation",
+    desc: "Persistent redness may indicate conjunctival irritation, blepharitis, or corneal inflammation requiring ophthalmology consultation.",
   },
   {
     id: 7,
-    title: "Light Sensitivity",
-    desc: "Light sensitivity or glare issues may result from cataracts, inflammation, corneal disorders, or post-vision correction complications.",
+    title: "Vision-Related Headaches",
+    desc: "Headaches associated with visual tasks may stem from uncorrected refractive errors, eye strain, or intraocular pressure differences.",
   },
   {
     id: 8,
-    title: "Vision Distortion",
-    desc: "Distorted vision may indicate retina conditions like diabetic retinopathy or macular degeneration requiring immediate retina specialist consultation.",
+    title: "Light Sensitivity (Photophobia)",
+    desc: "Sensitivity to light or glare issues may be linked to anterior segment inflammation, corneal disorders, or cataract development.",
   },
   {
     id: 9,
-    title: "Loss of Peripheral Vision",
-    desc: "Loss of side vision may signal glaucoma or optic nerve damage requiring timely diagnosis and advanced glaucoma treatment.",
+    title: "Visual Field Irregularities",
+    desc: "Changes in central or peripheral vision warrant detailed retinal, macular, and optic nerve assessments such as OCT and perimetry.",
+  },
+  {
+    id: 10,
+    title: "Intraocular Pressure Monitoring",
+    desc: "Elevated eye pressure or family history of glaucoma can be evaluated through tonometry, pachymetry, and optic nerve imaging.",
   },
 ];
 
@@ -424,52 +432,62 @@ function Card({ title, desc, index }) {
 const services = [
   {
     icon: <FaPassport />,
-    title: "Medical Visa Assistance",
-    desc: "Guidance with invitation letters and visa documentation.",
+    title: "Medical Report & Document Coordination",
+    desc: "Assistance with sharing and reviewing ophthalmic reports and diagnostic records prior to travel.",
   },
   {
-    icon: <FaUserMd />,
-    title: "Online Doctor Consultation",
-    desc: "Share reports and receive expert opinions before traveling.",
+    icon: <FaHospital />,
+    title: "Hospital & Ophthalmologist Options",
+    desc: "Guidance on selecting accredited eye care hospitals and qualified specialists in India.",
   },
   {
-    icon: <FaPlaneArrival />,
-    title: "Airport Pickup & Travel Support",
-    desc: "Comfortable transportation arrangements from arrival to discharge.",
+    icon: <FaCalendarCheck />,
+    title: "Appointment Scheduling Assistance",
+    desc: "Facilitation of consultations and diagnostic appointments with chosen ophthalmology teams.",
+  },
+  {
+    icon: <FaMicroscope />,
+    title: "Treatment & Procedure Information",
+    desc: "Objective information regarding available surgical, non-surgical, and laser treatment protocols.",
   },
   {
     icon: <FaBed />,
-    title: "Hotel & Accommodation Assistance",
-    desc: "Support in finding nearby hotels and guesthouses for patients and attendants.",
+    title: "Travel & Accommodation Coordination",
+    desc: "Assistance with booking suitable accommodation near selected medical facilities.",
+  },
+  {
+    icon: <FaPlaneArrival />,
+    title: "Airport & Local Transfer Assistance",
+    desc: "Arrangement of airport pickup and local transport logistics for patient convenience.",
   },
   {
     icon: <FaGlobe />,
-    title: "Language Interpretation",
-    desc: "Language coordinators are available for better communication and comfort.",
+    title: "Communication Support",
+    desc: "Language and communication assistance throughout consultations and hospital visits.",
   },
   {
     icon: <FaHandshake />,
-    title: "Personalized Treatment Coordination",
-    desc: "Dedicated coordinators help manage appointments, treatment schedules, and follow-up care.",
+    title: "Follow-Up Coordination",
+    desc: "Support with post-procedure documentation, review scheduling, and remote follow-up coordination.",
   },
 ];
 
 const reviews = [
   {
-    name: "Allison Hayes",
-    text: '"After my eye surgery in India, I finally have a healthy smile. The doctors were incredibly professional and caring."',
+    name: "Patient from Kenya",
+    text: '"The coordination for my cataract evaluation in Mumbai was handled efficiently. The ophthalmologist took time to explain the procedure and lens options clearly before treatment."',
   },
   {
-    name: "Brooke Sullivan",
-    text: '"The entire experience from online consultation to treatment was seamless. The clinic in Mumbai was world-class, and I saved significantly compared to back home."',
+    name: "Patient from Uganda",
+    text: '"Human Care helped organize my medical reports and schedule an appointment with a retina specialist in Delhi. The hospital facilities and coordination team were very organized."',
   },
   {
-    name: "Allison Hayes",
-    text: '"After my eye surgery in India, I finally have a healthy smile. The doctors were incredibly professional and caring."',
+    name: "Patient from Tanzania",
+    text: '"Traveling for my corneal assessment was well-managed. We received clear procedure details and assistance with local logistics and hospital appointments throughout our stay."',
   },
   {
-    name: "Allison Hayes",
-    text: '"After my eye surgery in India, I finally have a healthy smile. The doctors were incredibly professional and caring."',
+    name: "Patient from Nigeria",
+    text: '"The team provided helpful guidance regarding hospital options and appointment scheduling in Bangalore. The doctors and medical staff were attentive and professional."',
   },
 ];
 const Stars = () => (
@@ -483,68 +501,69 @@ const Stars = () => (
 const faqData = [
   {
     id: 1,
-    question: "Why do international patients choose Eye Surgery in India?",
+    question: "What eye treatments are available in India?",
     answer:
-      "Many international patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan choose Eye Surgery in India because of experienced ophthalmologists, advanced hospitals, modern technology, and affordable treatment costs. India is known for providing high-quality vision care, faster appointments, and personalized support for international patients seeking LASIK, cataract, retina, and glaucoma treatment.",
+      "Eye hospitals and ophthalmologists in India provide consultations, diagnostic services and a range of surgical and non-surgical treatment options. Availability depends on the condition and selected provider.",
   },
   {
     id: 2,
-    question:
-      "What is the Eye Surgery cost in India for international patients?",
+    question: "Is eye surgery available for international patients?",
     answer:
-      "The Eye Surgery cost in India is significantly more affordable compared to many other countries while maintaining international treatment standards. The total cost may vary depending on the type of procedure, hospital, surgeon expertise, technology used, and recovery requirements. Many patients choose India for affordable and advanced eye treatment options.",
+      "International patients can explore planned eye treatment in India subject to the hospital’s requirements, applicable travel rules and individual medical circumstances.",
   },
   {
     id: 3,
-    question: "What is the LASIK eye surgery cost in India?",
+    question: "How do I choose an eye hospital in India?",
     answer:
-      "The LASIK eye surgery cost in India depends on the laser technology, hospital reputation, surgeon experience, and the patient’s eye condition. India has become a preferred destination for LASIK because patients can access advanced blade-free laser vision correction at affordable prices with experienced eye specialists.",
+      "Consider the required ophthalmology specialty, available procedures, specialist qualifications, hospital facilities, location, international patient services and treatment information.",
   },
   {
     id: 4,
-    question: "Which are considered the best eye hospitals in India?",
+    question: "Can I share my eye reports before travelling?",
     answer:
-      "Some of the best eye hospitals in India are located in Mumbai, Delhi, Chennai, Hyderabad, and Bangalore. These hospitals are known for advanced ophthalmology departments, modern surgical equipment, experienced ophthalmologists, retina specialists, and comprehensive international patient care services.",
+      "Yes. Relevant medical reports and eye-test records can be shared for coordination and to help identify suitable specialist or hospital options. Final clinical decisions are made by the treating ophthalmologist.",
   },
   {
     id: 5,
-    question:
-      "How do I choose the best ophthalmologist in India for eye treatment?",
+    question: "How much does eye surgery cost in India?",
     answer:
-      "When selecting the best ophthalmologist in India, patients should consider the doctor’s experience, specialization, hospital accreditation, patient reviews, surgical success rates, and expertise in procedures such as LASIK surgery, cataract surgery, retina treatment, cornea surgery, and glaucoma management.",
+      "Cost varies according to the procedure, diagnostic tests, hospital, ophthalmologist fees, technology, room requirements and follow-up. A specific estimate should be confirmed with the relevant provider.",
   },
   {
     id: 6,
-    question: "Is Cataract Surgery in India safe for international patients?",
+    question: "How long does eye surgery take?",
     answer:
-      "Yes. Cataract Surgery in India is considered safe and reliable when performed at reputed hospitals with experienced eye surgeons. Many hospitals follow international safety protocols, use advanced lens implant technology, and provide dedicated international patient support throughout the treatment and recovery process.",
+      "The procedure and overall care timeline vary by the type of treatment, individual condition and follow-up requirements. The ophthalmologist can provide more specific guidance after evaluation.",
   },
   {
     id: 7,
-    question:
-      "Do eye hospitals in India provide support for international patients?",
+    question: "Can Human Care help with an ophthalmologist appointment?",
     answer:
-      "Yes. Many leading eye hospitals in India offer complete international patient services including online consultations, medical visa assistance, airport pickup, accommodation support, language interpretation, treatment coordination, and post-treatment follow-up care for overseas patients.",
+      "Human Care can assist with appointment coordination based on the selected hospital, ophthalmologist availability and the patient’s requirements.",
   },
   {
     id: 8,
-    question:
-      "How long do international patients need to stay in India after eye surgery?",
+    question: "Can you help with travel and accommodation?",
     answer:
-      "The required stay in India depends on the type of eye surgery, the patient’s recovery progress, and follow-up evaluations recommended by the ophthalmologist. Procedures such as LASIK may require only a short stay, while complex retina or cornea surgeries may need additional recovery time. Most hospitals provide personalized treatment and recovery plans to help international patients travel safely and comfortably.",
+      "Human Care can assist with selected travel, accommodation and local transfer arrangements for international patients, subject to the requested services and availability.",
   },
   {
     id: 9,
-    question: "What types of eye treatments are commonly available in India?",
+    question: "Are eye-surgery results guaranteed?",
     answer:
-      "India offers a wide range of advanced eye treatments including LASIK eye surgery, cataract surgery, retina surgery, glaucoma treatment, cornea transplant surgery, squint eye surgery, and pediatric ophthalmology care. International patients choose India because of modern eye care technology, experienced specialists, affordable treatment options, and internationally recognized hospitals.",
+      "No medical procedure should be presented as guaranteed for every patient. Visual and medical outcomes vary according to the condition, procedure, individual circumstances and other clinical factors.",
   },
   {
     id: 10,
-    question:
-      "Why is India considered a trusted destination for affordable eye treatment?",
+    question: "Can eye surgery permanently improve vision?",
     answer:
-      "India is considered one of the leading destinations for affordable eye treatment because patients receive high-quality ophthalmology care at significantly lower costs compared to many countries. With experienced ophthalmologists, advanced surgical technology, internationally accredited hospitals, and dedicated international patient support services, India continues to attract patients seeking safe, effective, and affordable vision treatment.",
+      "The expected effect of an eye procedure depends on the diagnosis, procedure and individual clinical factors. The treating ophthalmologist should explain the expected benefits, limitations and risks.",
+  },
+  {
+    id: 11,
+    question: "How can I contact Human Care Medical Tourism?",
+    answer:
+      "Use the contact options and CTA buttons on this page to discuss your eye-treatment and medical-travel requirements with the Human Care Medical Tourism team.",
   },
 ];
 
@@ -636,32 +655,26 @@ const EyeSurgeryIndia = () => {
 
         <meta
           name="description"
-          content="Get affordable eye surgery in India with experienced ophthalmologists, advanced eye hospitals, LASIK, cataract surgery, retina treatment, and personalized eye care for international patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan."
+          content="Explore eye-care and eye-surgery options in India with support for hospital selection, ophthalmologist appointments, medical-report coordination and international patient arrangements."
         />
 
         <meta
           name="keywords"
           content="
               eye surgery in india,
+              affordable eye surgery in india,
+              eye surgery in india for international patients,
               eye treatment in india,
-              affordable eye surgery india,
-              ophthalmology treatment india,
-              cataract surgery india,
-              lasik surgery india,
-              retina treatment india,
-              glaucoma treatment india,
-              cornea transplant india,
               eye hospitals in india,
+              eye specialists in india,
               ophthalmologists in india,
-              laser eye surgery india,
-              advanced eye care india,
-              vision correction surgery india,
-              retinal surgery india,
-              pediatric ophthalmology india,
-              eye care hospitals india,
-              affordable ophthalmology care,
-              eye treatment abroad,
-              eye specialist india
+              eye surgeon in india,
+              cataract surgery in india,
+              eye treatment cost in india,
+              eye surgery cost in india,
+              ophthalmology treatment in india,
+              international eye treatment,
+              medical tourism for eye treatment
             "
         />
 
@@ -677,12 +690,12 @@ const EyeSurgeryIndia = () => {
         {/* Open Graph / Facebook */}
         <meta
           property="og:title"
-          content="Eye Surgery in India | Affordable Eye Treatment"
+          content="Eye Surgery in India | Affordable Eye Treatment for International Patients"
         />
 
         <meta
           property="og:description"
-          content="Affordable eye surgery in India with experienced ophthalmologists, advanced eye hospitals, and personalized treatment for international patients."
+          content="Explore eye surgery options in India with support for hospital selection, ophthalmologist appointments, medical-report coordination and international patient arrangements."
         />
 
         <meta
@@ -702,12 +715,12 @@ const EyeSurgeryIndia = () => {
 
         <meta
           name="twitter:title"
-          content="Eye Surgery in India | Affordable Eye Treatment"
+          content="Eye Surgery in India | Affordable Eye Treatment for International Patients"
         />
 
         <meta
           name="twitter:description"
-          content="Get advanced and affordable eye treatment in India with modern eye hospitals and experienced ophthalmology specialists."
+          content="Explore eye surgery options in India with support for hospital selection, ophthalmologist appointments, medical-report coordination and international patient arrangements."
         />
 
         <meta
@@ -743,7 +756,7 @@ const EyeSurgeryIndia = () => {
         {/* Content */}
         <div className="eye-hero-content">
           <span className="eye-hero-badge">
-            Trusted by 50,000+ International Patients
+            International Patient Eye Care Assistance
           </span>
 
           <h1 className="eyecare-heading">
@@ -751,10 +764,14 @@ const EyeSurgeryIndia = () => {
           </h1>
 
           <p>
-            Get advanced and affordable Eye Surgery in India with experienced
-            ophthalmologists, modern hospitals, and complete international
-            patient support. Explore LASIK, cataract, retina, glaucoma, and
-            cornea treatments in India.
+            Explore eye-care and eye-surgery options in India with support for
+            hospital selection, ophthalmologist appointments, medical-report
+            coordination and international patient arrangements.
+          </p>
+          <p>
+            Human Care Medical Tourism assists international patients with
+            healthcare coordination based on their medical requirements and
+            travel needs.
           </p>
 
           <div className="eye-hero-ctas">
@@ -774,6 +791,7 @@ const EyeSurgeryIndia = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 2 — INTRODUCTION ════ */}
       <section className="eyecare-section">
         <div className="eyecare-container">
           {/* ── Left Content Panel ── */}
@@ -787,21 +805,22 @@ const EyeSurgeryIndia = () => {
             </h2>
 
             <p className="eyecare-body">
-              Eye problems can affect every part of daily life — from reading
-              and driving to work, education, and independence. Today, thousands
-              of international patients travel for Eye Surgery in India because
-              of the country's advanced medical technology, experienced eye
-              specialists, and affordable treatment options.
+              India has hospitals and ophthalmologists providing evaluation and
+              treatment for a range of eye conditions. Available procedures
+              depend on the patient’s diagnosis, eye health, medical history and
+              clinical requirements.
             </p>
 
             <p className="eyecare-body">
-              India has become one of the most trusted destinations for eye care
-              and medical tourism. Patients from Kenya, Uganda, Tanzania,
-              Nigeria, and South Sudan choose India for high-quality treatment,
-              modern hospitals, and personalized international patient support.
+              International patients can explore appropriate eye-care options
+              while receiving assistance with specialist coordination,
+              medical-document sharing, appointments and selected
+              travel-related arrangements.
             </p>
 
-            <h2 className="eyecare-trust-heading">Why Patients Trust Us</h2>
+            <h3 className="eyecare-trust-heading">
+              Ophthalmic Services &amp; Coordination Support
+            </h3>
 
             <ul className="eyecare-trust-list">
               {trustSignals.map((item, idx) => (
@@ -820,7 +839,7 @@ const EyeSurgeryIndia = () => {
             <div className="eyecare-img-wrapper eyecare-img-top">
               <img
                 src={EyeAboutImage}
-                alt="Ophthalmologist performing advanced eye examination in India"
+                alt="Ophthalmologist performing eye examination in India"
                 className="eyecare-img"
         width={1920}
         height={768}
@@ -831,7 +850,7 @@ const EyeSurgeryIndia = () => {
             <div className="eyecare-img-wrapper eyecare-img-bottom">
               <img
                 src={EyeAbout1Image}
-                alt="Ophthalmologist performing advanced eye examination in India"
+                alt="Ophthalmic diagnostic equipment and examination in India"
                 className="eyecare-img"
         width={1200}
         height={800}
@@ -842,6 +861,7 @@ const EyeSurgeryIndia = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 3 — WHY CHOOSE INDIA ════ */}
       <section className="wci-section">
         {/* Decorative background blobs */}
         <div className="wci-blob wci-blob--1" aria-hidden="true" />
@@ -850,13 +870,15 @@ const EyeSurgeryIndia = () => {
         <div className="wci-container">
           {/* Header */}
           <div className="wci-header">
-            {/* <span className="wci-eyebrow">Medical Tourism · India</span> */}
-            <h2 className="wci-heading">Why Choose India for Eye Surgery</h2>
+            <h2 className="wci-heading">Why Choose India for Eye Care?</h2>
             <p className="wci-subheading">
-              India is globally recognized for providing advanced eye treatment
-              at affordable costs without compromising on quality. International
-              patients benefit from highly skilled doctors, advanced technology,
-              and dedicated medical tourism assistance.
+              India offers a range of hospitals, ophthalmology departments and
+              specialist options for international patients. Patients can
+              compare providers based on the required eye specialty, available
+              procedures, specialist experience, hospital facilities, location
+              and international patient services. The most appropriate treatment
+              depends on individual clinical assessment and should be determined
+              by a qualified ophthalmologist.
             </p>
           </div>
 
@@ -886,17 +908,18 @@ const EyeSurgeryIndia = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 4 — TYPES OF EYE SURGERY ════ */}
       <section className="eye-services-section">
         {/* Header */}
         <div className="eye-services-header">
           <h2 className="eye-services-title">
-            Types of Eye Surgeries in India
+            Types of Eye Surgery in India
           </h2>
           <p className="eye-services-description">
-            From LASIK and cataract surgery to advanced retina treatment, our
-            comprehensive eye care services are designed to restore vision,
-            reduce discomfort, and improve quality of life for international
-            patients seeking advanced eye treatment in India.
+            Explore available eye-care and surgical procedures in India.
+            Appropriate treatment options depend on individual clinical
+            assessment, diagnosis, and recommendations by a qualified
+            ophthalmologist.
           </p>
         </div>
 
@@ -908,12 +931,13 @@ const EyeSurgeryIndia = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 5 — EYE TREATMENT COST ════ */}
       <section className="bo-section">
         {/* Background image layer */}
         <div className="bo-bg" aria-hidden="true">
           <img
             src={BestOphthalmologistsBanner}
-            alt="Eye surgery background"
+            alt="Eye treatment and surgery cost considerations in India"
             className="bo-bg__image"
         width={1920}
         height={1280}
@@ -925,11 +949,10 @@ const EyeSurgeryIndia = () => {
         <div className="bo-container">
           {/* ── Top: full-width heading block ── */}
           <div className="bo-top">
-            <span className="bo-eyebrow">Best Ophthalmologists in India</span>
+            <span className="bo-eyebrow">Cost &amp; Treatment Guidance</span>
 
             <h2 className="bo-heading">
-              India is home to highly qualified and experienced eye specialists
-              who are recognized internationally for their expertise.
+              Eye Treatment Cost in India
             </h2>
           </div>
 
@@ -938,14 +961,21 @@ const EyeSurgeryIndia = () => {
             {/* LEFT */}
             <div className="bo-left">
               <p className="bo-left__body">
-                Indian ophthalmologists regularly treat international patients
-                with complex eye conditions and provide complete pre-operative
-                and post-operative guidance.
+                Eye treatment and surgery costs vary according to the type of
+                procedure, diagnostic requirements, hospital, ophthalmologist or
+                surgeon fees, technology used, room requirements, medicines,
+                follow-up and other individual factors.
+              </p>
+              <p className="bo-left__body">
+                Patients can request cost information based on their medical
+                details and proposed treatment. A final cost should be
+                confirmed with the relevant hospital or healthcare provider
+                after clinical evaluation.
               </p>
 
-              {/* Specialty badges */}
+              {/* Cost Highlights */}
               <div className="bo-badges">
-                {specialtyBadges.map((b) => (
+                {costHighlights.map((b) => (
                   <span key={b} className="bo-badge">
                     {b}
                   </span>
@@ -959,11 +989,11 @@ const EyeSurgeryIndia = () => {
             {/* RIGHT */}
             <div className="bo-right">
               <p className="bo-right__intro">
-                Why International Patients Trust Indian Eye Specialists
+                Key Factors Influencing Cost:
               </p>
 
               <ul className="bo-trust">
-                {trustPoints.map((pt) => (
+                {costFactors.map((pt) => (
                   <li key={pt} className="bo-trust__item">
                     <FaCheckCircle
                       className="bo-trust__check"
@@ -1028,12 +1058,27 @@ const EyeSurgeryIndia = () => {
         </div>
       </section> */}
 
-      {/* ════ SECTION 4 — DOCTORS ════ */}
+      {/* ════ SECTION 7 — DOCTORS ════ */}
       <section className="doctor-section-light">
         <div className="doctor-container">
           <div className="doctor-title-wrap">
-            <span className="doctor-label">Our Specialists</span>
-            <h2 className="doctor-h2">Best Ophthalmologists in India</h2>
+            <span className="doctor-label">Specialist Directory</span>
+            <h2 className="doctor-h2">
+              Ophthalmologists and Eye Specialists in India
+            </h2>
+            <p
+              className="doctor-subheading"
+              style={{
+                maxWidth: "820px",
+                margin: "12px auto 0",
+                color: "#64748b",
+                fontSize: "15px",
+              }}
+            >
+              Patients can explore ophthalmologists based on their eye-care
+              requirements, specialty, hospital affiliation, qualifications and
+              verified professional information.
+            </p>
           </div>
           <div className="doctor-cards-grid">
             {DOCTORS.map((d, i) => (
@@ -1114,19 +1159,18 @@ const EyeSurgeryIndia = () => {
         </div>
       )}
 
+      {/* ════ SECTION 8 — MEDICAL FACILITIES & CONDITIONS ════ */}
       <section className="eca-section">
         {/* Header */}
         <div className="eca-header">
-          <h2 className="eca-heading">Symptoms & Eye Conditions Treated</h2>
+          <h2 className="eca-heading">
+            Medical Facilities &amp; Eye Conditions Evaluated in India
+          </h2>
           <p className="eca-subheading">
-            India’s leading eye hospitals provide advanced diagnosis and
-            treatment for a wide range of vision and eye-related disorders.
-            Experienced ophthalmologists use modern diagnostic technology, laser
-            procedures, and personalized treatment plans to help patients
-            restore and protect their eyesight. International patients searching
-            for Eye Surgery in India, eye operation in India, or affordable eye
-            surgery cost in India often choose India for expert care, modern
-            hospitals, and faster appointments.
+            Hospitals in India provide diagnostic evaluations, ophthalmic
+            imaging and treatment options for a range of eye conditions.
+            Available care depends on the patient’s diagnosis, eye health and
+            clinical assessment by a qualified ophthalmologist.
           </p>
         </div>
 
@@ -1142,10 +1186,9 @@ const EyeSurgeryIndia = () => {
           {/* Centre image */}
           <div className="eca-center">
             <div className="eca-image-wrap">
-              {/* Replace src with your actual eye image */}
               <img
                 src={SymptomsEyeConditionTreated}
-                alt="Close-up of a human eye"
+                alt="Ophthalmic examination and diagnostic eye evaluation in India"
                 className="eca-image"
         width={400}
         height={400}
@@ -1163,17 +1206,19 @@ const EyeSurgeryIndia = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 6 — INTERNATIONAL PATIENT SUPPORT ════ */}
       <section className="ips">
         <div className="ips__container">
           <div className="ips__left">
             <h2 className="ips__heading">
-              International Patient <em>Services</em>
+              International Patient Support for Eye Treatment
             </h2>
             <p className="ips__sub">
-              India’s medical tourism industry is designed to make treatment
-              convenient and stress-free for overseas patients.
+              Human Care supports international patients with coordination
+              before and during planned eye treatment in India, depending on
+              the requested services and availability.
             </p>
-            <p className="ips__services-label">Services Include</p>
+            <p className="ips__services-label">Coordination Services Include</p>
             <div className="ips__services">
               {services.map((s, i) => (
                 <div
@@ -1196,7 +1241,7 @@ const EyeSurgeryIndia = () => {
             <div className="ips__img-wrap">
               <img
                 src={InternationalPatientServicesImage}
-                alt="International patient services"
+                alt="International patient assistance and coordination services in India"
                 className="ips__img"
         width={493}
         height={740}
@@ -1207,9 +1252,20 @@ const EyeSurgeryIndia = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 9 — REVIEWS ════ */}
       <section className="eye-reviews-section">
         <div className="eye-reviews-content">
-          <h2 className="eye-reviews-heading">Our Clients Review</h2>
+          <h2 className="eye-reviews-heading">Our Clients' Reviews</h2>
+          <p
+            style={{
+              color: "#64748b",
+              margin: "8px 0 24px 0",
+              fontSize: "15px",
+            }}
+          >
+            Read experiences shared by patients who have used Human Care’s
+            medical-tourism coordination services.
+          </p>
 
           {/* Slider wrapper */}
           <div className="eye-reviews-slider-wrapper">
@@ -1223,7 +1279,6 @@ const EyeSurgeryIndia = () => {
                     <div key={cardIndex} className="eye-reviews-card">
                       <Stars />
                       <p className="eye-reviews-card-text">{r.text}</p>
-                      {/* <p className="eye-reviews-card-name">{r.name}</p> */}
                     </div>
                   ))}
                 </div>
@@ -1247,7 +1302,7 @@ const EyeSurgeryIndia = () => {
         <div className="eye-reviews-image-wrapper">
           <img
             src={ThumbnailImage}
-            alt="Happy international eye patient in India"
+            alt="International patient receiving eye care consultation in India"
             className="eye-reviews-image"
         width={740}
         height={536}
@@ -1256,17 +1311,18 @@ const EyeSurgeryIndia = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 10 — FAQS ════ */}
       <section className="eye-faq-section" aria-labelledby="faq-heading">
         <div className="eye-faq-container">
           {/* Section Header */}
           <div className="eye-faq-header">
             <span className="eye-faq-badge">Ophthalmology Treatment FAQs</span>
             <h2 id="faq-heading" className="eye-faq-title">
-              Frequently Asked Questions About eye Treatment in India
+              Frequently Asked Questions About Eye Treatment in India
             </h2>
             <p className="eye-faq-subtitle">
-              Get answers to common questions about eye care, best eye
-              hospitals, and treatment options in India
+              Clear, factual information regarding eye care, hospital choices,
+              ophthalmology consultations, and treatment coordination in India.
             </p>
           </div>
 
@@ -1313,6 +1369,7 @@ const EyeSurgeryIndia = () => {
         </div>
       </section>
 
+      {/* ════ SECTION 11 — FINAL CTA ════ */}
       <section className="eye-cta-section">
         {/* Background Image */}
         <img
@@ -1331,36 +1388,36 @@ const EyeSurgeryIndia = () => {
         {/* Content Container */}
         <div className="eye-cta-container">
           <div className="eye-cta-content">
-            <span className="eye-cta-badge">Protect & Restore Your Vision</span>
+            <span className="eye-cta-badge">International Patient Support</span>
 
             <h2 className="eye-cta-title">Book Your Eye Consultation</h2>
 
             <p className="eye-cta-subtitle">
-              Start your ophthalmology treatment journey in India with
-              experienced joint replacement specialists and internationally
-              trusted hospitals.
+              Discuss your eye-treatment requirements with Human Care Medical
+              Tourism and receive assistance with hospital options,
+              ophthalmologist coordination and international patient services.
             </p>
 
             <div className="eye-cta-benefits-list">
               <div className="eye-cta-benefit-point">
                 <FaCheckCircle className="eye-cta-check-icon" />
-                <span>Personalized treatment plans</span>
+                <span>Hospital and ophthalmologist options</span>
               </div>
               <div className="eye-cta-benefit-point">
                 <FaCheckCircle className="eye-cta-check-icon" />
-                <span>Transparent pricing</span>
+                <span>Medical report and document coordination</span>
               </div>
               <div className="eye-cta-benefit-point">
                 <FaCheckCircle className="eye-cta-check-icon" />
-                <span>Expert eye specialists</span>
+                <span>Transparent treatment and cost information</span>
               </div>
               <div className="eye-cta-benefit-point">
                 <FaCheckCircle className="eye-cta-check-icon" />
-                <span>International patient support</span>
+                <span>Travel and accommodation assistance</span>
               </div>
               <div className="eye-cta-benefit-point">
                 <FaCheckCircle className="eye-cta-check-icon" />
-                <span>Modern and safe eye care</span>
+                <span>Post-procedure coordination support</span>
               </div>
             </div>
 
@@ -1378,6 +1435,23 @@ const EyeSurgeryIndia = () => {
                 <FaPhoneAlt /> Contact Medical Coordinator
               </a>
             </div>
+
+            <p
+              style={{
+                marginTop: "24px",
+                fontSize: "12px",
+                color: "#94a3b8",
+                lineHeight: "1.6",
+                maxWidth: "680px",
+              }}
+            >
+              *Disclaimer: Human Care Medical Tourism provides medical travel
+              and appointment coordination services. Medical advice, diagnosis,
+              and treatment plans are provided solely by licensed
+              ophthalmologists and authorized healthcare institutions. Visual
+              and surgical outcomes vary according to individual condition and
+              clinical circumstances.
+            </p>
           </div>
         </div>
       </section>

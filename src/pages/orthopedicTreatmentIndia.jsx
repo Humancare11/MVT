@@ -75,68 +75,68 @@ const AdvancedIcon = () => <FaRobot />;
 const cards = [
   {
     id: "01",
-    tag: "Diagnosis",
+    tag: "Evaluation",
     icon: <DiagnosisIcon />,
-    title: "Comprehensive Diagnosis & Evaluation",
+    title: "Medical Report & Diagnostic Review",
     items: [
-      "X-rays & MRI review",
-      "Joint mobility assessment",
-      "Arthritis & pain evaluation",
-      "Medical history analysis",
-      "Age-based treatment planning",
+      "Review and coordination of available medical reports",
+      "Joint and bone condition assessment",
+      "Medical history and symptom analysis",
+      "Diagnostic imaging evaluation",
+      "Clinical requirements planning",
     ],
   },
   {
     id: "02",
-    tag: "Support",
+    tag: "Coordination",
     icon: <SupportIcon />,
-    title: "Dedicated International Patient Support",
+    title: "Specialist & Hospital Options",
     items: [
-      "Online doctor consultation",
-      "Medical visa assistance",
-      "Travel & accommodation",
-      "Airport pickup support",
-      "Language assistance",
+      "Orthopedic specialist and hospital options",
+      "Consultation and appointment coordination",
+      "Hospital department selection",
+      "Specialist availability scheduling",
+      "Doctor credentials and profiles",
     ],
   },
   {
     id: "03",
-    tag: "Recovery",
+    tag: "Support",
     icon: <RecoveryIcon />,
-    title: "Recovery & Rehabilitation Care",
+    title: "Travel & Logistical Support",
     items: [
-      "Personalized physiotherapy",
-      "Mobility & walking training",
-      "Pain management guidance",
-      "Recovery monitoring",
-      "Follow-up support",
+      "Travel and accommodation coordination",
+      "Airport and local transfer assistance",
+      "Medical visa invitation assistance",
+      "International patient communication",
+      "Local coordination during hospital visit",
     ],
   },
   {
     id: "04",
-    tag: "Transparency",
+    tag: "Care Plan",
     icon: <TransparencyIcon />,
-    title: "Transparent Treatment & Cost Guidance",
+    title: "Personalized Treatment Information & Planning",
     items: [
-      "Recommended procedure info",
-      "Hospital stay duration",
-      "Recovery expectations",
-      "Estimated treatment cost",
-      "Rehabilitation planning",
+      "Treatment information coordination",
+      "Estimated hospital stay duration",
+      "Available cost estimate guidance",
+      "Surgical and non-surgical approaches",
+      "Multidisciplinary care coordination",
     ],
     wide: true,
   },
   {
     id: "05",
-    tag: "Advanced",
+    tag: "Recovery",
     icon: <AdvancedIcon />,
-    title: "Advanced Orthopedic Treatment Planning",
+    title: "Rehabilitation & Follow-Up Services",
     items: [
-      "Total knee replacement",
-      "Robotic knee replacement",
-      "Bilateral knee replacement",
-      "Joint preservation",
-      "Revision knee surgery",
+      "Post-treatment rehabilitation guidance",
+      "Physiotherapy and mobility monitoring",
+      "Follow-up consultation coordination",
+      "Teleconsultation support after returning home",
+      "Ongoing medical document assistance",
     ],
     wide: true,
   },
@@ -169,51 +169,51 @@ import TraumaOrthopedicsImage from "../departments/dept-images/orthopedics-treat
 const orthopedicServices = [
   {
     id: 1,
-    title: "Total Knee Replacement Surgery in India",
+    title: "Knee Replacement",
     description:
-      "Advanced total knee replacement surgery in India helps patients with severe arthritis and chronic knee pain regain mobility, reduce stiffness, and improve daily movement.",
+      "Surgical treatment that may be considered for certain severe knee-joint conditions after appropriate clinical evaluation.",
     image: KneeReplacementImage,
-    alt: "Total knee replacement surgery in India for severe arthritis and chronic knee pain",
+    alt: "Knee replacement treatment in India",
   },
   {
     id: 2,
-    title: "Partial Knee Replacement",
+    title: "Hip Replacement",
     description:
-      "Partial knee replacement in India is suitable for patients with limited joint damage, helping preserve healthy tissue while improving knee function and recovery time.",
+      "A procedure that may be recommended for selected hip-joint conditions when clinically appropriate.",
     image: PartialKneeReplacementImage,
-    alt: "Partial knee replacement treatment in India for damaged knee joint recovery",
+    alt: "Hip replacement treatment in India",
   },
   {
     id: 3,
-    title: "Bilateral Knee Replacement",
+    title: "Spine and Back Care",
     description:
-      "Affordable bilateral knee replacement cost in India allows patients with severe pain in both knees to receive advanced joint replacement treatment with long-term mobility benefits.",
+      "Evaluation and treatment options for selected spinal and back-related conditions.",
     image: BilateralKneeReplacementImage,
-    alt: "Bilateral knee replacement surgery in India for patients with pain in both knees",
+    alt: "Spine and back care in India",
   },
   {
     id: 4,
-    title: "Robotic Knee Replacement",
+    title: "Sports Injury Treatment",
     description:
-      "The robotic knee replacement cost in India remains affordable for international patients seeking precise implant positioning, better alignment, and faster rehabilitation support.",
+      "Assessment and management options for sports-related musculoskeletal injuries.",
     image: RoboticKneeReplacementImage,
-    alt: "Robotic knee replacement surgery in India with precision orthopedic technology",
+    alt: "Sports injury treatment in India",
   },
   {
     id: 5,
-    title: "Revision Knee Replacement",
+    title: "Arthroscopy and Minimally Invasive Procedures",
     description:
-      "Revision knee replacement surgery in India is recommended for failed implants, persistent pain, or joint instability requiring advanced corrective orthopedic procedures.",
-    image: ReviewKneeReplacementImage,
-    alt: "Revision knee replacement surgery in India for failed or damaged knee implants",
+      "Procedures used for selected joint conditions when recommended by the treating specialist.",
+    image: MinimalInvasiveKneeSurgeryImage,
+    alt: "Arthroscopy and minimally invasive orthopedic procedures in India",
   },
   {
     id: 6,
-    title: "Minimally Invasive Knee Surgery",
+    title: "Fracture and Trauma Care",
     description:
-      "Modern knee surgery in India also includes minimally invasive procedures designed to reduce tissue damage, shorten hospital stays, and support quicker recovery.",
-    image: MinimalInvasiveKneeSurgeryImage,
-    alt: "Minimally invasive knee surgery in India with faster recovery and smaller incisions",
+      "Evaluation and treatment of bone and joint injuries according to the nature and severity of the injury.",
+    image: ReviewKneeReplacementImage,
+    alt: "Fracture and trauma care in India",
   },
 ];
 
@@ -335,14 +335,14 @@ const DOCTORS = [
     name: "Dr. Satyen Nabar",
     education: "MBBS, MS (Orthopaedics)",
     spec: "Orthopaedic Surgeon, Joint Replacement Specialist, Sports Injury Expert",
-    desc: "Dr. Satyen Nabar is a highly experienced Orthopaedic Surgeon with over 24 years of expertise in diagnosing and treating a wide range of musculoskeletal disorders, joint conditions, sports injuries, and complex orthopedic trauma cases. He is currently associated with Sujay Hospital and Research Centre, Mumbai, and is widely recognized for his patient-focused approach, precise diagnosis, and advanced surgical skills. Throughout his distinguished career, Dr. Nabar has successfully managed numerous complex orthopedic cases across leading healthcare institutions in India. He completed his MBBS followed by an MS in Orthopaedics and has continually enhanced his expertise through advanced orthopedic training, research, workshops, and academic contributions. Dr. Nabar specializes in joint replacement and revision surgeries of the knee, hip, shoulder, and elbow, helping patients regain mobility and improve their quality of life through modern surgical techniques. His expertise also extends to arthroscopic procedures for knee and shoulder conditions, sports injury management, complex fracture fixation, deformity correction surgeries, limb reconstruction procedures, and pediatric orthopedic trauma care. Known for his commitment to excellence, Dr. Nabar combines advanced orthopedic treatment methods with personalized rehabilitation strategies to ensure optimal patient outcomes. In addition to his clinical work, he has actively participated in orthopedic research, presented scientific papers, and contributed to various academic forums. His dedication to innovation and orthopedic excellence has earned him recognition and awards within the field. With extensive experience in both surgical and non-surgical orthopedic treatments, Dr. Satyen Nabar remains a trusted specialist for patients seeking comprehensive care for joint disorders, trauma injuries, sports-related conditions, and reconstructive orthopedic procedures.",
+    desc: "Dr. Satyen Nabar is an Orthopaedic Surgeon with over 24 years of clinical experience in diagnosing and treating musculoskeletal disorders, joint conditions, sports injuries, and complex orthopedic trauma cases. Associated with Sujay Hospital and Research Centre, Mumbai, he completed his MBBS and MS in Orthopaedics. Dr. Nabar specializes in joint replacement and revision surgeries of the knee, hip, shoulder, and elbow, as well as arthroscopic procedures, sports injury management, complex fracture fixation, and reconstructive orthopedic procedures.",
     photoUrl: SatyenNabarImage,
   },
   {
     name: "Dr. Dinshaw Pardiwala",
     education: "MS (Orthopaedics), DNB (Orthopaedics), FCPS",
     spec: "Sports Orthopaedic Surgeon, Arthroscopy Specialist, Shoulder Surgeon, Sports Medicine Expert",
-    desc: "Dr. Dinshaw Pardiwala is one of India's most renowned Sports Orthopaedic Surgeons, with over 27 years of experience in sports medicine, arthroscopy, minimally invasive orthopedic surgery, shoulder surgery, and regenerative medicine. He serves as Director of Arthroscopy, Sports Orthopaedics & Shoulder Service and Head of the Centre for Sports Medicine at Kokilaben Dhirubhai Ambani Hospital, Mumbai. Widely regarded as a pioneer in sports injury management and arthroscopic surgery in India, Dr. Pardiwala has played a significant role in helping elite athletes return to peak performance following complex injuries. He completed his advanced orthopedic training with qualifications including MS (Orthopaedics), DNB (Orthopaedics), and FCPS. Over the course of his distinguished career, he has developed exceptional expertise in ligament reconstruction, knee arthroscopy, shoulder arthroscopy, cartilage restoration, sports trauma, joint preservation procedures, and minimally invasive orthopedic surgery. Dr. Pardiwala is internationally recognized for his contributions to arthroscopy and sports medicine. He is a committee member of the International Society of Arthroscopy, Knee Surgery and Orthopaedic Sports Medicine (ISAKOS), serves on the board of the Asia-Pacific Knee, Arthroscopy and Sports Medicine Society (APKASS), and is an active member of the Indian Arthroscopy Association and the Shoulder & Elbow Society of India. He has also served on the editorial boards of globally respected journals such as Arthroscopy and the American Journal of Sports Medicine. As India's representative on the International Cricket Council (ICC) Medical Committee and a trusted physician for multiple national sports teams, Dr. Pardiwala has treated some of India's most celebrated athletes across cricket, badminton, wrestling, boxing, rugby, and kabaddi. His patients include Olympic and international medalists such as Saina Nehwal, P. V. Sindhu, Parupalli Kashyap, Sushil Kumar, Yogeshwar Dutt, Vikas Krishan, and several leading Indian cricketers. Notably, among India's medal winners at the 2018 Commonwealth Games, 12 athletes had undergone sports injury surgeries under his care, contributing to multiple gold medal-winning performances. His research and innovations in arthroscopic surgery have earned international recognition, including the prestigious ISAKOS John Joyce Award. Known for combining advanced surgical techniques with athlete-focused rehabilitation programs, Dr. Dinshaw Pardiwala is widely recognized as one of India's leading experts in sports medicine, arthroscopy, and orthopedic surgery.",
+    desc: "Dr. Dinshaw Pardiwala is a Sports Orthopaedic Surgeon and Arthroscopy Specialist with over 27 years of clinical experience in sports medicine, arthroscopy, minimally invasive orthopedic surgery, and shoulder surgery. He serves as Director of Arthroscopy, Sports Orthopaedics & Shoulder Service and Head of the Centre for Sports Medicine at Kokilaben Dhirubhai Ambani Hospital, Mumbai. Holding an MS (Orthopaedics), DNB (Orthopaedics), and FCPS, his clinical focus includes ligament reconstruction, knee and shoulder arthroscopy, cartilage restoration, and sports trauma management.",
     photoUrl: DinshawPardiwalaImage,
   },
   {
@@ -350,28 +350,28 @@ const DOCTORS = [
     education:
       "MBBS, D.Orth, MS (Orthopaedics), FCPS Orthopaedics, MCh Orthopaedics (UK)",
     spec: "Orthopaedic Surgeon, Joint Replacement Specialist, Robotic Knee Replacement Surgeon",
-    desc: "Dr. Vivek Allahbadia is a highly accomplished Orthopaedic and Joint Replacement Surgeon with over 28 years of surgical experience and expertise in advanced knee replacement, robotic-assisted joint surgery, sports injury management, and complex reconstructive orthopaedic procedures. He is currently associated with Hinduja Healthcare Surgical, Khar, Mumbai, and is recognized as one of the pioneers of robotic knee replacement surgery in Mumbai. Dr. Allahbadia completed his MBBS, Diploma in Orthopaedics, MS in Orthopaedics, FCPS Orthopaedics, and MCh Orthopaedics (UK), building a strong foundation in advanced orthopedic care. He further enhanced his expertise through prestigious international fellowships and advanced training programs at leading centers across the United Kingdom, Singapore, Prague, and Australia. His fellowship training includes Joint Replacement Surgery at the renowned Northern General Hospital, Sheffield, United Kingdom, along with specialized exposure to advanced orthopedic and reconstructive procedures in Singapore and Prague. To stay at the forefront of technological advancements in orthopaedics, Dr. Allahbadia underwent specialized training in Computer Navigation Knee Replacement Surgery in Perth, Australia, and is a certified CORI Robotic Surgery Specialist. Throughout his distinguished career, he has successfully treated thousands of patients suffering from severe arthritis, joint degeneration, sports injuries, deformities, and complex orthopedic conditions. His expertise encompasses robotic knee replacement, total knee replacement, hip replacement surgery, revision joint replacement procedures, minimally invasive orthopaedic surgery, sports injury treatment, arthroscopic surgery, and computer-assisted joint reconstruction. Known for combining precision, innovation, and compassionate patient care, Dr. Allahbadia focuses on delivering personalized treatment plans that optimize mobility, reduce recovery time, and improve long-term outcomes. His commitment to adopting cutting-edge robotic technology and evidence-based surgical techniques has established him as one of Mumbai's leading specialists in joint replacement and advanced orthopedic surgery. Patients value his meticulous surgical approach, accurate diagnosis, and dedication to restoring pain-free movement and enhanced quality of life.",
+    desc: "Dr. Vivek Allahbadia is an Orthopaedic and Joint Replacement Surgeon with over 28 years of clinical experience in knee replacement, robotic-assisted joint procedures, sports injury management, and reconstructive orthopaedic care. Associated with Hinduja Healthcare Surgical, Mumbai, he holds an MBBS, MS in Orthopaedics, and MCh Orthopaedics (UK), with advanced fellowship training in joint replacement from the United Kingdom, Australia, and Singapore. His clinical practice encompasses robotic-assisted knee replacement, total knee replacement, hip replacement, and arthroscopic joint procedures.",
     photoUrl: VivekAllahbadiaImage,
   },
   {
     name: "Dr. Mihir Bapat",
     education: "MS (Orthopaedics), DNB (Orthopaedics)",
     spec: "Spine Surgeon, Minimally Invasive Spine Surgery Specialist, Orthopaedic Spine Expert",
-    desc: "Dr. Mihir Bapat is one of India's leading Spine Surgeons and currently serves as Vice Chairman – Orthopedics & Spinal Surgery at the Nanavati Max Institute of Advanced Orthopaedics, Spine & Joint Care, Mumbai. With over 25 years of experience and more than 8,000 successful spine surgeries to his credit, he is widely recognized for his expertise in minimally invasive spine surgery, complex spinal reconstruction, and advanced spinal deformity correction. Dr. Bapat leads multiple specialized spine programs, including the Spine Fusion Surgery Unit, Center of Spine Surgery, Microscopic and Endoscopic Disc Surgery Unit, and Back Pain Management Unit. Throughout his distinguished career, he has developed extensive expertise in treating degenerative spine disorders, slipped discs, spinal fractures, spinal tumors, scoliosis, kyphosis, spinal deformities, and chronic back pain conditions. His focus on minimally invasive and endoscopic spine procedures allows patients to benefit from smaller incisions, reduced pain, faster recovery, and improved surgical outcomes. Recognized internationally for his contributions to spinal surgery, Dr. Bapat has received numerous prestigious awards, including the Karmarkar Gold Medal in Surgery, the Pandurangi Award for Best Resident in Orthopaedics, and the highly regarded Global Outreach Fellowship awarded by the Scoliosis Research Society. He is actively involved in academic teaching and serves as a postgraduate educator affiliated with Mumbai University while also holding the distinction of being a Diplomate of the National Board. Dr. Bapat maintains strong affiliations with leading international spine organizations, including AO Spine Asia Pacific, and has contributed extensively to global spine research through numerous international publications, scientific presentations, and academic citations. Known for his surgical precision, evidence-based approach, and patient-centered care, Dr. Mihir Bapat is regarded as one of the foremost experts in spine surgery, spinal deformity correction, and minimally invasive spine treatment in India.",
+    desc: "Dr. Mihir Bapat is an Orthopaedic Spine Surgeon serving as Vice Chairman – Orthopedics & Spinal Surgery at the Nanavati Max Institute of Advanced Orthopaedics, Spine & Joint Care, Mumbai. With over 25 years of clinical experience, he completed his MS and DNB in Orthopaedics along with international fellowships from the Scoliosis Research Society. His clinical focus includes minimally invasive spine surgery, microscopic and endoscopic disc procedures, spinal deformity evaluation, and comprehensive back care management.",
     photoUrl: MihirBapatImage,
   },
   {
     name: "Dr. D. D. Tanna",
     education: "MS (Orthopaedics)",
     spec: "Orthopaedic Surgeon, Trauma Specialist, Joint Replacement Surgeon",
-    desc: "Dr. D. D. Tanna is one of India's most respected and accomplished Orthopaedic Surgeons, with an exceptional career spanning over 55 years in orthopedic surgery, trauma care, fracture management, and joint replacement surgery. Currently serving as Mentor in Orthopaedics, Dr. Tanna has played a transformative role in shaping modern orthopedic practice in India through his pioneering surgical innovations, academic leadership, and dedication to training future generations of orthopedic surgeons. A distinguished academician, he served as Professor of Orthopaedics at Nair Hospital and Topiwala National Medical College, Mumbai, where he mentored countless MBBS and MS Orthopaedics students who have gone on to become leading orthopedic specialists across the country. Dr. Tanna is widely recognized as a pioneer in Indian orthopedics for introducing interlocking nailing techniques in India and successfully adapting this advanced fracture fixation method to local healthcare settings. He was also among the first orthopedic surgeons in the private sector to introduce and utilize C-Arm imaging technology, significantly advancing the precision of orthopedic trauma surgeries. His expertise encompasses complex trauma management, revision trauma surgery, failed fracture treatment, fracture fixation procedures, joint replacement surgery, and advanced orthopedic reconstruction. Beyond his clinical contributions, Dr. Tanna is an internationally recognized author and educator. His landmark publication, 'Tanna's Interlocking Book,' now in its fifth edition, is regarded as a definitive reference for orthopedic surgeons worldwide. He has also authored several influential orthopedic texts, including 'Orthopaedic Tidbits,' 'Orthopaedic Secrets,' and 'Proximal Femur Fracture.' In addition, he has published numerous scientific articles in leading national and international journals, contributing significantly to orthopedic research and education. Throughout his distinguished career, Dr. Tanna has held prestigious leadership positions, serving as President of the Trauma Society Association, Maharashtra Orthopaedic Association, and Mumbai Orthopaedic Association. He is also an Honorary Fellow of the Indian Orthopaedic Association and has been recognized with multiple Lifetime Achievement Awards from the Trauma Society and the All India Orthopaedic Association for his extraordinary contributions to orthopedic surgery. Known for his surgical excellence, innovation, and lifelong commitment to orthopedic education, Dr. D. D. Tanna remains a towering figure in Indian orthopedics and continues to influence the advancement of trauma care, fracture management, and joint reconstruction surgery.",
+    desc: "Dr. D. D. Tanna is an Orthopaedic Surgeon and Senior Consultant with over 55 years of experience in orthopedic trauma care, fracture management, and joint reconstruction surgery. A former Professor of Orthopaedics at Topiwala National Medical College and Nair Hospital, Mumbai, he introduced advanced interlocking nailing techniques in India. His clinical practice focuses on complex trauma management, non-union fracture care, fracture fixation procedures, and joint reconstruction.",
     photoUrl: DDTannaImage,
   },
   {
     name: "Dr. Ashok Johari",
     education: "MBBS, MS (Orthopaedics)",
     spec: "Paediatric Orthopaedic Surgeon, Cerebral Palsy Specialist, Pediatric Deformity Correction Expert",
-    desc: "Dr. Ashok Johari is one of India's most respected Paediatric Orthopaedic Surgeons, with over 42 years of experience in the diagnosis, treatment, and surgical management of musculoskeletal disorders in children. Widely recognized for his pioneering contributions to pediatric orthopedics, Dr. Johari has earned both national and international acclaim as a surgeon, educator, researcher, and innovator. Throughout his distinguished career, he has dedicated himself to improving the lives of children affected by orthopedic disorders, congenital deformities, neuromuscular conditions, and complex mobility challenges. Dr. Johari is regarded as one of the driving forces behind the growth of Pediatric Orthopaedics in India and played a pivotal role in establishing and advancing the specialty across the country. He spearheaded the Pediatric Orthopaedic movement in India and is the founder of the Indian Academy of Cerebral Palsy (IACP), a landmark organization dedicated to improving care for children with cerebral palsy and related neurological disorders. His clinical expertise encompasses cerebral palsy management, pediatric deformity correction, clubfoot treatment, limb reconstruction, congenital orthopedic disorders, gait abnormalities, pediatric trauma, neuromuscular conditions, and complex orthopedic surgeries in children. In addition to his surgical excellence, Dr. Johari is a passionate educator who has trained and mentored numerous orthopedic surgeons, helping shape the future of pediatric orthopedic care in India. His commitment to social service is reflected through his active involvement in philanthropic initiatives such as the Johari Medical & Research Foundation (JMRF) and Child Care Foundation, organizations focused on delivering specialized orthopedic care to underprivileged children. Dr. Johari is also deeply engaged in clinical research and innovation, contributing to the development of advanced treatment techniques and rehabilitation strategies for children with orthopedic disabilities. Known for his compassionate approach, academic leadership, and dedication to improving children's mobility and quality of life, Dr. Ashok Johari remains one of India's foremost authorities in pediatric orthopedics and cerebral palsy management.",
+    desc: "Dr. Ashok Johari is a Paediatric Orthopaedic Surgeon with over 42 years of clinical experience in the diagnosis, evaluation, and surgical management of musculoskeletal conditions in children. Founder of the Indian Academy of Cerebral Palsy, he holds an MBBS and MS in Orthopaedics. His clinical practice encompasses pediatric deformity correction, cerebral palsy management, clubfoot treatment, limb reconstruction, neuromuscular conditions, and pediatric trauma care.",
     photoUrl: AshokJohariImage,
   },
 ];
@@ -380,20 +380,20 @@ import ReviewRightImage from "../departments/dept-images/happy-ortho-patient-ind
 
 const reviews = [
   {
-    name: "Allison Hayes",
-    text: '"I had been struggling with ortho pain for years. After my implant procedure in India, I finally have a healthy smile. The doctors were incredibly professional and caring."',
+    name: "Allison Hayes, Kenya",
+    text: "“After struggling with chronic knee pain for several years, our family coordinated with Human Care Medical Tourism for knee replacement in Mumbai. The hospital coordination and assistance throughout our stay were very helpful.”",
   },
   {
-    name: "Brooke Sullivan",
-    text: '"The entire experience from online consultation to treatment was seamless. The clinic in Mumbai was world-class, and I saved significantly compared to back home."',
+    name: "Brooke Sullivan, Nigeria",
+    text: "“The entire experience from online medical report review to hospital consultations in India was well-coordinated. The medical team in Mumbai provided clear treatment guidance and thorough care.”",
   },
   {
-    name: "Allison Hayes",
-    text: '"I had been struggling with ortho pain for years. After my implant procedure in India, I finally have a healthy smile. The doctors were incredibly professional and caring."',
+    name: "David O., Uganda",
+    text: "“We received coordinated support for my father's hip treatment in Delhi. Human Care assisted with medical invitation letters, specialist appointments, and local transfers, making the journey much smoother for our family.”",
   },
   {
-    name: "Allison Hayes",
-    text: '"I had been struggling with ortho pain for years. After my implant procedure in India, I finally have a healthy smile. The doctors were incredibly professional and caring."',
+    name: "Grace M., Tanzania",
+    text: "“Human Care helped coordinate consultations for a complex sports-related joint injury. The orthopedic specialist in India provided clear diagnostic information and a structured recovery plan.”",
   },
 ];
 const Stars = () => (
@@ -407,72 +407,69 @@ const Stars = () => (
 const faqData = [
   {
     id: 1,
-    question:
-      "Why do international patients choose an orthopedic surgeon in India for knee replacement surgery?",
+    question: "What orthopedic treatments are available in India?",
     answer:
-      "Many international patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan choose an orthopedic surgeon in India because of the combination of advanced medical technology, experienced specialists, internationally accredited hospitals, and affordable treatment options. India is known for providing high-quality orthopedic care with shorter waiting times and personalized international patient support.",
+      "Orthopedic hospitals in India offer a range of consultations, procedures and treatment approaches for bone, joint, muscle, spine and mobility-related conditions. Availability depends on the hospital and clinical requirements.",
   },
   {
     id: 2,
-    question:
-      "Which are considered among the best orthopedic hospitals in India?",
+    question: "Is orthopedic treatment available for international patients?",
     answer:
-      "Some of the best orthopedic hospitals in India are known for advanced joint replacement procedures, robotic knee surgery, experienced orthopedic surgeons, and modern rehabilitation facilities. Cities such as Mumbai, Delhi, Chennai, Hyderabad, and Bangalore are home to internationally recognized hospitals offering comprehensive orthopedic treatment for international patients.",
+      "International patients can explore planned orthopedic care in India subject to hospital requirements, applicable travel rules and individual medical circumstances.",
   },
   {
     id: 3,
-    question:
-      "What is the knee surgery cost in India for international patients?",
+    question: "How do I choose an orthopedic hospital in India?",
     answer:
-      "The knee surgery cost in India is generally much more affordable compared to countries like the USA, UK, and many private hospitals internationally. The total cost may vary depending on the type of procedure, hospital, implant choice, surgeon expertise, and recovery requirements. Many patients choose India because they can access advanced orthopedic treatment at a lower overall expense while maintaining high standards of care.",
+      "Consider the required orthopedic specialty, hospital facilities, specialist availability, location, international patient services and the treatment information provided by the hospital.",
   },
   {
     id: 4,
-    question:
-      "Why is Mumbai considered a popular destination for knee replacement surgery?",
+    question: "Can I share my medical reports before travelling?",
     answer:
-      "Mumbai is home to some of the best knee replacement hospitals in Mumbai, offering advanced orthopedic technology, robotic-assisted surgery, experienced joint replacement specialists, and dedicated international patient services. The city also provides convenient international connectivity, accommodation options, and multilingual support for overseas patients.",
+      "Yes. Relevant reports and medical documents can be shared for coordination and to help identify suitable hospital or specialist options. Final clinical decisions are made by the treating healthcare professional.",
   },
   {
     id: 5,
-    question:
-      "How do I choose the best orthopedic surgeon in India for my treatment?",
+    question: "What orthopedic procedures are available in India?",
     answer:
-      "When selecting an orthopedic surgeon in India, patients should consider the surgeon’s experience, specialization in joint replacement surgery, hospital accreditation, patient reviews, surgical success rates, and use of advanced technologies such as robotic-assisted knee replacement. Many leading orthopedic surgeons in India have extensive experience treating international patients.",
+      "Depending on the hospital and clinical indication, procedures may include joint replacement, arthroscopy, fracture care, reconstruction and other orthopedic interventions. A specialist determines whether a procedure is appropriate.",
   },
   {
     id: 6,
-    question:
-      "Do the best orthopedic hospitals in India provide support for international patients?",
+    question: "How much does orthopedic treatment cost in India?",
     answer:
-      "Yes. Many of the best orthopedic hospitals in India have dedicated international patient departments that assist with online consultations, medical visa guidance, airport transfers, accommodation support, language assistance, and follow-up care after surgery. These services help make the treatment journey smoother for patients traveling from Africa and other countries.",
+      "Cost varies according to the condition, diagnostic tests, procedure, hospital, surgeon or specialist fees, room requirements, duration of care, rehabilitation and other services. A specific estimate should be confirmed with the relevant provider.",
   },
   {
     id: 7,
-    question:
-      "What types of orthopedic treatments are commonly performed in India?",
+    question: "How long does orthopedic treatment take?",
     answer:
-      "India offers a wide range of orthopedic procedures including total knee replacement, robotic knee replacement, hip replacement surgery, spine surgery, sports injury treatment, trauma care, revision joint replacement, and minimally invasive orthopedic procedures. Many hospitals use advanced surgical systems to improve precision and recovery outcomes.",
+      "The duration varies according to the condition, procedure, recovery requirements and follow-up plan. The treating specialist can provide more specific guidance after evaluation.",
   },
   {
     id: 8,
-    question:
-      "How long should international patients stay in India after knee replacement surgery?",
+    question: "Can Human Care help with orthopedic appointments?",
     answer:
-      "The required stay depends on the patient’s medical condition, recovery progress, and type of surgery performed. In many cases, patients may stay in India for a few weeks to complete surgery, physiotherapy, and follow-up evaluations before returning home. The treating orthopedic surgeon usually provides a personalized recovery timeline.",
+      "Human Care can assist with appointment coordination based on the selected hospital, specialist availability and the patient’s requirements.",
   },
   {
     id: 9,
-    question: "Are robotic knee replacement procedures available in India?",
+    question: "Can you help with travel and accommodation?",
     answer:
-      "Yes. Many leading orthopedic hospitals in India now offer robotic knee replacement surgery. Robotic-assisted procedures help orthopedic surgeons improve implant positioning, surgical precision, alignment accuracy, and personalized treatment planning. International patients often choose robotic knee replacement in India because of its affordability and advanced technology.",
+      "Human Care can assist with selected travel, accommodation and local transfer arrangements for international patients, subject to the requested service and availability.",
   },
   {
     id: 10,
-    question:
-      "Is orthopedic treatment in India safe for patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan?",
+    question: "Are orthopedic treatment results guaranteed?",
     answer:
-      "Reputed orthopedic hospitals in India follow international safety standards, strict sterilization protocols, and advanced infection control measures. Many hospitals are experienced in treating international patients and provide coordinated care throughout the treatment and recovery process, helping patients feel comfortable and supported during their medical journey.",
+      "No medical treatment should be presented as guaranteed for every patient. Outcomes vary according to the condition, treatment approach, individual circumstances and other clinical factors.",
+  },
+  {
+    id: 11,
+    question: "How can I contact Human Care Medical Tourism?",
+    answer:
+      "Use the contact options and CTA buttons on this page to discuss your orthopedic treatment and medical-travel requirements with the Human Care Medical Tourism team.",
   },
 ];
 
@@ -553,18 +550,17 @@ export default function OrthopedicTreatmentIndia() {
     <>
       <Helmet>
         <title>
-          Affordable Orthopedic Treatment in India | Knee & Joint Replacement
-          Surgery
+          Affordable Orthopedic Treatment in India for International Patients | Human Care Medical Tourism
         </title>
 
         <meta
           name="description"
-          content="Get affordable orthopedic treatment in India with top surgeons and JCI-accredited hospitals. Advanced knee replacement, joint replacement, and bone surgery for international patients."
+          content="Explore orthopedic treatment options in India with support for hospital selection, orthopedic specialist appointments, medical-report coordination and international patient arrangements."
         />
 
         <meta
           name="keywords"
-          content="orthopedic treatment india, knee replacement surgery india, joint replacement india, best orthopedic hospital india, bone surgery india"
+          content="orthopedic treatment in india, affordable orthopedic treatment in india, orthopedic treatment in india for international patients, orthopedic surgery in india, orthopedic hospitals in india, best orthopedic hospitals in india, orthopedic surgeons in india, best orthopedic surgeons in india, knee replacement in india, hip replacement in india, joint replacement in india, orthopedic surgery cost in india, orthopedic treatment cost in india, international orthopedic treatment, medical tourism for orthopedic treatment, orthopedic specialist in india"
         />
 
         <link
@@ -574,11 +570,11 @@ export default function OrthopedicTreatmentIndia() {
 
         <meta
           property="og:title"
-          content="Affordable Orthopedic Treatment in India | Knee & Joint Replacement Surgery"
+          content="Affordable Orthopedic Treatment in India for International Patients | Human Care Medical Tourism"
         />
         <meta
           property="og:description"
-          content="Get affordable orthopedic treatment in India with top surgeons and JCI-accredited hospitals. Advanced knee replacement, joint replacement, and bone surgery for international patients."
+          content="Explore orthopedic treatment options in India with support for hospital selection, orthopedic specialist appointments, medical-report coordination and international patient arrangements."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -593,32 +589,30 @@ export default function OrthopedicTreatmentIndia() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Affordable Orthopedic Treatment in India | Knee & Joint Replacement Surgery"
+          content="Affordable Orthopedic Treatment in India for International Patients | Human Care Medical Tourism"
         />
         <meta
           name="twitter:description"
-          content="Get affordable orthopedic treatment in India with top surgeons and JCI-accredited hospitals. Advanced knee replacement, joint replacement, and bone surgery for international patients."
+          content="Explore orthopedic treatment options in India with support for hospital selection, orthopedic specialist appointments, medical-report coordination and international patient arrangements."
         />
         <meta
           name="twitter:image"
           content="https://humancaremedicaltourism.com/og-image.jpg"
         />
-
-       
       </Helmet>
       {/* ════ SECTION 1 — HERO ════ */}
       <section className="orthopedic-hero-section">
         {/* Background Image */}
         <img
           src={heroImage}
-          alt="Affordable orthopedic treatment in India with advanced knee replacement surgery for international patients"
+          alt="Affordable orthopedic treatment in India for international patients"
           className="orthopedic-hero-bg-image"
           loading="eager"
-        fetchPriority="high"
-        width={735}
-        height={412}
-        decoding="async"
-      />
+          fetchPriority="high"
+          width={735}
+          height={412}
+          decoding="async"
+        />
 
         {/* Gradient Overlay */}
         <div className="orthopedic-hero-overlay" />
@@ -626,23 +620,18 @@ export default function OrthopedicTreatmentIndia() {
         {/* Content */}
         <div className="orthopedic-hero-content">
           <span className="orthopedic-hero-badge">
-            Trusted by 50,000+ International Patients
+            International Patient Support
           </span>
 
           <h1>
-            Affordable Orthopedic Treatment in India for International
-            Patients
+            Affordable Orthopedic Treatment in India for International Patients
           </h1>
 
           <p>
-            Orthopedic treatment in India is becoming one of the most preferred
-            solutions for international patients seeking affordable and
-            high-quality joint surgery. India offers advanced orthopedic
-            technology, experienced specialists, and internationally accredited
-            hospitals at significantly lower costs compared to the USA, UK, and
-            Europe. Patients from Kenya, Uganda, Tanzania, Nigeria, and South
-            Sudan choose India for safe, modern, and cost-effective orthopedic
-            care.
+            Explore orthopedic treatment options in India with support for hospital selection, orthopedic specialist appointments, medical-report coordination and international patient arrangements.
+          </p>
+          <p style={{ marginTop: "0.5rem" }}>
+            Human Care Medical Tourism helps international patients coordinate orthopedic care based on their medical requirements and travel needs.
           </p>
 
           <div className="orthopedic-hero-ctas">
@@ -662,6 +651,7 @@ export default function OrthopedicTreatmentIndia() {
         </div>
       </section>
 
+      {/* ════ SECTION 2 — ORTHOPEDIC SURGERY IN INDIA ════ */}
       <section className="about-section">
         <div className="about-container">
           {/* ── Left: Image collage ── */}
@@ -669,91 +659,88 @@ export default function OrthopedicTreatmentIndia() {
             <div className="about-images__main">
               <img
                 src={about}
-                alt="Orthopedic surgeon in India performing advanced joint replacement treatment"
-        width={493}
-        height={740}
-        decoding="async"
-      />
+                alt="Orthopedic surgeon in India providing joint evaluation and treatment"
+                width={493}
+                height={740}
+                decoding="async"
+              />
             </div>
             <div className="about-images__stack">
               <div className="about-images__small">
                 <img
                   src={about1}
-                  alt="Physiotherapy and rehabilitation support after knee replacement surgery in India"
-        width={493}
-        height={740}
-        decoding="async"
-      />
+                  alt="Post-treatment rehabilitation and physiotherapy support in India"
+                  width={493}
+                  height={740}
+                  decoding="async"
+                />
               </div>
               <div className="about-images__small">
                 <img
                   src={about2}
-                  alt="Orthopedic doctor consultation in India for international joint replacement patients"
-        width={740}
-        height={494}
-        decoding="async"
-      />
+                  alt="Orthopedic specialist consultation in India for international patients"
+                  width={740}
+                  height={494}
+                  decoding="async"
+                />
               </div>
             </div>
           </div>
 
           {/* ── Right: Content ── */}
           <div className="about-content">
-            {/* <p className="about-content__label">About Us</p> */}
+            <p className="about-content__label">Orthopedic Care</p>
             <h2 className="about-content__title">
               Orthopedic Surgery in India
             </h2>
 
             <div className="about-content__body">
               <p>
-                India has become one of the leading destinations for advanced
-                orthopedic and joint replacement treatment, attracting thousands
-                of international patients every year. Patients from Kenya,
-                Uganda, Tanzania, Nigeria, South Sudan, and many other countries
-                travel to India seeking high-quality care from experienced
-                <strong> orthopedic surgeons in India</strong> at affordable
-                treatment costs.
+                Orthopedic hospitals and specialists in India provide evaluation and treatment for a range of bone, joint, muscle and mobility-related conditions.
               </p>
               <p>
-                One of the biggest reasons patients choose{" "}
-                <strong>knee replacement in India</strong> is the combination of
-                affordability and medical expertise. Many Indian hospitals are
-                equipped with advanced surgical technology, including
-                robotic-assisted systems used for precision-based joint
-                replacement procedures. These technologies help orthopedic
-                specialists perform surgeries with improved implant positioning,
-                better alignment, and enhanced recovery planning.
+                Depending on the patient’s condition, available care may include consultations, diagnostic evaluation, non-surgical management, rehabilitation or orthopedic procedures. The appropriate approach is determined by a qualified healthcare professional after clinical assessment.
               </p>
-              <p>
-                International patients benefit from highly experienced doctors,
-                many of whom have performed thousands of successful joint
-                replacement procedures — whether total knee replacement,
-                bilateral knee replacement, revision surgery, or minimally
-                invasive orthopedic procedures across major cities such as
-                Mumbai, Delhi, Chennai, and Ahmedabad.
-              </p>
-              <p>
-                Patients searching for the{" "}
-                <strong>best orthopedic hospitals in India</strong>
-                often choose India not only because of affordability but also
-                because of the compassionate care and personalized attention
-                they receive throughout their treatment journey.
-              </p>
+            </div>
+
+            <div className="about-services">
+              <div className="about-service">
+                <Check />
+                <span>Orthopedic consultation and evaluation</span>
+              </div>
+              <div className="about-service">
+                <Check />
+                <span>Joint and bone condition assessment</span>
+              </div>
+              <div className="about-service">
+                <Check />
+                <span>Surgical and non-surgical treatment options</span>
+              </div>
+              <div className="about-service">
+                <Check />
+                <span>Joint replacement and reconstruction procedures</span>
+              </div>
+              <div className="about-service">
+                <Check />
+                <span>Sports and musculoskeletal care</span>
+              </div>
+              <div className="about-service">
+                <Check />
+                <span>Post-treatment rehabilitation and follow-up</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2 — APPROACH */}
+      {/* ════ SECTION 3 — APPROACH ════ */}
       <section className="approach-section">
         <p className="approach-section__label">Our Approach</p>
         <h2 className="approach-section__title">
           Personalized Orthopedic Care, Designed Around Your Needs
         </h2>
         <p className="approach-section__sub">
-          We understand that every patient experiences pain, mobility issues,
-          and recovery differently. Our approach focuses on accurate diagnosis,
-          personalized treatment, and complete recovery support.
+          Orthopedic care is based on the patient’s condition, medical history, diagnostic findings, treatment requirements and individual circumstances. Human Care can assist with coordinating relevant hospital and specialist options, sharing medical reports, arranging consultations and supporting international patient requirements.
         </p>
 
         <div className="approach-grid approach-grid--top">
@@ -769,6 +756,7 @@ export default function OrthopedicTreatmentIndia() {
         </div>
       </section>
 
+      {/* ════ SECTION 4 — WHY CHOOSE INDIA ════ */}
       <section className="why-section">
         <div className="why-container">
           {/* ── Left: Image ── */}
@@ -776,20 +764,22 @@ export default function OrthopedicTreatmentIndia() {
             <div className="why-image-wrapper">
               <img
                 src={whyChooseUs}
-                alt="Robotic knee replacement surgery in India using advanced orthopedic technology"
-        width={736}
-        height={736}
-        decoding="async"
-      />
+                alt="Orthopedic treatment and advanced medical facilities in India"
+                width={736}
+                height={736}
+                decoding="async"
+              />
             </div>
           </div>
 
           {/* ── Right: Header + Feature rows ── */}
           <div className="why-content-col">
-            {/* <p className="why-label">Why Choose India</p> */}
             <h2 className="why-title">
               Why Patients Choose India for Orthopedic Treatment
             </h2>
+            <p style={{ color: "#555", fontSize: "16px", marginBottom: "1.5rem", lineHeight: "1.6" }}>
+              India has hospitals and orthopedic specialists offering care across a range of musculoskeletal conditions and procedures. International patients may consider treatment options based on specialist availability, hospital facilities, location, treatment requirements and other individual factors.
+            </p>
 
             <div className="why-rows">
               {/* Row 1 */}
@@ -810,28 +800,29 @@ export default function OrthopedicTreatmentIndia() {
                 </div>
                 <div className="why-row__body">
                   <h3 className="why-row__title">
-                    Experienced Orthopedic Surgeons
+                    Range of Orthopedic Specialties and Procedures
                   </h3>
                   <p className="why-row__desc">
-                    Many hospitals in India have highly qualified orthopedic
-                    specialists with decades of experience in:
+                    Patients can explore medical and surgical care across a range of musculoskeletal conditions:
                   </p>
                   <div className="why-row__pills">
                     <span className="why-pill why-pill--teal">
-                      Knee replacement surgery
+                      Knee replacement
                     </span>
                     <span className="why-pill why-pill--teal">
-                      Hip replacement surgery
+                      Hip replacement
+                    </span>
+                    <span className="why-pill why-pill--teal">
+                      Spine care
                     </span>
                     <span className="why-pill why-pill--teal">
                       Sports injury treatment
                     </span>
                     <span className="why-pill why-pill--teal">
-                      Spine surgery
+                      Trauma & fracture care
                     </span>
-                    <span className="why-pill why-pill--teal">Trauma care</span>
                     <span className="why-pill why-pill--teal">
-                      Robotic joint replacement
+                      Arthroscopic procedures
                     </span>
                   </div>
                 </div>
@@ -857,29 +848,26 @@ export default function OrthopedicTreatmentIndia() {
                 </div>
                 <div className="why-row__body">
                   <h3 className="why-row__title">
-                    Advanced Technology & Robotic Surgery
+                    Access to Specialist Consultations
                   </h3>
                   <p className="why-row__desc">
-                    Patients looking for{" "}
-                    <strong>best robotic knee replacement in India </strong>
-                    often choose robotic-assisted procedures because they may
-                    offer:
+                    Hospitals in India have qualified orthopedic specialists and surgical teams working across specific clinical areas:
                   </p>
                   <div className="why-row__pills">
                     <span className="why-pill why-pill--teal">
-                      Better implant alignment
+                      Joint replacement specialists
                     </span>
                     <span className="why-pill why-pill--teal">
-                      Smaller incisions
+                      Spine surgeons
                     </span>
                     <span className="why-pill why-pill--teal">
-                      Reduced blood loss
+                      Sports medicine doctors
                     </span>
                     <span className="why-pill why-pill--teal">
-                      Faster rehabilitation
+                      Arthroscopy specialists
                     </span>
                     <span className="why-pill why-pill--teal">
-                      Improved accuracy
+                      Pediatric orthopedics
                     </span>
                   </div>
                 </div>
@@ -903,13 +891,9 @@ export default function OrthopedicTreatmentIndia() {
                   </svg>
                 </div>
                 <div className="why-row__body">
-                  <h3 className="why-row__title">Affordable Treatment</h3>
+                  <h3 className="why-row__title">Diagnostic and Surgical Facilities</h3>
                   <p className="why-row__desc">
-                    One of the biggest reasons patients travel for{" "}
-                    <strong>knee replacement in India</strong> is affordability.
-                    Compared to treatment costs in Western countries, patients
-                    can save a substantial amount while still receiving
-                    high-quality medical care and modern hospital facilities.
+                    Hospitals provide diagnostic imaging, modern surgical suites, intensive care facilities, and postoperative rehabilitation units to support comprehensive orthopedic care.
                   </p>
                 </div>
               </div>
@@ -930,23 +914,22 @@ export default function OrthopedicTreatmentIndia() {
                   </svg>
                 </div>
                 <div className="why-row__body">
-                  <h3 className="why-row__title">Faster Treatment Access</h3>
+                  <h3 className="why-row__title">International Patient Coordination</h3>
                   <p className="why-row__desc">
-                    In many countries, patients wait months for orthopedic
-                    procedures. India offers:
+                    Dedicated international patient teams assist overseas visitors throughout their medical journey:
                   </p>
                   <div className="why-row__pills">
                     <span className="why-pill why-pill--teal">
-                      Faster appointments
+                      Appointment coordination
                     </span>
                     <span className="why-pill why-pill--teal">
-                      Shorter surgery waiting periods
+                      Medical report sharing
                     </span>
                     <span className="why-pill why-pill--teal">
-                      Quick diagnostic evaluations
+                      Rehabilitation planning
                     </span>
                     <span className="why-pill why-pill--teal">
-                      Efficient treatment planning
+                      Travel assistance
                     </span>
                   </div>
                 </div>
@@ -956,6 +939,7 @@ export default function OrthopedicTreatmentIndia() {
         </div>
       </section>
 
+      {/* ════ SECTION 5 — 5 REASONS ════ */}
       <section className="wo-section">
         <div className="wo-container">
           {/* ── Hero Banner ── */}
@@ -973,25 +957,23 @@ export default function OrthopedicTreatmentIndia() {
               <div className="wo-item__num">01</div>
               <div className="wo-item__body">
                 <h3 className="wo-item__title">
-                  Affordable Knee Replacement Surgery Cost in India
+                  Orthopedic Specialist Options
                 </h3>
                 <p className="wo-item__desc">
-                  The <strong>knee replacement surgery cost in India</strong> is
-                  considerably lower than in countries such as the USA, UK, or
-                  many African nations offering private orthopedic care.
+                  Patients can explore orthopedic specialists according to their condition and consultation requirements.
                 </p>
                 <div className="wo-item__tags">
                   <span className="wo-tag wo-tag--teal">
-                    Advanced surgical procedures
+                    Specialist consultations
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    International standard hospitals
+                    Joint care specialists
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    Skilled orthopedic specialists
+                    Spine specialists
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    Comprehensive rehabilitation
+                    Verified qualifications
                   </span>
                 </div>
               </div>
@@ -1002,28 +984,26 @@ export default function OrthopedicTreatmentIndia() {
               <div className="wo-item__num">02</div>
               <div className="wo-item__body">
                 <h3 className="wo-item__title">
-                  Modern Hospitals with Global Standards
+                  Range of Orthopedic Procedures
                 </h3>
                 <p className="wo-item__desc">
-                  Many of the{" "}
-                  <strong>best orthopedic hospitals in India </strong>are
-                  internationally accredited and equipped with:
+                  Hospitals may provide different surgical and non-surgical treatment options depending on clinical evaluation.
                 </p>
                 <div className="wo-item__tags">
                   <span className="wo-tag wo-tag--teal">
-                    Modern operation theaters
+                    Joint replacement
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    Robotic surgery systems
+                    Minimally invasive procedures
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    Advanced imaging technology
+                    Arthroscopy
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    Specialized orthopedic ICUs
+                    Non-surgical management
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    Dedicated rehabilitation departments
+                    Fracture care
                   </span>
                 </div>
               </div>
@@ -1034,16 +1014,25 @@ export default function OrthopedicTreatmentIndia() {
               <div className="wo-item__num">03</div>
               <div className="wo-item__body">
                 <h3 className="wo-item__title">
-                  Robotic Knee Replacement Technology
+                  Hospital Infrastructure
                 </h3>
                 <p className="wo-item__desc">
-                  Patients seeking{" "}
-                  <strong>robotic knee replacement cost in India</strong> are
-                  often surprised that robotic-assisted surgery remains
-                  affordable compared to many international destinations.
-                  Robotic systems help surgeons achieve more precise implant
-                  placement and personalized surgical planning.
+                  Available facilities and services vary by hospital and should be reviewed before selecting a provider.
                 </p>
+                <div className="wo-item__tags">
+                  <span className="wo-tag wo-tag--teal">
+                    Modern surgical theaters
+                  </span>
+                  <span className="wo-tag wo-tag--teal">
+                    Advanced imaging technology
+                  </span>
+                  <span className="wo-tag wo-tag--teal">
+                    Specialized orthopedic units
+                  </span>
+                  <span className="wo-tag wo-tag--teal">
+                    Rehabilitation facilities
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -1052,21 +1041,23 @@ export default function OrthopedicTreatmentIndia() {
               <div className="wo-item__num">04</div>
               <div className="wo-item__body">
                 <h3 className="wo-item__title">
-                  English-Speaking Medical Teams
+                  International Patient Support
                 </h3>
                 <p className="wo-item__desc">
-                  Communication is an important concern for international
-                  patients. Hospitals in India typically have:
+                  Patients can receive assistance with appointments, documents, communication and selected travel arrangements.
                 </p>
                 <div className="wo-item__tags">
                   <span className="wo-tag wo-tag--teal">
-                    English-speaking doctors
+                    Appointment coordination
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    International patient coordinators
+                    Medical report sharing
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    Dedicated support teams
+                    Language support
+                  </span>
+                  <span className="wo-tag wo-tag--teal">
+                    Dedicated coordinators
                   </span>
                 </div>
               </div>
@@ -1076,23 +1067,22 @@ export default function OrthopedicTreatmentIndia() {
             <div className="wo-item wo-item--last">
               <div className="wo-item__num">05</div>
               <div className="wo-item__body">
-                <h3 className="wo-item__title">Medical Visa Assistance</h3>
+                <h3 className="wo-item__title">Treatment Cost Information</h3>
                 <p className="wo-item__desc">
-                  Hospitals and medical tourism coordinators assist patients
-                  with:
+                  Patients can request cost information based on the proposed treatment, hospital and individual requirements.
                 </p>
                 <div className="wo-item__tags">
                   <span className="wo-tag wo-tag--teal">
-                    Medical invitation letters
+                    Available cost estimates
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    Visa documentation
+                    Detailed treatment scope
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    Treatment scheduling
+                    Hospital category options
                   </span>
                   <span className="wo-tag wo-tag--teal">
-                    Airport assistance
+                    Follow-up planning
                   </span>
                 </div>
               </div>
@@ -1101,17 +1091,15 @@ export default function OrthopedicTreatmentIndia() {
         </div>
       </section>
 
+      {/* ════ SECTION 6 — TYPES OF ORTHOPEDIC TREATMENT ════ */}
       <section className="orthopedic-services-section">
         {/* Header */}
         <div className="orthopedic-services-header">
           <h2 className="orthopedic-services-title">
-            Types of Knee Surgeries in India
+            Types of Orthopedic Treatment in India
           </h2>
           <p className="orthopedic-services-description">
-            From joint replacement to sports injury treatment, our comprehensive
-            orthopedic services are designed to restore mobility, reduce pain,
-            and improve quality of life for international patients seeking
-            advanced orthopedic care in India.
+            Orthopedic hospitals in India provide evaluation and treatment for a range of bone, joint, muscle and mobility-related conditions. The treating specialist determines the appropriate approach based on clinical evaluation.
           </p>
         </div>
 
@@ -1130,17 +1118,14 @@ export default function OrthopedicTreatmentIndia() {
         </div>
       </section>
 
+      {/* ════ SECTION 7 — HOSPITALS ════ */}
       <section className="hn-section">
         <div className="hn-container">
           <div className="hn-title-wrap">
             <span className="hn-label">Our Hospital Network</span>
-            <h2 className="hn-heading">Best Orthopedic Hospitals in India</h2>
+            <h2 className="hn-heading">Orthopedic Hospitals in India</h2>
             <p className="hn-subtitle">
-              India is home to many experienced joint replacement specialists
-              known for handling complex orthopedic cases and advanced knee
-              replacement procedures. Below are some well-known specialists
-              often consulted by international patients seeking an orthopedic
-              surgeon in India or the best knee replacement surgeon in India.
+              Orthopedic hospitals in India offer different specialties, facilities and treatment services. The appropriate hospital depends on the patient’s medical requirements, required specialty, specialist availability, location and other relevant factors.
             </p>
           </div>
           <div className="hn-slider-wrapper">
@@ -1220,18 +1205,14 @@ export default function OrthopedicTreatmentIndia() {
         </div>
       </section>
 
-      {/* ════ SECTION 4 — DOCTORS ════ */}
+      {/* ════ SECTION 8 — DOCTORS ════ */}
       <section className="doctor-section-light">
         <div className="doctor-container">
           <div className="doctor-title-wrap">
             <span className="doctor-label">Our Specialists</span>
-            <h2 className="doctor-h2">Best Orthopedic Surgeons in India</h2>
+            <h2 className="doctor-h2">Orthopedic Specialists and Surgeons in India</h2>
             <p className="doctor-subtitle">
-              India is home to many experienced joint replacement specialists
-              known for handling complex orthopedic cases and advanced knee
-              replacement procedures. Below are some well-known specialists
-              often consulted by international patients seeking an orthopedic
-              surgeon in India or the best knee replacement surgeon in India.
+              Patients can explore orthopedic specialists based on their treatment requirements, specialty, hospital affiliation, qualifications and verified professional information.
             </p>
           </div>
           <div className="doctor-cards-grid">
@@ -1312,9 +1293,13 @@ export default function OrthopedicTreatmentIndia() {
         </div>
       )}
 
+      {/* ════ SECTION 9 — REVIEWS ════ */}
       <section className="ortho-reviews-section">
         <div className="ortho-reviews-content">
-          <h2 className="ortho-reviews-heading">Our Clients Review</h2>
+          <h2 className="ortho-reviews-heading">Our Patients' Experiences</h2>
+          <p style={{ color: "#555", fontSize: "16px", marginBottom: "1.5rem" }}>
+            Read experiences shared by patients who used Human Care’s medical-tourism coordination services.
+          </p>
 
           {/* Slider wrapper */}
           <div className="ortho-reviews-slider-wrapper">
@@ -1328,7 +1313,9 @@ export default function OrthopedicTreatmentIndia() {
                     <div key={cardIndex} className="ortho-reviews-card">
                       <Stars />
                       <p className="ortho-reviews-card-text">{r.text}</p>
-                      {/* <p className="ortho-reviews-card-name">{r.name}</p> */}
+                      <p className="ortho-reviews-card-name" style={{ fontWeight: 600, marginTop: "0.5rem", color: "#0a1754" }}>
+                        {r.name}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -1352,26 +1339,26 @@ export default function OrthopedicTreatmentIndia() {
         <div className="ortho-reviews-image-wrapper">
           <img
             src={ReviewRightImage}
-            alt="Happy international ortho patient in India"
+            alt="International orthopedic patient experiences in India"
             className="ortho-reviews-image"
-        width={736}
-        height={552}
-        decoding="async"
-      />
+            width={736}
+            height={552}
+            decoding="async"
+          />
         </div>
       </section>
 
+      {/* ════ SECTION 10 — FAQ ════ */}
       <section className="ortho-faq-section" aria-labelledby="faq-heading">
         <div className="ortho-faq-container">
           {/* Section Header */}
           <div className="ortho-faq-header">
             <span className="ortho-faq-badge">Orthopedic Treatment FAQs</span>
             <h2 id="faq-heading" className="ortho-faq-title">
-              Frequently Asked Questions About ortho Treatment in India
+              Frequently Asked Questions About Orthopedic Treatment in India
             </h2>
             <p className="ortho-faq-subtitle">
-              Get answers to common questions about ortho care, best ortho
-              hospitals, and treatment options in India
+              Get answers to common questions about orthopedic care, hospital options, treatment approaches and international patient support in India
             </p>
           </div>
 
@@ -1418,17 +1405,18 @@ export default function OrthopedicTreatmentIndia() {
         </div>
       </section>
 
+      {/* ════ SECTION 11 — FINAL CTA ════ */}
       <section className="ortho-cta-section">
         {/* Background Image */}
         <img
           src={CtaImage}
-          alt="Book orthopedic consultation in India for affordable knee replacement treatment"
+          alt="Book orthopedic consultation in India with Human Care Medical Tourism"
           className="ortho-cta-bg-image"
           loading="lazy"
-        width={740}
-        height={416}
-        decoding="async"
-      />
+          width={740}
+          height={416}
+          decoding="async"
+        />
 
         {/* Gradient Overlay */}
         <div className="ortho-cta-overlay" />
@@ -1436,30 +1424,28 @@ export default function OrthopedicTreatmentIndia() {
         {/* Content Container */}
         <div className="ortho-cta-container">
           <div className="ortho-cta-content">
-            <span className="ortho-cta-badge">YOUR SMILE STARTS HERE</span>
+            <span className="ortho-cta-badge">International Patient Support</span>
 
             <h2 className="ortho-cta-title">
               Book Your Orthopedic Consultation
             </h2>
 
             <p className="ortho-cta-subtitle">
-              Start your orthopedic treatment journey in India with experienced
-              joint replacement specialists and internationally trusted
-              hospitals.
+              Discuss your orthopedic treatment requirements with Human Care Medical Tourism and receive assistance with hospital options, specialist coordination and international patient services.
             </p>
 
             <div className="ortho-cta-benefits-list">
               <div className="ortho-cta-benefit-point">
                 <FaCheckCircle className="ortho-cta-check-icon" />
-                <span>Personalized treatment plans</span>
+                <span>Orthopedic specialist options</span>
               </div>
               <div className="ortho-cta-benefit-point">
                 <FaCheckCircle className="ortho-cta-check-icon" />
-                <span>Transparent pricing</span>
+                <span>Hospital selection assistance</span>
               </div>
               <div className="ortho-cta-benefit-point">
                 <FaCheckCircle className="ortho-cta-check-icon" />
-                <span>Expert ortho specialists</span>
+                <span>Treatment cost information</span>
               </div>
               <div className="ortho-cta-benefit-point">
                 <FaCheckCircle className="ortho-cta-check-icon" />
@@ -1467,7 +1453,7 @@ export default function OrthopedicTreatmentIndia() {
               </div>
               <div className="ortho-cta-benefit-point">
                 <FaCheckCircle className="ortho-cta-check-icon" />
-                <span>Modern and safe ortho care</span>
+                <span>Travel and accommodation coordination</span>
               </div>
             </div>
 
@@ -1485,6 +1471,18 @@ export default function OrthopedicTreatmentIndia() {
                 <FaPhoneAlt /> Contact Medical Coordinator
               </a>
             </div>
+
+            <p
+              className="ortho-cta-disclaimer"
+              style={{
+                fontSize: "0.82rem",
+                opacity: 0.85,
+                marginTop: "1.25rem",
+                lineHeight: "1.4",
+              }}
+            >
+              Medical disclaimer: Healthcare information on this page is provided for general informational purposes. Diagnosis, treatment suitability, expected outcomes, duration and final cost vary according to individual circumstances and should be discussed with a qualified healthcare professional.
+            </p>
           </div>
         </div>
       </section>

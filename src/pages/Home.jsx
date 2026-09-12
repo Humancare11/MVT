@@ -34,8 +34,6 @@ import {
   FlaskConical,
   Activity,
 } from "lucide-react";
-
-<<<<<<< HEAD
 import "./Home.css";
 import Contactsection from "../component/Contactsection";
 import Apollo from "../assets/hospitals/apollo-1.webp";
@@ -73,7 +71,7 @@ import dentistsImg from "../departments/dept-images/dentists-treatment.webp";
 import pulmonologyImg from "../departments/dept-images/pulmonology-treatment.webp";
 import nephrologyImg from "../departments/dept-images/nephrology-treatment.webp";
 import urologyImg from "../departments/dept-images/urology-treatment.webp";
-=======
+
 const trackGTMEvent = (eventName) => {
   if (window.gtag) {
     window.gtag("event", eventName, {
@@ -91,7 +89,6 @@ const handleWhatsAppConsultationClick = () => {
 const handleMedicalCoordinatorClick = () => {
   trackGTMEvent("Medicak Cordinator LP ghana");
 };
->>>>>>> d64f7ef (GTM code and favicon updated)
 
 const hospitals = [
   {
@@ -286,10 +283,8 @@ export default function HomePage() {
           content="medical tourism in India, treatment in india, affordable medical treatment India, best hospitals India, international patient care, medical travel support"
         />
 
-<<<<<<< HEAD
         <link rel="canonical" href="https://humancaremedicaltourism.com/" />
 
-        {/* 🔹 Open Graph (Social Media Previews) */}
         <meta
           property="og:title"
           content="Medical Tourism & Healthcare in India | Affordable Treatment in India"
@@ -308,7 +303,6 @@ export default function HomePage() {
           content="https://humancaremedicaltourism.com/og-image.jpg"
         />
 
-        {/* 🔹 Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -323,7 +317,6 @@ export default function HomePage() {
           content="https://humancaremedicaltourism.com/og-image.jpg"
         />
 
-        {/* 🔹 FAQ Schema (Structured Data) */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -367,7 +360,6 @@ export default function HomePage() {
       </Helmet>
 
       <div className="layout">
-        {/* HERO SECTION start  */}
         <section className="hero">
           <div className="hero-left">
             <span className="hero-badge-red">
@@ -388,50 +380,29 @@ export default function HomePage() {
 
             <div className="hero-buttons">
               <a
-                href="tel:+919833166697"
+                href="tel:+918655835979"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-btn red-btn"
+                onClick={handleMedicalCoordinatorClick}
               >
                 <Phone size={18} />
                 Book Free Consultation
               </a>
               <a
-                href="https://wa.me/+919833166697"
+                href="https://wa.me/+918655835979"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-btn green-btn"
+                onClick={() => {
+                  handleWhatsAppConsultationClick();
+                  trackGTMEvent("Ghana LP contact WhatApp Stickker Button");
+                }}
               >
                 <MessageCircle size={18} />
                 WhatsApp Chat
               </a>
             </div>
-=======
-          <div className="hero-buttons">
-            <a
-              href="tel:+918655835979"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn red-btn"
-              onClick={handleMedicalCoordinatorClick}
-            >
-              <Phone size={18} />
-              Book Free Consultation
-            </a>
-            <a
-              href="https://wa.me/+918655835979"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn green-btn"
-              onClick={() => {
-                handleWhatsAppConsultationClick();
-                trackGTMEvent("Ghana LP contact WhatApp Stickker Button");
-              }}
-            >
-              <MessageCircle size={18} />
-              WhatsApp Chat
-            </a>
->>>>>>> d64f7ef (GTM code and favicon updated)
           </div>
 
           <div className="hero-right">

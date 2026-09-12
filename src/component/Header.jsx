@@ -53,14 +53,11 @@ const Header = () => {
 
     const interval = setInterval(() => {
       tries++;
-
       const googleSelect = document.querySelector(".goog-te-combo");
 
       if (googleSelect) {
         googleSelect.value = lang;
-
         googleSelect.dispatchEvent(new Event("change", { bubbles: true }));
-
         clearInterval(interval);
       }
 
@@ -84,7 +81,6 @@ const Header = () => {
       <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
         <div className="navbar-container">
           <div className="navbar-inner">
-            {/* Logo */}
             <Link to="/" className="logo">
               <img
                 src="/humancare-logo.webp"
@@ -96,7 +92,6 @@ const Header = () => {
               />
             </Link>
 
-            {/* Desktop Menu */}
             <div className="nav-desktop">
               {navItems.map((item) => (
                 <NavLink
@@ -111,57 +106,6 @@ const Header = () => {
               ))}
             </div>
 
-            {/* placeholder for language select (moved to right controls) */}
-
-            {/* Social Icons */}
-            {/* <div className="social-icons">
-              <div className="social-links">
-                <a
-                  href="https://www.facebook.com/humancareworldwide/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Facebook size={15} />
-                </a>
-                <a
-                  href="https://x.com/wwhumancare"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaXTwitter size={15} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Linkedin size={15} />
-                </a>
-                <a
-                  href="https://wa.me/+918655835979"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaWhatsapp size={15} />
-                </a>
-                <a
-                  href="https://www.instagram.com/humancareworldwideofficial/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Instagram size={15} />
-                </a>
-                <a
-                  href="https://www.youtube.com/@HumancareWorldWide"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Youtube size={15} />
-                </a>
-              </div>
-            </div> */}
-
-            {/* Right controls: social icons + language select */}
             <div className="header-controls">
               <div className="social-icons small">
                 <div className="social-links">
@@ -181,7 +125,6 @@ const Header = () => {
                   >
                     <FaXTwitter size={15} />
                   </a>
-
                   <a
                     href="https://www.linkedin.com/company/human-care-world-wide/posts/?feedView=all"
                     target="_blank"
@@ -216,6 +159,16 @@ const Header = () => {
                   </a>
                 </div>
               </div>
+
+              <a
+                href="tel:+918655835979"
+                className="emergency-btn"
+                onClick={() => trackGTMEvent("Call Sticker button LP Ghana")}
+              >
+                <Phone size={16} />
+                Emergency
+              </a>
+
               <select
                 onChange={(e) => handleLangChange(e.target.value)}
                 className="lang-select"
@@ -226,7 +179,7 @@ const Header = () => {
                 <option value="bn">Bengali</option>
               </select>
             </div>
-            {/* Mobile Menu Button */}
+
             <button
               className="menu-btn"
               onClick={() => setIsOpen(!isOpen)}
@@ -238,33 +191,10 @@ const Header = () => {
             </button>
           </div>
 
-<<<<<<< HEAD
-          {/* Mobile Navigation */}
           <div
             id="mobile-nav"
             className={`nav-mobile ${isOpen ? "open" : "closed"}`}
           >
-=======
-          {/* EMERGENCY BUTTON */}
-          <a
-            href="tel:+918655835979"
-            className="emergency-btn"
-            onClick={() => trackGTMEvent("Call Sticker button LP Ghana")}
-          >
-            <Phone size={16} />
-            Emergency
-          </a>
-
-          {/* MOBILE MENU BUTTON */}
-          <button className="menu-btn" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X /> : <Menu />}
-          </button>
-        </div>
-
-        {/* MOBILE NAV */}
-        {isOpen && (
-          <div className="nav-mobile">
->>>>>>> d64f7ef (GTM code and favicon updated)
             {navItems.map((item) => (
               <NavLink
                 key={item.name}
@@ -276,8 +206,6 @@ const Header = () => {
               </NavLink>
             ))}
 
-<<<<<<< HEAD
-            {/* Mobile Language Dropdown */}
             <select
               onChange={(e) => handleLangChange(e.target.value)}
               className="lang-select mobile"
@@ -292,7 +220,6 @@ const Header = () => {
               <option value="es">Spanish</option>
             </select>
 
-            {/* Mobile Social Links (shown on very small screens) */}
             <div className="mobile-social-links">
               <div className="social-links">
                 <a
@@ -345,7 +272,7 @@ const Header = () => {
                 </a>
               </div>
             </div>
-=======
+
             <a
               href="tel:+918655835979"
               className="emergency-btn mobile"
@@ -354,7 +281,6 @@ const Header = () => {
               <Phone size={16} />
               Emergency Call
             </a>
->>>>>>> d64f7ef (GTM code and favicon updated)
           </div>
         </div>
       </nav>

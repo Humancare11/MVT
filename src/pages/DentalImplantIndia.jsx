@@ -141,49 +141,49 @@ const TechIcon = () => (
 const services = [
   {
     id: 1,
-    title: "Smile Makeover",
+    title: "Cosmetic Dentistry",
     description:
-      "Improve your smile with customized cosmetic treatments, including veneers, crowns, teeth whitening, smile correction, and gum contouring. Designed to enhance appearance and confidence while maintaining natural-looking results.",
+      "Dental procedures intended to address selected aesthetic concerns after consultation, including veneers, composite bonding, and aesthetic restorations.",
     image: SmileMakeoverImage,
-    alt: "Smile makeover treatment in India",
+    alt: "Cosmetic dentistry and smile makeover in India",
   },
   {
     id: 2,
     title: "Dental Implants",
     description:
-      "Replace missing teeth with durable, natural-looking implants single tooth, full-mouth, All-on-4, and implant-supported dentures. Highly affordable in India without compromising quality.",
+      "Implant-based tooth replacement options for selected patients after dental evaluation, including single-tooth, multi-unit, and full-arch solutions.",
     image: DentalImplantImage,
     alt: "Dental implant procedure in India",
   },
   {
     id: 3,
-    title: "Painless Root Canal",
+    title: "Dental Crowns",
     description:
-      "Advanced rotary systems and digital imaging for faster, comfortable root canals with reduced discomfort, improved precision, and better recovery. Transparently priced for international patients.",
+      "Restorative options used to protect or restore damaged teeth when clinically appropriate following endodontic or restorative treatment.",
     image: PainlessRootCanalImage,
-    alt: "Painless root canal treatment in India",
+    alt: "Dental crowns and restorative care in India",
   },
   {
     id: 4,
-    title: "Cosmetic Dentistry",
+    title: "Oral & Maxillofacial Care",
     description:
-      "Veneers, composite bonding, teeth reshaping, smile correction, and laser whitening — performed by experienced cosmetic dentists using modern techniques and high-quality materials.",
+      "Specialist assessment and treatment for selected conditions involving the mouth, jaw, and related craniofacial structures.",
     image: CosmeticDentistryImage,
-    alt: "Cosmetic dentistry and smile correction in India",
+    alt: "Oral and maxillofacial care in India",
   },
   {
     id: 5,
-    title: "Ortho & Endodontics",
+    title: "Teeth Alignment",
     description:
-      "Traditional braces, clear aligners, invisible braces, and advanced endodontic care including root canal retreatment. Affordable packages with modern dental infrastructure across India.",
+      "Orthodontic options for selected alignment and bite concerns using modern bracket systems and functional appliances.",
     image: Orthodontics,
-    alt: "Orthodontic and braces treatment in India",
+    alt: "Teeth alignment and orthodontic treatment in India",
   },
   {
     id: 6,
     title: "Teeth Whitening",
     description:
-      "Laser teeth whitening and professional bleaching remove stains and brighten your smile safely. Fast, effective, and cost-effective procedures for a radiant, confident result.",
+      "Professional whitening options for selected types of tooth discoloration following comprehensive dental evaluation.",
     image: WhiteningTeethImage,
     alt: "Professional teeth whitening treatment in India",
   },
@@ -191,17 +191,17 @@ const services = [
     id: 7,
     title: "Invisible Braces",
     description:
-      "Clear aligners for discreet orthodontic correction — ideal for adults, working professionals, and teenagers seeking effective, aesthetic solutions without visible metal braces.",
+      "Clear or less-visible orthodontic options where clinically suitable for mild to moderate dental alignment corrections.",
     image: InvisibleBracesImage,
-    alt: "Invisible braces and aligners treatment in India",
+    alt: "Invisible braces and clear aligners in India",
   },
   {
     id: 8,
-    title: "Advanced Gum Care",
+    title: "Advanced Dental Care",
     description:
-      "Deep cleaning, gum infection treatment, reshaping, laser gum therapy, and preventive periodontal care — essential for strong teeth and successful long-term dental implants.",
+      "A range of dental consultations and procedures based on the patient’s individual treatment requirements and periodontal health.",
     image: AdvancedGumCareImage,
-    alt: "Advanced gum care treatment in India",
+    alt: "Advanced dental care and periodontal treatment in India",
   },
 ];
 function ServiceCard({ svc }) {
@@ -227,67 +227,66 @@ function ServiceCard({ svc }) {
 const steps = [
   {
     num: "01.",
-    title: "Free Online Consultation",
-    desc: "Share your dental reports, X-rays, or scans online to receive:",
+    title: "Initial Dental Consultation",
+    desc: "Review dental history, symptoms, existing records and treatment requirements:",
     items: [
-      "Personalized treatment plan",
-      "Estimated treatment cost",
-      "Implant recommendations",
-      "Travel guidance for India",
+      "Review of dental history and concerns",
+      "Assessment of medical records and reports",
+      "Initial clinic and specialist options",
+      "Preliminary treatment and cost information",
     ],
   },
   {
     num: "02.",
-    title: "Travel & Arrival Support",
-    desc: "Dedicated international patient teams assist with:",
+    title: "Treatment & Implant Planning",
+    desc: "Clinical examination and diagnostic imaging to plan the appropriate treatment:",
     items: [
-      "Visa guidance",
-      "Airport pickup",
-      "Hotel arrangements",
-      "Local travel support",
-      "Appointment coordination",
+      "Comprehensive clinical oral examination",
+      "Diagnostic 3D CBCT or X-ray imaging",
+      "Bone and gum condition evaluation",
+      "Detailed treatment and timeline planning",
     ],
   },
   {
     num: "03.",
     title: "Implant Procedure",
-    desc: "Advanced digital planning and modern surgical techniques ensure safe, accurate results:",
+    desc: "Placement of the dental implant or other planned surgical treatment when clinically appropriate:",
     items: [
-      "Implant placement",
-      "Healing phase",
-      "Crown attachment",
-      "Bite adjustment & final restoration",
+      "Surgical placement of the implant post",
+      "Assessment of tissue and bone integration",
+      "Abutment placement when indicated",
+      "Provisional restoration where suitable",
     ],
   },
   {
     num: "04.",
     title: "Recovery & Follow-Up",
-    desc: "After treatment, patients receive complete aftercare support:",
+    desc: "Follow-up appointments and restoration steps according to the dentist’s treatment plan:",
     items: [
-      "Detailed aftercare instructions",
-      "Oral hygiene guidance",
-      "Online follow-up consultations",
-      "Recovery support",
+      "Healing period monitoring",
+      "Permanent crown or prosthesis fitting",
+      "Bite alignment and comfort assessment",
+      "Long-term oral hygiene and care guidance",
     ],
   },
 ];
 
 const features = [
   {
-    title: "Preventive & Routine Care",
-    desc: "Regular check-ups, professional cleaning, fluoride applications, and early diagnosis to prevent future complications.",
+    title: "Personalized Treatment Planning",
+    desc: "Treatment recommendations are developed based on individual clinical assessment, oral health, and diagnostic findings.",
   },
   {
-    title: "Restorative Solutions",
-    desc: "Fillings, crowns, bridges, dentures, implants, bone grafting, and full-mouth rehabilitation.",
+    title: "Specialist Dental Care",
+    desc: "Coordination with qualified prosthodontists, implantologists, periodontists, and oral surgeons based on the required treatment area.",
   },
   {
-    title: "Cosmetic & Smile Design",
-    desc: "Teeth whitening, veneers, gum contouring, clear aligners, and personalized smile enhancements.",
+    title: "Complete Dental Services",
+    desc: "Access to multiple dental-care options, including restorative, cosmetic, orthodontic, and surgical procedures.",
   },
   {
-    title: "Advanced Procedures",
-    desc: "Oral surgery, jaw correction, reconstructive treatments, and antimicrobial therapies.",
+    title: "Advanced Dental Procedures",
+    desc: "Use of verified diagnostic imaging, computer-guided surgical planning, and modern restorative materials where clinically indicated.",
   },
 ];
 
@@ -372,57 +371,57 @@ const DOCTORS = [
   {
     name: "Dr. Shoeb Shaikh",
     education: "MDS - Periodontics",
-    spec: "Dentist",
-    desc: "Dr. Shoeb Shaikh is a highly experienced Dentist and Periodontist with over 18 years of expertise in advanced dental care and gum disease treatment. He completed his BDS from J.G.D.C, Akola and earned his MDS in Periodontology from D Y Patil University, School of Dentistry. Dr. Shoeb Shaikh has worked as a Lecturer at JGDC, Akola and has contributed articles on gum surgeries in reputed dental magazines. He serves as an Honorary Consultant at Kalsekar Hospital, Andheri and several private clinics in Mumbai. In 2013, he launched the initiative 'The Rite to Bite' to provide free gum surgeries for underprivileged patients and spread awareness about gum disease. He also started the lecture series 'Dentist's Professional Development' to guide upcoming and practicing dentists in clinical practice management. Dr. Shoeb Shaikh has been a Guest Speaker at D Y Patil University and the World Dental Show, and was honored with the 'Emerging Dental Speaker Of The Year' award at the Indian Health Professional Awards 2016. He is also the Director of ANSH Academy of Dental Excellence, conducting lectures and professional dental courses across various fields of dentistry.",
+    spec: "Dentist, Periodontist",
+    desc: "Dr. Shoeb Shaikh is a Senior Dentist and Periodontist with over 18 years of clinical experience in advanced dental care and periodontal management. He completed his BDS from J.G.D.C, Akola and his MDS in Periodontology from D Y Patil University School of Dentistry. He has served as a Lecturer at JGDC and provides specialized periodontal, gum disease, and restorative treatments across recognized dental centers in Mumbai.",
     photoUrl: ShoebShaikhImage,
   },
   {
     name: "Dr. Anisa Shaikh",
     education: "BDS",
-    spec: "Dentist, Cosmetic/Aesthetic Dentist",
-    desc: "Dr. Anisa Shaikh is an experienced Dentist and Cosmetic/Aesthetic Dentist with over 24 years of overall experience, including 19 years as a specialist. She completed her Bachelor of Dental Surgery (BDS) from the prestigious Nair Hospital Dental College, Mumbai, where she was a University Topper and Gold Medalist. Driven by her passion for advanced dental care, Dr. Anisa Shaikh pursued advanced dental training in the United States, with a special focus on Pediatric Dentistry. She established Healthy Teeth Dental Clinic, a modern state-of-the-art dental center equipped with advanced technology and international-quality treatment standards. Dr. Anisa Shaikh leads a skilled team of visiting dental consultants specializing in various branches of dentistry, ensuring comprehensive dental care for patients. Known for her patient-centric approach, she has successfully balanced her professional excellence with family life while delivering trusted and affordable dental treatments.",
+    spec: "Dentist, Aesthetic Dental Practitioner",
+    desc: "Dr. Anisa Shaikh is an experienced Dentist and Aesthetic Dental Practitioner with over 24 years of overall clinical experience, including 19 years of focused dental practice. She completed her BDS from Nair Hospital Dental College, Mumbai, followed by advanced clinical training in the United States. She focuses on comprehensive restorative care, pediatric dental management, and personalized oral health treatment.",
     photoUrl: AnisaShaikhImage,
   },
   {
     name: "Dr. Binal Shah",
     education: "BDS",
-    spec: "Dental Surgeon, Implantologist, Cosmetic/Aesthetic Dentist",
-    desc: "Dr. Binal Shah is a highly experienced Dental Surgeon, Implantologist, and Cosmetic/Aesthetic Dentist with over 17 years of overall experience, including 16 years as a specialist. Known for her precision, compassionate care, and expertise in smile transformation, she has earned a reputation as one of the trusted dentists in Chembur, Mumbai. Dr. Binal Shah specializes in advanced dental treatments for both children and adults, focusing on gentle, pain-free, and effective procedures that enhance oral health and confidence. She combines modern dental technology with personalized treatment planning to deliver high-quality dental care. Her approach includes comprehensive smile analysis, advanced digital diagnostics, aesthetic dental enhancements, and long-term oral health guidance, ensuring comfortable and successful treatment outcomes for every patient.",
+    spec: "Dental Surgeon, Implantologist, Aesthetic Dental Practitioner",
+    desc: "Dr. Binal Shah is a Dental Surgeon, Implantologist, and Aesthetic Dental Practitioner with over 17 years of clinical experience. Practicing in Mumbai, she specializes in restorative dental treatments, implant-supported prosthetics, and aesthetic dental assessments. She utilizes modern digital diagnostics and individualized treatment planning to support long-term oral health.",
     photoUrl: BinalShahImage,
   },
   {
     name: "Dr. Varun Saoji",
     education: "BDS, MDS - Orthodontics and Dentofacial Orthopaedics",
     spec: "Dentist, Orthodontist, Implantologist",
-    desc: "Dr. Varun Saoji is an experienced Dentist, Orthodontist, and Implantologist with over 14 years of expertise in advanced orthodontic and dental treatments. He completed both his graduation and post-graduation from the renowned KLES Institute of Dental Sciences, Belgaum, Karnataka. Dr. Varun Saoji specializes in Orthodontics and Dentofacial Orthopaedics, with clinical expertise in non-extraction orthodontic treatments, adult orthodontics, lingual orthodontics, and interdisciplinary orthodontic care. He is committed to staying updated with the latest advancements in dental technology and is a certified practitioner of Invisalign and Clearpath aligner systems. Known for his precision-driven and patient-focused approach, Dr. Varun Saoji provides personalized orthodontic solutions designed to improve dental alignment, oral health, and smile aesthetics.",
+    desc: "Dr. Varun Saoji is an experienced Dentist, Orthodontist, and Implantologist with over 14 years of clinical experience in orthodontic care. He completed his graduation and post-graduation from KLES Institute of Dental Sciences, Belgaum. He specializes in orthodontic bite correction, clear aligner therapy, and interdisciplinary orthodontic treatments tailored to individual dental alignment requirements.",
     photoUrl: VarunSaojiImage,
   },
   {
     name: "Dr. Binila S. Babu",
     education: "BDS, MDS - Conservative Dentistry & Endodontics",
     spec: "Dentist, Endodontist, Conservative Dentistry Specialist",
-    desc: "Dr. Binila S. Babu is a highly experienced Consultant in Conservative Dentistry and Endodontics with over a decade of expertise in advanced dental care and complex endodontic treatments. She completed her BDS from Dr. M.G.R. Medical University, Chennai and earned her MDS from Rajiv Gandhi University of Health Sciences, Bangalore. Currently associated with Aster Medcity Kochi, Dr. Binila specializes in advanced root canal treatments, esthetic and restorative dentistry, minimally invasive dental procedures, and the management of complex dental trauma, including sports-related injuries. She is dedicated to preserving natural teeth through precision endodontics and modern restorative techniques, ensuring excellent functional and aesthetic outcomes for her patients. Alongside her clinical practice, Dr. Binila serves as a Professor and Postgraduate Guide in Conservative Dentistry and Endodontics and is actively involved in academic research with several publications in reputed national and international journals. She is currently pursuing her PhD under Kerala University of Health Sciences (KUHS). Dr. Binila S. Babu is a Fellow of the International College of Dentists (FICD) and recipient of the IDA Kerala Excellence Award 2025 for her outstanding contributions to dentistry. She is also an active member of several professional organizations, including CAESOK, IDA Kochi, IES, IACDE, and ACDI.",
+    desc: "Dr. Binila S. Babu is a Consultant in Conservative Dentistry and Endodontics with over a decade of clinical experience in complex endodontic care. Associated with Aster Medcity Kochi, she completed her BDS from Dr. M.G.R. Medical University and MDS from Rajiv Gandhi University of Health Sciences. She specializes in root canal therapies, aesthetic restorative dentistry, and dental trauma management. She is a Fellow of the International College of Dentists (FICD).",
     photoUrl: BinilaSBabuImage,
   },
   {
     name: "Dr. Sameer Punathil",
     education: "BDS, MDS - Pedodontics and Preventive Dentistry",
     spec: "Dentist, Pedodontist, Preventive Dentistry Specialist",
-    desc: "Dr. Sameer P is an experienced Consultant in Pedodontics and Preventive Dentistry with extensive expertise in pediatric dental care and preventive oral health management. He completed his BDS from Mysore University in 1999 and later pursued his MDS in Pedodontics and Preventive Dentistry from Rajiv Gandhi University of Health Sciences in 2009. With years of clinical and academic experience, Dr. Sameer P has served as an Assistant Professor at Malabar Dental College, Edappal, and currently works as the Head of the Department of Pedodontics and Preventive Dentistry at Anjaneya Institute of Dental Sciences. He is also associated with Aster MIMS Calicut as a Visiting Consultant, where he provides specialized pediatric dental treatments. His areas of expertise include pediatric dentistry, preventive dental care, pulpectomy procedures, dental infection management, and child oral health education. Dr. Sameer P has actively contributed to dental research and scientific conferences with multiple paper presentations and academic sessions. He has also been recognized for his achievements in pediatric dentistry, including receiving the First Prize for the poster presentation 'Recipe for Healthy Teeth' at the Annual Conference of the Indian Society of Pedodontics and Preventive Dentistry.",
+    desc: "Dr. Sameer Punathil is a Consultant in Pedodontics and Preventive Dentistry with extensive clinical and academic experience. He completed his BDS from Mysore University and MDS from Rajiv Gandhi University of Health Sciences. Head of the Department of Pedodontics at Anjaneya Institute of Dental Sciences and Visiting Consultant at Aster MIMS Calicut, he specializes in pediatric dental care, preventive dentistry, and pulp therapy.",
     photoUrl: SameerPImage,
   },
   {
     name: "Dr. C. Sharath Babu",
     education: "BDS, MDS, FICOI",
     spec: "Dentist, Prosthodontist, Implantologist",
-    desc: "Dr. C. Sharath Babu is a highly experienced Prosthodontist and Implantologist with over 15 years of expertise in advanced dental care, implantology, and smile restoration treatments. Currently associated with Medicover Hospitals, Hitech City, Hyderabad, he is recognized for his compassionate patient care, accurate diagnosis, and advanced dental solutions. Dr. Sharath Babu completed his BDS from AME's Dental College and Hospital, Raichur in 2003 and earned his MDS in Prosthodontics from Dr. NTR University of Health Sciences, Vijayawada in 2010. He further enhanced his expertise by obtaining the prestigious FICOI (Fellowship of the International Congress of Oral Implantologists) in 2014. His advanced training also includes a Mastership in Implantology from the Asian Institute of Advanced Dentistry and a Professional Advanced Prosthetic Course in OSSTEM Implantology. Dr. C. Sharath Babu specializes in implant surgery, full-mouth rehabilitation, cosmetic smile designing, aesthetic dental restorations, and complex dental rehabilitation procedures. Known for combining technical precision with patient comfort, he focuses on delivering functional, long-lasting, and aesthetically pleasing dental outcomes.",
+    desc: "Dr. C. Sharath Babu is a Prosthodontist and Implantologist with over 15 years of clinical experience in prosthetic and restorative dentistry. Associated with Medicover Hospitals, Hyderabad, he completed his BDS from AME's Dental College and MDS in Prosthodontics from Dr. NTR University of Health Sciences. A Fellow of the International Congress of Oral Implantologists (FICOI), he specializes in dental implant restorations, full-mouth prosthetic rehabilitation, and aesthetic dental care.",
     photoUrl: CSharathBabuImage,
   },
   {
     name: "Dr. Apurva Gujarathi",
     education: "BDS, MDS (Pedodontics)",
-    spec: "Pediatric Dentist, Cosmetic Dentist, Preventive Dental Care Specialist",
-    desc: "Dr. Apurva Gujarathi is a highly experienced Pediatric Dentist and Cosmetic Dental Specialist with over 16 years of overall clinical experience, including more than 15 years of specialization in pediatric dentistry. He is widely recognized for providing comprehensive dental care for infants, children, adolescents, and young patients in a child-friendly and comfortable environment. Dr. Gujarathi completed his BDS followed by an MDS in Pedodontics, developing advanced expertise in preventive, restorative, and pediatric dental treatments. He practices at specialized pediatric dental centers in Andheri East and Andheri West, Mumbai, where he has established dedicated child-focused dental facilities equipped with pediatric operatories and play areas designed to create a positive and stress-free dental experience for children. His clinical expertise covers preventive dentistry, dental restorations, treatment of traumatic dental injuries, dental prophylaxis, teeth scaling and polishing, cavity management, pediatric root canal treatments, fluoride therapy, habit correction, and comprehensive oral health care for children from birth through adolescence. Dr. Gujarathi is known for his gentle approach, patience, and ability to effectively manage children's dental anxiety, making dental visits comfortable and enjoyable for young patients. He is committed to promoting early oral health education and preventive dental care, helping children develop healthy dental habits that last a lifetime. As an active member of the Indian Society of Pedodontics and Preventive Dentistry, Dr. Gujarathi remains updated with the latest advancements in pediatric dental care and minimally invasive treatment techniques. His dedication to delivering high-quality, child-centered dental services has earned him the trust of parents and an excellent reputation in pediatric dentistry.",
+    spec: "Pediatric Dentist, Preventive Dental Specialist",
+    desc: "Dr. Apurva Gujarathi is a Pediatric Dentist and Preventive Dental Specialist with over 16 years of clinical experience. He completed his BDS and MDS in Pedodontics, developing expertise in restorative and pediatric dental treatments. Practicing in Mumbai, he provides preventive dentistry, pediatric restorations, trauma management, and comprehensive oral care for children and young adults.",
     photoUrl: ApurvaGujarathiImage,
   },
 ];
@@ -430,109 +429,92 @@ const DOCTORS = [
 const faqData = [
   {
     id: 1,
-    question:
-      "Why should I consider India for dental treatments from Kenya, Uganda, Tanzania, Nigeria, or South Sudan?",
+    question: "What dental treatments are available in India?",
     answer:
-      "India has become a preferred destination for quality dental care among patients from Africa. Many clinics use advanced technology, experienced specialists, and international standards of hygiene. Patients often appreciate the availability of comprehensive treatments under one roof, shorter waiting times, and the opportunity to combine treatment with recovery in a culturally welcoming environment.",
+      "Dental clinics and hospitals in India offer a range of general, restorative, cosmetic, orthodontic, surgical and implant-related treatments. Availability depends on the selected provider and the patient’s dental requirements.",
   },
   {
     id: 2,
-    question: "What are dental implants and who can benefit from them?",
+    question: "Are dental implants available for international patients?",
     answer:
-      "Dental implants are titanium posts that act as artificial tooth roots, supporting crowns, bridges, or dentures. They are ideal for people who have lost one or more teeth due to injury, decay, or other reasons. Implants help restore chewing function, speech clarity, and natural appearance, offering a long-term solution compared to traditional options.",
+      "International patients can explore dental implant treatment in India, subject to clinical evaluation, provider requirements and the patient’s individual circumstances.",
   },
   {
     id: 3,
-    question: "How do I choose the best dentist or dental clinic in India?",
+    question: "How do I know if I am suitable for dental implants?",
     answer:
-      "Look for clinics with qualified specialists (MDS doctors), modern equipment such as digital imaging and surgical guides, and positive patient feedback. Many top dentists in cities like Mumbai, Bangalore, Ahmedabad, Coimbatore, and Vijayawada have extensive experience treating international patients. Checking qualifications, years of experience, and use of advanced tools like dental loupes for precision can help you make an informed choice.",
+      "Suitability depends on factors such as oral health, jawbone condition, gum health, medical history and the planned restoration. A qualified dentist should assess the patient before recommending implant treatment.",
   },
   {
     id: 4,
-    question:
-      "What dental procedures are commonly sought by international patients?",
+    question: "Can I share my dental reports before travelling?",
     answer:
-      "Popular treatments include dental implants, crowns and caps, bridges, smile makeovers, root canal treatments, and cosmetic dentistry. Clinics across India offer full-mouth rehabilitation and restorative procedures using high-quality materials that meet global standards.",
+      "Yes. Relevant dental records, imaging and treatment information can be shared for coordination and to help identify suitable dental providers. Final treatment decisions are made by the treating dentist.",
   },
   {
     id: 5,
-    question: "Which cities in India are good for dental care?",
+    question: "How much do dental implants cost in India?",
     answer:
-      "Major cities such as Mumbai, Bangalore, Ahmedabad, Coimbatore, Delhi, and Vijayawada have well-equipped dental centers. These locations offer easy international connectivity, good accommodation options, and access to highly experienced dental teams.",
+      "Dental implant costs vary according to the number and type of implants, diagnostic requirements, materials, restoration, dentist or surgeon fees, clinic, accommodation needs and other services. A specific estimate should be confirmed with the selected provider.",
   },
   {
     id: 6,
-    question:
-      "What is the typical process for someone coming from Africa for dental treatment in India?",
+    question: "How long does dental implant treatment take?",
     answer:
-      "The process usually starts with an online consultation where you share your dental records, X-rays, or photos. The dentist provides a personalized treatment plan. Once you arrive, you undergo a detailed examination, followed by the procedure. Most clinics assist with airport transfers, accommodation guidance, and follow-up care even after you return home.",
+      "The overall timeline varies according to the patient’s oral health, treatment plan, implant requirements, healing period and restoration process. The treating dentist can provide a more specific timeline after evaluation.",
   },
   {
     id: 7,
-    question:
-      "How safe is dental treatment in India for international patients?",
+    question: "Are dental implants permanent?",
     answer:
-      "Reputable clinics maintain strict sterilization protocols, use disposable materials where required, and follow infection control guidelines similar to international standards. Many dentists have trained or practiced abroad and regularly handle patients from different countries, ensuring comfortable and safe experiences.",
+      "Implant longevity varies between individuals and depends on factors including oral health, implant care, hygiene, maintenance and clinical circumstances. A dentist can explain the expected lifespan and care requirements for a specific treatment plan.",
   },
   {
     id: 8,
-    question: "Do clinics in India use advanced technology?",
+    question: "Are dental implant results guaranteed?",
     answer:
-      "Yes. Leading dental practices are equipped with 3D imaging (CBCT), CAD/CAM systems for precise crowns, intraoral scanners, and surgical microscopes or loupes for enhanced accuracy. This technology helps in planning and executing treatments with better outcomes and faster recovery.",
+      "No dental procedure should be presented as guaranteed for every patient. Treatment results vary according to individual clinical factors, treatment planning, healing and aftercare.",
   },
   {
     id: 9,
-    question:
-      "How long do I need to stay in India for dental implant or crown procedures?",
+    question: "Can Human Care help with dental appointments?",
     answer:
-      "The duration depends on the complexity of your case. Single implants or simple crowns may require one visit of 5–10 days, while full-mouth cases or those needing bone grafting might need two visits spaced a few months apart. Your dentist will provide a clear timeline during consultation.",
+      "Human Care can assist with coordinating dental appointments based on the selected clinic or dentist, availability and the patient’s requirements.",
   },
   {
     id: 10,
-    question:
-      "What support is available for patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan?",
+    question: "Can you help with travel and accommodation?",
     answer:
-      "Many clinics offer dedicated international patient coordinators who assist with visa-related queries, language support (English is widely spoken), dietary preferences, and post-treatment guidance. Some also provide virtual follow-ups after you return to your country.",
+      "Human Care can assist with selected travel, accommodation and local transfer arrangements for international patients, subject to the requested services and availability.",
   },
   {
     id: 11,
-    question: "Are dental crowns and caps a good option for damaged teeth?",
+    question: "How can I contact Human Care Medical Tourism?",
     answer:
-      "Yes. Crowns (also called caps) are custom-made covers that restore the shape, strength, and appearance of severely damaged or root-canal-treated teeth. They are durable and can be matched to your natural tooth color for a seamless smile.",
-  },
-  {
-    id: 12,
-    question:
-      "How can I get started with my dental treatment journey in India?",
-    answer:
-      "Simply reach out via the contact form or WhatsApp with your dental concerns and any available records. The team will guide you through the next steps, including a no-obligation consultation with a specialist.",
+      "Use the contact options and CTA buttons on this page to discuss your dental-treatment and medical-travel requirements with the Human Care Medical Tourism team.",
   },
 ];
 
 const reviews = [
   {
     name: "Daniel Mwangi",
-    text: "I traveled from Kenya for dental implants in India and Humancare World Wide helped me throughout the entire process. From choosing the right clinic to arranging appointments, everything was smooth and well organized. The doctors were excellent and the treatment was completely painless.",
+    text: "I traveled from Kenya for dental implants in India and Human Care helped me throughout the entire process. From choosing the clinic to arranging appointments, everything was smooth and well organized. The doctors were attentive and professional.",
   },
-
   {
     name: "Aisha Bello",
-    text: "The dental implant treatment in India exceeded my expectations. The clinic was modern, the dentists were highly experienced, and the support team from Humancare World Wide stayed connected with me before and after the procedure. I felt safe and comfortable during my journey.",
+    text: "The dental implant treatment coordination in India was well managed. The clinic was modern, the dentists were experienced, and the support team stayed connected with me before and after the procedure. I felt comfortable during my journey.",
   },
-
   {
     name: "Joseph Okello",
-    text: "I had missing teeth for years and finally decided to get dental implants in India. The treatment quality was excellent and much more affordable than other countries. The entire process was professionally managed and the recovery was faster than I expected.",
+    text: "I needed tooth replacement and chose dental implants in India. The treatment quality was high and costs were transparent. The entire process was professionally managed and the dental team explained every step clearly.",
   },
-
   {
     name: "Grace Nanyonga",
-    text: "I came to India for a smile makeover and dental crown treatment. The doctors explained everything clearly and the final results look very natural. I also appreciated the travel assistance and regular follow-up support during my stay.",
+    text: "I came to India for aesthetic dental work and crown treatment. The dentists explained everything clearly and the final restoration looks very natural. I appreciated the clinic coordination and regular follow-up support.",
   },
-
   {
     name: "Emmanuel Peter",
-    text: "Humancare World Wide made my dental treatment journey stress-free. They assisted with hotel arrangements, hospital coordination, and every appointment during my stay in India. The implant procedure went smoothly and I’m extremely happy with my new smile.",
+    text: "Human Care helped make my dental treatment journey organized. They assisted with hotel arrangements, clinic coordination, and each appointment in India. The implant procedure went smoothly with clear guidance throughout.",
   },
 ];
 
@@ -625,41 +607,17 @@ const DentalImplantIndia = () => {
         />
         {/* Primary SEO */}
         <title>
-          Dental Implants in India | Affordable Dental Treatment for
-          International Patients
+          Dental Implants in India – Affordable &amp; Advanced Dental Treatment
         </title>
 
         <meta
           name="description"
-          content="Get affordable dental implants in India with advanced technology, experienced dentists, and modern clinics. Trusted dental treatment in India for patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan."
+          content="Explore dental implant and restorative dental treatment options in India. Support with clinic selection, dentist appointments, medical-record coordination, and international patient travel arrangements."
         />
 
         <meta
           name="keywords"
-          content="
-              dental in india
-              dental implants india
-              dental implant cost in india
-              dental implant cost in mumbai
-              dental implant cost bangalore
-              price of dental implants in india
-              dental loupes india
-              partha dental vijayawada
-              dental treatment price list in india
-              dental crown cost in india
-              dental cap cost in india
-              dental cap price in india
-              best dentist in india
-              dental crown price in india
-              dentist in ahmedabad
-              best dentist in coimbatore
-              dentist bareilly
-              top 10 dentist in coimbatore
-              teeth cap price in india
-              tooth cap price in delhi
-              implant cost in india
-              implant cost in mumbai
-            "
+          content="dental implants in india, affordable dental implants in india, dental treatment in india, dental implants in india for international patients, dental implant cost in india, dental treatment cost in india, best dental hospitals in india, dental clinics in india, dentists in india, best dentists in india, implant dentist in india, dental tourism in india, international dental treatment, cosmetic dentistry in india, teeth whitening in india, dental care in india"
         />
 
         {/* Canonical URL */}
@@ -674,12 +632,12 @@ const DentalImplantIndia = () => {
         {/* Open Graph / Facebook */}
         <meta
           property="og:title"
-          content="Dental Implants in India | Affordable Dental Treatment"
+          content="Dental Implants in India – Affordable &amp; Advanced Dental Treatment"
         />
 
         <meta
           property="og:description"
-          content="Affordable dental implants in India with experienced dentists, advanced clinics, and personalized care for international patients."
+          content="Explore dental implant and dental care options in India with support for clinic selection, dentist appointments, records sharing, and international patient coordination."
         />
 
         <meta
@@ -699,12 +657,12 @@ const DentalImplantIndia = () => {
 
         <meta
           name="twitter:title"
-          content="Dental Implants in India | Affordable Dental Treatment"
+          content="Dental Implants in India – Affordable &amp; Advanced Dental Treatment"
         />
 
         <meta
           name="twitter:description"
-          content="Get affordable dental treatment in India with modern clinics and experienced implant specialists."
+          content="Explore dental implant and dental care options in India with support for clinic selection, dentist appointments, records sharing, and international patient coordination."
         />
 
         <meta
@@ -723,14 +681,14 @@ const DentalImplantIndia = () => {
         {/* Background Image */}
         <img
           src={DentalHeroImage}
-          alt="Affordable dental implants in India for international patients"
+          alt="Dental implants and advanced dental treatment in India for international patients"
           className="dental-hero-bg-image"
           loading="eager"
-        fetchPriority="high"
-        width={1920}
-        height={1280}
-        decoding="async"
-      />
+          fetchPriority="high"
+          width={1920}
+          height={1280}
+          decoding="async"
+        />
 
         {/* Gradient Overlay */}
         <div className="dental-hero-overlay" />
@@ -738,7 +696,7 @@ const DentalImplantIndia = () => {
         {/* Content */}
         <div className="dental-hero-content">
           <span className="dental-hero-badge">
-            Trusted by 50,000+ International Patients
+            International Patient Dental Assistance
           </span>
 
           <h1>
@@ -747,14 +705,14 @@ const DentalImplantIndia = () => {
           </h1>
 
           <p>
-            Dental implants in India are becoming one of the most preferred
-            solutions for international patients seeking affordable and
-            high-quality dental care. India offers advanced dental technology,
-            experienced specialists, and internationally accredited clinics at
-            significantly lower costs compared to the USA, UK, and Europe.
-            Patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan
-            choose India for safe, modern, and cost-effective smile restoration
-            treatments.
+            Explore dental implant and other dental treatment options in India
+            with support for clinic selection, dentist appointments,
+            medical-record coordination and international patient arrangements.
+          </p>
+          <p>
+            Human Care Medical Tourism assists international patients with
+            dental-care coordination based on their treatment requirements and
+            travel needs.
           </p>
 
           <div className="dental-hero-ctas">
@@ -777,15 +735,19 @@ const DentalImplantIndia = () => {
       <section className="dental-why-choose-section">
         {/* Header */}
         <div className="dental-why-choose-header">
-          <div className="dental-why-choose-subtitle">Why Choose Us</div>
+          <div className="dental-why-choose-subtitle">Dental Care in India</div>
           <h2 className="dental-why-choose-title">
             Why Choose Dental Treatment in India?
           </h2>
           <p className="dental-why-choose-description">
-            Patients from Kenya, Uganda, Tanzania, Nigeria, South Sudan, and
-            many other countries increasingly choose India because of the
-            combination of affordability, quality treatment, and faster access
-            to dental care.
+            India offers dental clinics, hospitals and dental specialists
+            providing a range of restorative, surgical and general dental
+            services. International patients can compare providers based on
+            their dental requirements, available procedures, dentist
+            qualifications, facilities, location and international patient
+            support. The appropriate dental treatment depends on the patient’s
+            oral health, examination, diagnostic findings and treatment plan
+            prepared by a qualified dental professional.
           </p>
         </div>
 
@@ -795,24 +757,18 @@ const DentalImplantIndia = () => {
           <div className="dental-why-choose-column">
             <FeatureItem
               icon={<AffordableIcon />}
-              title="Affordable Treatment Costs"
-              desc={
-                <>
-                  Dental implants in India can cost up to{" "}
-                  <strong>70% less</strong> than Western countries, making India
-                  a top dental tourism destination.
-                </>
-              }
+              title="Affordable Dental Care"
+              desc="Access cost-effective dental treatment options with transparent pricing information while maintaining high clinical and hygiene standards."
             />
             <FeatureItem
               icon={<DoctorIcon />}
-              title="Experienced Dental Specialists"
-              desc="Highly qualified implantologists, cosmetic dentists, orthodontists, and oral surgeons with modern expertise."
+              title="Experienced Dentists"
+              desc="Qualified dental specialists, implantologists, prosthodontists, and oral maxillofacial surgeons with verified credentials and expertise."
             />
             <FeatureItem
               icon={<PaymentIcon />}
-              title="Flexible Payment Options"
-              desc="Accessible financial plans tailored for international patients from Kenya, Uganda, Tanzania, Nigeria and beyond."
+              title="Flexible Treatment Options"
+              desc="A comprehensive range of restorative, cosmetic, and surgical procedures explained clearly based on individual clinical suitability."
             />
           </div>
 
@@ -822,10 +778,10 @@ const DentalImplantIndia = () => {
               src={WhyChooseIndiaImage}
               alt="Advanced dental treatment in India with experienced dentists"
               className="dental-why-choose-image"
-        width={439}
-        height={429}
-        decoding="async"
-      />
+              width={439}
+              height={429}
+              decoding="async"
+            />
           </div>
 
           {/* RIGHT COLUMN */}
@@ -834,23 +790,23 @@ const DentalImplantIndia = () => {
               align="right"
               icon={<EmergencyIcon />}
               title="Emergency Services"
-              desc="Quick access to emergency dental care with dedicated international patient coordinators available to assist."
+              desc="Access to urgent dental consultations and priority emergency appointments where available from participating dental centers."
             />
             <FeatureItem
               align="right"
               icon={<ReviewIcon />}
-              title="Positive Patient Reviews"
-              desc="Thousands of international patients trust Indian dental clinics for world-class outcomes and compassionate care."
+              title="International Patient Support"
+              desc="Complete assistance with appointment coordination, dental records sharing, language support, and selected travel arrangements."
             />
             <FeatureItem
               align="right"
               icon={<TechIcon />}
-              title="Advanced Technology"
+              title="Advanced Dental Technology"
               desc={
                 <ul className="dental-tech-list">
                   {[
-                    "Digital smile designing",
-                    "3D CBCT scans",
+                    "Digital smile evaluation",
+                    "3D CBCT diagnostic imaging",
                     "CAD/CAM restorations",
                     "Computer-guided implant surgery",
                   ].map((item) => (
@@ -868,12 +824,12 @@ const DentalImplantIndia = () => {
       <section className="dental-services-section">
         {/* Header */}
         <div className="dental-services-header">
-          <h2 className="dental-services-title">Our Services</h2>
+          <h2 className="dental-services-title">Our Dental Services</h2>
           <p className="dental-services-description">
-            Whether you need a single dental procedure or a complete smile
-            transformation, our advanced dental treatments are designed to
-            restore oral health, improve aesthetics, and enhance confidence for
-            international patients visiting India.
+            Explore restorative, surgical, cosmetic, and orthodontic dental care
+            options in India. Treatment plans and procedure suitability are
+            determined by qualified dental professionals based on clinical
+            evaluation and diagnostic findings.
           </p>
         </div>
 
@@ -897,10 +853,11 @@ const DentalImplantIndia = () => {
         <div className="dental-steps-header">
           <h2 className="dental-steps-title">Dental Implant Procedure</h2>
           <p className="dental-steps-description">
-            Whether you need a single dental procedure or a complete smile
-            transformation, our advanced dental treatments are designed to
-            restore oral health, improve aesthetics, and enhance confidence for
-            international patients visiting India.
+            Dental implant treatment may involve several stages depending on the
+            patient’s oral health, bone condition, treatment plan and type of
+            restoration required. The exact sequence, timing and suitability of
+            implant treatment should be determined by the treating dentist or
+            oral-health specialist after examination.
           </p>
         </div>
         <div className="dental-steps-grid">
@@ -930,41 +887,44 @@ const DentalImplantIndia = () => {
                 src={Dental3}
                 alt="Patient receiving professional dental care"
                 className="dental-comprehensive-image"
-        width={1920}
-        height={1277}
-        decoding="async"
-      />
+                width={1920}
+                height={1277}
+                decoding="async"
+              />
               <img
                 src={Dental2}
                 alt="Experienced dental team at work"
                 className="dental-comprehensive-image"
-        width={1920}
-        height={1280}
-        decoding="async"
-      />
+                width={1920}
+                height={1280}
+                decoding="async"
+              />
             </div>
             <img
               src={Dental1}
               alt="Modern dental clinic facility in India"
               className="dental-comprehensive-image-large"
-        width={1920}
-        height={2880}
-        decoding="async"
-      />
+              width={1920}
+              height={2880}
+              decoding="async"
+            />
           </div>
 
           <div className="dental-comprehensive-content">
             <div className="dental-comprehensive-header">
               <p className="dental-comprehensive-subtitle">
-                What Is Included in Dental Treatment in India?
+                Personalized Dental Coordination
               </p>
               <h2 className="dental-comprehensive-title">
-                Comprehensive Care With a Personal Touch
+                Comprehensive Care With Personalized Treatment
               </h2>
               <p className="dental-comprehensive-description">
-                We combine expert care, advanced technology, and a warm
-                atmosphere to ensure every visit is comfortable, efficient, and
-                tailored to your needs.
+                Dental treatment should be planned according to the patient’s
+                oral health, dental history, diagnostic findings, treatment
+                goals and individual circumstances. Human Care can assist
+                international patients with finding relevant dental providers,
+                coordinating consultations, sharing medical or dental records
+                and arranging selected travel-related services.
               </p>
             </div>
             <div className="dental-comprehensive-features-grid">
@@ -988,12 +948,16 @@ const DentalImplantIndia = () => {
       <section className="hn-section">
         <div className="hn-container">
           <div className="hn-title-wrap">
-            <span className="hn-label">Our Hospital Network</span>
+            <span className="hn-label">Dental Treatment Providers in India</span>
             <h2 className="hn-heading">
-              Best Dental Hospitals & Clinics in India
+              Dental Hospitals &amp; Clinics in India
             </h2>
             <p className="hn-subtitle">
-              We partner with India’s top NABH & JCI-accredited hospitals
+              Dental hospitals and clinics in India offer different specialties,
+              procedures, facilities and international patient services. The
+              appropriate provider depends on the patient’s treatment
+              requirements, dentist availability, location and other individual
+              factors.
             </p>
           </div>
           <div className="hn-slider-wrapper">
@@ -1053,7 +1017,7 @@ const DentalImplantIndia = () => {
                     <div className="hn-card-body">
                       <div className="hn-specialties">
                         <p className="hn-specialties-label">
-                          Dentist Specialties:
+                          Dental Specialties:
                         </p>
                         <ul className="hn-specialties-list">
                           {h.specialties.map((spec, j) => (
@@ -1077,10 +1041,15 @@ const DentalImplantIndia = () => {
       <section className="doctor-section-light">
         <div className="doctor-container">
           <div className="doctor-title-wrap">
-            <span className="doctor-label">Our Specialists</span>
+            <span className="doctor-label">Specialist Directory</span>
             <h2 className="doctor-h2">
-              Top Dentist In India for International Patients
+              Dental Specialists in India for International Patients
             </h2>
+            <p className="doctor-subtitle" style={{ maxWidth: "800px", margin: "12px auto 0", color: "#64748b", fontSize: "1rem", lineHeight: "1.6" }}>
+              International patients can explore dentists based on the required
+              dental specialty, qualifications, hospital or clinic affiliation,
+              verified professional experience and treatment requirements.
+            </p>
           </div>
           <div className="doctor-cards-grid">
             {DOCTORS.map((d, i) => (
@@ -1163,7 +1132,11 @@ const DentalImplantIndia = () => {
 
       <section className="dental-reviews-section">
         <div className="dental-reviews-content">
-          <h2 className="dental-reviews-heading">Our Clients Review</h2>
+          <h2 className="dental-reviews-heading">Our Clients&apos; Reviews</h2>
+          <p style={{ color: "#64748b", margin: "12px 0 24px", lineHeight: "1.6", maxWidth: "600px" }}>
+            Read experiences shared by patients who have used Human Care’s
+            medical-tourism coordination services.
+          </p>
 
           {/* Slider wrapper */}
           <div className="dental-reviews-slider-wrapper">
@@ -1220,12 +1193,12 @@ const DentalImplantIndia = () => {
         <div className="dental-reviews-image-wrapper">
           <img
             src={ReviewRightImage}
-            alt="Happy international dental patient in India"
+            alt="International dental patient assisted by Human Care in India"
             className="dental-reviews-image"
-        width={1920}
-        height={1280}
-        decoding="async"
-      />
+            width={1920}
+            height={1280}
+            decoding="async"
+          />
         </div>
       </section>
 
@@ -1238,8 +1211,9 @@ const DentalImplantIndia = () => {
               Frequently Asked Questions About Dental Treatment in India
             </h2>
             <p className="dental-faq-subtitle">
-              Get answers to common questions about dental care, best dental
-              hospitals, and treatment options in India
+              Clear, factual information regarding dental implants, restorative
+              procedures, dentist appointments, and international patient
+              services in India.
             </p>
           </div>
 
@@ -1293,10 +1267,10 @@ const DentalImplantIndia = () => {
           alt="Book dental consultation in India"
           className="dental-cta-bg-image"
           loading="lazy"
-        width={1920}
-        height={1025}
-        decoding="async"
-      />
+          width={1920}
+          height={1025}
+          decoding="async"
+        />
 
         {/* Gradient Overlay */}
         <div className="dental-cta-overlay" />
@@ -1304,35 +1278,36 @@ const DentalImplantIndia = () => {
         {/* Content Container */}
         <div className="dental-cta-container">
           <div className="dental-cta-content">
-            <span className="dental-cta-badge">YOUR SMILE STARTS HERE</span>
+            <span className="dental-cta-badge">INTERNATIONAL PATIENT DENTAL CARE</span>
 
             <h2 className="dental-cta-title">Book Your Dental Consultation</h2>
 
             <p className="dental-cta-subtitle">
-              Start your smile restoration journey with affordable and advanced
-              dental implant treatment in India.
+              Discuss your dental-treatment requirements with Human Care Medical
+              Tourism and receive assistance with dental clinic options, dentist
+              coordination, appointments and international patient services.
             </p>
 
             <div className="dental-cta-benefits-list">
               <div className="dental-cta-benefit-point">
                 <FaCheckCircle className="dental-cta-check-icon" />
-                <span>Personalized treatment plans</span>
+                <span>Personalized treatment planning based on clinical evaluation</span>
               </div>
               <div className="dental-cta-benefit-point">
                 <FaCheckCircle className="dental-cta-check-icon" />
-                <span>Transparent pricing</span>
+                <span>Transparent cost estimates from verified dental providers</span>
               </div>
               <div className="dental-cta-benefit-point">
                 <FaCheckCircle className="dental-cta-check-icon" />
-                <span>Expert dental specialists</span>
+                <span>Experienced dental specialists and implantologists</span>
               </div>
               <div className="dental-cta-benefit-point">
                 <FaCheckCircle className="dental-cta-check-icon" />
-                <span>International patient support</span>
+                <span>Dedicated international patient coordination and records sharing</span>
               </div>
               <div className="dental-cta-benefit-point">
                 <FaCheckCircle className="dental-cta-check-icon" />
-                <span>Modern and safe dental care</span>
+                <span>Modern dental facilities and advanced clinical technology</span>
               </div>
             </div>
 

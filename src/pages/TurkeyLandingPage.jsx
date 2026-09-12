@@ -59,11 +59,9 @@ import ThumbnailImage from "../departments/dept-images/turkey-country/internatio
 
 import ctaImage from "../departments/dept-images/turkey-country/medical-treatment-turkey-consultation.webp";
 
-
 const WA = ({ size = 5 }) => (
   <FaWhatsapp className={`icon-wa icon-wa--${size}`} />
 );
-const Check = () => <FaCheck className="icon-check" />;
 
 const WA_URL =
   "https://wa.me/919833166697?text=Hello%2C%20I%20am%20looking%20for%20medical%20treatment%20in%20Turkey";
@@ -73,25 +71,26 @@ const HOSPITALS = [
     name: "Liv Hospital",
     image: livHospitalImage,
     type: "Multi-Speciality Hospital",
-    locations: "Ankara, Gaziantep, Samsun",
+    locations: "Istanbul, Ankara, Samsun",
     description:
-      "Liv Hospital is one of the top hospitals in Turkey, known for delivering high-quality healthcare to patients from around the world. Located in Istanbul and other major Turkish cities, the hospital offers comprehensive treatments including cancer care, heart surgery, orthopedics, neurology, Women's Health, and organ transplantation. Its international patient services, experienced medical teams, and advanced technology have made Liv Hospital a preferred choice for medical tourism in Turkey.",
+      "A hospital option in Turkey offering multiple medical specialties and services for local and international patients. Patients should review the relevant department, specialist availability and hospital facilities for their individual requirements.",
+    cta: "Get Hospital Details",
     specialties: [
       "Cardiology",
       "Oncology",
       "Orthopedics",
       "Organ Transplant",
-      " Specialized Healthcare",
+      "Specialized Healthcare",
     ],
   },
-
   {
-    name: "Güven Hospital",
+    name: "Acıbadem / Güven Hospital",
     image: guvenHospitalImage,
     type: "Multi-Speciality Hospital",
-    locations: "Location available on request",
+    locations: "Ankara & Istanbul, Turkey",
     description:
-      "Güven Hospital is a renowned healthcare institution in Ankara, offering advanced medical care across multiple specialties. The hospital is recognized for its experienced specialists, modern medical technology, and comprehensive treatment programs. International patients choose Güven Hospital for cardiology, oncology, orthopedics, neurology, and surgical procedures. Its patient-centered approach, high clinical standards, and dedicated international patient services make it a trusted destination for medical treatment in Turkey.",
+      "A hospital network in Turkey with multiple clinical departments and services. International patients can explore relevant specialties and coordinate appointments according to their healthcare requirements.",
+    cta: "Explore Hospital",
     specialties: [
       "Cardiology",
       "Oncology",
@@ -100,7 +99,6 @@ const HOSPITALS = [
       "General Surgery",
     ],
   },
-
   {
     name: "Medical Park Hospital",
     image: medicalParkImage,
@@ -108,7 +106,8 @@ const HOSPITALS = [
     locations:
       "Istanbul, Adana, Ankara, Izmir, Kocaeli, Mersin, Samsun, Trabzon",
     description:
-      "Medical Park Hospital is one of Turkey’s leading healthcare providers, offering comprehensive medical services through its network of modern hospitals. Known for advanced diagnostics, specialized treatments, and experienced medical professionals, the hospital serves both local and international patients. Medical Park Hospital provides expert care in oncology, cardiology, orthopedics, neurology, and organ transplantation. Its commitment to quality healthcare, innovative technology, and international patient support has made it a preferred choice for medical treatment in Turkey.",
+      "A hospital group in Turkey providing services across multiple medical specialties. Hospital selection should be based on the required specialty, facilities and individual healthcare needs.",
+    cta: "View Hospital Information",
     specialties: [
       "Oncology",
       "Cardiology",
@@ -117,38 +116,36 @@ const HOSPITALS = [
       "Neurology",
     ],
   },
-
   {
     name: "Istinye Dental Hospital",
     image: istinyeDentalImage,
     type: "Dental Specialty Hospital",
-    locations: "Istanbul",
+    locations: "Istanbul, Turkey",
     description:
-      "Istinye Dental Hospital is a trusted destination for advanced dental care in Turkey, providing comprehensive oral health services for local and international patients. The hospital specializes in dental implants, cosmetic dentistry, orthodontics, oral surgery, and restorative treatments using modern technology and personalized care plans. With experienced dental specialists and a patient-focused approach, Istinye Dental Hospital is recognized for delivering high-quality dental treatment in Turkey while supporting the growing demand for dental tourism and smile transformation procedures.",
+      "A specialized dental hospital in Istanbul providing oral health services including dental implants, orthodontics, oral surgery and restorative treatments for local and international patients.",
+    cta: "View Hospital Details",
     specialties: [
       "Dental Implants",
       "Cosmetic Dentistry",
       "Orthodontics",
       "Oral Surgery",
       "Restorative Dentistry",
-      "More",
     ],
   },
-
   {
     name: "Memorial Health Group",
     image: memorialHealthImage,
     type: "Multi-Speciality Hospital",
-    locations: "Ankara, Antalya, Kayseri, Diyarbakir, Mugla",
+    locations: "Istanbul, Ankara, Antalya, Kayseri, Diyarbakir",
     description:
-      "Memorial Health Group is one of the most recognized healthcare organizations in Turkey, offering advanced medical services through its network of modern hospitals and specialized medical centers. The group is known for excellence in oncology, organ transplantation, cardiology, neurosurgery, and robotic surgery. With internationally trained specialists, cutting-edge medical technology, and dedicated international patient services, Memorial Health Group attracts patients seeking high-quality medical treatment in Turkey and comprehensive healthcare solutions.",
+      "A hospital group in Turkey with services across various medical specialties. Patients can review relevant departments, specialist availability and international patient support.",
+    cta: "Get Hospital Assistance",
     specialties: [
       "Oncology",
       "Organ Transplant",
       "Cardiology",
       "Orthopedics",
       "Robotic Surgery",
-      "More",
     ],
   },
 ];
@@ -156,163 +153,146 @@ const HOSPITALS = [
 const specialties = [
   {
     id: 1,
-    sectionTag: "Cardiology & Heart Care",
-    title:
-      "Advanced cardiac treatment in Turkey with experienced heart specialists and modern heart care technology.",
+    sectionTag: "Oncology Care",
+    title: "Cancer Treatment",
     description:
-      "Turkey offers advanced cardiology and heart surgery services through internationally accredited hospitals equipped with modern cardiac technology and highly experienced specialists. Patients traveling for heart treatment in Turkey benefit from affordable procedures, shorter waiting times, and personalized international patient support.",
+      "Oncology services may include medical, surgical and radiation oncology according to diagnosis, clinical evaluation and treatment requirements.",
     treatments: [
-      "Coronary Artery Bypass Surgery (CABG)",
-      "Heart Valve Replacement",
-      "Angiography & Angioplasty",
-      "Pacemaker Implantation",
-      "Pediatric Heart Surgery",
-      "Minimally Invasive Cardiac Surgery",
+      "Medical Oncology",
+      "Surgical Oncology",
+      "Radiation Oncology",
+      "Chemotherapy Coordination",
+      "Personalized Treatment Planning",
     ],
-    ctaLabel: "Talk to Heart Specialist",
-    image: cardiologyImage,
-    imageAlt: "Advanced Cardiology treatment in Turkey",
+    ctaLabel: "Learn More",
+    image: oncologyImage,
+    imageAlt: "Cancer Treatment in Turkey",
     reversed: false,
   },
   {
     id: 2,
-    sectionTag: "Cancer Treatment & Oncology",
-    title:
-      "Comprehensive cancer care with advanced oncology treatments and specialized cancer hospitals in Turkey.",
+    sectionTag: "Radiation Oncology",
+    title: "Radiation Therapy",
     description:
-      "Turkey has become a leading destination for cancer treatment, offering modern oncology centers, experienced cancer specialists, and advanced technologies such as robotic surgery, radiation therapy, and targeted treatment. International patients receive personalized treatment plans and complete support throughout their recovery journey.",
+      "Radiation oncology teams may provide radiation-based treatment as part of care when clinically appropriate.",
     treatments: [
-      "Chemotherapy",
-      "Radiation Therapy",
-      "Bone Marrow Transplant",
-      "Immunotherapy",
-      "Surgical Oncology",
-      "Robotic Cancer Surgery",
-      "Breast Cancer Treatment",
+      "External Beam Radiation",
+      "Intensity-Modulated Radiation",
+      "Stereotactic Radiosurgery",
+      "Brachytherapy",
+      "Treatment Planning",
     ],
-    ctaLabel: "Talk to Oncology Specialist",
-    image: oncologyImage,
-    imageAlt: "Advanced Oncology treatment in Turkey",
+    ctaLabel: "Learn More",
+    image: organTransplantImage,
+    imageAlt: "Radiation Therapy in Turkey",
     reversed: true,
   },
   {
     id: 3,
-    sectionTag: "Organ Transplant Treatment",
-    title:
-      "Advanced organ transplant procedures with internationally experienced transplant specialists in Turkey.",
+    sectionTag: "Surgical Specialties",
+    title: "Surgical Treatment",
     description:
-      "Leading transplant hospitals in Turkey provide advanced organ transplant services using modern surgical technology and specialized intensive care support. Patients receive expert care before, during, and after surgery through dedicated international patient departments.",
+      "Specialist surgical teams may provide procedures according to the patient's condition, clinical assessment and hospital capabilities.",
     treatments: [
-      "Kidney Transplant",
-      "Liver Transplant",
-      "Bone Marrow Transplant",
-      "Pediatric Organ Transplant",
-      "Living Donor Transplant",
-      "Post-Transplant Care",
+      "General Surgery",
+      "Minimally Invasive Procedures",
+      "Laparoscopic Surgery",
+      "Pre-Surgical Assessment",
+      "Post-Operative Care",
     ],
-    ctaLabel: "Talk to Orthopedic Specialist",
-    image: organTransplantImage,
-    imageAlt: "Organ transplant treatment",
+    ctaLabel: "Learn More",
+    image: cosmeticSurgeryImage,
+    imageAlt: "Surgical Treatment in Turkey",
     reversed: false,
   },
   {
     id: 4,
-    sectionTag: "Orthopedic & Spine Surgery",
-    title:
-      "Modern orthopedic treatment in Turkey for joint pain, mobility problems, and sports injuries.",
+    sectionTag: "Orthopedic Care",
+    title: "Orthopedic Treatment",
     description:
-      "Turkey is known for advanced orthopedic surgery and rehabilitation programs supported by experienced surgeons and modern medical technology. Patients benefit from affordable procedures, minimally invasive techniques, and personalized recovery care.",
+      "Orthopedic services may address bone, joint, muscle, ligament and mobility-related conditions.",
     treatments: [
-      "Knee Replacement Surgery",
-      "Hip Replacement Surgery",
-      "Spine Surgery",
-      "ACL Reconstruction",
-      "Shoulder Replacement",
-      "Sports Injury Treatment",
+      "Joint Assessment",
+      "Knee & Hip Procedures",
+      "Spine Care",
+      "Sports Injury Management",
+      "Rehabilitation Support",
     ],
-    ctaLabel: "Talk to Orthopedic Specialist",
+    ctaLabel: "Learn More",
     image: kneeReplacementImage,
-    imageAlt: "Knee replacement treatment",
+    imageAlt: "Orthopedic Treatment in Turkey",
     reversed: true,
   },
   {
     id: 5,
-    sectionTag: "Neurosurgery & Neurology",
-    title:
-      "Specialized neurological treatment with advanced brain and spine surgery facilities in Turkey.",
+    sectionTag: "Neurosciences",
+    title: "Neurology & Neurosurgery",
     description:
-      "Hospitals in Turkey provide advanced neurosurgery and neurology care using high-precision diagnostic systems and minimally invasive surgical techniques. International patients receive treatment for complex neurological conditions with expert monitoring and rehabilitation support.",
+      "Specialists evaluate neurological conditions and surgical requirements when clinically appropriate.",
     treatments: [
-      "Brain Tumor Surgery",
-      "Spine Tumor Surgery",
-      "Epilepsy Treatment",
+      "Neurological Evaluation",
+      "Brain & Spine Surgery",
+      "Diagnostic Investigations",
       "Stroke Management",
-      "Deep Brain Stimulation (DBS)",
-      "Minimally Invasive Neurosurgery",
+      "Specialist Consultations",
     ],
-    ctaLabel: "Talk to Neuro Specialist",
+    ctaLabel: "Learn More",
     image: neurologyImage,
-    imageAlt: "Advanced Neurology treatment in Turkey",
+    imageAlt: "Neurology and Neurosurgery in Turkey",
     reversed: false,
   },
   {
-    id: 7,
-    sectionTag: "Cosmetic & Plastic Surgery",
-    title:
-      "Modern cosmetic surgery procedures in Turkey with experienced plastic surgeons and advanced techniques.",
+    id: 6,
+    sectionTag: "Cardiovascular Care",
+    title: "Cardiology & Cardiac Care",
     description:
-      "Turkey is internationally recognized for cosmetic and plastic surgery, attracting patients seeking high-quality procedures at affordable costs. Leading hospitals and cosmetic centers offer advanced surgical techniques, personalized consultations, and comfortable recovery support.",
+      "Cardiology teams evaluate and manage cardiovascular conditions through appropriate diagnostic and treatment services.",
     treatments: [
-      "Rhinoplasty (Nose Surgery)",
-      "Hair Transplant",
-      "Liposuction",
-      "Facelift Surgery",
-      "Breast Surgery",
-      "Tummy Tuck Surgery",
+      "Cardiovascular Evaluation",
+      "Diagnostic Angiography",
+      "Heart Valve Assessment",
+      "Cardiac Consultations",
+      "Arrhythmia Management",
     ],
-    ctaLabel: "Talk to Cosmetic Specialist",
-    image: cosmeticSurgeryImage,
-    imageAlt: "Advanced Cosmetic Surgery treatment in Turkey",
+    ctaLabel: "Learn More",
+    image: cardiologyImage,
+    imageAlt: "Cardiology and Cardiac Care in Turkey",
     reversed: true,
   },
   {
-    id: 8,
-    sectionTag: "Eye Surgery & Vision Care",
-    title:
-      "Advanced eye treatment and vision correction procedures with modern ophthalmology technology in Turkey.",
+    id: 7,
+    sectionTag: "Diagnostic Services",
+    title: "Diagnostic Imaging",
     description:
-      "Turkey provides high-quality eye care and vision correction procedures through advanced ophthalmology centers and experienced eye specialists. International patients benefit from modern laser technologies, affordable treatment costs, and comprehensive recovery support.",
+      "Hospitals may provide imaging and diagnostic services to support medical evaluation and treatment planning.",
     treatments: [
-      "LASIK Eye Surgery",
-      "Cataract Surgery",
-      "Retina Treatment",
-      "Glaucoma Treatment",
-      "Corneal Transplant",
-      "Pediatric Eye Treatment",
+      "MRI & CT Scans",
+      "PET-CT Imaging",
+      "Ultrasound Services",
+      "Digital X-Ray",
+      "Laboratory Investigations",
     ],
-    ctaLabel: "Talk to Eye Specialist",
+    ctaLabel: "Learn More",
     image: eyeSurgeryImage,
-    imageAlt: "Advanced Eye Surgery treatment in Turkey",
+    imageAlt: "Diagnostic Imaging in Turkey",
     reversed: false,
   },
   {
-    id: 9,
-    sectionTag: "Dental Treatment & Smile Restoration",
-    title:
-      "Affordable dental treatment in Turkey with advanced dental technology and cosmetic dentistry solutions.",
+    id: 8,
+    sectionTag: "Dental Specialties",
+    title: "Dental Treatment",
     description:
-      "Turkey has become one of the leading destinations for dental treatment, offering modern dental clinics, experienced dentists, and internationally recognized cosmetic dentistry procedures. Patients receive personalized dental care with advanced technology and affordable treatment packages.",
+      "Dental specialists provide evaluation and treatment planning for oral and dental healthcare requirements.",
     treatments: [
       "Dental Implants",
-      "Smile Makeover",
-      "Dental Veneers",
-      "Teeth Whitening",
-      "Full Mouth Rehabilitation",
-      "Orthodontic Treatment",
+      "Cosmetic Dentistry",
+      "Oral Surgery",
+      "Restorative Care",
+      "Orthodontic Evaluation",
     ],
-    ctaLabel: "Talk to Dental Specialist",
+    ctaLabel: "Learn More",
     image: dentalImage,
-    imageAlt: "Advanced Dental Treatment in Turkey",
+    imageAlt: "Dental Treatment in Turkey",
     reversed: true,
   },
 ];
@@ -362,21 +342,24 @@ const TreatmentCard = ({ specialty }) => {
 
 const reviews = [
   {
-    text: "After months of searching for affordable heart surgery, we finally found hope in Turkey. The doctors were experienced, the hospital was modern, and the support team helped us throughout the journey. Today, my father is recovering well and living a healthier life.!",
+    text: "“Our family received thorough guidance for heart care in Turkey. The hospital was modern, the doctors were experienced, and the international patient team assisted us throughout the journey.”",
     name: "Patient from Kenya",
   },
   {
-    text: "I traveled from Nigeria for cancer treatment in Turkey and was surprised by how fast everything was arranged. From airport pickup to hospital appointments, the entire process was smooth and professional. The doctors explained every step clearly and treated me with great care.",
+    text: "“Traveling from Nigeria for oncology consultations in Turkey went smoothly. From airport pickup to hospital appointments, the coordination was prompt and professional, and the medical team explained our options clearly.”",
     name: "Patient from Nigeria",
   },
   {
-    text: "My knee pain had made it difficult to walk for years. After my knee replacement surgery in Istanbul, I can finally move comfortably again. The hospital facilities were excellent, and the recovery support was better than we expected.",
+    text: "“The orthopedic team in Istanbul evaluated my joint condition and provided clear surgical and rehabilitation care. The hospital facilities and recovery support were very helpful.”",
+    name: "Patient from Ghana",
   },
   {
-    text: "We came to Turkey for neurology treatment after many years of trying to start a family. The medical team was supportive, kind, and highly experienced. We truly felt cared for throughout the entire treatment journey.",
+    text: "“We consulted specialists in Turkey for neurological care. The medical team was attentive and experienced, and the coordinators supported our family at every stage.”",
+    name: "Patient from Tanzania",
   },
   {
-    text: "The medical treatment in Turkey was affordable compared to other countries, but the quality of care was exceptional. The doctors, translators, and coordinators made us feel safe and supported from the first day until discharge.",
+    text: "“The medical facilities and patient support in Turkey were well organized. The coordinators and hospital staff assisted us with communication, consultations, and post-treatment follow-up.”",
+    name: "Patient from Uganda",
   },
 ];
 
@@ -392,53 +375,75 @@ const Stars = () => (
 const faqData = [
   {
     id: 1,
-    question:
-      "Which is the best hospital in Turkey for international patients?",
+    question: "Which is the best hospital in Turkey?",
     answer:
-      "Turkey has many internationally recognized hospitals offering advanced treatment across cardiology, oncology, orthopedics, neurology, and cosmetic surgery. The best hospital in Turkey depends on the patient’s medical condition, treatment requirements, and specialist availability.",
+      "There is no single hospital that is suitable for every patient or every medical condition. The appropriate hospital depends on the required specialty, medical condition, specialist availability, facilities, location and individual requirements.",
   },
   {
     id: 2,
-    question: "Is medical treatment in Turkey affordable?",
+    question: "How do I choose the best hospital in Turkey?",
     answer:
-      "Yes, medical treatment in Turkey is often more affordable compared to Europe, the USA, and many other countries while maintaining high healthcare standards and advanced medical technology.",
+      "Consider the relevant medical department, specialist availability, hospital facilities, international patient services, location, verified credentials and the healthcare provider's evaluation.",
   },
   {
     id: 3,
-    question: "Are hospitals in Istanbul internationally accredited?",
+    question: "Are hospitals in Turkey available for international patients?",
     answer:
-      "Many top hospitals in Istanbul are internationally accredited and follow global healthcare standards with advanced technology, experienced doctors, and dedicated international patient departments.",
+      "Yes. Many hospitals in Turkey provide international patient services and assist patients travelling from other countries.",
   },
   {
     id: 4,
-    question: "How much does surgery cost in Turkey?",
+    question: "How much does medical treatment cost in Turkey?",
     answer:
-      "The cost of surgery in Turkey depends on the type of treatment, hospital, surgeon experience, and duration of stay. However, many patients choose Turkey because treatments are significantly more cost-effective compared to Western countries.",
+      "Costs vary according to the medical condition, treatment approach, hospital, specialist, investigations, procedures and duration of care.",
   },
   {
     id: 5,
-    question: "Is Turkey safe for medical tourism?",
+    question: "Can I share my medical reports before travelling to Turkey?",
     answer:
-      "Turkey is considered one of the most trusted destinations for medical tourism, with modern hospitals, experienced specialists, and organized support services for international patients traveling for treatment.",
+      "Yes. Relevant medical reports can be shared for appointment and hospital coordination. The treating healthcare professional makes the clinical assessment.",
   },
   {
     id: 6,
-    question:
-      "Do Turkish hospitals provide translators for international patients?",
+    question: "Can you help me choose a hospital in Turkey?",
     answer:
-      "Yes, many hospitals in Turkey provide translators and international patient coordinators to help patients communicate comfortably with doctors and medical staff.",
+      "Our team can assist with exploring hospital options based on your stated healthcare requirements and coordinating communication with healthcare providers.",
   },
   {
     id: 7,
-    question: "How long does it take to get a medical visa for Turkey?",
+    question: "Can you arrange a doctor appointment in Turkey?",
     answer:
-      "Medical visa processing times may vary depending on the country and documentation, but many patients receive assistance with invitation letters and visa guidance to simplify the process.",
+      "Appointment coordination may be provided based on the selected hospital, specialist availability and patient's requirements.",
   },
   {
     id: 8,
-    question: "Which surgeries and treatments are popular in Turkey?",
+    question: "Can you help with accommodation in Turkey?",
     answer:
-      "Turkey is widely known for heart surgery, cancer treatment, orthopedic surgery, neurology treatment, cosmetic surgery, dental treatment, eye surgery, and organ transplantation.",
+      "International patient support may include coordination assistance for accommodation, airport transfers and local transportation.",
+  },
+  {
+    id: 9,
+    question: "How long does medical treatment in Turkey take?",
+    answer:
+      "The duration varies according to the medical condition, recommended treatment, hospital schedule, recovery requirements and follow-up plan.",
+  },
+  {
+    id: 10,
+    question: "Can I get a second medical opinion in Turkey?",
+    answer:
+      "Patients may request coordination for a specialist consultation when seeking another professional medical opinion.",
+  },
+  {
+    id: 11,
+    question: "Are treatment outcomes guaranteed?",
+    answer:
+      "No medical outcome should be presented as guaranteed. Treatment suitability and outcomes vary according to individual circumstances and should be discussed with the treating healthcare professional.",
+  },
+  {
+    id: 12,
+    question: "How can I contact Human Care Medical Tourism?",
+    answer:
+      "You can contact our team to discuss your healthcare requirements, hospital options, specialist appointments, treatment information, estimated costs and international patient support.",
   },
 ];
 
@@ -473,12 +478,6 @@ function TurkeyLandingPage() {
     };
   }, []);
 
-  // Truncate description helper
-  const truncateText = (text, maxLength = 120) => {
-    if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength) + "...";
-  };
-
   // FAQ toggle function
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -503,34 +502,29 @@ function TurkeyLandingPage() {
         />
         {/* Primary SEO */}
         <title>
-          Best Hospital in Turkey | Affordable Medical Treatment for
-          International Patients
+          Best Hospital in Turkey for International Patients | Human Care Medical Tourism
         </title>
 
         <meta
           name="description"
-          content="Get advanced medical treatment in Turkey with internationally accredited hospitals, experienced specialists, and affordable healthcare solutions. Trusted medical tourism Turkey services for patients from Kenya, Uganda, Tanzania, Nigeria, and South Sudan."
+          content="Explore hospital and healthcare options in Turkey with support for specialist appointments, treatment coordination, hospital information, travel arrangements and international patient services."
         />
 
         <meta
           name="keywords"
           content="
-            best hospital in turkey,
-            istanbul best hospital,
-            top hospitals in istanbul,
-            medical tourism turkey,
-            turkish medical tourism,
-            turkey treatments,
-            top hospitals in turkey,
-            best hospital in istanbul turkey,
-            medical treatment in turkey,
-            turkey best hospital,
-            top 10 hospitals in istanbul,
-            turkey surgeries,
-            affordable treatment in turkey,
-            international patient treatment turkey,
-            healthcare in turkey,
-            hospitals in turkey for international patients
+            best hospital in Turkey,
+            best hospital in Turkey for international patients,
+            hospitals in Turkey for international patients,
+            medical treatment in Turkey,
+            medical tourism in Turkey,
+            hospitals in Turkey,
+            medical specialists in Turkey,
+            treatment cost in Turkey,
+            medical treatment cost in Turkey,
+            international patient services Turkey,
+            healthcare in Turkey,
+            hospital treatment in Turkey
           "
         />
 
@@ -546,12 +540,12 @@ function TurkeyLandingPage() {
         {/* Open Graph / Facebook */}
         <meta
           property="og:title"
-          content="Best Hospital in Turkey | Affordable Medical Treatment"
+          content="Best Hospital in Turkey for International Patients | Human Care Medical Tourism"
         />
 
         <meta
           property="og:description"
-          content="Affordable medical treatment in Turkey with experienced specialists, modern hospitals, and personalized care for international patients."
+          content="Explore hospital and healthcare options in Turkey with support for specialist appointments, treatment coordination, hospital information, travel arrangements and international patient services."
         />
 
         <meta
@@ -571,12 +565,12 @@ function TurkeyLandingPage() {
 
         <meta
           name="twitter:title"
-          content="Best Hospital in Turkey | Medical Tourism Turkey"
+          content="Best Hospital in Turkey for International Patients | Human Care Medical Tourism"
         />
 
         <meta
           name="twitter:description"
-          content="Get affordable medical treatment in Turkey with internationally accredited hospitals and experienced specialists."
+          content="Explore hospital and healthcare options in Turkey with support for specialist appointments, treatment coordination, hospital information, travel arrangements and international patient services."
         />
 
         <meta
@@ -600,11 +594,11 @@ function TurkeyLandingPage() {
           alt="Best hospital in Turkey for international patients"
           className="turkey-hero-bg-image"
           loading="eager"
-        fetchPriority="high"
-        width={1920}
-        height={1080}
-        decoding="async"
-      />
+          fetchPriority="high"
+          width={1920}
+          height={1080}
+          decoding="async"
+        />
 
         {/* Gradient Overlay */}
         <div className="turkey-hero-overlay" />
@@ -612,28 +606,22 @@ function TurkeyLandingPage() {
         {/* Content */}
         <div className="turkey-hero-content">
           <span className="turkey-hero-badge">
-            Trusted by 50,000+ International Patients
+            International Patient Support in Turkey
           </span>
 
           <h1>Best Hospital in Turkey for International Patients</h1>
 
           <p>
-            Get advanced medical treatment in Turkey with internationally
-            accredited hospitals, experienced specialists, and affordable
-            healthcare solutions. Humancare World Wide helps patients from
-            Kenya, Uganda, Tanzania, Nigeria, and South Sudan connect with top
-            hospitals in Istanbul for trusted treatment and personalized care.
+            Explore hospital and healthcare options in Turkey with support for
+            specialist appointments, treatment coordination, hospital
+            information, travel arrangements and international patient services.
           </p>
 
-          <div className="turkey-hero-features">
-            <ul>
-              <li>International Patient Support</li>
-              <li>Advanced Treatment Technology</li>
-              <li>Affordable Medical Care</li>
-              <li>Top Hospitals in Istanbul</li>
-              <li>Personalized Treatment Assistance</li>
-            </ul>
-          </div>
+          <p style={{ marginTop: "12px", opacity: 0.9 }}>
+            Connect with our medical tourism team to understand available hospital
+            options, medical specialties, treatment information, estimated costs
+            and the process for planning healthcare in Turkey.
+          </p>
 
           <div className="turkey-hero-ctas">
             <a
@@ -642,17 +630,17 @@ function TurkeyLandingPage() {
               rel="noreferrer"
               className="btn-wa whatsapp-glow"
             >
-              <WA size={5} /> WhatsApp Consultation
+              <WA size={5} /> Get Hospital Assistance
             </a>
 
             <a href="tel:+919833166697" className="btn-outline">
-              <FaPhoneAlt /> Contact Medical Coordinator
+              <FaPhoneAlt /> Speak With Our Team
             </a>
           </div>
         </div>
       </section>
 
-      {/* ════ SECTION 2 — ABOUT HEALTHCARE ════ */}
+      {/* ════ SECTION 2 — INTRODUCTION / HEALTHCARE INFORMATION ════ */}
       <section className="turkey-about-section">
         <div className="turkey-about-container">
           {/* Left Side - Images */}
@@ -660,22 +648,22 @@ function TurkeyLandingPage() {
             <div className="turkey-about-image-wrapper">
               <img
                 src={aboutImage1}
-                alt="Modern hospital in Istanbul Turkey for international patients"
+                alt="Healthcare support and hospital coordination in Turkey"
                 loading="lazy"
-        width={1920}
-        height={1080}
-        decoding="async"
-      />
+                width={1920}
+                height={1080}
+                decoding="async"
+              />
             </div>
             <div className="turkey-about-image-wrapper">
               <img
                 src={aboutImage2}
-                alt="Medical treatment in Turkey for African patients"
+                alt="Medical tourism support services in Turkey"
                 loading="lazy"
-        width={1920}
-        height={1280}
-        decoding="async"
-      />
+                width={1920}
+                height={1280}
+                decoding="async"
+              />
             </div>
           </div>
 
@@ -683,77 +671,65 @@ function TurkeyLandingPage() {
           <div className="turkey-about-content">
             <div className="turkey-about-header">
               <span className="turkey-about-subtitle">
-                Trusted Medical Tourism Partner
+                Healthcare Coordination
               </span>
-              <h2>Affordable & Advanced Healthcare Solutions in Turkey</h2>
+              <h2>Find the Right Healthcare Support in Turkey</h2>
             </div>
 
             <p>
-              Finding the right hospital in another country can feel
-              overwhelming, especially when your health or your loved one's
-              treatment is involved. At <strong>Humancare World Wide</strong>,
-              we help patients from Kenya, Uganda, Tanzania, Nigeria, and South
-              Sudan access advanced medical treatment in Turkey with confidence
-              and peace of mind. From connecting you with the best hospital in
-              Turkey to arranging appointments, travel assistance, and treatment
-              coordination, our team supports you throughout every stage of your
-              medical journey.
+              Turkey has hospitals and medical specialists across a wide range of
+              healthcare specialties. International patients can explore available
+              healthcare options according to their medical requirements,
+              specialist availability, hospital facilities and individual
+              circumstances.
             </p>
 
             <p>
-              Turkey is globally recognized for its modern healthcare system,
-              internationally accredited hospitals, and highly experienced
-              specialists across cardiology, oncology, orthopedics, neurology,
-              cosmetic surgery, and many other specialties. Through our trusted
-              hospital network in Istanbul and other leading medical cities,
-              international patients can receive world-class treatment at
-              affordable costs without long waiting periods. Our goal is to make
-              medical tourism in Turkey simpler, safer, and more comfortable for
-              every patient and family we assist.
+              Our team helps international patients coordinate the practical
+              aspects of planning healthcare in Turkey, including hospital
+              communication, specialist appointments, medical-report sharing and
+              travel-related arrangements.
             </p>
 
             <div className="turkey-about-features">
               <div className="turkey-about-feature-item">
                 <FaCheckCircle className="turkey-feature-icon" />
-                <span>
-                  Access to top hospitals in Istanbul and internationally
-                  trained specialists
-                </span>
+                <span>Hospital and specialist coordination</span>
               </div>
               <div className="turkey-about-feature-item">
                 <FaCheckCircle className="turkey-feature-icon" />
-                <span>
-                  Personalized treatment guidance and fast appointment
-                  scheduling
-                </span>
+                <span>Medical report sharing and appointment assistance</span>
               </div>
               <div className="turkey-about-feature-item">
                 <FaCheckCircle className="turkey-feature-icon" />
-                <span>
-                  Support for medical visas, travel arrangements, and
-                  accommodation
-                </span>
+                <span>Treatment information coordination</span>
               </div>
               <div className="turkey-about-feature-item">
                 <FaCheckCircle className="turkey-feature-icon" />
-                <span>
-                  Affordable treatment packages with advanced healthcare
-                  technology
-                </span>
+                <span>Hospital and consultation scheduling</span>
               </div>
               <div className="turkey-about-feature-item">
                 <FaCheckCircle className="turkey-feature-icon" />
-                <span>
-                  Dedicated assistance for patients from Africa throughout the
-                  treatment journey
-                </span>
+                <span>Available cost information</span>
+              </div>
+              <div className="turkey-about-feature-item">
+                <FaCheckCircle className="turkey-feature-icon" />
+                <span>Travel and accommodation coordination</span>
+              </div>
+              <div className="turkey-about-feature-item">
+                <FaCheckCircle className="turkey-feature-icon" />
+                <span>Airport and local transfer assistance</span>
+              </div>
+              <div className="turkey-about-feature-item">
+                <FaCheckCircle className="turkey-feature-icon" />
+                <span>International patient support</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ════ SECTION 3 — WHY CHOOSE TURKEY ════ */}
+      {/* ════ SECTION 3 — WHY CHOOSE TURKEY FOR MEDICAL TREATMENT? ════ */}
       <section className="turkey-why-section">
         <div className="turkey-why-container">
           {/* Left Side - Content */}
@@ -763,29 +739,19 @@ function TurkeyLandingPage() {
             </div>
 
             <p>
-              Turkey has emerged as one of the world's fastest-growing
-              destinations for international healthcare, attracting thousands of
-              patients every year who are seeking high-quality treatment at
-              affordable costs. For many families from Kenya, Uganda, Tanzania,
-              Nigeria, and South Sudan, accessing advanced healthcare locally
-              can sometimes involve long waiting periods, limited treatment
-              options, or extremely high expenses abroad. Medical treatment in
-              Turkey offers a trusted alternative with internationally
-              accredited hospitals, experienced specialists, and modern
-              healthcare technology across a wide range of specialties.
+              Turkey is considered by international patients seeking access to
+              hospitals and specialists across multiple medical fields. Healthcare
+              options vary by hospital, specialty and individual medical
+              requirements.
             </p>
 
             <p>
-              From complex heart surgeries and cancer treatment to orthopedic
-              procedures, neurology, dental care, and cosmetic surgery, Turkish
-              medical tourism continues to grow because patients can receive
-              world-class care without the financial burden often associated
-              with treatment in Europe or the United States. Hospitals in
-              Istanbul and other leading Turkish cities are equipped with
-              advanced diagnostic systems, robotic surgery technology, modern
-              intensive care units, and dedicated international patient
-              departments designed to support overseas patients throughout their
-              medical journey.
+              Hospitals in Turkey provide services across a range of medical and
+              surgical specialties, allowing patients to explore care according to
+              their healthcare requirements. With modern facilities and dedicated
+              international patient departments, patients receive coordinated
+              support for appointments, medical documentation, travel, and
+              treatment planning.
             </p>
           </div>
 
@@ -793,12 +759,12 @@ function TurkeyLandingPage() {
           <div className="turkey-why-image">
             <img
               src={whyChooseTurkeyImage}
-              alt="Why international patients choose Turkey for medical treatment"
+              alt="Medical treatment in Turkey for international patients"
               loading="lazy"
-        width={500}
-        height={750}
-        decoding="async"
-      />
+              width={500}
+              height={750}
+              decoding="async"
+            />
           </div>
         </div>
 
@@ -808,11 +774,11 @@ function TurkeyLandingPage() {
             <div className="turkey-benefit-icon">
               <FaCheckCircle />
             </div>
-            <h3>Affordable Treatment Without Compromising Quality</h3>
+            <h3>Healthcare Options Across Multiple Specialties</h3>
             <p>
-              Turkey treatments are significantly more affordable compared to
-              many Western countries while still maintaining high international
-              healthcare standards.
+              Hospitals in Turkey provide services across a range of medical and
+              surgical specialties, allowing patients to explore care according to
+              their healthcare requirements.
             </p>
           </div>
 
@@ -820,11 +786,11 @@ function TurkeyLandingPage() {
             <div className="turkey-benefit-icon">
               <FaCheckCircle />
             </div>
-            <h3>Access to Internationally Accredited Hospitals</h3>
+            <h3>Medical Specialists</h3>
             <p>
-              Many top hospitals in Turkey follow global healthcare standards
-              and offer advanced infrastructure, modern operation theaters, and
-              specialized treatment centers.
+              Patients can explore specialist services across areas such as
+              oncology, cardiology, orthopedics, neurology, gastroenterology,
+              urology and other clinical departments.
             </p>
           </div>
 
@@ -832,11 +798,11 @@ function TurkeyLandingPage() {
             <div className="turkey-benefit-icon">
               <FaCheckCircle />
             </div>
-            <h3>Experienced Specialists Across Multiple Medical Fields</h3>
+            <h3>Hospital Facilities</h3>
             <p>
-              Turkey is home to internationally trained doctors and surgeons
-              with expertise in cardiology, oncology, orthopedics, Women's Health
-              treatment, neurology, and more.
+              Depending on the hospital, facilities may include diagnostic
+              departments, imaging services, surgical units, intensive care
+              services, rehabilitation and other clinical departments.
             </p>
           </div>
 
@@ -844,10 +810,11 @@ function TurkeyLandingPage() {
             <div className="turkey-benefit-icon">
               <FaCheckCircle />
             </div>
-            <h3>Faster Appointments & Shorter Waiting Times</h3>
+            <h3>International Patient Services</h3>
             <p>
-              Patients can often begin consultations, diagnostics, and surgeries
-              much faster compared to long waiting lists in many countries.
+              Many hospitals provide international-patient support for
+              appointments, documentation, communication and other practical
+              requirements.
             </p>
           </div>
 
@@ -855,42 +822,39 @@ function TurkeyLandingPage() {
             <div className="turkey-benefit-icon">
               <FaCheckCircle />
             </div>
-            <h3>Comfortable Experience for International Patients</h3>
+            <h3>Medical Tourism Coordination</h3>
             <p>
-              From airport pickup and hotel arrangements to translators and
-              personalized treatment coordination, medical tourism Turkey
-              services are designed to make the journey smooth and stress-free
-              for international patients and their families.
+              International patients can receive assistance with hospital
+              coordination, accommodation, airport transfers, local
+              transportation and other travel-related requirements.
             </p>
           </div>
+
           <div className="turkey-benefit-card">
             <div className="turkey-benefit-icon">
               <FaCheckCircle />
             </div>
-            <h3>Personalized Support for African Patients</h3>
+            <h3>Treatment Cost Information</h3>
             <p>
-              Hospitals and medical tourism providers in Turkey offer dedicated
-              international patient services, including English-speaking
-              coordinators, cultural assistance, halal food options, and
-              personalized care designed to help patients from Kenya, Uganda,
-              Tanzania, Nigeria, and South Sudan feel comfortable throughout
-              their treatment journey.
+              Healthcare costs vary according to the medical condition, treatment
+              approach, hospital, specialist, investigations, procedures and
+              duration of care.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ════ SECTION 5 — Our Hospital Network ════ */}
+      {/* ════ SECTION 4 — HOSPITALS IN TURKEY ════ */}
       <section className="hn-section">
         <div className="hn-container">
           <div className="hn-title-wrap">
-            <span className="hn-label">Our Hospital Network</span>
-            <h2 className="hn-heading">Best Hospitals in Turkey</h2>
+            <span className="hn-label">Hospital Options</span>
+            <h2 className="hn-heading">Best Hospitals in Turkey for International Patients</h2>
             <p className="hn-subtitle">
-              Turkey is home to internationally accredited hospitals offering
-              advanced treatment, experienced specialists, and personalized care
-              for international patients seeking affordable medical treatment in
-              Turkey.
+              Hospitals should be compared according to the medical specialty
+              required, available facilities, specialist availability, location,
+              international-patient services and the patient's individual healthcare
+              needs.
             </p>
           </div>
           <div className="hn-grid">
@@ -924,6 +888,26 @@ function TurkeyLandingPage() {
                       </span>
                     ))}
                   </div>
+
+                  <div style={{ marginTop: "16px" }}>
+                    <a
+                      href={WA_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "6px",
+                        fontSize: "0.88rem",
+                        fontWeight: "600",
+                        color: "#0284c7",
+                        textDecoration: "none",
+                      }}
+                    >
+                      {h.cta || "View Hospital Details"}
+                      <ArrowRight size={14} />
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
@@ -931,18 +915,18 @@ function TurkeyLandingPage() {
         </div>
       </section>
 
-      {/* ════ SECTION 6 — Treatment Specialties ════ */}
+      {/* ════ SECTION 5 — TOP TREATMENTS & MEDICAL SPECIALTIES ════ */}
       <section className="ts-section">
         {/* Section Header */}
         <div className="ts-header">
           <div className="ts-header__label">Treatment Specialties</div>
           <h2 className="ts-header__title">
-            Top Treatments & Surgeries in Turkey
+            Top Treatments & Medical Specialties in Turkey
           </h2>
           <p className="ts-header__sub">
-            Explore advanced medical treatment in Turkey with experienced
-            specialists, modern technology, affordable costs, and personalized
-            patient care.
+            The specialty and treatment options below reflect common areas of care
+            available in Turkey. Treatment plans are determined through
+            professional clinical evaluation.
           </p>
         </div>
 
@@ -954,117 +938,97 @@ function TurkeyLandingPage() {
         </div>
       </section>
 
-      {/* ════ SECTION 4 — Why Patients from Africa Prefer Turkey ════ */}
+      {/* ════ SECTION 6 — WHY PATIENTS CHOOSE MEDICAL TOURISM IN TURKEY ════ */}
       <section className="turkey-africa-section">
         <div className="turkey-africa-container">
           {/* Left Side - Image */}
           <div className="turkey-africa-image">
             <img
               src={whyPatientsChooseUsImage}
-              alt="African patients receiving medical treatment in Turkey"
+              alt="International patients receiving medical treatment in Turkey"
               loading="lazy"
-        width={1920}
-        height={1280}
-        decoding="async"
-      />
+              width={1920}
+              height={1280}
+              decoding="async"
+            />
           </div>
 
           {/* Right Side - Content */}
           <div className="turkey-africa-content">
-            <h2>Why Patients from Africa Prefer Turkey</h2>
+            <h2>Why Patients Choose Medical Tourism in Turkey</h2>
+
+            <p style={{ marginBottom: "20px", color: "rgba(255,255,255,0.85)", lineHeight: "1.6" }}>
+              International patients may consider Turkey based on access to
+              hospitals and specialists, available healthcare specialties,
+              international patient services, travel accessibility and the range of
+              healthcare facilities available.
+            </p>
 
             <div className="turkey-africa-list">
               <div className="turkey-africa-item">
                 <div className="turkey-africa-check">
                   <FaCheck />
                 </div>
-                <p>
-                  Affordable medical treatment packages compared to Europe and
-                  many other countries
-                </p>
+                <p>Access to multiple medical specialties</p>
               </div>
 
               <div className="turkey-africa-item">
                 <div className="turkey-africa-check">
                   <FaCheck />
                 </div>
-                <p>
-                  Faster appointments and shorter waiting times for surgeries
-                  and specialist consultations
-                </p>
+                <p>Hospital and specialist options</p>
               </div>
 
               <div className="turkey-africa-item">
                 <div className="turkey-africa-check">
                   <FaCheck />
                 </div>
-                <p>
-                  International patient coordinators who communicate in English
-                  and assist throughout the journey
-                </p>
+                <p>International patient departments</p>
               </div>
 
               <div className="turkey-africa-item">
                 <div className="turkey-africa-check">
                   <FaCheck />
                 </div>
-                <p>
-                  Assistance with medical visa applications, travel planning,
-                  and hospital appointments
-                </p>
+                <p>Medical consultation and appointment coordination</p>
               </div>
 
               <div className="turkey-africa-item">
                 <div className="turkey-africa-check">
                   <FaCheck />
                 </div>
-                <p>
-                  Comfortable accommodation, airport pickup, and personalized
-                  support for international patients
-                </p>
+                <p>Travel and accommodation support</p>
               </div>
 
               <div className="turkey-africa-item">
                 <div className="turkey-africa-check">
                   <FaCheck />
                 </div>
-                <p>
-                  Availability of halal food options and culturally comfortable
-                  environments for African families
-                </p>
+                <p>Hospital and local transportation assistance</p>
               </div>
 
               <div className="turkey-africa-item">
                 <div className="turkey-africa-check">
                   <FaCheck />
                 </div>
-                <p>
-                  Access to advanced hospitals in Turkey with experienced
-                  specialists and modern medical technology
-                </p>
+                <p>Treatment and cost information</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ════ SECTION 5 — Our Medical Tourism Services ════ */}
+      {/* ════ SECTION 7 — INTERNATIONAL MEDICAL TOURISM SERVICES ════ */}
       <section className="turkey-services-section">
         <div className="turkey-services-container">
           {/* Section Header */}
           <div className="turkey-services-header">
-            <span className="turkey-services-badge">Our Services</span>
-            <h2>Our Medical Tourism Services</h2>
+            <span className="turkey-services-badge">Coordination Services</span>
+            <h2>International Medical Tourism Services</h2>
 
             <p className="turkey-services-description">
-              At Humancare World Wide, we provide personalized support for
-              patients traveling for medical treatment in Turkey. From your
-              first consultation to your recovery journey, our team helps make
-              Turkish medical tourism simple, comfortable, and stress-free for
-              patients and families from Kenya, Uganda, Tanzania, Nigeria, and
-              South Sudan. We work closely with top hospitals in Turkey to
-              ensure patients receive quality healthcare, transparent guidance,
-              and complete travel assistance throughout their treatment journey.
+              Our international patient services are designed to help coordinate the
+              non-clinical requirements involved in planning healthcare in Turkey.
             </p>
           </div>
 
@@ -1073,65 +1037,65 @@ function TurkeyLandingPage() {
             {/* Service 1 */}
             <div className="turkey-service-card">
               <div className="turkey-service-icon-wrapper">
-                <FaStethoscope className="turkey-service-icon" />
+                <FaCalendarCheck className="turkey-service-icon" />
                 <span className="turkey-service-number">01</span>
               </div>
-              <h3>Online Medical Consultation</h3>
+              <h3>Hospital Appointment Assistance</h3>
               <p>
-                Share your medical reports and receive expert opinions from
-                experienced specialists before traveling to Turkey.
+                Support with coordinating appointments with selected hospitals and
+                departments.
               </p>
             </div>
 
             {/* Service 2 */}
             <div className="turkey-service-card">
               <div className="turkey-service-icon-wrapper">
-                <FaPassport className="turkey-service-icon" />
+                <FaClipboardList className="turkey-service-icon" />
                 <span className="turkey-service-number">02</span>
               </div>
-              <h3>Medical Visa Assistance</h3>
+              <h3>Medical Report Coordination</h3>
               <p>
-                Our team helps patients with medical visa documentation,
-                invitation letters, and travel guidance for a smoother process.
+                Assistance with sharing relevant medical reports with the
+                healthcare provider.
               </p>
             </div>
 
             {/* Service 3 */}
             <div className="turkey-service-card">
               <div className="turkey-service-icon-wrapper">
-                <FaPlane className="turkey-service-icon" />
+                <FaStethoscope className="turkey-service-icon" />
                 <span className="turkey-service-number">03</span>
               </div>
-              <h3>Flight & Travel Support</h3>
+              <h3>Specialist Consultation Coordination</h3>
               <p>
-                We assist with flight planning and travel coordination to help
-                patients and accompanying family members travel comfortably.
+                Support with arranging consultations according to the patient's
+                stated healthcare requirement.
               </p>
             </div>
 
             {/* Service 4 */}
             <div className="turkey-service-card">
               <div className="turkey-service-icon-wrapper">
-                <FaCar className="turkey-service-icon" />
+                <FaHotel className="turkey-service-icon" />
                 <span className="turkey-service-number">04</span>
               </div>
-              <h3>Airport Pickup Services</h3>
+              <h3>Travel & Accommodation Assistance</h3>
               <p>
-                Dedicated airport pickup and transportation support are arranged
-                for international patients arriving in Turkey.
+                Coordination support for accommodation, airport transfers and local
+                transportation.
               </p>
             </div>
 
             {/* Service 5 */}
             <div className="turkey-service-card">
               <div className="turkey-service-icon-wrapper">
-                <FaHotel className="turkey-service-icon" />
+                <FaHospital className="turkey-service-icon" />
                 <span className="turkey-service-number">05</span>
               </div>
-              <h3>Hotel & Accommodation Arrangements</h3>
+              <h3>Hospital Admission Support</h3>
               <p>
-                We help organize comfortable accommodation near hospitals for
-                patients and their families during treatment and recovery.
+                Practical coordination related to hospital admission and
+                international-patient requirements.
               </p>
             </div>
 
@@ -1141,46 +1105,60 @@ function TurkeyLandingPage() {
                 <FaLanguage className="turkey-service-icon" />
                 <span className="turkey-service-number">06</span>
               </div>
-              <h3>Translator & Language Assistance</h3>
+              <h3>Communication Support</h3>
               <p>
-                Professional coordinators and translators help patients
-                communicate easily with doctors and hospital staff.
+                Assistance with communication between international patients and
+                healthcare providers.
               </p>
             </div>
 
             {/* Service 7 */}
             <div className="turkey-service-card">
               <div className="turkey-service-icon-wrapper">
-                <FaCalendarCheck className="turkey-service-icon" />
+                <FaHeartbeat className="turkey-service-icon" />
                 <span className="turkey-service-number">07</span>
               </div>
-              <h3>Treatment Coordination</h3>
+              <h3>Follow-Up Coordination</h3>
               <p>
-                From hospital appointments to surgery scheduling and medical
-                documentation, we manage the complete treatment process.
+                Support with future appointments and communication with the
+                hospital when required.
               </p>
             </div>
 
             {/* Service 8 */}
             <div className="turkey-service-card">
               <div className="turkey-service-icon-wrapper">
-                <FaHeartbeat className="turkey-service-icon" />
+                <FaUserMd className="turkey-service-icon" />
                 <span className="turkey-service-number">08</span>
               </div>
-              <h3>Post-Treatment Follow-Up Care</h3>
+              <h3>Second Medical Opinion Coordination</h3>
               <p>
-                Our support continues even after treatment with follow-up
-                coordination, medical updates, and recovery guidance.
+                Assistance in coordinating another professional medical opinion when
+                requested by the patient.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ════ SECTION 6 — Client Reviews ════ */}
+      {/* ════ SECTION 8 — PATIENT EXPERIENCES ════ */}
       <section className="general-reviews-section">
         <div className="general-reviews-content">
-          <h2 className="general-reviews-heading">Our Clients Review</h2>
+          <h2 className="general-reviews-heading">Our Patients' Experiences</h2>
+          <p
+            style={{
+              maxWidth: "600px",
+              margin: "0 0 24px 0",
+              color: "#64748b",
+              fontSize: "0.95rem",
+              lineHeight: "1.5",
+            }}
+          >
+            Every patient's healthcare experience is different. Genuine patient
+            feedback can help visitors understand the service experience, but
+            individual testimonials should not be presented as a guarantee of
+            medical outcomes.
+          </p>
 
           {/* Slider wrapper */}
           <div className="general-reviews-slider-wrapper">
@@ -1194,7 +1172,19 @@ function TurkeyLandingPage() {
                     <div key={cardIndex} className="general-reviews-card">
                       <Stars />
                       <p className="general-reviews-card-text">{r.text}</p>
-                      {/* <p className="general-reviews-card-name">{r.name}</p> */}
+                      {r.name && (
+                        <p
+                          className="general-reviews-card-name"
+                          style={{
+                            marginTop: "12px",
+                            fontWeight: "600",
+                            fontSize: "0.9rem",
+                            color: "#0f172a",
+                          }}
+                        >
+                          {r.name}
+                        </p>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -1218,117 +1208,113 @@ function TurkeyLandingPage() {
         <div className="general-reviews-image-wrapper">
           <img
             src={ThumbnailImage}
-            alt="International patient testimonial for medical treatment in Turkey"
+            alt="International patient feedback for healthcare in Turkey"
             className="general-reviews-image"
-        width={1200}
-        height={800}
-        decoding="async"
-      />
+            width={1200}
+            height={800}
+            decoding="async"
+          />
         </div>
       </section>
 
-      {/* ════ SECTION 7 — Why Choose Humancare World Wide ════ */}
+      {/* ════ SECTION 9 — WHY CHOOSE HUMAN CARE MEDICAL TOURISM ════ */}
       <section className="turkey-why-choose-section">
         <div className="turkey-why-choose-container">
           {/* Left Side - Content */}
           <div className="turkey-why-choose-content">
-            <h2>Why Choose Humancare World Wide?</h2>
+            <h2>Why Choose Human Care Medical Tourism?</h2>
 
             <p>
-              At Humancare World Wide, we understand that traveling abroad for
-              medical treatment can feel challenging for patients and their
-              families. Our goal is to make the entire medical journey simple,
-              transparent, and stress-free by helping international patients
-              connect with trusted hospitals and experienced specialists in
-              Turkey. From the first consultation to post-treatment follow-up,
-              our dedicated team provides complete assistance at every stage of
-              the treatment process.
+              Human Care Medical Tourism supports international patients with the
+              practical coordination required when planning healthcare in Turkey.
             </p>
 
             <p>
-              We work closely with leading hospitals in Turkey to help patients
-              access advanced healthcare, affordable treatment packages, and
-              personalized medical support based on their healthcare needs.
-              Whether you are seeking heart surgery, cancer treatment,
-              orthopedic procedures, neurology, cosmetic surgery, or specialized
-              medical care, our experienced coordinators ensure smooth
-              communication, fast appointment scheduling, and complete travel
-              support throughout your journey.
+              From exploring hospital options and scheduling specialist
+              consultations to assisting with medical reports, travel, and
+              accommodation, our dedicated team provides organized support
+              throughout the non-clinical process.
             </p>
             <div className="turkey-why-choose-image">
               <img
                 src={whyHumancareImage}
-                alt="Humancare World Wide - Medical tourism support for international patients"
+                alt="Human Care Medical Tourism - Support for international patients in Turkey"
                 loading="lazy"
-        width={740}
-        height={493}
-        decoding="async"
-      />
+                width={740}
+                height={493}
+                decoding="async"
+              />
             </div>
           </div>
 
           {/* Right Side - Features */}
           <div className="turkey-why-choose-features">
-            <h3>What Makes Us Different</h3>
+            <h3>Our Support Highlights</h3>
 
             <div className="turkey-why-choose-grid">
               <div className="turkey-why-choose-item">
                 <div className="turkey-why-choose-icon">
+                  <FaHospital />
+                </div>
+                <h4>Hospital Coordination</h4>
+                <p>
+                  Assistance with exploring hospital options based on the stated
+                  healthcare requirement.
+                </p>
+              </div>
+
+              <div className="turkey-why-choose-item">
+                <div className="turkey-why-choose-icon">
                   <FaUserMd />
                 </div>
+                <h4>Specialist Appointment Support</h4>
                 <p>
-                  Personalized guidance and treatment planning for every patient
+                  Coordination assistance for consultations with relevant healthcare
+                  professionals.
                 </p>
               </div>
 
               <div className="turkey-why-choose-item">
                 <div className="turkey-why-choose-icon">
-                  <FaHandshake />
+                  <FaPassport />
                 </div>
+                <h4>International Patient Assistance</h4>
                 <p>
-                  Partnerships with trusted hospitals and experienced
-                  specialists in Turkey
+                  Support with practical requirements for patients travelling to
+                  Turkey.
                 </p>
-              </div>
-
-              <div className="turkey-why-choose-item">
-                <div className="turkey-why-choose-icon">
-                  <FaDollarSign />
-                </div>
-                <p>Affordable treatment packages with transparent support</p>
-              </div>
-
-              <div className="turkey-why-choose-item">
-                <div className="turkey-why-choose-icon">
-                  <FaHeadset />
-                </div>
-                <p>24/7 assistance for international patients and families</p>
-              </div>
-
-              <div className="turkey-why-choose-item">
-                <div className="turkey-why-choose-icon">
-                  <FaClipboardList />
-                </div>
-                <p>Complete coordination from consultation to recovery</p>
               </div>
 
               <div className="turkey-why-choose-item">
                 <div className="turkey-why-choose-icon">
                   <FaGlobe />
                 </div>
+                <h4>Travel Coordination</h4>
                 <p>
-                  Support with medical visas, travel, accommodation, and
-                  hospital appointments
+                  Assistance with accommodation, airport transfers and local
+                  transportation.
                 </p>
               </div>
 
               <div className="turkey-why-choose-item">
                 <div className="turkey-why-choose-icon">
-                  <FaUsers />
+                  <FaLanguage />
                 </div>
+                <h4>Clear Communication</h4>
                 <p>
-                  Dedicated care coordinators for patients from Kenya, Uganda,
-                  Tanzania, Nigeria, and South Sudan
+                  Support with communication between patients and healthcare
+                  providers.
+                </p>
+              </div>
+
+              <div className="turkey-why-choose-item">
+                <div className="turkey-why-choose-icon">
+                  <FaCalendarCheck />
+                </div>
+                <h4>Follow-Up Assistance</h4>
+                <p>
+                  Coordination support for future hospital appointments when
+                  required.
                 </p>
               </div>
             </div>
@@ -1336,6 +1322,7 @@ function TurkeyLandingPage() {
         </div>
       </section>
 
+      {/* ════ SECTION 10 — FAQ SECTION ════ */}
       <section className="general-faq-section" aria-labelledby="faq-heading">
         <div className="general-faq-container">
           {/* Section Header */}
@@ -1343,10 +1330,6 @@ function TurkeyLandingPage() {
             <span className="general-faq-badge">
               Frequently Asked Questions
             </span>
-            {/* <p className="general-faq-subtitle">
-                    Get answers to common questions about general care, best general
-                    hospitals, and treatment options in India
-                  </p> */}
           </div>
 
           {/* FAQ Accordion */}
@@ -1397,17 +1380,18 @@ function TurkeyLandingPage() {
         </div>
       </section>
 
+      {/* ════ SECTION 11 — FINAL CTA SECTION ════ */}
       <section className="general-cta-section">
         {/* Background Image */}
         <img
           src={ctaImage}
-          alt="International patient support for treatment in Turkey"
+          alt="International patient support for healthcare in Turkey"
           className="general-cta-bg-image"
           loading="lazy"
-        width={740}
-        height={493}
-        decoding="async"
-      />
+          width={740}
+          height={493}
+          decoding="async"
+        />
 
         {/* Gradient Overlay */}
         <div className="general-cta-overlay" />
@@ -1416,51 +1400,48 @@ function TurkeyLandingPage() {
         <div className="general-cta-container">
           <div className="general-cta-content">
             <span className="general-cta-badge">
-              Start Your Medical Journey to Turkey Today
+              Hospital & Healthcare Assistance
             </span>
 
             <h2 className="general-cta-title">
-              Get Expert Medical Treatment Without Long Waiting Times
+              Get Expert Medical Treatment Support in Turkey
             </h2>
 
             <p className="general-cta-subtitle">
-              Receive personalized support, advanced healthcare access, and
-              affordable treatment options from trusted hospitals in Turkey. Our
-              team helps patients from Kenya, Uganda, Tanzania, Nigeria, and
-              South Sudan connect with experienced specialists and
-              internationally accredited hospitals for safe and comfortable
-              medical care.
+              Get assistance with hospital options, specialist appointment
+              coordination, treatment information, estimated costs, travel
+              arrangements and international patient services.
             </p>
 
             <div className="general-cta-benefits-list">
               <div className="general-cta-benefit-point">
                 <FaCheckCircle className="general-cta-check-icon" />
-                <span>Fast response from dedicated medical coordinators</span>
+                <span>Hospital and specialist coordination</span>
               </div>
 
               <div className="general-cta-benefit-point">
                 <FaCheckCircle className="general-cta-check-icon" />
-                <span>Confidential consultation and secure medical review</span>
+                <span>Treatment information and available cost estimates</span>
               </div>
 
               <div className="general-cta-benefit-point">
                 <FaCheckCircle className="general-cta-check-icon" />
                 <span>
-                  Complete support for international patients and families
+                  Travel, accommodation and airport transfer coordination
                 </span>
               </div>
 
               <div className="general-cta-benefit-point">
                 <FaCheckCircle className="general-cta-check-icon" />
                 <span>
-                  Assistance with travel, visas, and hospital appointments
+                  Dedicated non-clinical international patient support
                 </span>
               </div>
 
               <div className="general-cta-benefit-point">
                 <FaCheckCircle className="general-cta-check-icon" />
                 <span>
-                  Personalized guidance throughout the treatment journey
+                  Support with communication between patients and healthcare providers
                 </span>
               </div>
             </div>
@@ -1472,13 +1453,29 @@ function TurkeyLandingPage() {
                 rel="noreferrer"
                 className="btn-wa whatsapp-glow"
               >
-                <WA size={5} /> WhatsApp Consultation
+                <WA size={5} /> Get Hospital Assistance
               </a>
 
               <a href="tel:+919833166697" className="btn-outline">
-                <FaPhoneAlt /> Contact Medical Coordinator
+                <FaPhoneAlt /> Speak With Our Team
               </a>
             </div>
+
+            <p
+              style={{
+                marginTop: "24px",
+                fontSize: "0.82rem",
+                opacity: 0.8,
+                lineHeight: "1.5",
+                maxWidth: "700px",
+              }}
+            >
+              Medical disclaimer: Healthcare information is provided for general
+              informational purposes. Diagnosis, treatment suitability, expected
+              outcomes, duration and final cost vary according to individual
+              circumstances and should be discussed with a qualified healthcare
+              professional.
+            </p>
           </div>
         </div>
       </section>

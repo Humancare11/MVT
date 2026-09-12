@@ -96,25 +96,25 @@ const VALUE_CARDS = [
     emoji: <FaClipboardList />,
     colorClass: "card-red",
     title: "Transparent Treatment Planning",
-    desc: "Full cost breakdown before you travel — no hidden charges, ever.",
+    desc: "Detailed cost and treatment information before you travel.",
   },
   {
     emoji: <FaCheckCircle />,
     colorClass: "card-navy",
-    title: "No Unnecessary Procedures",
-    desc: "Evidence-based protocols with an ethics-first approach by board-certified specialists.",
+    title: "Evidence-Based Protocols",
+    desc: "Care plans recommended by qualified cardiac specialists based on clinical evaluation.",
   },
   {
     emoji: <FaHeart />,
     colorClass: "card-red",
-    title: "Personalized Care",
-    desc: "Dedicated patient coordinators who speak your language and understand your culture.",
+    title: "Personalized Coordination",
+    desc: "Dedicated international patient coordinators assisting throughout your visit.",
   },
   {
     emoji: <FaMoneyBillWave />,
     colorClass: "card-navy",
-    title: "Affordable Pricing",
-    desc: "Heart surgery from $3,500 — saving you up to 80% vs Western countries.",
+    title: "Cost Transparency",
+    desc: "Clear provider estimates tailored to your proposed treatment and medical requirements.",
   },
 ];
 
@@ -324,46 +324,46 @@ const HOSPITALS = [
 const DOCTORS = [
   {
     name: "Dr. Rajesh M Rajani",
-    education: "MBBS",
+    education: "MBBS, MD (Cardiology), DM (Cardiology)",
     spec: "Cardiologist",
-    desc: "Dr. Rajesh M Rajani is a Cardiologist in Breach Candy, Mumbai and has an experience of 39 years in this field. Dr. Rajesh M Rajani practices at Breach Candy Hospital in Breach Candy, Mumbai. He completed MBBS from JJ Hospital & Grant Medical College in 1984,MD - Cardiology from JJ Hospital & Grant Medical College in 1988 and DM - Cardiology from KEM Hospital & Seth GS Medical College in 1991",
+    desc: "Dr. Rajesh M Rajani is a Cardiologist in Breach Candy, Mumbai with over 39 years of clinical experience in cardiology. Practicing at Breach Candy Hospital, he completed his MBBS from JJ Hospital & Grant Medical College in 1984, MD in Cardiology in 1988, and DM in Cardiology from KEM Hospital & Seth GS Medical College in 1991. His clinical practice focuses on diagnostic and preventive cardiology for domestic and international patients.",
     photoUrl: RajeshRajaniImage,
   },
   {
     name: "Dr. Yunus Shafi Loya",
-    education: "MBBS, MD, DM, Cardiologist",
-    spec: "Cardiologist",
-    desc: "Dr. Yunus Shafi Loya is an experienced Interventional Cardiologist in India with 25+ years of expertise in advanced heart treatment and minimally invasive cardiac procedures. His specialties include Angioplasty, Stenting, Atherectomy, Balloon Angioplasty, and Percutaneous Valve Repair. International patients choose him for advanced cardiac care, modern treatment techniques, and personalized patient support.",
+    education: "MBBS, MD, DM (Cardiology)",
+    spec: "Interventional Cardiologist",
+    desc: "Dr. Yunus Shafi Loya is an Interventional Cardiologist in India with 25+ years of experience in cardiac evaluation and catheter-based interventions. His practice areas include coronary angioplasty, stenting, atherectomy, and percutaneous valve assessments. International patients consult him for detailed diagnostic evaluation and minimally invasive cardiac care.",
     photoUrl: YunusLoyaImage,
   },
   {
     name: "Dr. Yash Lokhandwala",
-    education: "MD, DM (Doctor), FACC(sp.Arrhythmias)",
-    spec: "Cardiologist",
-    desc: "Dr. Yash Lokhandwala is an experienced Cardiologist in India with 26+ years of expertise in advanced cardiac care and heart rhythm disorder treatment. Associated with Lilavati Hospital for over 10 years and trained in Holland, the doctor has performed approximately 15,000 cardiac procedures. Special interests include Bradycardia, Tachycardia, ECG diagnosis, and advanced heart rhythm treatment for international patients seeking affordable heart care in India.",
+    education: "MD, DM, FACC (Arrhythmias)",
+    spec: "Cardiac Electrophysiologist",
+    desc: "Dr. Yash Lokhandwala is a Cardiologist and Electrophysiologist in India with 26+ years of clinical experience in heart rhythm disorders. Associated with Lilavati Hospital and trained internationally in the Netherlands, his clinical focus includes bradycardia, tachycardia, arrhythmia management, pacemaker evaluations, and catheter ablation.",
     photoUrl: YashLokhandwalaImage,
   },
   {
     name: "Dr. Zainulabedin Hamdulay",
     education:
-      "MCh - Thoracic Surgery, MS - General Surgery, DNB - Cardiothoracic Surgery, MBBS",
+      "MCh (Thoracic Surgery), MS (General Surgery), DNB (CTS), MBBS",
     spec: "Cardiac Surgeon",
-    desc: "Dr. Zainulabedin Hamdulay is a highly experienced Cardiac Surgeon in India with over 33 years of expertise in advanced heart surgery and cardiothoracic procedures. Based in Mumbai and associated with leading cardiac institutes, he has attended and performed more than 10,000 cardiac surgeries including coronary artery bypass surgery, complex valve repair, minimally invasive cardiac surgery (MICS-keyhole), and heart transplant procedures. International patients choose Dr. Hamdulay for advanced heart treatment in India because of his extensive surgical experience, internationally recognized expertise, and patient-focused cardiac care. He has participated in prestigious international cardiac surgery workshops and conferences in the USA, Canada, and the UK, and is known for innovative techniques in minimally invasive heart surgery and complex cardiac procedures.",
+    desc: "Dr. Zainulabedin Hamdulay is a Cardiac Surgeon based in Mumbai, India, with over 33 years of experience in adult cardiac and cardiothoracic surgery. Associated with leading cardiac centers, his surgical focus includes coronary artery bypass grafting (CABG), valve repair and replacement, and minimally invasive cardiac surgical approaches.",
     photoUrl: ZainulabedinHamdulayImage,
   },
   {
     name: "Dr. Kamran Ahmed Khan",
     education:
-      "MBBS, MCPS, FCPS Cardiology, Certification in Interventional Cardiology",
+      "MBBS, MCPS, FCPS Cardiology, Fellowship in Interventional Cardiology",
     spec: "Interventional Cardiologist",
-    desc: "Dr. Kamran Ahmed Khan is a highly skilled Interventional Cardiologist with extensive experience in advanced cardiac care and minimally invasive heart procedures. Associated with the National Institute of Cardiovascular Disease since 2017, he completed his MBBS from Dow Medical College followed by internship, medicine training, and General Cardiology fellowship at Aga Khan University Hospital, Karachi. He earned his MCPS and FCPS Cardiology qualifications from the College of Physicians and Surgeons and further specialized in Interventional Cardiology with advanced certification from Queen Elizabeth II, Dalhousie University, Halifax, Nova Scotia, Canada. Dr. Kamran Ahmed Khan is recognized for his expertise in coronary interventions, advanced heart disease management, and evidence-based cardiac treatment. He actively participates in national scientific conferences, Continuing Medical Education (CME) workshops, and professional cardiac forums as a speaker and moderator. International patients seeking affordable and advanced heart treatment trust his experience, modern cardiac care approach, and commitment to patient-centered treatment.",
+    desc: "Dr. Kamran Ahmed Khan is an Interventional Cardiologist with extensive training in coronary interventions and cardiovascular medicine. Having completed his cardiology training and advanced interventional fellowship certification from Dalhousie University in Canada, his clinical focus encompasses coronary angiograms, angioplasty, and evidence-based heart disease management.",
     photoUrl: KamranAhmedKhanImage,
   },
   {
     name: "Dr. K R Balakrishnan",
     education: "MBBS, MS (General Surgery), MCh (Cardiothoracic Surgery)",
     spec: "Cardiothoracic and Heart Transplant Surgeon",
-    desc: "Dr. K R Balakrishnan is one of the leading Cardiothoracic and Heart Transplant Surgeons in India with over 40 years of experience in advanced cardiac surgery and transplant procedures. An MCh graduate in Cardiothoracic Surgery from KEM Hospital, University of Bombay, he is internationally recognized for his expertise in end-stage heart failure management, heart transplant surgery, VAD implant procedures, pediatric cardiac surgery, lung transplant, and combined heart and lung transplantation. Having successfully performed more than 18,000 cardiac surgeries and over 190 heart transplant procedures, Dr. Balakrishnan is regarded as a pioneer in advanced heart failure treatment in India. He achieved several major milestones including India’s first successful LVAD implant surgery as destination therapy in 2012 and India’s first successful HVAD implant surgery in 2013. His evidence-based surgical approach, extensive transplant expertise, and internationally recognized contributions to cardiothoracic surgery make him a trusted choice for international patients seeking advanced heart treatment in India.",
+    desc: "Dr. K R Balakrishnan is a Cardiothoracic and Heart Transplant Surgeon in India with over 40 years of surgical experience. An alumnus of KEM Hospital, Mumbai, his clinical practice specializes in advanced heart failure management, mechanical circulatory support, ventricular assist devices (VADs), and complex thoracic surgical procedures for international patients.",
     photoUrl: KRBalakrishnanImage,
   },
   {
@@ -371,47 +371,47 @@ const DOCTORS = [
     education:
       "MBBS, Diplomate American Board of Surgery, Diplomate American Board of Cardiothoracic Surgery",
     spec: "Cardiovascular and Cardiothoracic Surgeon",
-    desc: "Dr. Naresh Trehan is one of the most renowned Cardiovascular and Cardiothoracic Surgeons in India with over 40 years of experience in advanced heart surgery and cardiac care. He is the Chairman of Cardiac Services and Chairman & Managing Director of Medanta - The Medicity, Gurugram. Widely recognized as one of the best heart surgeons in India, Dr. Trehan has successfully performed more than 48,000 open-heart surgeries and complex cardiac procedures. His expertise includes coronary artery bypass grafting (CABG), heart valve replacement surgery, aortic aneurysm surgery, minimally invasive cardiac surgery, cardiothoracic surgery, and advanced heart treatment for international patients. Dr. Naresh Trehan is internationally respected for his excellence in treating coronary artery disease, heart blockages, rheumatic heart disease, and complex cardiovascular disorders using modern surgical techniques and evidence-based cardiac care. Patients from Kenya, Nigeria, Tanzania, Bangladesh, Oman, Ethiopia, Iraq, Uzbekistan, and many other countries travel to India for advanced heart surgery and specialized treatment under his care. His global reputation, extensive surgical experience, and leadership in establishing world-class cardiac healthcare infrastructure make him one of the most trusted cardiac surgeons in India.",
+    desc: "Dr. Naresh Trehan is a Cardiovascular and Cardiothoracic Surgeon in India with over 40 years of experience in cardiac surgery. He serves as Chairman of Cardiac Services and Managing Director of Medanta - The Medicity, Gurugram. His clinical focus includes coronary artery bypass grafting (CABG), heart valve replacement, aortic aneurysm surgery, and minimally invasive cardiac procedures for international patients.",
     photoUrl: NareshTrehanImage,
   },
   {
     name: "Dr. Suresh Rao",
     education: "MBBS, MS, MCh (CVTS), Dip.NB (CTS), FCPS, FIACS",
     spec: "Pediatric & Congenital Heart Surgeon",
-    desc: "Dr. Suresh Rao is one of the most experienced Pediatric and Congenital Heart Surgeons in India with over 37 years of expertise in neonatal cardiac surgery, congenital heart defect correction, and pediatric cardiovascular surgery. He is the Director of the Children’s Heart Centre and is internationally recognized for pioneering advanced techniques in congenital heart surgery and cardiopulmonary bypass procedures. Dr. Rao has established two nationally reputed Congenital Heart Centres and has trained several leading congenital heart surgeons across India. His expertise includes neonatal heart surgery, pediatric cardiac surgery, congenital heart defect treatment, fetal cardiac care, and complex cardiothoracic procedures for children. Dr. Suresh Rao has received advanced international training in New Zealand, Australia, and the USA, including a Special Congenital Heart Surgery Fellowship from the University of Alabama at Birmingham, USA. International patients seeking advanced pediatric heart treatment in India choose Dr. Rao for his extensive surgical experience, globally trained expertise, and compassionate child-focused cardiac care.",
+    desc: "Dr. Suresh Rao is a Pediatric and Congenital Heart Surgeon in India with over 37 years of clinical experience in neonatal and pediatric cardiac care. He serves as Director of the Children’s Heart Centre. With international fellowship training from the University of Alabama at Birmingham, USA, his practice centers on congenital heart defect repair and child-focused cardiac surgery.",
     photoUrl: SureshRaoImage,
   },
 ];
 
 const REASONS = [
   {
-    emoji: <FaMoneyBillWave />,
-    title: "Affordable treatment without compromising quality",
-    desc: "60–80% lower than UK, US, or South Africa",
-    colorClass: "reason-red",
-  },
-  {
-    emoji: <FaClock />,
-    title: " No long waiting time",
-    desc: "Surgery scheduled within days, not months",
-    colorClass: "reason-navy",
-  },
-  {
-    emoji: <FaRobot />,
-    title: "Advanced technology (robotic & minimally invasive surgery)",
-    desc: "Robotic surgery, TAVR, minimally invasive",
+    emoji: <FaUserMd />,
+    title: "Cardiac Specialist Options",
+    desc: "Explore relevant cardiology and cardiac-surgery specialists based on requirements.",
     colorClass: "reason-red",
   },
   {
     emoji: <FaHandshake />,
-    title: "Cultural comfort & patient-friendly environment",
-    desc: "African patient coordinators, halal food",
+    title: "International Patient Support",
+    desc: "Assistance with medical documents, appointments, and communication.",
     colorClass: "reason-navy",
   },
   {
-    emoji: <FaFileAlt />,
-    title: " Easy visa & travel assistance",
-    desc: "Medical visa in 3–5 days with our full support",
+    emoji: <FaGlobe />,
+    title: "Hospital & Treatment Options",
+    desc: "Compare accredited hospitals based on verified cardiac facilities and care options.",
+    colorClass: "reason-red",
+  },
+  {
+    emoji: <FaPlaneArrival />,
+    title: "Travel Coordination",
+    desc: "Support with selected travel, accommodation, and local-transfer requirements.",
+    colorClass: "reason-navy",
+  },
+  {
+    emoji: <FaMoneyBillWave />,
+    title: "Treatment Cost Information",
+    desc: "Request provider-specific cost information based on individual clinical needs.",
     colorClass: "reason-red",
   },
 ];
@@ -420,74 +420,75 @@ const SERVICES = [
   {
     icon: <FaHeartbeat />,
     title: "Heart Bypass Surgery (CABG)",
-    desc: "Open-heart & minimally invasive bypass procedures",
+    desc: "A surgical procedure used in selected cases to improve blood flow to the heart muscle.",
   },
   {
     icon: <FaExchangeAlt />,
-    title: "Heart Valve Repair & Replacement",
-    desc: "Mitral, aortic & tricuspid valve treatments",
+    title: "Heart Valve Repair or Replacement",
+    desc: "Procedures used for selected valve conditions after specialist evaluation.",
   },
   {
     icon: <FaBullseye />,
     title: "Angioplasty & Stenting",
-    desc: "Drug-eluting stents & rotational atherectomy",
+    desc: "Procedures that may be used to treat certain narrowed or blocked coronary arteries when clinically appropriate.",
   },
   {
     icon: <FaDotCircle />,
-    title: "Heart Hole Surgery (ASD, VSD)",
+    title: "Heart Valve Surgery",
+    desc: "Surgical treatment for selected heart-valve conditions based on specialist assessment.",
   },
   {
     icon: <FaChild />,
     title: "Pediatric Heart Surgery",
-    desc: "Congenital defects in infants and children",
+    desc: "Cardiac surgical care for selected congenital or other heart conditions in children, subject to specialist evaluation.",
   },
   {
     icon: <FaHeart />,
     title: "Heart Transplant",
-    desc: "End-stage heart failure & transplant care",
+    desc: "A highly specialized treatment option for selected patients with severe heart disease who meet appropriate clinical criteria.",
   },
   {
     icon: <FaChartLine />,
-    title: "Electrophysiology & Arrhythmia Treatment",
-    desc: "Ablation, pacemakers & ICD implantation",
+    title: "Electrophysiology & Cardiac Procedures",
+    desc: "Evaluation and procedures for selected heart-rhythm conditions.",
   },
   {
     icon: <FaClock />,
-    title: "Aortic Aneurysm Repair",
-    desc: "Open & endovascular aortic aneurysm surgery",
+    title: "Aortic & Vascular Care",
+    desc: "Specialist assessment and treatment options for selected aortic or vascular conditions.",
   },
 ];
 
 const SUPPORT_STEPS = [
   {
+    icon: <FaGlobe />,
+    title: "Hospital Coordination",
+    desc: "Assistance in identifying and coordinating with relevant cardiac hospitals in India.",
+  },
+  {
+    icon: <FaUserMd />,
+    title: "Cardiologist & Surgeon Appointments",
+    desc: "Support with scheduling consultations with qualified cardiac specialists.",
+  },
+  {
     icon: <FaFileAlt />,
-    title: "Medical Opinion",
-    desc: "Expert review of your reports by our senior cardiologists.",
-  },
-  {
-    icon: <FaPassport />,
-    title: "Visa Assistance",
-    desc: "Medical visa arranged in 3–5 days with full documentation support.",
-  },
-  {
-    icon: <FaPlaneArrival />,
-    title: "Airport Pickup",
-    desc: "Personal welcome & comfortable transfer to your accommodation.",
+    title: "Medical Report Coordination",
+    desc: "Sharing diagnostic reports and medical records with hospital teams for preliminary review.",
   },
   {
     icon: <FaBed />,
-    title: "Accommodation",
-    desc: "Affordable guest houses and hotels located near the hospital.",
+    title: "Travel & Accommodation Assistance",
+    desc: "Guidance on suitable lodging and travel arrangements for patients and companions.",
   },
   {
-    icon: <FaBolt />,
-    title: "Fast Admission",
-    desc: "Priority admission with zero queues and dedicated care team.",
+    icon: <FaPlaneArrival />,
+    title: "Airport & Local Transfer Support",
+    desc: "Assistance with airport reception and local transit to your hospital or accommodation.",
   },
   {
     icon: <FaShieldAlt />,
-    title: "Post-Treatment Follow-up",
-    desc: "Telemedicine support and monitoring after you return home.",
+    title: "Communication & Follow-Up",
+    desc: "Assistance with ongoing hospital communication and follow-up consultation planning.",
   },
 ];
 
@@ -496,27 +497,27 @@ const TESTIMONIALS = [
     initials: "AC",
     gradClass: "grad-red-dark",
     name: "Adebayo Chukwu",
-    designation: "Lagos, Nigeria · Bypass Surgery (CABG)",
+    designation: "Lagos, Nigeria · Bypass Surgery Coordination",
     quote:
-      "Humancare World Wide supported me throughout my entire treatment journey — from travel assistance to my bypass surgery at Apollo Hospitals. The doctors were highly experienced, and the care I received exceeded my expectations. Today, I feel healthier and stronger than ever.",
+      "Human Care Medical Tourism assisted me with my medical trip to India for bypass surgery consultation at Apollo Hospitals. The coordination team handled hospital appointments and local support efficiently, allowing me to focus on my treatment plan.",
     avatarBg: "#c0392b",
   },
   {
     initials: "FM",
     gradClass: "grad-navy-dark",
     name: "Fatima Mwangi",
-    designation: "Nairobi, Kenya · Child ASD Surgery",
+    designation: "Nairobi, Kenya · Pediatric Cardiac Consultation",
     quote:
-      "My 4-year-old daughter underwent ASD heart surgery shortly after we arrived in India. Humancare World Wide handled everything smoothly and made us feel comfortable during a stressful time. The pediatric cardiac team at Max hospital was exceptional, and my daughter is now living a happy and active life.",
+      "When we sought a second opinion for my daughter's heart condition, Human Care coordinated our appointments at Max Healthcare. The medical team explained all findings clearly, and having local coordination made our travel manageable.",
     avatarBg: "#1a3a5c",
   },
   {
     initials: "KO",
     gradClass: "grad-red-dark",
     name: "Kwame Osei",
-    designation: "Accra, Ghana · Valve Replacement",
+    designation: "Accra, Ghana · Valve Treatment Coordination",
     quote:
-      "Humancare World Wide connected me with one of the best cardiac specialists in India for my valve replacement surgery. From hospital coordination to post-treatment support, the entire experience was professional and reassuring. I am truly grateful for the compassionate care I received.",
+      "Human Care helped connect me with experienced cardiac specialists in India for evaluation of my heart valve condition. From report sharing to hospital coordination, the process was handled with care and professionalism.",
     avatarBg: "#7b2d8b",
   },
 ];
@@ -529,58 +530,62 @@ const REVIEW_AVATARS = [
 
 const HERO_BULLETS = [
   {
-    icon: <FaUser />,
+    icon: <FaHeartbeat />,
     colorClass: "bullet-red",
-    text: "25+ Years Experienced Cardiac Surgeons",
+    text: "Wide Range of Cardiac Care",
+    desc: "Access information about different cardiac specialties and treatment options.",
   },
   {
-    icon: <FaLightbulb />,
+    icon: <FaUserMd />,
     colorClass: "bullet-white",
-    text: "Advanced Technology & Robotic Surgeries",
+    text: "Specialized Cardiology & Surgery",
+    desc: "Coordinate with relevant cardiology or cardiac-surgery specialists based on requirements.",
   },
   {
     icon: <FaGlobe />,
     colorClass: "bullet-red",
-    text: "Trusted by 50,000+ International Patients",
+    text: "Specialty Cardiac Hospitals",
+    desc: "Explore hospitals with dedicated cardiac departments, modern technology, and facilities.",
   },
   {
-    icon: <FaHeart />,
+    icon: <FaHandshake />,
     colorClass: "bullet-white",
-    text: "Dedicated Support for African Patients",
+    text: "Support for International Patients",
+    desc: "Assistance with appointments, medical reports coordination, and communication.",
   },
 ];
 
 const HERO_STATS = [
-  { val: "60-80%", label: "Cost Savings", colorClass: "stat-red" },
+  { val: "Verified", label: "Cardiac Centers", colorClass: "stat-red" },
   { val: "50K+", label: "Intl. Patients", colorClass: "stat-white" },
   { val: "25+", label: "Yrs Experience", colorClass: "stat-red" },
-  { val: "24/7", label: "Support", colorClass: "stat-white" },
+  { val: "Complete", label: "Patient Support", colorClass: "stat-white" },
 ];
 
 const features = [
   {
     id: 1,
     icon: <FaClipboardList />,
-    title: "Transparent Planning",
-    desc: "Clear cost breakdowns with no hidden charges or surprises.",
+    title: "Diagnostic Evaluation",
+    desc: "Cardiac consultation, diagnostic imaging, and pre-treatment clinical assessment.",
   },
   {
     id: 2,
-    icon: <FaCheckCircle />,
-    title: "No Unnecessary Procedures",
-    desc: "Evidence-based care — only what you truly need.",
+    icon: <FaUserMd />,
+    title: "Hospital & Specialist Fees",
+    desc: "Transparent specialist fees and clinical care costs from accredited providers.",
   },
   {
     id: 3,
-    icon: <FaUserMd />,
-    title: "Personalized Approach",
-    desc: "Treatment plans tailored to each patient's unique condition.",
+    icon: <FaHeartbeat />,
+    title: "Procedure-Specific Planning",
+    desc: "Detailed medical planning based on the proposed surgical or interventional procedure.",
   },
   {
     id: 4,
-    icon: <FaGlobe />,
-    title: "Global Standards",
-    desc: "World-class hospitals with internationally certified specialists.",
+    icon: <FaBed />,
+    title: "Stay & International Support",
+    desc: "Room requirements, post-treatment follow-up, and travel coordination assistance.",
   },
 ];
 
@@ -590,45 +595,69 @@ const features = [
 const faqData = [
   {
     id: 1,
-    question: "What is the best hospital for heart problems in India?",
+    question: "What is the best heart treatment in India?",
     answer:
-      "Top hospitals for heart care in India include All India Institute of Medical Sciences, Apollo Hospitals, and Fortis Healthcare, known for advanced cardiac treatments and experienced specialists.",
+      "The appropriate cardiac treatment depends on the patient’s diagnosis, severity, medical history, test results and clinical requirements. A qualified cardiologist or cardiac surgeon should determine the suitable treatment approach.",
   },
   {
     id: 2,
-    question: "Which hospital is the best in India for heart treatment?",
+    question: "Which hospitals in India provide cardiac treatment?",
     answer:
-      "India has several world-class hospitals, especially in Delhi, Mumbai, and Chennai, offering cutting-edge heart surgeries and diagnostics.",
+      "Hospitals across India provide cardiology and cardiac-surgery services. Hospital suitability depends on the required specialty, available facilities, specialist availability, location and the patient’s individual needs.",
   },
   {
     id: 3,
-    question: "Is heart transplant possible in India?",
+    question: "Is heart treatment available for international patients?",
     answer:
-      "Yes, heart transplant is widely available in India at leading hospitals with high success rates and advanced post-operative care.",
+      "International patients can explore planned cardiac care in India, subject to hospital requirements, applicable travel rules and individual medical circumstances.",
   },
   {
     id: 4,
-    question: "Who is the No. 1 cardiologist in India?",
+    question: "Can I share my cardiac medical reports before travelling?",
     answer:
-      "India has many highly reputed cardiologists rather than a single “No.1.” The best doctor depends on your condition, treatment type, and hospital specialization.",
+      "Yes. Relevant reports, scans and medical documents can be shared for coordination and to help identify suitable hospital or specialist options. Final clinical decisions are made by the treating healthcare professional.",
   },
   {
     id: 5,
-    question: "How many heart transplants are done in India every year?",
+    question: "How much does cardiac treatment cost in India?",
     answer:
-      "India performs hundreds of heart transplants annually, with numbers steadily increasing due to improved awareness and organ donation programs.",
+      "Cost varies according to the diagnosis, investigations, procedure or surgery, hospital, specialist fees, room requirements, duration of care and follow-up. A specific estimate should be confirmed with the relevant provider.",
   },
   {
     id: 6,
-    question: "Which hospitals perform the most heart transplants in India?",
+    question: "How long does cardiac treatment take?",
     answer:
-      "Hospitals like Apollo Hospitals Chennai, Fortis Escorts Heart Institute, and Narayana Health are among the leaders in heart transplant procedures.",
+      "The treatment timeline varies according to the condition, procedure, hospital stay, recovery requirements and follow-up plan. The treating specialist can provide more specific guidance after evaluation.",
   },
   {
     id: 7,
-    question: "Which is the best heart hospital in the world?",
+    question: "Can Human Care help with cardiac specialist appointments?",
     answer:
-      "Globally, hospitals in the US and Europe rank highly, but India is becoming a preferred destination due to affordable treatment and high-quality cardiac care.",
+      "Human Care can assist with appointment coordination based on the selected hospital, cardiologist or cardiac surgeon, availability and the patient’s requirements.",
+  },
+  {
+    id: 8,
+    question: "Can you help with travel and accommodation?",
+    answer:
+      "Human Care can assist with selected travel, accommodation and local transfer arrangements for international patients, subject to the requested service and availability.",
+  },
+  {
+    id: 9,
+    question: "Are heart surgery results guaranteed?",
+    answer:
+      "No medical procedure should be presented as guaranteed for every patient. Outcomes vary according to the medical condition, procedure, individual circumstances and other clinical factors.",
+  },
+  {
+    id: 10,
+    question: "Is cardiac treatment in India always cheaper?",
+    answer:
+      "Costs vary by treatment, hospital, specialist and patient requirements. Patients should request a provider-specific estimate rather than relying on a fixed percentage of savings.",
+  },
+  {
+    id: 11,
+    question: "How can I contact Human Care Medical Tourism?",
+    answer:
+      "Use the contact options and CTA buttons on this page to discuss your cardiac-treatment and medical-travel requirements with the Human Care Medical Tourism team.",
   },
 ];
 
@@ -693,18 +722,16 @@ export default function CardiacLanding() {
   return (
     <>
       <Helmet>
-        
         <title>
-          Affordable Cardiac Treatment in India | Affordable Heart Surgery &
-          Bypass Surgery
+          Affordable Cardiac Treatment in India for International Patients
         </title>
         <meta
           name="description"
-          content="Get affordable cardiac treatment in India with top hospitals and expert surgeons. Save up to 80% on heart surgery, bypass surgery, and valve replacement with world-class care at JCI-accredited facilities."
+          content="Explore cardiac treatment and heart-care options in India with support for hospital selection, cardiologist appointments, medical-report coordination and international patient arrangements."
         />
         <meta
           name="keywords"
-          content="best heart hospitals in india, best hospital of heart in india,  best heart transplant hospital in india, best cardiac electrophysiologist in india, best electrophysiologist in chennai, best electrophysiologist in mumbai, best electrophysiologist in delhi"
+          content="cardiac treatment in india, affordable cardiac treatment in india, heart treatment in india, heart surgery in india, cardiac treatment in india for international patients, best heart hospitals in india, cardiac hospitals in india, cardiologists in india, cardiac surgeons in india, heart surgery cost in india, cardiac treatment cost in india, heart bypass surgery in india, cabg in india, angioplasty in india, valve replacement in india, medical tourism for cardiac treatment, international cardiac treatment, cardiac care in india"
         />
         <link
           rel="canonical"
@@ -713,11 +740,11 @@ export default function CardiacLanding() {
 
         <meta
           property="og:title"
-          content="Affordable Cardiac Treatment in India | Affordable Heart Surgery & Bypass Surgery"
+          content="Affordable Cardiac Treatment in India for International Patients"
         />
         <meta
           property="og:description"
-          content="Get affordable cardiac treatment in India with top hospitals and expert surgeons. Save up to 80% on heart surgery, bypass surgery, and valve replacement with world-class care at JCI-accredited facilities."
+          content="Explore cardiac treatment and heart-care options in India with support for hospital selection, cardiologist appointments, medical-report coordination and international patient arrangements."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -726,21 +753,21 @@ export default function CardiacLanding() {
         />
         <meta
           property="og:image"
-          content="https://humancaremedicaltourism.com/og-image.jpg"
+          content="https://humancaremedicaltourism.com/src/departments/dept-images/cardiac-treatment-india-hero.webp"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Affordable Cardiac Treatment in India | Affordable Heart Surgery & Bypass Surgery"
+          content="Affordable Cardiac Treatment in India for International Patients"
         />
         <meta
           name="twitter:description"
-          content="Get affordable cardiac treatment in India with top hospitals and expert surgeons. Save up to 80% on heart surgery, bypass surgery, and valve replacement with world-class care at JCI-accredited facilities."
+          content="Explore cardiac treatment and heart-care options in India with support for hospital selection, cardiologist appointments, medical-report coordination and international patient arrangements."
         />
         <meta
           name="twitter:image"
-          content="https://humancaremedicaltourism.com/og-image.jpg"
+          content="https://humancaremedicaltourism.com/src/departments/dept-images/cardiac-treatment-india-hero.webp"
         />
       </Helmet>
 
@@ -749,14 +776,14 @@ export default function CardiacLanding() {
         {/* Background Image */}
         <img
           src={heroImage}
-          alt="cardiac treatment in India with advanced hospital care"
+          alt="Affordable cardiac treatment in India for international patients"
           className="hero-bg-image"
           loading="eager"
-        fetchPriority="high"
-        width={1920}
-        height={1280}
-        decoding="async"
-      />
+          fetchPriority="high"
+          width={1920}
+          height={1280}
+          decoding="async"
+        />
 
         {/* Gradient Overlay */}
         <div className="hero-overlay" />
@@ -764,18 +791,22 @@ export default function CardiacLanding() {
         {/* Content */}
         <div className="hero-content">
           <span className="cardiac-hero-badge">
-            Trusted by 50,000+ International Patients
+            International Patient Cardiac Care
           </span>
 
           <h1>
-            Affordable Cardiac Treatment in India | World-Class Heart Surgery
+            Affordable Cardiac Treatment in India for International Patients
           </h1>
 
           <p>
-            Get affordable cardiac treatment in India with world-class
-            hospitals, experienced surgeons, and advanced technology. We help
-            international patients access safe, cost-effective heart surgery in
-            India with up to 80% savings compared to Western countries.
+            Explore cardiac treatment and heart-care options in India with
+            support for hospital selection, cardiologist appointments,
+            medical-report coordination and international patient arrangements.
+          </p>
+          <p>
+            Human Care Medical Tourism assists international patients with
+            cardiac-care coordination based on their medical requirements and
+            travel needs.
           </p>
 
           <div className="hero-ctas">
@@ -795,21 +826,25 @@ export default function CardiacLanding() {
         </div>
       </section>
 
-      {/* ════ SECTION 2 — WHY INDIA (two-column) ════ */}
+      {/* ════ SECTION 2 — CARDIAC TREATMENT OPTIONS (two-column) ════ */}
       <section className="wi-section">
         <div className="wi-container">
           {/* Centered header */}
           <div className="wi-header">
-            <span className="section-label-why">Why India?</span>
+            <span className="section-label-why">Cardiac Care in India</span>
 
             <h2 className="wi-heading">
-              Get the Best Heart Treatment in India at 60–80% Lower Cost
+              Cardiac Treatment Options in India for International Patients
             </h2>
 
             <p className="wi-subtext">
-              India is one of the top destinations globally for advanced cardiac
-              care, offering high success rates, experienced surgeons, and
-              internationally accredited hospitals.
+              India has hospitals and cardiac specialists providing evaluation,
+              medical management and procedures across a range of heart-related
+              conditions. International patients can compare providers based on
+              the required specialty, hospital facilities, specialist
+              availability, location and treatment requirements. Treatment
+              suitability and cost depend on the individual patient, proposed
+              procedure, hospital, specialist and other clinical factors.
             </p>
           </div>
 
@@ -834,11 +869,14 @@ export default function CardiacLanding() {
       <section className="ht-section">
         {/* ── Background heart image ── */}
         <div className="ht-bg-overlay" aria-hidden="true">
-          <img src={heartBg} alt="" className="ht-bg-img"
-        width={626}
-        height={417}
-        decoding="async"
-      />
+          <img
+            src={heartBg}
+            alt=""
+            className="ht-bg-img"
+            width={626}
+            height={417}
+            decoding="async"
+          />
         </div>
 
         <div className="ht-container">
@@ -850,10 +888,10 @@ export default function CardiacLanding() {
                 alt="heart specialist performing cardiac treatment in India"
                 className="ht-doctor-img"
                 loading="lazy"
-        width={626}
-        height={351}
-        decoding="async"
-      />
+                width={626}
+                height={351}
+                decoding="async"
+              />
             </div>
           </div>
 
@@ -862,15 +900,20 @@ export default function CardiacLanding() {
             <p className="ht-eyebrow">Cardiac Care Excellence</p>
 
             <h2 className="ht-title">
-              Affordable Heart Treatment{" "}
+              Affordable Cardiac Treatment{" "}
               <span className="ht-title--accent">
                 Without Compromising Quality
               </span>
             </h2>
 
             <p className="ht-description">
-              Get high-quality cardiac care at significantly lower cost compared
-              to many countries, while maintaining global medical standards.
+              Cardiac treatment costs in India vary according to the diagnosis,
+              investigations, procedure, hospital, specialist fees, room
+              requirements, length of stay, medicines, follow-up and other
+              individual factors. Patients can compare treatment options and
+              request cost information from the relevant hospital or provider.
+              Cost should be confirmed after review of the patient’s medical
+              requirements.
             </p>
 
             <div className="ht-features">
@@ -899,12 +942,15 @@ export default function CardiacLanding() {
       <section className="hn-section">
         <div className="hn-container">
           <div className="hn-title-wrap">
-            <span className="hn-label">Our Hospital Network</span>
+            <span className="hn-label">Cardiac Treatment Providers in India</span>
             <h2 className="hn-heading">
-              Best Heart Hospitals in India for Cardiac Treatment
+              Heart Hospitals in India for Cardiac Treatment
             </h2>
             <p className="hn-subtitle">
-              We partner with India’s top NABH & JCI-accredited hospitals
+              Cardiac hospitals in India provide different cardiology and
+              cardiac-surgery services. The appropriate hospital depends on the
+              patient’s condition, required specialty, available facilities,
+              specialist availability and other individual requirements.
             </p>
           </div>
           <div className="hn-slider-wrapper">
@@ -987,10 +1033,16 @@ export default function CardiacLanding() {
       <section className="doctor-section-light">
         <div className="doctor-container">
           <div className="doctor-title-wrap">
-            <span className="doctor-label">Our Specialists</span>
+            <span className="doctor-label">Specialist Directory</span>
             <h2 className="doctor-h2">
-              Top Cardiac Specialists in India for Heart Surgery
+              Cardiologists and Cardiac Specialists in India
             </h2>
+            <p className="doctor-subtitle" style={{ maxWidth: "800px", margin: "12px auto 0", color: "#64748b", fontSize: "1rem", lineHeight: "1.6" }}>
+              International patients can explore cardiologists and cardiac
+              surgeons based on their treatment requirements, specialty,
+              hospital affiliation, qualifications and verified professional
+              information.
+            </p>
           </div>
           <div className="doctor-cards-grid">
             {DOCTORS.map((d, i) => (
@@ -1070,7 +1122,7 @@ export default function CardiacLanding() {
           </div>
         </div>
       )}
-      {/* ════ SECTION 5 — WHY INDIA REASONS (navy) ════ */}
+      {/* ════ SECTION 5 — WHY AFRICA REASONS (navy) ════ */}
       <section className="section-navy section-parallax">
         <div
           className="section-parallax-bg"
@@ -1082,19 +1134,26 @@ export default function CardiacLanding() {
         <div className="why-choose-container">
           <div className="section-title-wrap">
             <span className="why-section-label">
-              Why African Patients Choose India for Heart Treatment?
+              International Patient Considerations
             </span>
             <h2 className="why-section-h2">
-              Patients from Nigeria, Kenya, Tanzania, Uganda, Ghana, and
-              Ethiopia trust India for affordable cardiac treatment with
-              world-class care and advanced medical facilities.
+              Why African Patients Choose India for Heart Treatment
             </h2>
+            <p style={{ maxWidth: "820px", margin: "14px auto 0", color: "rgba(255, 255, 255, 0.85)", fontSize: "1.05rem", lineHeight: "1.6" }}>
+              International patients from Africa may consider cardiac treatment
+              in India based on hospital options, specialist availability,
+              treatment requirements, travel arrangements and international
+              patient support. Human Care assists with coordinating hospital
+              information, specialist appointments, medical reports and
+              selected travel-related arrangements.
+            </p>
           </div>
           <div className="cards-grid-5">
             {REASONS.map((r, i) => (
               <div key={i} className="hover-lift reason-card">
                 <div className="reason-icon">{r.emoji}</div>
                 <h3 className="reason-title">{r.title}</h3>
+                <p className="reason-desc" style={{ fontSize: "0.85rem", opacity: 0.8, marginTop: "6px" }}>{r.desc}</p>
               </div>
             ))}
           </div>
@@ -1104,16 +1163,17 @@ export default function CardiacLanding() {
       <section className="services-section">
         <div className="services-container">
           <div className="service-title-wrap">
-            <span className="service-label">Treatments</span>
+            <span className="service-label">Cardiac Specialties &amp; Procedures</span>
             <h2 className="service-h2">Types of Heart Treatments We Offer</h2>
+            <p style={{ maxWidth: "700px", margin: "10px auto 0", color: "#64748b", fontSize: "0.95rem", lineHeight: "1.5" }}>
+              Explore clinical evaluation and treatment options for common and complex cardiac conditions.
+            </p>
           </div>
           <div className="services-grid">
             {SERVICES.map((s, i) => (
               <div className="service-card" key={i}>
                 <div className="icon-wrap">{s.icon}</div>
                 <div className="card-text">
-                  {" "}
-                  {/* ← add this wrapper */}
                   <h3 className="card-title">{s.title}</h3>
                   <p className="card-desc">{s.desc}</p>
                 </div>
@@ -1131,18 +1191,24 @@ export default function CardiacLanding() {
             alt="cardiac treatment heart illustration showing heart anatomy"
             className="support-image"
             loading="lazy"
-        width={1408}
-        height={768}
-        decoding="async"
-      />
+            width={1408}
+            height={768}
+            decoding="async"
+          />
         </div>
 
         {/* Right — Content */}
         <div className="support-content">
-          <span className="support-label">End-to-End Support</span>
+          <span className="support-label">End-to-End Coordination</span>
           <h2 className="support-h2">
-            We Handle Everything You Focus on Recovery
+            International Patient Support Throughout Your Cardiac Treatment Journey
           </h2>
+          <p style={{ color: "#64748b", margin: "12px 0 24px", lineHeight: "1.6", fontSize: "0.98rem" }}>
+            Human Care assists with practical coordination so international
+            patients can focus on their planned medical visit and communication
+            with their healthcare providers. Medical treatment and recovery
+            remain under the care of the treating healthcare professionals.
+          </p>
 
           <div className="support-steps">
             {SUPPORT_STEPS.map((s, i) => (
@@ -1170,10 +1236,13 @@ export default function CardiacLanding() {
                 <span className="ts-label-icon">
                   <FaPills />
                 </span>{" "}
-                Testimonials
+                Patient Experiences
               </p>
 
-              <h2 className="ts-heading">Let's Hear What They Say About Us</h2>
+              <h2 className="ts-heading">Our Testimonials – Let's Hear What They Say About Us</h2>
+              <p style={{ color: "#64748b", margin: "8px 0 16px", fontSize: "0.95rem", lineHeight: "1.5" }}>
+                Read experiences shared by patients who have used Human Care’s medical-tourism coordination services.
+              </p>
 
               <div className="ts-quote-icon">
                 <FaQuoteLeft />
@@ -1211,13 +1280,13 @@ export default function CardiacLanding() {
           <div className="ts-right">
             <img
               src={testimonialRightImg}
-              alt="experienced cardiac surgeon at best heart hospital in India"
+              alt="cardiac specialist for international heart treatment in India"
               className="ts-doctor-img"
               loading="lazy"
-        width={612}
-        height={743}
-        decoding="async"
-      />
+              width={612}
+              height={743}
+              decoding="async"
+            />
           </div>
         </div>
       </section>
@@ -1230,8 +1299,9 @@ export default function CardiacLanding() {
               Frequently Asked Questions About Heart Treatment in India
             </h2>
             <p className="heart-faq-subtitle">
-              Get answers to common questions about cardiac care, best heart
-              hospitals, and treatment options in India
+              Clear, factual information regarding cardiology consultations,
+              cardiac surgery, hospital options, and international patient
+              coordination in India.
             </p>
           </div>
 
@@ -1286,10 +1356,10 @@ export default function CardiacLanding() {
             alt="experienced cardiac surgeon in India"
             className="hcs-illo-img"
             loading="lazy"
-        width={322}
-        height={367}
-        decoding="async"
-      />
+            width={322}
+            height={367}
+            decoding="async"
+          />
           <svg
             className="hcs-heartbeat"
             viewBox="0 0 200 50"
@@ -1311,16 +1381,16 @@ export default function CardiacLanding() {
         <div className="hcs-center">
           <div className="cta-badge">
             <span className="animate-pulse badge-dot" />
-            Medical Coordinators Available 24/7
+            Medical Coordination Support
           </div>
           <h2 className="font-display hcs-heading">
-            Get Cardiac Treatment Consultation in India
-            <br />
-            <span className="cta-h2-accent">24/7 Available</span>
+            Get Cardiac Treatment Consultation
           </h2>
           <p className="hcs-subtitle">
-            Share your medical reports and get a expert opinion from India's top
-            cardiac specialists. No obligations — just clarity and care.
+            Discuss your cardiac-treatment requirements with Human Care Medical
+            Tourism and receive assistance with hospital options, cardiologist
+            or cardiac-surgeon coordination, appointments and international
+            patient services.
           </p>
           <div className="cta-btns">
             <a
@@ -1329,7 +1399,7 @@ export default function CardiacLanding() {
               rel="noreferrer"
               className="btn-wa btn-wa--lg whatsapp-glow"
             >
-              <WA size={6} /> WhatsApp Now
+              <WA size={6} /> WhatsApp Consultation
             </a>
             <a href="tel:+919833166697" className="btn-phone">
               <FaPhoneAlt /> Call Medical Coordinator
@@ -1337,9 +1407,9 @@ export default function CardiacLanding() {
           </div>
           <div className="cta-trust-row">
             {[
-              { icon: <FaCheckCircle />, text: "JCI & NABH Accredited" },
-              { icon: <FaLock />, text: "100% Secure & Confidential" },
-              { icon: <FaClock />, text: "Opinion in 24 Hours" },
+              { icon: <FaCheckCircle />, text: "JCI & NABH Accredited Hospitals" },
+              { icon: <FaLock />, text: "Confidential Report Sharing" },
+              { icon: <FaClock />, text: "Responsive Coordination Support" },
             ].map((b, i) => (
               <span key={i} className="cta-trust-item">
                 {b.icon} {b.text}
@@ -1352,13 +1422,13 @@ export default function CardiacLanding() {
         <div className="hcs-right-illo">
           <img
             src={heartIlloImg}
-            alt="best heart hospital in India for affordable cardiac treatment"
+            alt="heart hospital in India for cardiac treatment coordination"
             className="hcs-illo-img"
             loading="lazy"
-        width={197}
-        height={252}
-        decoding="async"
-      />
+            width={197}
+            height={252}
+            decoding="async"
+          />
         </div>
       </section>
     </>
