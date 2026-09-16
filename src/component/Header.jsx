@@ -161,7 +161,7 @@ const Header = () => {
               </div>
 
               <a
-                href="tel:+918655835979"
+                href="tel:+919833166697"
                 className="emergency-btn"
                 onClick={() => trackGTMEvent("Call Sticker button LP Ghana")}
               >
@@ -247,7 +247,7 @@ const Header = () => {
                   <Linkedin size={15} />
                 </a>
                 <a
-                  href="https://wa.me/+918655835979"
+                  href="https://wa.me/+919833166697"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Chat with us on WhatsApp"
@@ -274,7 +274,7 @@ const Header = () => {
             </div>
 
             <a
-              href="tel:+918655835979"
+              href="tel:+919833166697"
               className="emergency-btn mobile"
               onClick={() => trackGTMEvent("Call Sticker button LP Ghana")}
             >

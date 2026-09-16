@@ -380,7 +380,7 @@ export default function HomePage() {
 
             <div className="hero-buttons">
               <a
-                href="tel:+918655835979"
+                href="tel:+919833166697"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-btn red-btn"
@@ -390,7 +390,7 @@ export default function HomePage() {
                 Book Free Consultation
               </a>
               <a
-                href="https://wa.me/+918655835979"
+                href="https://wa.me/+919833166697"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-btn green-btn"
